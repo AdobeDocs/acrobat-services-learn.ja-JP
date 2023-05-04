@@ -8,7 +8,7 @@ thumbnail: KT-6677.jpg
 kt: 6677
 keywords: 英雄
 exl-id: 61a9a2d1-94c3-41c2-8f90-a56a938ef245
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: c1937561d607f1eabbc1921d6090858abb13f0d3
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 4%
@@ -30,7 +30,9 @@ OCR（光学文字認識）を使用すると、スキャンした文字のロ�
 以下の入門チュートリアルを使用して、API 資格情報の作成、サンプルファイルのダウンロード、環境の設定を行います。
 
 [PDFサービス API と Java 入門](gettingstartedjava.md)
+
 [PDFサービス APIと.Net 入門](gettingstartednet.md)
+
 [PDFサービス API と Node.js 入門](createpdffromhtml.md)
 
 ## サンプルファイルに含まれている OCR の例を実行します

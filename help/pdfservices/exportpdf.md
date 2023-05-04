@@ -7,7 +7,7 @@ level: Beginner
 thumbnail: KT-6674.jpg
 kt: 6674
 exl-id: 55f5b04e-0249-47d9-9131-2f9ec01db7e8
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: aa5c88fb5725a3d1c50d5c6b73fce7add629b08d
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 5%
@@ -35,7 +35,9 @@ Export 操作では、次の変換ファイルPDFがサポートされます。
 以下の入門チュートリアルを使用して、API 資格情報の作成、サンプルファイルのダウンロード、環境の設定を行います。
 
 [PDFサービス API と Java 入門](gettingstartedjava.md)
+
 [PDFサービス APIと.Net 入門](gettingstartednet.md)
+
 [PDFサービス API と Node.js 入門](createpdffromhtml.md)
 
 ## 手順 2:サンプルファイルを使用した PDF の書き出し操作の実行
