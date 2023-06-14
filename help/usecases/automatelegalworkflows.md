@@ -7,9 +7,9 @@ type: Tutorial
 thumbnail: KT-10202.jpg
 kt: 10202
 exl-id: 2a1752b8-9641-40cc-a0af-1dce6cf49346
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 98dc9f98f660b43d2ca0780b51624bf3be71c853
 workflow-type: tm+mt
-source-wordcount: '2893'
+source-wordcount: '2876'
 ht-degree: 1%
 
 ---
@@ -551,7 +551,7 @@ Acrobat Signの認証トークンを作成する方法について詳しくは�
   }
 ```
 
-更新が変更されたときに通知を受け取るより効率的な方法は、詳細を確認できる Webhooks を使用することです [ここ](https://opensource.adobe.com/acrobat-sign/developer_guide/webhookapis.html) また、使用可能な webhook イベントの完全なリストが用意されています [ここ](https://opensource.adobe.com/acrobat-sign/developer_guide/webhookevents.html)を選択します。
+更新が変更されたときに通知を受け取るより効率的な方法は、詳細を確認できる Webhooks を使用することです [ここ](https://opensource.adobe.com/acrobat-sign/developer_guide/webhookapis.html.
 
 ## 署名済み文書を保存する
 
