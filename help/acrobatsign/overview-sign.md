@@ -6,10 +6,10 @@ role: Developer
 skill: Beginner, Intermediate, Experienced
 thumbnail: KT-11079.jpg
 exl-id: 79603883-26cd-439c-9cfd-6178c4544b93
-source-git-commit: 0c434db1665d4cb6ce6aff6f329e300f22129df9
+source-git-commit: 744830d00c75c136354ca41893337e6a474d5aed
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 ![Acrobat Sign API バナー](../assets/acrobatsignhero.png)
 
-Acrobat Signの API を使用すると、アプリケーションを作成して、Acrobat Signの UI と機能をアプリケーションに埋め込むことができます。
+Acrobat Sign API を使用すると、アプリケーションを作成し、Acrobat Sign UI と機能をアプリケーションに埋め込むことができます。
 
 ## はじめに
 
