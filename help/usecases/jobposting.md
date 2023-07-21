@@ -5,12 +5,12 @@ role: Developer
 level: Intermediate
 type: Tutorial
 thumbnail: KT-8092.jpg
-kt: 8092
+jira: KT-8092
 exl-id: 0e24c8fd-7fda-452c-96f9-1e7ab1e06922
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '1527'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 * [PDF埋め込み API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [PDFサービス API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 ## AdobeAPI 資格情報の作成
 
@@ -199,7 +199,7 @@ Node.js ファイルに戻ります。 ファイルの先頭に読み込みを�
   result.writeToStream(writableStream);
 ```
 
-コンテンツを書き込むには、WritableStreamBuffer を作成します。 finish イベントで、SQL クエリを実行します。 node-postgres パッケージは自動的に Buffer パラメータを BYTEA フォーマットに変換します。 クエリは、後で作成されるエンドポイントである/job/{id} にユーザーをリダイレクトします。
+コンテンツを書き込むには、WritableStreamBuffer を作成します。 finish イベントで、SQL クエリを実行します。 node-postgres パッケージは自動的に Buffer パラメータを BYTEA フォーマットに変換します。 クエリはユーザーを/job/にリダイレクトします{id}エンドポイントは後で作成されます。
 
 PDF埋め込み API の場合は、エンドポイントのコンテンツのみを返すPDFも必要です。
 
@@ -220,7 +220,7 @@ PDF埋め込み API の場合は、エンドポイントのコンテンツのみ
 
 ## PDF
 
-次に、/job/{id} エンドポイントを作成します。このエンドポイントは、要求された求人情報の名前と埋め込みテンプレートを含むPDFを生成します。
+次に/job/を作成します。{id} endpoint：要求された求人情報の名前と埋め込みテンプレートを含むテンプレートをレンダリングPDFします。
 
 ```
 router.get('/job/:id', async function(req, res, next) {
@@ -279,6 +279,6 @@ views/ディレクトリで、次の内容の job.jade ファイルを作成し�
 
 * [PDF埋め込み API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [PDFサービス API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 Web サイトに使いやすいドキュメント処理機能を追加するには、 [無料体験版に新規登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を選択します。 Adobe PDF Embed API は常に無料で使用でき、Adobe PDF Services API は 6 ヶ月間無料です。ドキュメントトランザクションあたり 0.05 USD で、次の処理を [従量制の](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) ビジネスの成長に合わせて

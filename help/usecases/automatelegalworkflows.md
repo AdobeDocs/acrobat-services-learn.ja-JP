@@ -5,9 +5,9 @@ role: Developer
 level: Intermediate
 type: Tutorial
 thumbnail: KT-10202.jpg
-kt: 10202
+jira: KT-10202
 exl-id: 2a1752b8-9641-40cc-a0af-1dce6cf49346
-source-git-commit: 98dc9f98f660b43d2ca0780b51624bf3be71c853
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '2876'
 ht-degree: 1%
@@ -98,7 +98,7 @@ ht-degree: 1%
 
 ## 会社名の挿入
 
-1. 置換するテキストを選択します。 このシナリオでは、ドキュメントの最初のセクションで COMPANY を置き換えます。
+1. 置換するテキストを選択します。 このシナリオでは、ドキュメントの最初のセクションの COMPANY を置き換えます。
 1. 入力 *文書生成タグ*&#x200B;で、「name」を検索します。
 1. 会社の下で、 *name*&#x200B;を選択します。
 

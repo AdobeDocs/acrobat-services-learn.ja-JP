@@ -5,9 +5,9 @@ role: Developer
 level: Intermediate
 type: Tutorial
 thumbnail: KT-8099.jpg
-kt: 8099
+jira: KT-8099
 exl-id: 219c70de-fec1-4946-b10e-8ab5812562ef
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 2%
@@ -64,7 +64,7 @@ ht-degree: 2%
 
 ![Word 内の Document Tagger アドインのスクリーンショット](assets/sales_1.png)
 
-選択 **はじめに**&#x200B;を選択します。 その後、サンプルデータの提供を求めるメッセージが表示されます。 以下に示すように、フォームの応答 JSON ファイルを貼り付けるか、アップロードします。
+選択 **はじめに**&#x200B;を選択します。 その後、サンプルデータの提供を求めるメッセージが表示されます。 フォームの応答 JSON ファイルを次のように貼り付けるか、アップロードします。
 
 ![サンプルコードのペーストのスクリーンショット](assets/sales_2.png)
 

@@ -5,12 +5,12 @@ type: Tutorial
 role: Developer
 level: Intermediate
 thumbnail: KT-8094.jpg
-kt: 8094
+jira: KT-8094
 exl-id: d704620f-d06a-4714-9d09-3624ac0fcd3a
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ![ユースケースのヒーローバナー](assets/UseCaseReviewsHero.jpg)
 
-COVID-19 のパンデミックの影響で、多くの企業ではチーム間のリモートコラボレーションが必要になりました。 [デジタルドキュメントの共有とレビュー](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) チームや部門間のリソースに一連の課題をもたらします。
+COVID-19 が急速に拡大する中、多くの企業ではチーム間のリモートコラボレーションが必要になりました。 [デジタルドキュメントの共有とレビュー](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) チームや部門間のリソースに一連の課題をもたらします。
 
 これには、様々なファイル形式でドキュメントを共有すること、コンテンツを効果的にレビューしてコメントを追加すること、最新の編集内容と同期することが含まれます。 [!DNL Adobe Acrobat Services] API は、アプリケーション開発者がユーザーのこれらの課題を解決できるように設計されています。
 
@@ -42,7 +42,7 @@ COVID-19 のパンデミックの影響で、多くの企業ではチーム間�
 
 ## 関連する API とリソース
 
-* [PDFサービス API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [PDF埋め込み API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 

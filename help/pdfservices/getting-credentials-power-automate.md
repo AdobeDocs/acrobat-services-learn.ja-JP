@@ -5,9 +5,9 @@ type: Tutorial
 role: Developer
 level: Beginner
 thumbnail: KT-10382.jpg
-kt: 10382
+jira: KT-10382
 exl-id: 68ec654f-74aa-41b7-9103-44df13402032
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 3%
@@ -22,13 +22,14 @@ ht-degree: 3%
 
 ## Microsoft Power Automate ユーザーがAdobe PDF Services コネクタを使用し始めるにはどうすればよいですか？
 
-既存のMicrosoft Power Automate ユーザーは、 [体験版の資格情報の取得](https://www.adobe.com/go/powerautomate_getstarted_jp) Adobe PDF Services の場合 上のリンクは、このプロセスを特にMicrosoft Power Automate ユーザー向けに支援する特別な登録リンクです。
+既存のMicrosoft Power Automate ユーザーは、 [体験版の資格情報の取得](https://www.adobe.com/go/powerautomate_getstarted) Adobe PDF Services の場合 上のリンクは、このプロセスを特にMicrosoft Power Automate ユーザー向けに支援する特別な登録リンクです。
 
 ![Adobe Developerユーザーのログイン](assets/credentials_1.png)
 
 
 >[!IMPORTANT]
 > 体験版にログインする場合は、Enterprise IDではなくAdobe IDを使用する必要があります。 Adobe PDF Services API の現在のサブスクライバーではない場合にEnterprise IDでログインしようとすると、Adobe PDF Services API を使用する権限がエンタープライズにないために権限エラーが発生する場合があります。 このため、無料の個人用Adobe IDの使用をお勧めします。
+>
 
 1. ログインすると、新しい資格情報の名前を選択するように求められます。 次の *資格情報名*&#x200B;を選択します。
 1. 開発者の条件に同意するには、このチェックボックスをオンにします。
