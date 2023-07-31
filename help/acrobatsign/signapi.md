@@ -1,46 +1,47 @@
 ---
-title: Acrobat Sign API 入門
-description: アプリケーションにAcrobat Sign API を含めて、署名やその他の情報を収集する方法について説明します
+title: Acrobat Sign API入門
+description: Acrobat Sign APIをアプリケーションに含めて、署名やその他の情報を収集する方法を説明します
 role: Developer
 level: Intermediate
 type: Tutorial
+feature: Acrobat Sign API
 thumbnail: KT-8089.jpg
 jira: KT-8089
 exl-id: ae1cd9db-9f00-4129-a2a1-ceff1c899a83
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 2%
 
 ---
 
-# Adobe Sign API 入門
+# Adobe Sign APIの概要
 
-![ユースケースのヒーローバナー](assets/UseCaseStartedHero.jpg)
+![ユースケースの英雄バナー](assets/UseCaseStartedHero.jpg)
 
-[Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html) は、署名済み契約書の管理方法を強化するのに最適な方法です。 開発者は、システムを Sign API と簡単に統合できます。これにより、文書のアップロード、署名用に文書を送信、リマインダーを送信、電子サインを収集する信頼性の高い簡単な方法が提供されます。
+[ACROBAT SIGN API](https://www.adobe.io/apis/documentcloud/sign.html) は、署名済み契約書の管理方法を強化するのに最適な方法です。 開発者はSign APIを使用してシステムを簡単に統合できます。この機能により、信頼性が高く簡単な方法で、文書のアップロード、署名用の送信、リマインダーの送信、電子サインの収集を行うことができます。
 
 ## 学習内容
 
-この実践チュートリアルでは、開発者が Sign API を使用して、 [!DNL Adobe Acrobat Services]を選択します。 [!DNL Acrobat Services] includes [Adobe PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html), [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk) （無料）および [Adobeドキュメント生成 API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)を選択します。
+この実践チュートリアルでは、開発者がSign APIを使用して、で作成したアプリケーションとワークフローを強化する方法について説明します [!DNL Adobe Acrobat Services]. [!DNL Acrobat Services] includes [Adobe PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html), [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk) （無料）、 [Adobe文書生成API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html).
 
-具体的には、Acrobat Sign API をアプリケーションに組み込んで、署名や、保険書類の従業員情報などのその他の情報を収集する方法について説明します。 簡略化された HTTP 要求と応答を持つ一般的な手順が使用されます。 これらのリクエストは、お好みの言語で実装できます。 PDFは、 [[!DNL Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/)で、Sign API に [transient](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md) 契約書または [widget](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md) ワークフロー
+詳しくは、Acrobat Sign APIをアプリケーションに組み込んで、署名や、保険フォームの社員情報などの他の情報を収集する方法を確認してください。 簡略化されたHTTPリクエストとレスポンスを含む一般的な手順が使用されます。 これらのリクエストは、お気に入りの言語で実装できます。 次の組み合わせを使用してPDFを作成できます [[!DNL Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/)を使用して、Sign APIに [一過性](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md) 契約書を使用して文書を作成し、エンドユーザーの署名を依頼するか、 [widget](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md) ワークフロー。
 
-## ドキュメントPDFの作成
+## PDF文書の作成
 
-まず、Microsoft Word テンプレートを作成し、PDFとして保存します。 または、ドキュメント生成 API を使用してパイプラインを自動化し、Word で作成したテンプレートをアップロードしてから、PDF文書を生成します。 文書生成 API は [!DNL Acrobat Services], [6 ヶ月間無料で使用でき、従量課金制でドキュメントトランザクションあたり 0.05 USD でご利用いただけます](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)を選択します。
+まず、Microsoft Wordテンプレートを作成し、PDFとして保存します。 または、Document Generation APIを使用してパイプラインを自動化し、Wordで作成されたテンプレートをアップロードしてPDF文書を生成できます。 Document Generation APIは [!DNL Acrobat Services], [6か月間無料で、その後は従量課金制で、ドキュメントのトランザクションあたり0.05ドルまたは0.05ドルです](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).
 
-この例では、テンプレートは数個の署名者フィールドが入力される単純な文書です。 フィールドに名前を付け、このチュートリアルで実際のフィールドを挿入します。
+この例のテンプレートは、いくつかの署名者フィールドを入力する単純な文書です。 フィールドに今すぐ名前を付け、後でこのチュートリアルの実際のフィールドを挿入します。
 
 ![いくつかのフィールドがある保険フォームのスクリーンショット](assets/GSASAPI_1.png)
 
-## 有効な API アクセスポイントを検出しています
+## 有効なAPIアクセスポイントの検出
 
-Sign API を使用する前に、 [無料の開発者アカウントを作成する](https://acrobat.adobe.com/ca/en/sign/developer-form.html) api にアクセスするには、ドキュメントの交換と実行をテストし、電子メール機能をテストします。
+Sign APIを使用する前に、 [無料のデベロッパーアカウントを作成](https://acrobat.adobe.com/ca/en/sign/developer-form.html) apiにアクセスするには、文書の交換と実行をテストし、電子メール機能をテストします。
 
-Adobeは、Acrobat Sign API を「シャード」と呼ばれる様々なデプロイメントユニットで世界中に配布しています。 各シャードは、NA1、NA2、NA3、EU1、JP1、AU1、IN1 などの顧客のアカウントに対応します。 シャード名は地理的な位置に対応しています。 これらのシャードは、API エンドポイントのベース URI（アクセスポイント）を構成します。
+Adobeは、「シャード」と呼ばれる多くのデプロイメント単位で、世界中にAcrobat Sign APIを配布しています。 各シャードは、NA1、NA2、NA3、EU1、JP1、AU1、IN1などのお客様のアカウントに対応しています。 シャード名は地理的位置に対応します。 これらのシャードは、APIエンドポイントのベースURI（アクセスポイント）を構成します。
 
-Sign API にアクセスするには、まずアカウントの正しいアクセスポイントを見つける必要があります。これは、場所によって api.na1.adobesign.com、api.na4.adobesign.com、api.eu1.adobesign.com などになります。
+Sign APIにアクセスするには、最初にアカウントの正しいアクセスポイントを見つける必要があります。アクセスポイントには、api.na1.adobesign.com、api.na4.adobesign.com、api.eu1.adobesign.com、その他があり、お住まいの地域によって異なります。
 
 ```
   GET /api/rest/v6/baseUris HTTP/1.1
@@ -60,15 +61,15 @@ Sign API にアクセスするには、まずアカウントの正しいアク�
 
 >[!IMPORTANT]
 >
->この場合、それ以降に Sign API に対して行うすべてのリクエストでは、そのアクセスポイントを使用する必要があります。 地域にサービスを提供しないアクセスポイントを使用すると、エラーが発生します。
+>この場合、以降にSign APIに対して行うすべてのリクエストは、そのアクセスポイントを使用する必要があります。 自分の地域にサービスを提供していないアクセスポイントを使用すると、エラーが発生します。
 
 ## 一時的なドキュメントのアップロード
 
-Adobe Signでは、署名やデータ収集のために文書を準備する様々なフローを作成できます。 アプリケーションのフローに関係なく、最初にドキュメントをアップロードする必要があります。このドキュメントは 7 日間のみ使用できます。 その後の API 呼び出しでは、この一時ドキュメントを参照する必要があります。
+Adobe Signを使用すると、様々なフローを作成して、文書の署名やデータ収集を行うことができます。 アプリケーションのフローに関係なく、最初に文書をアップロードする必要があります。この文書は、7日間だけ使用可能です。 その後のAPI呼び出しでは、この一時的な文書を参照する必要があります。
 
-文書は、POST要求を `/transientDocuments` 端点： マルチパート要求は、ファイル名、ファイルストリーム、およびドキュメントファイルの MIME（メディア）タイプで構成されます。 エンドポイントの応答には、文書を識別する ID が含まれます。
+文書は、POSTリクエストを使用して `/transientDocuments` 端点。 マルチパート要求は、ファイル名、ファイルストリーム、および文書ファイルのMIME（メディア）タイプで構成されます。 エンドポイント応答には、文書を識別するIDが含まれます。
 
-また、アプリケーションでは、Acrobat Signから ping へのコールバック URL を指定して、署名プロセスの完了時にアプリに通知することもできます。
+また、Acrobat SignのコールバックURLを指定してpingを実行し、署名プロセスが完了したらアプリに通知することができます。
 
 
 ```
@@ -88,21 +89,21 @@ Adobe Signでは、署名やデータ収集のために文書を準備する様�
   }
 ```
 
-## Web フォームの作成
+## Webフォームの作成
 
-Web フォーム（以前の署名ウィジェット）は、アクセス権を持つすべてのユーザーが署名できるホストされた文書です。 Web フォームの例としては、サインアップシート、権利放棄証書、および多くの人がオンラインでアクセスして署名するその他の文書などがあります。
+Webフォーム（以前の署名ウィジェット）は、アクセス権を持つユーザーが署名できるホストされた文書です。 Webフォームの例には、サインアップシート、免責条項など、多くの人がオンラインでアクセスおよび署名する文書が含まれます。
 
-Sign API を使用して新しい Web フォームを作成するには、まず一時的なドキュメントをアップロードする必要があります。 POSTリクエストを `/widgets` エンドポイントは、返された `transientDocumentId` を選択します。
+Sign APIを使用して新しいwebフォームを作成するには、まず一時的なドキュメントをアップロードする必要があります。 POSTリクエストの送信先 `/widgets` endpointは、返された `transientDocumentId` .
 
-この例では、Web フォームは `ACTIVE`ただし、次の 3 つの状態のいずれかで作成できます。
+この例では、Webフォームは `ACTIVE`を選択します。ただし、以下の3つの異なるステートのいずれかで作成できます。
 
-* ドラフト — Web フォームを増分的に作成します。
+* DRAFT — Webフォームを段階的に構築します。
 
-* AUTHORING — Web フォームのフォームフィールドを追加または編集します。
+* AUTHORING — Webフォームのフォームフィールドを追加または編集
 
-* ACTIVE — Web フォームをすぐにホストします。
+* ACTIVE — Webフォームをすぐにホストします。
 
-フォームの参加者に関する情報も定義する必要があります。 この `memberInfos` プロパティには、電子メールなどの参加者のデータが含まれます。 現在、このセットは複数のメンバーをサポートしていません。 ただし、Web フォーム署名者の電子メールは Web フォームの作成時に不明であるため、次の例のように電子メールは空のままにする必要があります。 この `role` プロパティは、 `memberInfos` （署名者や承認者など）。
+フォームの参加者に関する情報も定義する必要があります。 この `memberInfos` プロパティには、電子メールなど、参加者に関するデータが含まれています。 現在、このセットは複数のメンバをサポートしていません。 ただし、Webフォームの作成時にWebフォーム署名者の電子メールが不明なため、次の例のように電子メールは空にしておく必要があります。 この `role` プロパティは、のメンバーが想定する役割を定義します `memberInfos` （署名者、承認者など）。
 
 ```
   POST /api/rest/v6/widgets HTTP/1.1
@@ -136,13 +137,13 @@ Sign API を使用して新しい Web フォームを作成するには、まず
   }
 ```
 
-Web フォームは、 `DRAFT` または `AUTHORING`を選択し、フォームがアプリケーションパイプラインを通過するときに状態を変更します。 Web フォームの状態を変更するには、 [PUT/widgets/{widgetId}/state](https://secure.na4.adobesign.com/public/docs/restapi/v6#!/widgets/updateWidgetState) 端点：
+Webフォームは次のように作成できます `DRAFT` または `AUTHORING`フォームがアプリケーションパイプラインを通過するときに状態を変更します。 Webフォームの状態を変更するには、 [PUT /widgets/{widgetId}/state](https://secure.na4.adobesign.com/public/docs/restapi/v6#!/widgets/updateWidgetState) 端点。
 
-## Web フォームホスティング URL の読み取り
+## WebフォームホスティングURLの読み取り
 
-次の手順は、Web フォームをホストしている URL を見つけることです。 /widgets エンドポイントは、署名およびその他のフォームデータを収集するために、ユーザーに転送する Web フォームのホスト URL を含む Web フォームデータの一覧を取得します。
+次の手順は、WebフォームをホストしているURLを見つけることです。 /widgetsエンドポイントは、署名やその他のフォームデータを収集するために、ユーザーに転送するWebフォームのホストURLを含むWebフォームデータのリストを取得します。
 
-このエンドポイントはリストを返すので、 `userWidgetList` web フォームをホストする URL を取得する前に、次の操作を行います。
+このエンドポイントはリストを返すので、特定のフォームをIDで検索できます。 `userWidgetList` webフォームをホストするURLを取得する前に、次の操作を実行します。
 
 ```
   GET /api/rest/v6/widgets HTTP/1.1
@@ -181,37 +182,37 @@ Web フォームは、 `DRAFT` または `AUTHORING`を選択し、フォーム�
         "id": "CBJCHB...Wmc",
 ```
 
-## Web フォームの管理
+## Webフォームの管理
 
-このフォームは、ユーザーがPDFに入力するための入力用ドキュメントです。 ただし、ユーザーが入力する必要があるフィールドと、文書内のそのフィールドの場所を、フォームのエディターに伝える必要があります。
+このフォームは、ユーザーが入力するためのPDF文書です。 ただし、ユーザーが入力する必要があるフィールドと、文書内のどこに配置されているかをフォームのエディターに伝える必要があります。
 
 ![いくつかのフィールドがある保険フォームのスクリーンショット](assets/GSASAPI_1.png)
 
-上記の文書には、まだフィールドが表示されていません。 これらのフィールドは、署名者の情報、サイズ、位置を収集するフィールドを定義するときに追加されます。
+上の文書には、まだフィールドが表示されていません。 署名者の情報を収集するフィールド、サイズ、位置を定義する際に追加されます。
 
-次に、 [Web フォーム](https://secure.na4.adobesign.com/public/agreements/#agreement_type=webform) 」タブをクリックし、作成したフォームを見つけます。
+次に [Webフォーム](https://secure.na4.adobesign.com/public/agreements/#agreement_type=webform) 「契約書」ページをタブでクリックし、作成したフォームを見つけます。
 
-![「Acrobat Sign Manage」タブのスクリーンショット](assets/GSASAPI_2.png)
+![「Acrobat Signの管理」タブのスクリーンショット](assets/GSASAPI_2.png)
 
-![「Web フォーム」が選択されている「Acrobat Signの管理」タブのスクリーンショット](assets/GSASAPI_3.png)
+![「Webフォーム」が選択された「Acrobat Signの管理」タブのスクリーンショット](assets/GSASAPI_3.png)
 
-クリック **編集** をクリックして、ドキュメント編集ページを開きます。 使用可能な定義済みフィールドは右側のパネルにあります。
+クリック **編集** をクリックして、ドキュメント編集ページを開きます。 使用可能な定義済みフィールドが右側のパネルに表示されます。
 
 ![Acrobat Signフォームオーサリング環境のスクリーンショット](assets/GSASAPI_4.png)
 
-このエディターでは、テキストフィールドと署名フィールドをドラッグ&amp;ドロップできます。 必要なフィールドをすべて追加したら、サイズを変更したり整列させたりして、フォームを仕上げることができます。 最後に、「 **保存** 」をクリックします。
+このエディターでは、テキストおよび署名フィールドをドラッグ&amp;ドロップできます。 必要なフィールドをすべて追加したら、フィールドのサイズを変更して配置し、フォームに磨きをかけることができます。 最後に、 **保存** をクリックしてフォームを作成します。
 
 ![フォームフィールドが追加されたAcrobat Signフォームオーサリング環境のスクリーンショット](assets/GSASAPI_5.png)
 
-## 署名用の Web フォームの送信
+## 署名用のWebフォームの送信
 
-Web フォームの入力が完了したら、ユーザーがフォームに入力して署名できるように、フォームを送信する必要があります。 フォームを保存すると、URL と埋め込みコードを表示してコピーできます。
+Webフォームを完了したら、ユーザーが入力および署名できるように送信する必要があります。 フォームを保存したら、URLと埋め込みコードを表示してコピーできます。
 
-**Web フォーム URL をコピー**:この URL を使用して、レビューおよび署名用にこの契約書のホスト版にユーザーを送信します。 次に例を示します。
+**WebフォームURLをコピー**：このURLを使用して、レビューおよび署名のためにホストされている本契約書のバージョンにユーザーを送信します。 次に例を示します。
 
-[https://secure.na4.adobesign.com/public/esignWidget?wid=CBFCIBAA3babw\*](https://secure.na4.adobesign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCndYscuKcDMPiVfQlpaGPb-5D7ebE9NUTQ6x6jK7PIs8HCtTzr3HOx8U6D5qqbabw*)
+[https://secure.na4.adobesign.com/public/esignWidget?wid=CBFCIBAA3...babw\*](https://secure.na4.adobesign.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhCndYscuKcDMPiVfQlpaGPb-5D7ebE9NUTQ6x6jK7PIs8HCtTzr3HOx8U6D5qqbabw*)
 
-**Web フォーム埋め込みコードをコピー**:このコードをコピーして Web サイトに貼り付け、契約書を Web サイトにHTMLします。
+**Webフォーム埋め込みコードをコピー**：このコードをコピーしてHTMLーに貼り付け、webサイトに契約書を追加します。
 
 次に例を示します。
 
@@ -223,25 +224,25 @@ style="border: 0;
 overflow: hidden; min-height: 500px; min-width: 600px;"></iframe>
 ```
 
-![最終的な Web フォームのスクリーンショット](assets/GSASAPI_6.png)
+![最終Webフォームのスクリーンショット](assets/GSASAPI_6.png)
 
-ユーザーがホストされているバージョンのフォームにアクセスすると、一時的なドキュメントが最初にアップロードされ、指定されたフィールドの位置でレビューされます。
+ユーザーがフォームのホストされたバージョンにアクセスすると、最初にアップロードされた一時的な文書を確認し、指定された位置にフィールドを配置します。
 
-![最終的な Web フォームのスクリーンショット](assets/GSASAPI_7.png)
+![最終Webフォームのスクリーンショット](assets/GSASAPI_7.png)
 
-その後、ユーザーはフィールドに入力してフォームに署名します。
+ユーザーがフィールドに入力し、フォームに署名します。
 
-![「署名」フィールドを選択したユーザーのスクリーンショット](assets/GSASAPI_8.png)
+![ユーザーが「署名」フィールドを選択したスクリーンショット](assets/GSASAPI_8.png)
 
-次に、ユーザーは以前に保存した署名を使用するか、新しい署名を使用して文書に署名します。
+次に、ユーザーは以前に保存された署名を使用するか、新しい署名を使用して、文書に署名します。
 
-![署名操作のスクリーンショット](assets/GSASAPI_9.png)
+![署名エクスペリエンスのスクリーンショット](assets/GSASAPI_9.png)
 
 ![署名のスクリーンショット](assets/GSASAPI_10.png)
 
-ユーザーが **適用**&#x200B;で、Adobeは電子メールを開いて署名を確認するように指示します。 署名は、確認メッセージが届くまで保留状態のままです。
+ユーザーがクリックしたとき **適用**、Adobeは電子メールを開いて署名を確認するように指示します。 署名は確認が届くまで保留中です。
 
-![もう 1 つのステップのスクリーンショット](assets/GSASAPI_11.png)
+![あと1ステップのスクリーンショット](assets/GSASAPI_11.png)
 
 この認証により、多要素認証が追加され、署名プロセスのセキュリティが強化されます。
 
@@ -249,9 +250,9 @@ overflow: hidden; min-height: 500px; min-width: 600px;"></iframe>
 
 ![完了メッセージのスクリーンショット](assets/GSASAPI_13.png)
 
-## 完了した Web フォームの読み取り
+## 入力済みのWebフォームを読み取り中
 
-次に、ユーザーが入力したフォームデータを取得します。 この `/widgets/{widgetId}/formData` エンドポイントは、ユーザーがフォームに署名したときに、ユーザーが入力したデータをインタラクティブフォームに取得します。
+次に、ユーザーが入力したフォームデータを取得します。 この `/widgets/{widgetId}/formData` endpointは、ユーザーがフォームに署名したときに、ユーザーが入力したデータを対話型フォームに取得します。
 
 ```
 GET /api/rest/v6/widgets/{widgetId}/formData HTTP/1.1
@@ -260,7 +261,7 @@ Authorization: Bearer {YOUR-INTEGRATION-KEY-HERE}
 Accept: text/csv
 ```
 
-結果の CSV ファイルストリームには、フォームデータが含まれます。
+生成されるCSVファイルストリームには、フォームデータが含まれます。
 
 ```
 Response Body:
@@ -273,11 +274,11 @@ Company Name","","","2021-03-07 19:32:59"
 
 ## 契約書の作成
 
-Web フォームの代わりに、契約書を作成することもできます。 次のセクションでは、Sign API を使用して契約書を管理するための簡単な手順を示します。
+Webフォームの代わりに、契約書を作成することもできます。 次のセクションでは、Sign APIを使用して契約書を管理するための簡単な手順を示します。
 
-署名または承認のために文書を指定された受信者に送信すると、契約書が作成されます。 API を使用して、契約書のステータスと完了を追跡できます。
+署名または承認のために、指定した受信者に文書を送信すると、契約書が作成されます。 APIを使用して、契約書のステータスと完了を追跡できます。
 
-契約書は、 [一時的文書](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html), [ライブラリ文書](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md)、または URL。 この例では、契約書は `transientDocumentId`を作成します。
+契約書は、 [一時的文書](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html), [ライブラリ文書](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md)、またはURL。 この例では、契約書は `transientDocumentId`前に作成したWebフォームと同様です。
 
 ```
 POST /api/rest/v6/agreements HTTP/1.1
@@ -310,25 +311,25 @@ Request Body:
   }
 ```
 
-この例では、契約書は IN_PROCESS として作成されますが、次の 3 つの状態のいずれかで作成できます。
+この例では、契約書はIN_PROCESSとして作成されますが、次の3つの異なる状態のいずれかで作成できます。
 
-* ドラフト — 契約書を送信する前に、契約書を増分的に作成します。
+* DRAFT – 契約書を送信する前に段階的に作成します。
 
-* オーサリング — 契約書のフォームフィールドを追加または編集します。
+* AUTHORING – 契約書のフォームフィールドを追加または編集します。
 
-* IN_PROCESS — 契約書をすぐに送信します。
+* IN_PROCESS – 契約書をすぐに送信します。
 
-契約書の状態を変更するには、 `PUT /agreements/{agreementId}/state` エンドポイントを使用して、次のいずれかの許可された状態遷移を実行します。
+契約書の状態を変更するには、 `PUT /agreements/{agreementId}/state` エンドポイント：次のいずれかの許可された状態遷移を実行します。
 
-* 下書きからオーサリング
+* オーサリングへのドラフト
 
-* IN_PROCESS へのオーサリング
+* IN_PROCESSへのオーサリング
 
-* IN_PROCESS をキャンセルしました
+* IN_PROCESSをCANCELLEDに
 
-この `participantSetsInfo` 上記のプロパティは、契約書に参加する予定のユーザーと実行するアクション（署名、承認、確認など）の電子メールを提供します。 上記の例では、構成要素は 1 つだけです。署名者 手書き署名は、文書 1 件につき 4 件までに制限されています。
+この `participantSetsInfo` 上記のプロパティにより、契約書への参加を期待されるユーザーの電子メールと、そのユーザーが実行するアクション（署名、承認、確認など）が提供されます。 上記の例では、参加者は1人だけです。署名者です。 手書き署名は1つの文書につき4つまでに制限されています。
 
-Web フォームとは異なり、契約書を作成すると、Adobeは署名用に自動的に送信します。 エンドポイントは、契約書の一意の識別子を返します。
+Webフォームとは異なり、契約書を作成すると、Adobeによって署名用に自動送信されます。 エンドポイントは、契約書の一意のIDを返します。
 
 
 ```
@@ -339,9 +340,9 @@ Web フォームとは異なり、契約書を作成すると、Adobeは署名�
   }
 ```
 
-## 契約メンバーに関する情報の取得
+## 契約書メンバーに関する情報の取得
 
-契約書を作成したら、 `/agreements/{agreementId}/members` エンドポイント：契約書のメンバーに関する情報を取得します。 例えば、参加者が契約書に署名したかどうかを確認できます。
+契約書を作成したら、 `/agreements/{agreementId}/members` エンドポイントを使用して、契約書のメンバーに関する情報を取得します。 例えば、参加者が契約書に署名したかどうかを確認できます。
 
 ```
 GET /api/rest/v6/agreements/{agreementId}/members HTTP/1.1
@@ -350,7 +351,7 @@ Authorization: Bearer {YOUR-INTEGRATION-KEY-HERE}
 Accept: application/json
 ```
 
-結果の JSON 応答の本文には、参加者に関する情報が含まれます。
+生成されるJSON応答の本文には、参加者に関する情報が含まれています。
 
 ```
   Response Body:
@@ -380,13 +381,13 @@ Accept: application/json
      ],
 ```
 
-## 契約書リマインダーの送信
+## 契約書のリマインダーの送信
 
-ビジネスルールによっては、期限によっては、参加者が特定の日付以降に契約書に署名できない場合があります。 契約書に有効期限がある場合は、有効期限が近づいたことを参加者に通知できます。
+ビジネス規則によっては、期限によって、特定の日付以降に参加者が契約書に署名できない場合があります。 契約書に有効期限がある場合、その日付が近づくと参加者に通知できます。
 
-お客様が `/agreements/{agreementId}/members` エンドポイント最後のセクションでは、まだ契約書に署名していないすべての参加者に電子メールリマインダーを発行できます。
+への通話後に受信した契約書メンバーの情報に基づきます。 `/agreements/{agreementId}/members` エンドポイント最後のセクションでは、契約書にまだ署名していないすべての参加者に対して、電子メールのリマインダーを発行できます。
 
-POSTリクエストを `/agreements/{agreementId}/reminders` エンドポイントは、 `agreementId` パラメーターを使用します。
+へのPOSTリクエスト `/agreements/{agreementId}/reminders` 「エンドポイント」を選択すると、 `agreementId` パラメータで指定します。
 
 ```
 POST /agreements/{agreementId}/reminders HTTP/1.1
@@ -412,13 +413,13 @@ Accept: application/json
   }
 ```
 
-リマインダーを投稿すると、契約書の詳細と契約書へのリンクが記載された電子メールがユーザーに送信されます。
+リマインダーを投稿すると、ユーザーは、契約書の詳細と契約書へのリンクが記載された電子メールを受信します。
 
 ![リマインダーメッセージのスクリーンショット](assets/GSASAPI_14.png)
 
-## 完了した契約書の読み取り
+## 完了した契約書を読み取り中
 
-Web フォームと同様に、受信者が署名した契約書の詳細を読むことができます。 この `/agreements/{agreementId}/formData` エンドポイントは、ユーザーが Web フォームに署名したときに入力したデータを取得します。
+Webフォームと同様に、受信者が署名した契約書の詳細を読むことができます。 この `/agreements/{agreementId}/formData` エンドポイントは、ユーザーがWebフォームに署名したときに入力したデータを取得します。
 
 ```
 GET /api/rest/v6/agreements/{agreementId}/formData HTTP/1.1
@@ -433,12 +434,12 @@ Company Name","CBJCHBCAABAA5Z84zy69q_Ilpuy5DzUAahVfcNZillDt"
 
 ## 次の手順
 
-Acrobat Sign API を使用すると、文書、Web フォーム、および契約書を管理できます。 Web フォームと契約書を使用して作成された、シンプルでありながら完全なワークフローは、開発者があらゆる言語を使用して実装できる汎用的な方法で実行されます。
+Acrobat Sign APIを使用すると、文書、Webフォーム、契約書を管理できます。 Webフォームと契約書を使用して作成された、シンプルでありながら完全なワークフローは、開発者が任意の言語を使用して実装できる一般的な方法で実行されます。
 
-Sign API のしくみの概要については、 [API の使用に関する開発者ガイド](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/api_usage.md)を選択します。 このドキュメントには、この記事の手順の多くに関する短い記事と、その他の関連トピックが記載されています。
+Sign APIの仕組みについては、 [API使用デベロッパーガイド](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/api_usage.md). このドキュメントには、この記事で行う多くの手順に関する短い記事と、その他の関連トピックが含まれています。
 
-Acrobat Sign API は、 [シングルユーザーおよびマルチユーザーの電子サインプラン](https://acrobat.adobe.com/jp/ja/sign/pricing/plans.html)」を選択することで、ニーズに最適な価格モデルを選択できます。 Sign API をアプリに簡単に組み込めるようになったので、 [Acrobat Sign Webhooks](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md)は、プッシュベースのプログラミングモデルです。 Webhooks を使用すると、Acrobat Signイベントを頻繁にチェックする代わりに、イベントが発生するたびに Sign API がPOSTコールバックリクエストを実行する HTTP URL を登録できます。 Webhooks を使用すると、リアルタイムで瞬時にアプリケーションを更新して、強力なプログラミングを実現できます。
+Acrobat Sign APIは、次のいくつかの階層で利用できます [シングルユーザーおよびマルチユーザーの電子サインプラン](https://acrobat.adobe.com/jp/ja/sign/pricing/plans.html)ニーズに最適な価格モデルを選択できます。 これでSign APIをアプリに組み込む簡単さが分かりました。次のような他の機能に興味があるかもしれません。 [Acrobat Sign Webhook](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md)（プッシュベースのプログラミングモデル）。 Webhookでは、アプリケーションでAcrobat Signイベントを頻繁に確認する必要がなくなり、イベントが発生したときにSign APIがPOSTコールバックリクエストを実行するHTTP URLを登録できます。 Webhookを使用すると、アプリケーションにリアルタイムで即座に更新を適用できるため、堅牢なプログラミングが可能になります。
 
-詳細については、 [従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)、6 ヶ月間の無償のAdobe PDF Services API 体験版が終了し、無償のAdobe PDF Embed API が終了した場合。
+詳細については、 [従量課金制の価格](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)6か月間のAdobe PDF Services API無料体験版が終了する場合と、Adobe PDF Embed API無料版が提供されます。
 
-ドキュメントの自動作成やドキュメントへの署名など、便利な機能をアプリに追加するには、 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を選択します。
+自動文書作成や文書署名などの魅力的な機能をアプリに追加するには、を開始してください [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html).

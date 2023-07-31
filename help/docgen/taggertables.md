@@ -1,20 +1,21 @@
 ---
-title: 表およびリストタグの追加
-description: Adobe文書生成タグを使用して、Microsoft Word テンプレートに表やリストのタグを追加する方法を説明します。Adobe文書生成 API を使用して、データに基づいて表やリストの行を動的に追加できます
+title: 表とリストタグの追加
+description: AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートに表とリストタグを追加し、AdobeのDocument Generation APIを使用してデータに基づいて表またはリストの行を動的に追加する方法について説明します。
 type: Tutorial
 role: Developer
 level: Beginner
+feature: Document Generation API
 thumbnail: 332115.jpg
 exl-id: 15cb4016-6f92-401f-bda5-088ffd43588a
-source-git-commit: 49c64965668518fc33539914db1b50132a40ee34
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
-# テーブルおよびリストタグの追加
+# 表とリストタグの追加
 
-Adobe文書生成タグを使用してMicrosoft Word テンプレートに表やリストのタグを追加し、Adobe文書生成 API を使用して、データに基づいて表やリストの行を動的に追加する方法について説明します。
+AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートに表とリストタグを追加し、AdobeのDocument Generation APIを使用してデータに基づいて表またはリストの行を動的に追加する方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332115?hidetitle=true)

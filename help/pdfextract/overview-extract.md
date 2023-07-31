@@ -1,39 +1,40 @@
 ---
-title: Adobe PDF Extract APITutorials
-description: Adobe PDF Extract API の概要ページ
+title: Adobe PDF Extract API Tutorials
+description: Adobe PDF Extract APIの概要ページ
 type: Tutorial
 role: Developer
 skill: Beginner, Intermediate, Experienced
+feature: PDF Extract API
 thumbnail: KT-9247.jpg
 jira: KT-9247
 exl-id: db340959-e7dc-4e46-939d-3b8c29749ebd
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-# Adobe PDF Extract API チュートリアル
+# Adobe PDF Extract APIチュートリアル
 
-![PDF埋め込み API バナー](../assets/pdfextracthero.jpg)
+![PDF埋め込みAPIバナー](../assets/pdfextracthero.jpg)
 
-Adobe Senseiのマシンラーニング（機械学習）を利用した web サービスを利用して、PDFの構造やコンテンツ要素を自由に活用できます。
+Adobe Senseiの機械学習を利用したwebサービスで、あらゆるPDFの構造とコンテンツ要素を利用できます。
 
 >[!NOTE]
 >
->PDF抽出 API は、PDFサービス API に含まれています。
+>PDFエクストラクトAPIは、PDFサービスAPIに含まれています。
 
 <table style="table-layout:fixed">
 <tr>
  <td>
    <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html">
-      <img alt="解析PDF:PDF抽出 API を使用した JSON データの操作と同じくらい簡単" src="assets/ParsingPDF_1280.png" />
+      <img alt="解析PDF:PDFのExtract APIを使用してJSONデータを操作するのと同じくらい簡単です。" src="assets/ParsingPDF_1280.png" />
    </a>
     <div>
-   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html"><strong>解析PDF:PDF抽出 API を使用した JSON データの操作と同じくらい簡単</strong></a>
+   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html"><strong>解析PDF:PDFのExtract APIを使用してJSONデータを操作するのと同じくらい簡単です。</strong></a>
     </div>
-    <em>Adobe PDFサービス API のPDF抽出サービスを使用して、JSON の解析と同様にPDFの解析を簡単にする方法を説明します</em>
+    <em>Adobe PDFサービスAPIのPDFエクストラクトサービスを使用して、JSONの解析と同様に簡単にPDFを解析する方法について説明します</em>
     <br>
   </td>
   <td>

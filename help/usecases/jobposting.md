@@ -1,13 +1,14 @@
 ---
 title: 求人情報
-description: 応募者と雇用者にとってスムーズで一貫性のある web エクスペリエンスを構築する方法を学びます
+description: 求職者および雇用者のwebエクスペリエンスを円滑かつ一貫して開発する方法を説明します
 role: Developer
 level: Intermediate
 type: Tutorial
 thumbnail: KT-8092.jpg
+feature: Use Cases
 jira: KT-8092
 exl-id: 0e24c8fd-7fda-452c-96f9-1e7ab1e06922
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 1%
@@ -16,39 +17,39 @@ ht-degree: 1%
 
 # 求人情報
 
-![ユースケースのヒーローバナー](assets/UseCaseJobHero.jpg)
+![ユースケースの英雄バナー](assets/UseCaseJobHero.jpg)
 
-複数のユーザーで web サイトを運用する場合は、すべてのユーザーにスムーズなエクスペリエンスを提供できるようにデザインすることが重要です。
+複数のユーザーが含まれるwebサイトを操作する場合は、すべてのユーザーにスムーズなエクスペリエンスを提供するエクスペリエンスをデザインすることが重要です。
 
-次のシナリオを想像してください。雇用者が～できるウェブサイトを持っている [求人情報のアップロード](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html)を選択します。 求職者にとっては、一貫した形式で投稿に関連するすべての文書を簡単に表示できるのが便利です。 しかし、雇用者にとっては、どのようなファイル形式であっても情報を添付するのが便利です。 両方のタイプのユーザーに利便性を提供するために、アップロードされたすべての文書を自動的にPDFに変換し、投稿にインラインで埋め込むことができます。
+次のようなシナリオを考えてみましょう。雇用主が次のことを実行できるWebサイトがある場合 [求人投稿をアップロード](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html). 求職者にとっては、投稿に関連するすべてのドキュメントを一貫した形式で簡単に表示できると便利です。 ただし、雇用主にとって、情報を添付するファイル形式は何でも構いません。 両方のユーザーの利便性を高めるために、アップロードしたすべての文書を自動的にPDFに変換し、投稿にインラインで埋め込むことができます。
 
 ## 学習内容
 
-この実践チュートリアルでは、 [!DNL Adobe Acrobat Services] およびその [Node.js SDK](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk) 」をクリックして、これらの機能を求人掲載サイトに追加します。 これにより、より使いやすく、雇用者と求職者の両方にとって魅力的なウェブサイトが作成されます。 ここに [complete](https://github.com/contentlab-io/adobe_job_posting) [プロジェクトコード](https://github.com/contentlab-io/adobe_job_posting)を使用します。
+この実践チュートリアルでは、 [!DNL Adobe Acrobat Services] とその [Node.js SDK](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk) 求人情報サイトにこれらの機能を追加します。 これにより、使いやすく、求職者と雇用主の両方にとって魅力的なwebサイトが作成されます。 これが、 [complete](https://github.com/contentlab-io/adobe_job_posting) [プロジェクトコード](https://github.com/contentlab-io/adobe_job_posting)を参照しながら作業を進める場合は、
 
-まず、簡単な Express ベースの Node.js Web アプリケーションを設定します。 [Express](https://expressjs.com/) は、ルーティングやテンプレート化などの機能を提供する、シンプルな web アプリケーションフレームワークです。 アプリケーションのコードは、 [GitHub](https://github.com/contentlab-io/adobe_job_posting)を選択します。 また、 [PostgreSQL データベース](https://www.postgresql.org/) を選択し、設定を行ってPDFを
+開始するには、簡単なExpressベースのNode.js Webアプリケーションを設定します。 [Express](https://expressjs.com/) は、ルーティングやテンプレート作成などの機能を備えた、シンプルなwebアプリケーションフレームワークです。 アプリケーションのコードは、次の場所で入手できます： [GitHub](https://github.com/contentlab-io/adobe_job_posting). また、 [PostgreSQLデータベース](https://www.postgresql.org/) PDFを保存するために設定します。
 
 ## 関連 [!DNL Acrobat Services] API
 
-* [PDF埋め込み API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
+* [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-## AdobeAPI 資格情報の作成
+## AdobeAPI資格情報を作成しています
 
-まず、次の操作を実行する必要があります [資格情報の作成](https://www.adobe.com/go/dcsdks_credentials) Adobe PDF Embed API（無料で使用）およびAdobe PDF Services API（6 ヶ月間無料）の場合 [従量制の](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) （ドキュメントトランザクションあたり\$0.05 のみ）。 PDFサービス API の資格情報を作成するときは、「パーソナライズされたコードサンプルを作成」オプションを選択します。 ZIP ファイルを保存し、pdftools-api-credentials.json と private.key を Node.js Express プロジェクトのルートディレクトリに抽出します。
+まず、次の操作を行います。 [資格情報の作成](https://www.adobe.com/go/dcsdks_credentials) Adobe PDF Embed API（無料）とAdobe PDF Services API（無料、6か月間） [従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) （文書トランザクションあたり\$0.05です）。 PDFサービスAPIの資格情報を作成する際に、[パーソナライズされたコードサンプルの作成]オプションをオンにします。 ZIPファイルを保存し、 pdftools-api-credentials.jsonとprivate.keyをNode.js Expressプロジェクトのルートディレクトリに抽出します。
 
-また、自由に利用できる Embed API の API キーも必要です。 差出人 [プロジェクト](https://console.adobe.io/projects)で、作成したプロジェクトに移動します。 次に、「 **プロジェクトに追加** を選択し、 **API**&#x200B;を選択します。 最後に、「 **PDF埋め込み API**&#x200B;を選択します。
+また、自由に使用できる埋め込みAPIのAPIキーも必要です。 共有元 [プロジェクト](https://console.adobe.io/projects)作成したプロジェクトに移動します。 次に、 **プロジェクトに追加** を選択します **API**. 最後に、 **PDF埋め込みAPI**.
 
-ドメイン埋め込み API のPDFを指定します。 API キーは公開されている必要があります（ブラウザーによって実行されるコードで検索します）。 ドメインを指定すると、別のドメインの他のユーザーが API キーを使用できなくなります。
+PDF埋め込みAPIのドメインを指定します。 APIキーは公開されている必要があります（ブラウザーで実行されるコードで検索してください）。 ドメインを指定すると、別のドメインのユーザーがAPIキーを使用できなくなります。
 
-「localhost」をドメインとして使用することはできません。 「testing.local」などのドメインを指定し、コンピュータ上の hosts ファイルを編集して、そのドメインをコンピュータである 127.0.0.1 にリダイレクトします。 次に、アプリケーションを localhost:3000 でテストする代わりに、testing.local:3000 でテストできます。 完了したら、プロジェクトページでPDF埋め込み API の API キーを見つけます。
+「localhost」をドメインとして使用することはできません。 「testing.local」などのドメインを指定し、コンピューター上のhostsファイルを編集して、ドメインをコンピューターの127.0.0.1にリダイレクトします。 次に、アプリケーションをlocalhost:3000でテストする代わりに、testing.local:3000でテストできます。 完了したら、プロジェクトページでPDF埋め込みAPIのAPIキーを探します。
 
 ## アップロードフォームとハンドラーの追加
 
-Express アプリケーションと API 資格情報が機能している場合は、ユーザーが自分のドキュメントを Web サイトにアップロードするためのフォームも必要です。 この目的のために index.jade テンプレートを編集します。
+ExpressアプリケーションとAPI資格情報が動作している場合は、ユーザーがドキュメントをwebサイトにアップロードできるようにするフォームも必要です。 この目的のために、 index.jadeテンプレートを編集します。
 
-アップロードされた求人情報の名前と、詳細情報を含むドキュメントの入力フィールドを作成します。
+アップロードされた求人情報の名前、および詳細情報を含む文書の入力フィールドを作成します。
 
 テンプレートのコンテンツブロック内に、次のフォームを追加します。
 
@@ -70,7 +71,7 @@ block content
     input(type="submit", value="Submit job posting")
 ```
 
-次に、/upload アクションにPOST要求のハンドラーを追加します。 次に、 routes/index.jsファイルに/upload のルートを追加します。 このルート用に新しいファイルを作成できますが、新しいファイルを反映するには app.js ファイルを更新する必要があります。 このルートハンドラの内部では、与えられた名前とアップロードされたファイルにアクセスできます。
+次に、POSTリクエストのハンドラーを/uploadアクションに追加します。 次に、 /uploadのルートをroutes/index.jsファイルに追加します。 このルート用に新しいファイルを作成できますが、新しいファイルを反映するようにapp.jsファイルを更新する必要があります。 このルートハンドラー内では、指定された名前とアップロードされたファイルにアクセスできます。
 
 ```
 router.post('/upload', async function (req, res, next) {
@@ -81,20 +82,20 @@ router.post('/upload', async function (req, res, next) {
   });
 ```
 
-この関数は非同期なので、関数で await キーワードを使用できます。これは、API 呼び出しを実行するメソッドを呼び出す場合に便利です。
+この関数は非同期なので、関数でawaitキーワードを使用できます。これは、API呼び出しを実行するメソッドを呼び出す際に便利です。
 
-![求人情報サイトのスクリーンショット](assets/jobs_1.png)
+![求人情報webサイトのスクリーンショット](assets/jobs_1.png)
 
-## PDFサービス API の使用
+## PDFサービスAPIの使用
 
-PDFサービス API を使用する前に、ルートファイルの先頭に次のインポートを追加する必要があります。
+PDFサービスAPIを使用する前に、次のインポートをルートファイルの先頭に追加する必要があります。
 
 ```
 const PDFToolsSdk = require('@adobe/documentservices-pdftools-node-sdk');
   const { Readable } = require('stream');
 ```
 
-読み込みの直下で、API 資格情報を読み込み、 [実行内容](https://www.javascripttutorial.net/javascript-execution-context/)を選択します。 実行コンテキストは別の操作に再利用できるため、1 回だけ実行することをお勧めします。
+インポートのすぐ下で、API資格情報を読み込み、 [実行内容](https://www.javascripttutorial.net/javascript-execution-context/). 実行コンテキストは様々な操作で再利用できるため、再利用は1回だけにするほうが理にかなっています。
 
 ```
   const credentials = PDFToolsSdk.Credentials
@@ -105,7 +106,7 @@ const PDFToolsSdk = require('@adobe/documentservices-pdftools-node-sdk');
   const executionContext = PDFToolsSdk.ExecutionContext.create(credentials);
 ```
 
-次に、 `router.post` ブロックします。 まず、ドキュメントをPDFに
+次に、 `router.post` ブロックします。 まず、文書をPDFに変換します。
 
 ```
   const createPdfOperation = PDFToolsSdk.CreatePDF.Operation.createNew();
@@ -121,13 +122,13 @@ const PDFToolsSdk = require('@adobe/documentservices-pdftools-node-sdk');
   return res.send('success!');
 ```
 
-ほとんどの操作は、同じ 4 つの手順を実行します。 まず、適切なクラスの createNew メソッドを使用して、操作の型を初期化します。 次に、操作の入力である FileRef を作成します。 操作の結果も FileRef になるため、以降の操作ではこの手順を省略できます。 この初期操作では、アップロードされたファイルのバイトから FileRef を作成します。 3 番目に、入力を操作に割り当てる必要があります。 最後に、実行コンテキストをパラメータとして実行メソッド内で実行します。 このメソッドは Promise を返すので、結果を待つことができます。
+ほとんどの操作は同じ4つの手順を実行します。 まず、適切なクラスのcreateNewメソッドを使用して、操作のタイプを初期化します。 次に、操作の入力をFileRefとして作成します。 操作の結果もFileRefであるため、後続の操作はこの手順をスキップできます。 この最初の操作では、アップロードされたファイルのバイトからFileRefを作成します。 3番目に、オペレーションに入力を割り当てる必要があります。 最後に、実行コンテキストを実行メソッドのパラメータとして操作が実行されます。 このメソッドは、結果を待つことができるようにPromiseを返します。
 
-このコードは、返されたPDFをファイルに保存し、単純な「success」応答をブラウザーに送信します。 ファイル名の「日付」部分は、一意のファイル名であることを保証します。 出力先ファイルが存在する場合、saveAsFile はエラーを返します。
+このコードは、返されたPDFをファイルに保存し、単純な「success」レスポンスをブラウザに送ります。 ファイル名の「日付」部分は、一意のファイル名を保証します。 保存先ファイルが存在する場合、 saveAsFileはエラーを返します。
 
-## 画像のテキストへの変換とPDF
+## 画像のテキストへの変換とPDFの圧縮
 
-次に、光学文字認識 (OCR) を使用して画像をテキストに変換し、結果を圧縮します。 この操作には、CreatePDF 操作と同様に、OCR および CompressPDF 操作を使用します。 ルートファイルに `router.post`:
+次に、光学式文字認識(OCR)を使用して画像をテキストに変換し、結果を圧縮します。 これは、CreatePDF操作と同様に、OCRおよびCompressPDF操作を使用して行います。 次の項目をroutesファイルに追加します。 `router.post`:
 
 ```
   const name = req.body.name;
@@ -152,33 +153,33 @@ const PDFToolsSdk = require('@adobe/documentservices-pdftools-node-sdk');
   return res.send('success!');
 ```
 
-この操作は 1 回だけ実行する必要があります。これは、コードが setInput に渡すことができる FileRef が結果になるためです。
+結果がFileRefで、コードがsetInputに渡すことができるため、この操作は1回だけ行う必要があります。
 
-ファイルをハードディスクに保存して、簡略化しすぎた HTTP レスポンスを返すよりも良い方法があります。 代わりに、データベースにPDFを保存し、Adobeの無料のPDF埋め込み API を使用してPDFを埋め込む Web ページを表示します。 こうすることで、求職者が会社のロゴやその他のデザイン要素を含む求人情報を見つけて閲覧できる web サイトに、雇用主の求人情報やパンフレットが表示されます。
+ファイルをハードディスクに保存して、単純化されたHTTP応答を返すよりも良い方法があります。 代わりに、PDFをデータベースに保存し、Adobeの無償PDF埋め込みAPIを使用してPDFを埋め込んだwebページを表示します。 これにより、求職者が会社のロゴや他のデザイン要素を含む求人情報やパンフレットを見つけて閲覧できるように、雇用主の求人情報やパンフレットがWebサイトに表示されます。
 
-## データベースへのPDFの保存
+## データベースへのPDFの格納
 
-PostgreSQL データベースにPDFを格納します。 Node.js で Postgres に接続するための node-postgres パッケージを取得します。 ある時点では、PDFの内容をバッファーに格納する必要があり、FileRef はストリームでのみ機能するため、stream-buffers パッケージをインストールします。 したがって、stream-buffers パッケージを使用して内容をバッファに書き込みます。
+PDFをPostgreSQLデータベースに格納します。 Node.jsでPostgresに接続するためのnode-postgresパッケージを取得します。 ある時点でPDFの内容をバッファに格納する必要があり、FileRefが機能するのはストリームのみなので、stream-buffersパッケージをインストールします。 そのため、stream-buffersパッケージを使用して内容をバッファに書き込みます。
 
 ```
 npm install pg stream-buffers
 ```
 
-次に、ジョブをポストするためのデータベーステーブルを作成します。 一意の識別子の列、名前の列、および関連付けられたPDFの列が必要です。 データベーステーブルは、Postgres コマンドラインインターフェイス (CLI) から作成できます。
+次に、ジョブ投稿用のデータベーステーブルを作成します。 一意のIDの列、名前の列、および関連付けられたPDFの列が必要です。 Postgresコマンドラインインターフェイス(CLI)からデータベース表を作成できます。
 
 ```
 CREATE TABLE job_postings (id TEXT PRIMARY KEY, name TEXT NOT NULL, attachment
 BYTEA NOT NULL);
 ```
 
-Node.js ファイルに戻ります。 ファイルの先頭に読み込みを追加します。
+Node.jsファイルに戻ります。 インポートをファイルの先頭に追加します。
 
 ```
   const { Client } = require('pg');
   const streamBuffers = require('stream-buffers');
 ```
 
-データベーステーブルにPDFを格納するには、アップロード関数を変更します。 最後の 2 行（saveAsFile と send）を次のコードスニペットで置き換えます。
+データベース・テーブルにPDFを格納するには、アップロード機能を変更します。 最後の2行（saveAsFileおよびsend）を次のコードスニペットで置き換えます。
 
 ```
   const pgClient = new Client();
@@ -199,9 +200,9 @@ Node.js ファイルに戻ります。 ファイルの先頭に読み込みを�
   result.writeToStream(writableStream);
 ```
 
-コンテンツを書き込むには、WritableStreamBuffer を作成します。 finish イベントで、SQL クエリを実行します。 node-postgres パッケージは自動的に Buffer パラメータを BYTEA フォーマットに変換します。 クエリはユーザーを/job/にリダイレクトします{id}エンドポイントは後で作成されます。
+内容を書き込むには、WritableStreamBufferを作成します。 finishイベントを使用して、SQLクエリを実行します。 node-postgresパッケージは自動的にBufferパラメータをBYTEA形式に変換します。 クエリにより、ユーザーは/job/にリダイレクトされます。{id}後で作成されるエンドポイントです。
 
-PDF埋め込み API の場合は、エンドポイントのコンテンツのみを返すPDFも必要です。
+PDF埋め込みAPIの場合は、PDFの内容のみを返すエンドポイントも必要です。
 
 ```
   router.get('/pdf/:id', async function (req, res, next) {
@@ -218,9 +219,9 @@ PDF埋め込み API の場合は、エンドポイントのコンテンツのみ
   });
 ```
 
-## PDF
+## PDFの埋め込み
 
-次に/job/を作成します。{id} endpoint：要求された求人情報の名前と埋め込みテンプレートを含むテンプレートをレンダリングPDFします。
+次に、 /job/を作成します{id} endpoint：要求された求人情報の名前と埋め込みPDFを含むテンプレートをレンダリングします。
 
 ```
 router.get('/job/:id', async function(req, res, next) {
@@ -237,7 +238,7 @@ router.get('/job/:id', async function(req, res, next) {
   });
 ```
 
-views/ディレクトリで、次の内容の job.jade ファイルを作成します。
+views/ディレクトリで、次の内容のjob.jadeファイルを作成します。
 
 ```
   extends layout
@@ -251,7 +252,7 @@ views/ディレクトリで、次の内容の job.jade ファイルを作成し�
     script(src='/javascripts/embed-pdf.js')
 ```
 
-最初のスクリプトは、Adobeの View SDK です。これにより、PDFを簡単に埋め込むことができます。 2 番目のスクリプトは、window.embedUrl の値を、Express ルートハンドラによって提供されるPDFの URL に設定するインラインの 1 行記述です。 次のように、3 番目のスクリプトを自分で作成します。
+最初のスクリプトはAdobeのView SDKで、これによりPDFを簡単に埋め込むことができます。 2番目のスクリプトは、window.embedUrlの値をExpressルートハンドラーによって提供されるPDFのURLに設定するインラインの1行です。 3つ目のスクリプトは、自分で次のように作成します。
 
 ```
   document.addEventListener("adobe_dc_view_sdk.ready", function () {
@@ -265,20 +266,20 @@ views/ディレクトリで、次の内容の job.jade ファイルを作成し�
   });
 ```
 
-これで、ドキュメントのアップロード、/job/id ページへのリダイレクト、埋め込みPDFの表示のプロセス全体をテストできます。 ユーザーは、同じ手順で求人情報やその他のドキュメントを Web サイトに追加します。
+これで、文書のアップロード、/job/idページへのリダイレクト、埋め込まれたPDFの表示のプロセス全体をテストできます。 ユーザーは同じ手順に従って、求人情報やその他のドキュメントをwebサイトに追加できます。
 
-![アップロードされたテストドキュメントのPDF画面](assets/jobs_2.png)
+![アップロードされたPDF文書のテストのスクリーンショット](assets/jobs_2.png)
 
-インライン埋め込みの動作を確認するには、こちらを参照してください [ライブデモ](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/IN_LINE/Bodea%20Brochure.pdf)を選択します。
+インライン埋め込みアクションを確認するには、以下を参照してください [ライブデモ](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/IN_LINE/Bodea%20Brochure.pdf).
 
 ## 次の手順
 
-この実践チュートリアルでは、Node.js を [!DNL Acrobat Services] アップロードした [求人情報](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html) 様々な形式でPDFに 作成されたPDFは、Web ページに埋め込まれました。 web サイトに同じ機能を追加すれば、求職者が見つけられる求人情報やパンフレットなどを簡単にアップロードできます。 これらの機能は、誰もが自分の夢の仕事を見つけるために必要な情報を取得するのに役立ちます。
+この実践チュートリアルでは、でNode.jsを使用する方法について説明しました。 [!DNL Acrobat Services] アップロードしたファイルを変換するには [求人情報](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html) 様々な形式でPDFに変換できます。 作成されたPDFは、webページに埋め込まれました。 同じ機能をwebサイトに追加できるようになりました。これにより、求職者が見つけやすい求人情報やパンフレットなどを簡単にアップロードできます。 これらの機能は、誰もが夢の仕事を見つけるために必要な情報を得るのを助けます。
 
-[!DNL Acrobat Services] web サイトまたはアプリケーションに主要なドキュメント処理関数を追加する際に役立ちます。 これらの API でできることについて詳しく知りたい場合は、次のクイックスタートドキュメントを参照してください。
+[!DNL Acrobat Services] 主要なドキュメント処理機能をwebサイトやアプリに追加するのに役立ちます。 これらのAPIの機能について詳しくは、次のquickstartドキュメントを参照してください。
 
-* [PDF埋め込み API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
+* [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-Web サイトに使いやすいドキュメント処理機能を追加するには、 [無料体験版に新規登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を選択します。 Adobe PDF Embed API は常に無料で使用でき、Adobe PDF Services API は 6 ヶ月間無料です。ドキュメントトランザクションあたり 0.05 USD で、次の処理を [従量制の](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) ビジネスの成長に合わせて
+ユーザーフレンドリーなドキュメント処理機能をwebサイトに追加するには、 [無料体験版に新規登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html). Adobe PDF Embed APIは常に無料で使用でき、Adobe PDF Services APIは6か月間無料です。この場合、文書トランザクション1つあたり\$0.05になるので、次のことができます [従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) 仕事の成長に応じて

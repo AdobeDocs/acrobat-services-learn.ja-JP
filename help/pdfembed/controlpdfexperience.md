@@ -1,157 +1,157 @@
 ---
-title: オンラインPDF体験を制御し、分析を収集
-description: この実践チュートリアルでは、Adobe PDF Embed API を使用して外観を制御し、共同作業を可能にし、ページや検索に費やした時間など、ユーザーがPDFとやり取りする方法について分析を収集する方法を学びます
+title: PDFオンラインエクスペリエンスを制御し、分析を収集
+description: この実践チュートリアルでは、Adobe PDF Embed APIを使用してアピアランスをコントロールし、共同作業を有効にし、ユーザーがPDFをどのように操作したかについて、ページや検索に費やした時間などの分析を収集する方法を学習します
 type: Tutorial
 role: Developer
 level: Intermediate
 thumbnail: KT-7487.jpg
 jira: KT-7487
 exl-id: 64ffdacb-d6cb-43e7-ad10-bbd8afc0dbf4
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '1496'
 ht-degree: 0%
 
 ---
 
-# オンラインPDF体験を制御し、分析を収集
+# PDFのオンラインエクスペリエンスを制御し、分析を収集
 
-自社の web サイトにPDFを投稿していますか？ Adobe PDF Embed API を使用して外観を制御し、共同作業を可能にし、ページや検索に費やした時間など、ユーザーのPDFとのやり取りに関する分析を収集する方法について説明します。 この 4 部構成のハンズオンチュートリアルを開始するには、 *PDF埋め込み API 入門*&#x200B;を選択します。
+所属する組織がwebサイトにPDFを投稿していますか？ Adobe PDF Embed APIを使用して外観をコントロールし、共同作業を有効にし、ユーザーがPDFーとどのように対話するかについての分析（ページと検索に費やした時間など）を収集する方法について説明します。 この4部構成の実践チュートリアルを開始するには、 *PDF埋め込みAPIの概要*.
 
 <table style="table-layout:fixed">
 <tr>
   <td>
     <a href="controlpdfexperience.md#part1">
-        <img alt="パート 1:PDF埋め込み API 入門" src="assets/ControlPDFPart1_thumb.png" />
+        <img alt="パート1:PDF埋め込みAPIの概要" src="assets/ControlPDFPart1_thumb.png" />
     </a>
     <div>
-    <a href="controlpdfexperience.md#part1"><strong>パート 1:PDF埋め込み API 入門</strong></a>
+    <a href="controlpdfexperience.md#part1"><strong>パート1:PDF埋め込みAPIの概要</strong></a>
     </div>
   </td>
   <td>
     <a href="controlpdfexperience.md#part2">
-        <img alt="パート 2:Web ページへのPDF埋め込み API の追加" src="assets/ControlPDFPart2_thumb.png" />
+        <img alt="パート2:webページへのPDF埋め込みAPIの追加" src="assets/ControlPDFPart2_thumb.png" />
     </a>
     <div>
-    <a href="controlpdfexperience.md#part2"><strong>パート 2:Web ページへのPDF埋め込み API の追加</strong></a>
+    <a href="controlpdfexperience.md#part2"><strong>パート2:webページへのPDF埋め込みAPIの追加</strong></a>
     </div>
   </td>
   <td>
    <a href="controlpdfexperience.md#part3">
-      <img alt="パート 3:Analytics API へのアクセス" src="assets/ControlPDFPart3_thumb.png" />
+      <img alt="パート3: Analytics APIへのアクセス" src="assets/ControlPDFPart3_thumb.png" />
    </a>
     <div>
-    <a href="controlpdfexperience.md#part3"><strong>パート 3:Analytics API へのアクセス</strong></a>
+    <a href="controlpdfexperience.md#part3"><strong>パート3: Analytics APIへのアクセス</strong></a>
     </div>
   </td>
   <td>
    <a href="controlpdfexperience.md#part4">
-      <img alt="パート 4:イベントに基づいたインタラクティブ機能の追加" src="assets/ControlPDFPart4_thumb.png" />
+      <img alt="パート4：イベントに基づくインタラクティブ機能の追加" src="assets/ControlPDFPart4_thumb.png" />
    </a>
     <div>
-    <a href="controlpdfexperience.md#part4"><strong>パート 4:イベントに基づいたインタラクティブ機能の追加</strong></a>
+    <a href="controlpdfexperience.md#part4"><strong>パート4：イベントに基づくインタラクティブ機能の追加</strong></a>
     </div>
   </td>
 </tr>
 </table>
 
-## パート 1:PDF埋め込み API 入門 {#part1}
+## パート1:PDF埋め込みAPIの概要 {#part1}
 
-パート 1 では、パート 1 ～ 3 に必要なすべての作業の開始方法について説明します。 まず、API 資格情報を取得します。
+パート1では、パート1～3に必要なものをすべて使い始める方法を説明します。 API資格情報の取得から始めます。
 
 **必要なもの**
 
 * チュートリアルのリソース [ダウンロード](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial)
-* Adobe ID [ここに届ける](https://accounts.adobe.com/jp)
-* Web サーバー（ノード JS、PHP など）
-* HTML/JavaScript/CSS の実用的な知識
+* Adobe ID [ここに取り込む](https://accounts.adobe.com/jp)
+* Webサーバー（Node JS、PHPなど）
+* HTML/JavaScript/CSSに関する実務知識
 
-**使用目的**
+**現在使用している機能**
 
-* 基本的な Web サーバー (Node)
-* Visual Studio Code
+* 基本的なWebサーバー（ノード）
+* Visual Studioコード
 * GitHub
 
 ### 資格情報の取得
 
-1. 次の [Adobe.io web サイト](https://www.adobe.io/)を選択します。
-1. クリック **[!UICONTROL 詳細]** 「魅力的なドキュメントのエクスペリエンスを構築」
+1. に移動 [Adobe.io webサイト](https://www.adobe.io/).
+1. クリック **[!UICONTROL 詳細情報]** 「 Build engaging document experience 」の下にあります。
 
    ![「詳細」ボタンのスクリーンショット](assets/ControlPDF_1.png)
 
-   これにより、 [!DNL Adobe Acrobat Services] ホームページ、
+   これにより、次の機能にアクセスできます [!DNL Adobe Acrobat Services] ホームページ
 
-1. クリック **[!UICONTROL はじめに]** をクリックします。
+1. クリック **[!UICONTROL 開始する]** をクリックします。
 
-   オプションは **使用を開始する [!DNL Acrobat Services] API** を **新しい資格情報の作成** または **既存の資格情報の管理**&#x200B;を選択します。
+   オプションが **今すぐ使用開始 [!DNL Acrobat Services] API** から **新しい資格情報の作成** または **既存の資格情報の管理**.
 
-1. クリック **[!UICONTROL はじめに]** 下のボタン **[!UICONTROL 新しい資格情報の作成]**&#x200B;を選択します。
+1. クリック **[!UICONTROL 開始する]** 下のボタン **[!UICONTROL 新しい資格情報の作成]**.
 
    ![「開始」ボタンのスクリーンショット](assets/ControlPDF_2.png)
 
-1. 選択する **[!UICONTROL PDF埋め込み API]** 」ラジオボタンをクリックし、次のウィンドウで選択した資格証明名とアプリケーションドメインを追加します。
+1. を選択します **[!UICONTROL PDF埋め込みAPI]** ラジオボタンをクリックし、次のウィンドウで選択した資格情報名とアプリケーションドメインを追加します。
 
    >[!NOTE]
    >
-   >これらの資格情報は、ここに表示されているアプリケーションドメインでのみ使用できます。 任意のドメインを選択して使用できます。
+   >これらの資格情報は、ここにリストされているアプリケーションドメインでのみ使用できます。 任意のドメインを選択して使用できます。
 
    ![資格情報のスクリーンショット](assets/ControlPDF_3.png)
 
-1. クリック **[!UICONTROL 資格情報の作成]**&#x200B;を選択します。
+1. クリック **[!UICONTROL 資格情報の作成]**.
 
-   ウィザードの最後のページに、クライアントの資格情報の詳細が表示されます。 このウィンドウを開いたままにしておくと、後で使用するためにクライアント ID（API キー）をコピーできます。
+   ウィザードの最後のページに、クライアントの認証情報の詳細が表示されます。 このウィンドウは開いたままにしておきます。戻ってクライアントID（APIキー）をコピーし、後で使用することができます。
 
-1. クリック **[!UICONTROL ドキュメントを見る]** を参照してください。
+1. クリック **[!UICONTROL ドキュメントを表示]** このAPIの使用方法の詳細を記載したドキュメントに移動します。
 
    ![「資格情報を作成」ボタンのスクリーンショット](assets/ControlPDF_4.png)
 
-## パート 2:Web ページへのPDF埋め込み API の追加 {#part2}
+## パート2:webページへのPDF埋め込みAPIの追加 {#part2}
 
-パート 2 では、Web ページにPDF埋め込み API を簡単に埋め込む方法を学びます。 Adobe PDF Embed API オンラインデモを使用してコードを作成します。
+パート2では、PDF埋め込みAPIを簡単にwebページに埋め込む方法を説明します。 そのためには、Adobe PDF Embed APIのオンラインデモを使用し、コードを作成します。
 
 ### 演習コードを取得する
 
-ご利用いただけるコードを作成しました。 独自のコードを使用することもできますが、デモンストレーションはチュートリアルリソースのコンテキストで行います。 サンプルコードをダウンロード [ここ](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial)を選択します。
+使用するコードを作成しました。 独自のコードを使用できますが、デモはチュートリアルのリソースに関連しています。 サンプルコードをダウンロード [こちら](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial).
 
-1. 移動 [[!DNL Adobe Acrobat Services] web サイト](https://www.adobe.io/apis/documentcloud/dcsdk/)を選択します。
+1. に移動 [[!DNL Adobe Acrobat Services] webサイト](https://www.adobe.io/apis/documentcloud/dcsdk/).
 
-   ![スクリーンショット [!DNL Adobe Acrobat Services] web サイト](assets/ControlPDF_6.png)
+   ![のスクリーンショット [!DNL Adobe Acrobat Services] webサイト](assets/ControlPDF_6.png)
 
-1. クリック **[!UICONTROL API]** を選択し、 **[!UICONTROL PDF埋め込み API]** ページをクリックします。
+1. クリック **[!UICONTROL API]** ナビゲーションバーで、 **[!UICONTROL PDF埋め込みAPI]** をクリックします。
 
-   ![「埋め込み API」PDFドロップダウンのスクリーンショット](assets/ControlPDF_7.png)
+   ![「PDF埋め込みAPI」ドロップダウンのスクリーンショット](assets/ControlPDF_7.png)
 
-1. クリック **[!UICONTROL デモを見る]**&#x200B;を選択します。
+1. クリック **[!UICONTROL デモを試す]**.
 
-   開発者埋め込み API の開発者サンドボックスを含む新しいウィンドウがPDFされます。
+   PDF埋め込みAPIのデベロッパーサンドボックスを含む新しいウィンドウが表示されます。
 
    ![デモを試すのスクリーンショット](assets/ControlPDF_8.png)
 
    ここでは、様々な表示モードのオプションを確認できます。
 
-1. フルウィンドウ、サイズコンテナ、インライン、ライトボックスのそれぞれの表示モードをクリックします。
+1. フルウィンドウ、サイズ調整されたコンテナ、インライン、ライトボックスの表示モードをクリックします。
 
    ![表示モードのスクリーンショット](assets/ControlPDF_9.png)
 
-1. クリック **[!UICONTROL ウィンドウ全体]** 表示モードで、 **[!UICONTROL カスタマイズ]** ボタンをクリックして、オプションのオンとオフを切り替えます。
+1. クリック **[!UICONTROL フルウィンドウ]** 表示モードを選択してから、 **[!UICONTROL カスタマイズ]** ボタンをクリックして、オプションのオンとオフを切り替えます。
 
    ![「カスタマイズ」ボタンのスクリーンショット](assets/ControlPDF_10.png)
 
-1. 無効 **[!UICONTROL ダウンロード]** PDF
-1. クリック **[!UICONTROL コードを生成]** 」ボタンをクリックして、コードプレビューを表示します。
-1. コピー **[!UICONTROL クライアント ID]** パート 1 の「Client Credentials」ウィンドウ
+1. 無効 **[!UICONTROL ダウンロード]** PDFオプション。
+1. クリック **[!UICONTROL コードを生成]** ボタンをクリックすると、コードのプレビューが表示されます。
+1. コピー **[!UICONTROL クライアントID]** パート1の「クライアント認証情報」ウィンドウからアクセスします。
 
-   ![クライアント ID のスクリーンショット](assets/ControlPDF_11.png)
+   ![クライアントIDのスクリーンショット](assets/ControlPDF_11.png)
 
-1. パネルの「 **[!UICONTROL Web]** -> **[!UICONTROL resources]** -> **[!UICONTROL js]** -> **[!UICONTROL dc-config.js]** ファイルを開きます。
+1. を開きます **[!UICONTROL Web]** -> **[!UICONTROL resources]** -> **[!UICONTROL js]** -> **[!UICONTROL dc-config.js]** ファイルをコードエディターに追加します。
 
-   clientID 変数が表示されます。
+   clientID変数があることがわかります。
 
-1. 二重引用符の間にクライアント資格情報を貼り付けて、clientID を資格情報に設定します。
+1. 二重引用符の間にクライアント資格情報を貼り付けて、clientIDを資格情報に設定します。
 
-1. 開発者サンドボックスのコードプレビューに戻ります。
+1. 開発者サンドボックスコードプレビューに戻ります。
 
-1. 次のコマンドを実行して、コピー・スクリプトを含む 2 行目をAdobeします。
+1. Adobeスクリプトがある2行目をコピーします。
 
    ```
    <script src=https://documentccloud.adobe.com/view-sdk/main.js></script>
@@ -159,13 +159,13 @@ ht-degree: 0%
 
    ![スクリプトのスクリーンショット](assets/ControlPDF_12.png)
 
-1. コードエディターを開き、 **[!UICONTROL Web]** -> **[!UICONTROL 練習]** -> **[!UICONTROL index.html]** します。
+1. コードエディターに移動し、 **[!UICONTROL Web]** -> **[!UICONTROL 運動]** -> **[!UICONTROL index.html]** ファイル。
 
-1. スクリプトコードを `<head>` 18 行目のファイルのコメントの下に次のように入力します。 **TODO:演習 1:埋め込み API スクリプトタグの挿入**&#x200B;を選択します。
+1. スクリプトコードを `<head>` というコメントの下の18行目のファイルについて： **TODO：演習1: EMBED APIスクリプトタグの挿入**.
 
    ![スクリプトコードのペースト先のスクリーンショット](assets/ControlPDF_13.png)
 
-1. 開発者サンドボックスコードプレビューに戻り、次のコードの最初の行をコピーします。
+1. デベロッパーサンドボックスコードプレビューに戻り、次のコードを含むコードの最初の行をコピーします。
 
    ```
    <div id="adobe-dc-view"></div>
@@ -173,13 +173,13 @@ ht-degree: 0%
 
    ![コードのコピー先のスクリーンショット](assets/ControlPDF_14.png)
 
-1. コードエディターを開き、 **[!UICONTROL Web]** -> **[!UICONTROL 練習]** -> **[!UICONTROL index.html]** ファイルを開きます。
+1. コードエディターに移動し、 **[!UICONTROL Web]** -> **[!UICONTROL 運動]** -> **[!UICONTROL index.html]** もう一度ファイルを開きます。
 
-1. ペースト `<div>` コードを `<body>` というコメントの下の 67 行目にあるファイルの **TODO:演習 1:挿入/PDF/埋め込み API コード**&#x200B;を選択します。
+1. ペースト `<div>` コードを `<body>` というコメントの下の67行目のファイルの **TODO：演習1: PDF埋め込みAPIコードを挿入する**.
 
    ![コードのペースト先のスクリーンショット](assets/ControlPDF_15.png)
 
-1. 開発者サンドボックスのコードプレビューに戻り、 `<script>` 下：
+1. デベロッパーサンドボックスコードプレビューに戻り、 `<script>` 下：
 
    ```
    <script type="text/javascript">
@@ -193,38 +193,38 @@ ht-degree: 0%
    </script>
    ```
 
-1. コードエディターを開き、 **[!UICONTROL Web]** -> **[!UICONTROL 練習]** -> **[!UICONTROL index.html]** ファイルを開きます。
+1. コードエディターに移動し、 **[!UICONTROL Web]** -> **[!UICONTROL 運動]** -> **[!UICONTROL index.html]** もう一度ファイルを開きます。
 
-1. ペースト `<script>` コードを `<body>` ファイルの 68 行目の `<div>` タグを使用します。
+1. ペースト `<script>` コードを `<body>` ファイルの68行目の `<div>` タグで作成されます。
 
-1. 同じ行 70 を修正 **index.html** ファイルに追加します。
+1. 同じ行の70を修正 **index.html** 以前に作成されたclientID変数を含めるファイル。
 
-   ![70 行目のスクリーンショット](assets/ControlPDF_16.png)
+   ![70行目のスクリーンショット](assets/ControlPDF_16.png)
 
-1. 同じ行 72 を修正 **index.html** ファイル：ローカルファイルを使用するようにPDFファイルの場所を更新します。
+1. 同じ行の72を修正 **index.html** ファイル：ローカルファイルを使用するためにPDFファイルの場所を更新します。
 
-   のチュートリアルファイルで使用可能なものがあります。 **/resources/pdfs/whitepaper.pdf**&#x200B;を選択します。
+   チュートリアルファイルには、以下の場所で利用可能なものがあります。 **/resources/pdfs/whitepaper.pdf**.
 
-1. 変更したファイルを保存し、 **`<your domain>`/summit21/web/exercise/**&#x200B;を選択します。
+1. 変更したファイルを保存し、次を参照してwebサイトをプレビューします： **`<your domain>`/summit21/web/exercise/**.
 
-   お使いのブラウザーで、フルウィンドウモードでレンダリングされたテクニカルホワイトペーパーをご覧ください。
+   Technical Whitepaperのレンダリング結果が、ブラウザーのフルウィンドウモードに表示されます。
 
-## パート 3:Analytics API へのアクセス {#part3}
+## パート3: Analytics APIへのアクセス {#part3}
 
-これで、PDFをレンダリングするPDF埋め込み API を含む Web ページの作成に成功しました。パート 3 では、JavaScript イベントを使用して分析を測定し、ユーザーがPDFをどのように使用しているかを理解する方法を探ることができます。
+これで、PDFをレンダリングするPDF埋め込みAPIを含むwebページが正常に作成されました。第3部では、JavaScript PDFを使用して分析を測定し、ユーザーがイベントをどのように使用しているかを理解する方法を確認できるようになりました。
 
 ### ドキュメントの検索
 
-イベント埋め込み API の一部として使用できる JavaScriptPDFは多数あります。 これらのファイルには、 [!DNL Adobe Acrobat Services] ドキュメント、
+PDF埋め込みAPIの一部として使用できるJavaScriptイベントは数多くあります。 以下からアクセスできます [!DNL Adobe Acrobat Services] ドキュメント。
 
-1. 次の場所にある [文書](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html) サイト。
-1. API の一部として使用できるさまざまなイベントタイプを確認します。 これらは参考になるだけでなく、今後のプロジェクトにも役立ちます。
+1. 次に移動： [文書](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html) サイト。
+1. APIの一部として使用できる様々なイベントタイプを確認します。 これらは参考になり、今後のプロジェクトでも役立ちます。
 
    ![リファレンスガイドのスクリーンショット](assets/ControlPDF_17.png)
 
-1. Web サイトに表示されているサンプルコードをコピーします。
+1. Webサイトに記載されているサンプルコードをコピーします。
 
-   これをコードのベースとして使用し、変更します。
+   これをコードの基準として使用し、変更します。
 
    ![サンプルコードのコピー先のスクリーンショット](assets/ControlPDF_18.png)
 
@@ -246,83 +246,83 @@ ht-degree: 0%
    );
    ```
 
-1. 前の手順で追加したコードセクションを以下のように検索し、 **index.html**:
+1. 先ほど追加したコードセクションで次のようになったら、そのコードの後に上記のコードを追加します。 **index.html**:
 
    ![コードのペースト先のスクリーンショット](assets/ControlPDF_19.png)
 
-1. Web ブラウザーにページを読み込み、コンソールを開いて、イベントビューアーを操作する際の様々なイベントからのコンソール出力をPDFします。
+1. Webブラウザーにページを読み込み、コンソールを開いて、PDFビューアを操作するさまざまなイベントからのコンソール出力を表示します。
 
    ![ページの読み込みのスクリーンショット](assets/ControlPDF_20.png)
 
    ![ページを読み込むコードのスクリーンショット](assets/ControlPDF_21.png)
 
-### イベントをキャプチャするためのスイッチの追加
+### イベントをキャプチャするためのスイッチを追加
 
-これでイベントが console.log に出力されたので、イベントに基づいて動作を変更してみましょう。 これには、スイッチの例を使用します。
+これでconsole.logに出力されるイベントが作成されました。次に、イベントに基づいて動作を変更しましょう。 これを行うには、スイッチの例を使用します。
 
-1. 次の場所に移動 **snippets/eventsSwitch.js** ファイルの内容をチュートリアルコードにコピーします。
+1. 移動先 **snippets/eventsSwitch.js** ファイルの内容をチュートリアルのコードにコピーします。
 
    ![コードのコピー先のスクリーンショット](assets/ControlPDF_22.png)
 
-1. イベントリスナー関数にコードをペーストします。
+1. イベントリスナー関数にコードを貼り付けます。
 
    ![コードのペースト先のスクリーンショット](assets/ControlPDF_23.png)
 
-1. ページの読み込み時およびコンソールビューアの操作時に、コンソールが正しく出力されることをPDFします。
+1. ページが読み込まれ、PDFビューアを操作したときに、コンソールが正しく出力されることを確認します。
 
 ### Adobe Analytics
 
-視聴者にAdobe Analyticsサポートを追加する場合は、Web サイトに記載されている手順に従ってください。
+ビューアにAdobe Analyticsのサポートを追加する場合は、webサイトに記載されている手順に従います。
 
 >[!IMPORTANT]
 >
->Web ページのヘッダーには、既にAdobe Analyticsが読み込まれている必要があります。
+>Webページには、ヘッダーのページにAdobe Analyticsが既に読み込まれている必要があります。
 
-次の場所にある [Adobe Analytics documentation](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtodata.html#adobe-analytics) また、web ページでAdobe Analyticsが既に有効になっているかどうかも確認してください。 reportSuite の設定手順に従います。
+次に移動： [Adobe Analyticsドキュメント](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtodata.html#adobe-analytics) WebページでAdobe Analyticsが既に有効になっているかどうかを確認します。 指示に従ってreportSuiteを設定します。
 
 ### Google Analytics
 
-![Google Analyticsとの統合方法のスクリーンショット](assets/ControlPDF_24.png)
+![Google Analyticsとの連携方法のスクリーンショット](assets/ControlPDF_24.png)
 
-Adobe PDF Embed API は、Adobe Analyticsとすぐに統合できます。 ただし、すべてのGoogle Analyticsは JavaScriptPDFとして使用できるので、イベントをキャプチャし、ga() 関数を使用してイベントをAdobe Analyticsに追加することで、イベントと統合できます。
+Adobe PDF Embed APIは、Adobe Analyticsとの事前定義済みの連携を提供します。 ただし、すべてのイベントはJavaScriptイベントとして使用できるため、PDFイベントを取得し、ga()関数を使用してGoogle AnalyticsをAdobe Analyticsに追加することで、イベントと統合できます。
 
-1. 次の場所に移動 **snippets/eventsSwitchGA.js** を参照してください。Google Analytics
-1. Web ページがAdobe Analyticsを使用して追跡され、既に Web ページに埋め込まれている場合は、このコードを例として確認して使用してください。
+1. 移動先 **snippets/eventsSwitchGA.js** を使用して、Google Analyticsと統合する方法を確認できます。
+1. WebページがAdobe Analyticsを使用してトラックされ、既にWebページに埋め込まれている場合は、このコードを確認して例として使用してください。
 
    ![Adobe Analyticsコードのスクリーンショット](assets/ControlPDF_25.png)
 
-## パート 4:イベントに基づいたインタラクティブ機能の追加 {#part4}
+## パート4：イベントに基づくインタラクティブ機能の追加 {#part4}
 
-パート 4 では、2 ページ目をスクロールして過ぎた後に表示されるペイウォールを、PDFビューアの上にレイヤー化する方法を説明します。
+パート4では、2ページ目をスクロールした後に表示されるペイウォールを、PDFビューアの上に重ねる方法について説明します。
 
-### Paywall の例
+### ペイウォールの例
 
-この [ペイウォールの背後にあるPDFの例](https://www3.technologyevaluation.com/research/white-paper/the-forrester-wave-digital-decisioning-platforms-q4-2020.html)を選択します。 この例では、インタラクティブ機能を追加し、さらにPDFを表示します。
+次に移動： [ペイウォールの背後にあるPDFの例](https://www3.technologyevaluation.com/research/white-paper/the-forrester-wave-digital-decisioning-platforms-q4-2020.html). この例では、PDF表示エクスペリエンスの上にインタラクティブ機能を追加する方法を説明します。
 
-### ペイウォールコードの追加
+### ペイウォールコードを追加
 
-1. snippets/paywallCode.htmlに移動し、コンテンツをコピーします。
-1. 検索対象 `<!-- TODO: EXERCISE 3: INSERT PAYWALL CODE -->` exercise/index.htmlを参照してください。
+1. snippets/paywallCode.htmlに移動し、内容をコピーします。
+1. 検索 `<!-- TODO: EXERCISE 3: INSERT PAYWALL CODE -->` をexercise/index.htmlに追加します。
 
    ![コードのコピー先のスクリーンショット](assets/ControlPDF_26.png)
 
-1. コピーしたコードをコメントの後にペーストします。
-1. 移動 **snippets/paywallCode.js** を選択し、内容をコピーします。
+1. コピーしたコードをコメントの後に貼り付けます。
+1. に移動 **snippets/paywallCode.js** 内容をコピーします。
 
    ![コードのペースト先のスクリーンショット](assets/ControlPDF_27.png)
 
-1. コードをその場所にペーストします。
+1. コードをその場所に貼り付けます。
 
-### Paywall でデモを試す
+### ペイウォールでデモを試す
 
-デモを表示できます。
+これで、デモを表示できます。
 
-1. リロード **index.html** できます。
-1. ページ/2 まで下にスクロールします。
-1. 2 ページ目の後にユーザーにチャレンジするためのダイアログを表示します。
+1. リロード **index.html** webサイトで確認する。
+1. 下にスクロールして> 2ページを表示します。
+1. 2ページ目の後に、チャレンジユーザーに上がるダイアログを表示します。
 
-   ![デモのスクリーンショット](assets/ControlPDF_28.png)
+   ![デモを表示したスクリーンショット](assets/ControlPDF_28.png)
 
 ## その他の参考資料
 
-その他のリソース [ここ](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html)を選択します。
+その他のリソースも参照できます [こちら](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html).

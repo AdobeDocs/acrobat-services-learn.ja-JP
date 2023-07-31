@@ -1,13 +1,14 @@
 ---
-title: Microsoft Power Automate での最初のワークフローの作成
-description: Microsoft Power Automate でのAdobe PDF Services コネクタの使用方法について説明します
+title: Microsoft Power Automateで最初のワークフローを作成
+description: Microsoft Power AutomateでAdobe PDFサービスコネクタを使用する方法について説明します。
 type: Tutorial
 role: Developer
 level: Beginner
+feature: PDF Services API
 thumbnail: KT-10379.jpg
 kt: 10379
 exl-id: 095b705f-c380-42cc-9329-44ef7de655ee
-source-git-commit: 799b37e526073893fe7c078db547798d6c31d1b2
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 2%
@@ -15,161 +16,161 @@ ht-degree: 2%
 ---
 
 
-# Microsoft Power Automate での最初のフローの作成
+# Microsoft Power Automateで最初のフローを作成
 
-最初のフローを [Microsoft Power Automate](https://flow.microsoft.com) の使用 [Adobe PDF Services](https://japan.flow.microsoft.com/ja-jp/connectors/shared_adobepdftools/adobe-pdf-services/) コネクタ。
+最初のフローを作成する方法 [Microsoft Power Automate](https://flow.microsoft.com) の使用 [Adobe PDF Services](https://japan.flow.microsoft.com/ja-jp/connectors/shared_adobepdftools/adobe-pdf-services/) コネクタ。
 
-この実践チュートリアルでは、次の方法を学習します。
+この実践チュートリアルでは、次の方法について学習します。
 
-* Word 文書をPDF
-* PDF文書を 1 つのPDF
-* PDF文書にパスワードをProtect
+* Word文書をPDFに変換
+* PDF文書を1つのPDFに結合
+* PDF文書をパスワードでProtectする
 
 ## 準備
 
 ### 必要なもの
 
-* **Adobe PDF Services の体験版または本番環境の資格情報**
-Microsoft Power Automate で資格情報を取得および設定する方法について詳しく説明します [ここ](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html)を選択します。
+* **Adobe PDFサービスの体験版または製品版の認証情報**
+Microsoft Power Automateで資格情報を取得および設定する方法の詳細 [こちら](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html).
 * **プレミアムコネクタ搭載のMicrosoft Power Automate**
-Power Automate のライセンスレベルを確認する方法について説明します [ここ](https://docs.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types)を選択します。
+Power Automateのライセンスレベルを確認する方法について説明します [こちら](https://docs.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types).
 * **OneDrive**
-このチュートリアルでは OneDrive ストレージコネクタを使用しますが、どのストレージコネクタでも置き換えることができます。
+このチュートリアルではOneDriveストレージコネクターを使用しますが、他のストレージコネクターで代用することもできます。
 
 ### サンプルファイル
 
-二つある [サンプルファイル](assets/sample-assets.zip) を解凍して OneDrive にアップロードする必要があります。
+二つある [サンプルファイル](assets/sample-assets.zip) 解凍してOneDriveにアップロードする必要があるファイル：
 
 * WordDocument01.docx
 * WordDocument02.docx
 
 ### 資格情報の取得
 
-このチュートリアルを完了するには、Adobe PDFサービス用のMicrosoft Power Automate で既に資格情報が設定されている必要があります。 この手順をまだ完了していない場合は、 [こちらの手順](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html)を選択します。
+このチュートリアルを完了するには、Adobe PDFサービス向けMicrosoft Power Automateで資格情報が既に設定されている必要があります。 この手順を完了していない場合は、 [ここでの手順](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html).
 
-## パート 1:新しいフローを作成し、Word をPDFに
+## パート1：新しいフローを作成し、WordをPDFに変換する
 
 ### フローの作成
 
-このパートでは、 [Microsoft Power Automate](https://flow.microsoft.com) インスタントフローを使用して、パラメーターを追加し、OneDrive からファイルを取得し、それらをPDFに変換します。
+このパートでは、 [Microsoft Power Automate](https://flow.microsoft.com) インスタントフローを使用して、パラメーターを追加し、OneDriveからファイルを取得して、PDFに変換します。
 
-1. 次の場所に移動 [Microsoft Power Automate](https://flow.microsoft.com) 資格情報を使用してログインします。
-1. サイドバーで、「 **[!UICONTROL 作成]**&#x200B;を選択します。
+1. 移動先 [Microsoft Power Automate](https://flow.microsoft.com) 資格情報を使用してログインします。
+1. サイドバーで、 **[!UICONTROL 作成]**.
 
-   ![「作成」ボタン](assets/createButtonPowerAutomate.png)
+   ![ボタンを作成](assets/createButtonPowerAutomate.png)
 
-1. 選択 **[!UICONTROL インスタントフロー]**&#x200B;を選択します。
+1. 選択 **[!UICONTROL インスタントフロー]**.
 1. フローに名前を付けます。
-1. Under *このフローをトリガーする方法を選択します*&#x200B;で、 **[!UICONTROL フローの手動トリガー]**&#x200B;を選択します。
+1. 未満 *このフローをトリガーする方法を選択*、選択 **[!UICONTROL 手動によるフローのトリガー]**.
 1. 「**[!UICONTROL 作成]**」を選択します。
 
-### ファイルの内容の取得
+### ファイルの内容を取得する
 
 次に、サンプルファイルのファイル内容を取得します。
 
 >[!PREREQUISITES]
 >
->まだアップロードしていない場合は、 [サンプルファイル](assets/sample-assets.zip) OneDrive に解凍してアップロードします。
+>をアップロードしていない場合 [サンプルファイル](assets/sample-assets.zip) onedriveに解凍してアップロードします。
 
 
-1. 入力 [Power Automate](https://flow.microsoft.com)で、 **[!UICONTROL +新しいステップ]**&#x200B;を選択します。
-1. 検索対象 *OneDrive* 」をクリックします。
-1. 職場または個人の OneDrive アカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**&#x200B;を選択します。
-1. 検索対象 *ファイルコンテンツの取得* 」をクリックします。
-1. 」を **[!UICONTROL ファイル]** 」フィールドで、フォルダーアイコンを選択して「 *WordDocument01.docx* ファイルを開きます。
+1. イン [Power Automate](https://flow.microsoft.com)、選択 **[!UICONTROL +新しい手順]**.
+1. 検索 *OneDrive* をクリックします。
+1. 職場または個人のOneDriveアカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**.
+1. 検索 *ファイルコンテンツを取得* をクリックします。
+1. を **[!UICONTROL ファイル]** フィールドで、フォルダーアイコンを選択して *WordDocument01.docx* onedrive内のファイルです。
 
-   ![Microsoft Power Automate でのファイルコンテンツの取得 OneDrive アクション](assets/getFileContentOneDrive.png)
+   ![Microsoft Power AutomateでのOneDriveアクションの取得](assets/getFileContentOneDrive.png)
 
-### ファイルをPDFに
+### ファイルをPDFに変換
 
-ファイルの内容が完成したので、ドキュメントをPDFに
+これでファイルコンテンツが完成したので、文書をPDFに変換できます。
 
-1. 入力 [Power Automate](https://flow.microsoft.com)で、 **[!UICONTROL +新しいステップ]**&#x200B;を選択します。
-1. 検索対象 *Adobe PDF Services* 」をクリックします。
-1. 選択 **[!UICONTROL Adobe PDF Services]**&#x200B;を選択します。
-1. 検索対象 *Word をPDF* 」をクリックします。
-1. 入力 **[!UICONTROL ファイル名]**&#x200B;で、必要に応じてファイルに名前を付けます。ただし、 *.docx*&#x200B;を選択します。 この拡張機能は、文書を Word からPDFに変換するために必要です。
-1. カーソルを **[!UICONTROL ファイルコンテンツ]** 」フィールドに入力します。
-1. エレメントを **[!UICONTROL 動的コンテンツ]** パネルで、 **[!UICONTROL ファイルコンテンツ]**&#x200B;を選択します。
+1. イン [Power Automate](https://flow.microsoft.com)、選択 **[!UICONTROL +新しい手順]**.
+1. 検索 *Adobe PDF Services* をクリックします。
+1. 選択 **[!UICONTROL Adobe PDF Services]**.
+1. 検索 *WordをPDFに変換* をクリックします。
+1. イン **[!UICONTROL ファイル名]**、必要に応じてファイル名を付けますが、末尾はで始まる必要があります *.docx*. この拡張子は、文書をWordからPDFに変換するために必要です。
+1. カーソルを **[!UICONTROL ファイルコンテンツ]** フィールドに入力します。
+1. を使用する **[!UICONTROL 動的コンテンツ]** パネル、選択 **[!UICONTROL ファイルコンテンツ]**.
 
-   ![Microsoft Power Automate で Word をPDFに変換するアクション](assets/convertWordToPDFActionPowerAutomate.png)
+   ![Microsoft Power Automateの「WordをPDFに変換」アクション](assets/convertWordToPDFActionPowerAutomate.png)
 
-### ファイルを OneDrive に保存します
+### ファイルをOneDriveに保存
 
-ドキュメントが生成されたら、ファイルを OneDrive に保存し直します。
+ドキュメントが生成されたら、ファイルをOneDriveに保存し直します。
 
-1. 入力 [Microsoft Power Automate](https://flow.microsoft.com)で、 **[!UICONTROL +新しいステップ]**&#x200B;を選択します。
-1. 検索対象 *OneDrive* 」をクリックします。
-1. 職場または個人の OneDrive アカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**&#x200B;を選択します。
-1. 検索対象 *ファイルコンテンツの取得* 」をクリックします。
-1. 検索対象 *ファイルの作成* 」をクリックします。
-1. 選択 **[!UICONTROL ファイルの作成]**&#x200B;を選択します。
-1. 」を **[!UICONTROL フォルダパス]** 」フィールドで、フォルダーアイコンを選択して、OneDrive 内のファイルの保存場所を指定します。
-1. 入力 **[!UICONTROL ファイル名]**&#x200B;で、必要に応じてファイルに名前を付けます。ただし、 *.docx*&#x200B;を選択します。 この拡張機能は、文書を Word からPDFに変換するために必要です。
-1. 」を **[!UICONTROL ファイルコンテンツ]** フィールド、使用 **[!UICONTROL 動的コンテンツ]** パネルを使用して、PDFファイル内容変数を挿入します。
+1. イン [Microsoft Power Automate](https://flow.microsoft.com)、選択 **[!UICONTROL +新しい手順]**.
+1. 検索 *OneDrive* をクリックします。
+1. 職場または個人のOneDriveアカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**.
+1. 検索 *ファイルコンテンツを取得* をクリックします。
+1. 検索 *ファイルを作成* をクリックします。
+1. 選択 **[!UICONTROL ファイルを作成]**.
+1. を **[!UICONTROL フォルダーパス]** フィールドで、フォルダーアイコンを選択して、OneDrive内のファイルの保存先を指定します。
+1. イン **[!UICONTROL ファイル名]**、必要に応じてファイル名を付けますが、末尾はで始まる必要があります *.docx*. この拡張子は、文書をWordからPDFに変換するために必要です。
+1. を **[!UICONTROL ファイルコンテンツ]** フィールド、使用 **[!UICONTROL 動的コンテンツ]** パネルに移動し、PDFファイルコンテンツ変数を挿入します。
 
-### フローを試す
+### 体験版のフロー
 
-1. 左上で、「 **[!UICONTROL 無題]** を選択して、フローの名前を変更します。
+1. 左上で、 **[!UICONTROL 無題]** フローの名前を変更します。
 1. 「**[!UICONTROL 保存]**」を選択します。
-1. 選択 **[!UICONTROL テスト]**&#x200B;を選択します。
-1. 選択 **[!UICONTROL 手動]** その後 **[!UICONTROL 保存とテスト]**&#x200B;を選択します。
+1. 選択 **[!UICONTROL テスト]**.
+1. 選択 **[!UICONTROL 手動]** その後 **[!UICONTROL 保存とテスト]**.
 1. 「**[!UICONTROL 続行]**」を選択します。
-1. 選択 **[!UICONTROL フローを実行]**&#x200B;を選択します。
+1. 選択 **[!UICONTROL フローを実行]**.
 
-OneDrive フォルダーに、変換されたフォルダーが表示されます。PDF。
+OneDriveフォルダーに、変換されたPDFが表示されます。
 
-![OneDrive 内の選択した変換されたPDFドキュメント](assets/selectedGeneratedFileInOneDrive.png)
+![OneDriveで選択した変換済みのPDF文書](assets/selectedGeneratedFileInOneDrive.png)
 
-## パート 2:テンプレートからの動的ドキュメントの生成
+## パート2:テンプレートから動的ドキュメントを生成する
 
-この次のパートは、パート 1 を基にして、 *Word からドキュメントを生成* 動的にデータを結合するためのテンプレートです。
+次のパートでは、パート1をベースにして、 *Wordから文書を生成* データを文書に動的に結合するテンプレート。
 
-### 文書テンプレートを確認する
+### 文書テンプレートをレビュー
 
-開く *WordDocument02_.docx* OneDrive のサンプルファイルから。 Word 文書には、データが文書に入力される場所を表す複数の異なるテキストタグが含まれます。
+開く *WordDocument02_.docx* onedriveのサンプルファイルから。 Word文書には、データが文書に入力される場所を表すいくつかの異なるテキストタグが含まれています。
 
-### トリガーへのパラメーターの追加
+### トリガーするパラメーターの追加
 
-動的データをドキュメントにプッシュするには、トリガーが値の入力を求めるためのパラメーターをいくつか作成する必要があります。
+動的データをドキュメントにプッシュするには、値の入力を促すトリガー用にいくつかのパラメーターを作成する必要があります。
 
-1. フローを編集するときは、 **[!UICONTROL フローの手動トリガー]** 」をクリックしてアクションを展開します。
-1. 選択 **[!UICONTROL 入力の追加]**&#x200B;を選択します。
-1. 選択 **[!UICONTROL テキスト]**&#x200B;を選択します。
-1. フィールドに名前を付ける *名*&#x200B;を選択します。
+1. フローの編集時に、 **[!UICONTROL 手動によるフローのトリガー]** アクションを展開します。
+1. 選択 **[!UICONTROL 入力を追加]**.
+1. 選択 **[!UICONTROL Text]**.
+1. フィールドに名前を付ける *名前（名）*.
 
-手順 2 ～ 4 を繰り返して、次のフィールドを追加します。
+手順2 ～ 4を繰り返して、次のフィールドを追加します。
 
 * 姓
 * 給与
 
-![パラメーターフィールドを使用した Power Automate のトリガー](assets/triggerParametersInPowerAutomate.png)
+![Power Automateのパラメーターフィールドでトリガー](assets/triggerParametersInPowerAutomate.png)
 
-### テンプレートのファイルコンテンツの取得
+### テンプレートのファイルコンテンツを取得する
 
-文書を生成するには、まず Word テンプレートのファイルコンテンツを取得する必要があります。
+文書を生成するには、まずWordテンプレートのファイルコンテンツを取得する必要があります。
 
-1. Power Automate で「+」を選択します。 **[!UICONTROL 新しいステップ]**&#x200B;を選択します。
-1. 検索対象 *OneDrive* 」をクリックします。
-1. 職場または個人の OneDrive アカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**&#x200B;を選択します。
-1. 検索対象 *ファイルコンテンツの取得* 」をクリックします。
-1. 」を **[!UICONTROL ファイル]** 」フィールドで、フォルダーアイコンを選択して「 *WordDocument02.docx* ファイルを開きます。
+1. Power Automateで、「+」を選択します。 **[!UICONTROL 新しい手順]**.
+1. 検索 *OneDrive* をクリックします。
+1. 職場または個人のOneDriveアカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**.
+1. 検索 *ファイルコンテンツを取得* をクリックします。
+1. を **[!UICONTROL ファイル]** フィールドで、フォルダーアイコンを選択して *WordDocument02.docx* onedrive内のファイルです。
 
-![Microsoft Power Automate の「OneDrive からファイルコンテンツを取得」アクション](assets/getFileContentAction02.png)
+![Microsoft Power AutomateのOneDriveからファイルコンテンツアクションを取得](assets/getFileContentAction02.png)
 
-### テンプレートからドキュメントを生成
+### テンプレートから文書を生成
 
-1. Power Automate で、 **[!UICONTROL +新しいステップ]**&#x200B;を選択します。
-1. 検索対象 *Adobe PDF Services* 」をクリックします。
-1. 選択 **[!UICONTROL Adobe PDF Services]**&#x200B;を選択します。
-1. ツールバーの「 **[!UICONTROL Word テンプレートからドキュメントを生成]** アクション
-1. 」を **[!UICONTROL テンプレートファイル名]** 」フィールドで、必要に応じてファイルに名前を付けます。ただし、ファイル名の末尾は *.docx*&#x200B;を選択します。
+1. Power Automateで、 **[!UICONTROL +新しい手順]**.
+1. 検索 *Adobe PDF Services* をクリックします。
+1. 選択 **[!UICONTROL Adobe PDF Services]**.
+1. を選択します **[!UICONTROL Wordテンプレートから文書を生成]** アクション:
+1. を **[!UICONTROL テンプレートファイル名]** フィールドに、必要に応じてファイルの名前を入力します。ただし、 *.docx*.
 
-#### データの結合
+#### データを結合
 
-エレメントを *Word テンプレートからドキュメントを生成* アクションを実行すると、動的コンテンツを使用して、フロー内の以前の任意の変数からドキュメントにデータを結合できます。
+を使用する *Wordテンプレートから文書を生成* アクションとして、動的コンテンツを使用して、以前フローにあった様々な変数から文書にデータを結合できます。
 
-以下の JSON データを **データの結合** フィールド：
+以下のJSONデータを **データを結合** フィールド：
 
 ```
 {
@@ -179,139 +180,138 @@ OneDrive フォルダーに、変換されたフォルダーが表示されま�
 }
 ```
 
-1. フィールド内で、 *FirstName* 値。
-1. エレメントを **[!UICONTROL 動的コンテンツ]** パネルで、 *名* フローアクションを手動でトリガーする値。
+1. フィールド内の2つの引用符の間にカーソルを置きます。 *FirstName* 値を返します。
+1. を使用する **[!UICONTROL 動的コンテンツ]** パネル、挿入 *名前（名）* 「フローを手動でトリガー」アクションの値。
 
-   ![JSON でデータタグを含むドキュメントを生成する](assets/generateDocumentJSONAction.png)
+   ![JSONのデータタグを使用して文書を生成](assets/generateDocumentJSONAction.png)
 
-1. に対して手順 7 ～ 8 を繰り返します。 **[!UICONTROL LastName]** および **[!UICONTROL 給与]** フィールド、
-1. 」を **[!UICONTROL テンプレートファイルの内容]** 」フィールドで、「 **[!UICONTROL 動的コンテンツ]** パネルを使用して、 **[!UICONTROL ファイルコンテンツ]** 値を *ファイルコンテンツの取得* ステップ
+1. 手順7 ～ 8を、 **[!UICONTROL LastName]** および **[!UICONTROL 給与]** フィールド。
+1. を **[!UICONTROL テンプレートファイルコンテンツ]** フィールドで、 **[!UICONTROL 動的コンテンツ]** 挿入するパネル **[!UICONTROL ファイルコンテンツ]** 値を *ファイルコンテンツを取得* 手順
 
-![Power Automate の「Word テンプレートから文書を生成」アクション（すべての値が完了している場合）](assets/generateDocumentJSONActionCompleted.png)
+![すべての値が入力されたPower Automateの「Wordテンプレートから文書を生成」アクション](assets/generateDocumentJSONActionCompleted.png)
 
 >[!TIP]
 >
->この *Word テンプレートからドキュメントを生成* アクションはAdobeドキュメント生成 API を使用します。 テンプレートの作成方法について詳しくは、次のリソースを参照してください。
+>この *Wordテンプレートから文書を生成* actionはAdobe Document Generation APIを使用します。 テンプレートの作成方法について詳しくは、いくつかのリソースをご覧ください。
 >
->* [ドキュメント生成Adobeの詳細](https://developer.adobe.com/document-services/apis/doc-generation/)
->* [Microsoft Word 用Adobe文書生成タグ](https://appsource.microsoft.com/en-US/product/office/WA200002654)
->* [Adobeドキュメント生成 API ドキュメント](https://developer.adobe.com/document-services/docs/overview/document-generation-api/)
+>* [Adobe文書の生成の詳細](https://developer.adobe.com/document-services/apis/doc-generation/)
+>* [Microsoft Word用Adobe文書生成タガー](https://appsource.microsoft.com/en-US/product/office/WA200002654)
+>* [Adobeドキュメント生成APIドキュメント](https://developer.adobe.com/document-services/docs/overview/document-generation-api/)
 
+### ファイルをOneDriveに保存
 
-### ファイルを OneDrive に保存します
+ドキュメントが生成されたら、ファイルをOneDriveに保存し直すことができます。
 
-ドキュメントが生成されたら、ファイルを OneDrive に保存し直すことができます。
+1. Power Automateで、 **+ [!UICONTROL 新しい手順]**.
+1. 検索 *OneDrive* をクリックします。
+1. 職場または個人のOneDriveアカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**.
+1. 検索 *ファイルを作成* をクリックします。
+1. 選択 **[!UICONTROL ファイルを作成]**.
+1. を **[!UICONTROL フォルダーパス]** フィールドで、フォルダーアイコンを選択して、OneDrive内のファイルの保存先を指定します。
+1. を **[!UICONTROL ファイル名]** フィールドに、ファイルの名前を設定します。 出力はPDFなので、ファイル名の末尾は.pdf拡張子にする必要があります。
+1. 次を使用します **[!UICONTROL 動的コンテンツ]** PDFファイルコンテンツ変数を **[!UICONTROL ファイルコンテンツ]** フィールドに入力します。
 
-1. Power Automate で、 **+ [!UICONTROL 新しいステップ]**&#x200B;を選択します。
-1. 検索対象 *OneDrive* 」をクリックします。
-1. 職場または個人の OneDrive アカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**&#x200B;を選択します。
-1. 検索対象 *ファイルの作成* 」をクリックします。
-1. 選択 **[!UICONTROL ファイルの作成]**&#x200B;を選択します。
-1. 」を **[!UICONTROL フォルダパス]** 」フィールドで、フォルダーアイコンを選択して、OneDrive 内のファイルの保存場所を指定します。
-1. 」を **[!UICONTROL ファイル名]** 」フィールドで、ファイルの名前を設定します。 出力はPDFであるため、ファイル名の末尾には.pdf 拡張子を付ける必要があります。
-1. 次の **[!UICONTROL 動的コンテンツ]** パネルを使用して、PDFファイル内容変数を **[!UICONTROL ファイルコンテンツ]** 」フィールドに入力します。
+### 体験版のフロー
 
-### フローを試す
-
-![Microsoft Power Automate の入力プロンプトのフロー画面](assets/runFlowParameters.png)
+![入力を求めるMicrosoft Power Automateのフロー画面の実行](assets/runFlowParameters.png)
 
 1. 「**[!UICONTROL 保存]**」を選択します。
-1. 選択 **[!UICONTROL テスト]**&#x200B;を選択します。
-1. 選択 **[!UICONTROL 手動]** その後 **[!UICONTROL 保存とテスト]**&#x200B;を選択します。
+1. 選択 **[!UICONTROL テスト]**.
+1. 選択 **[!UICONTROL 手動]** その後 **[!UICONTROL 保存とテスト]**.
 1. 「**[!UICONTROL 続行]**」を選択します。
-1. 値を入力 *名*, *姓*&#x200B;および *給与*&#x200B;を選択します。
-1. 選択 **[!UICONTROL フローを実行]**&#x200B;を選択します。
+1. 値を入力 *名前（名）*, *姓*、および *給与*.
+1. 選択 **[!UICONTROL フローを実行]**.
 
-OneDrive フォルダーに、Word 文書から生成されたPDFが表示されます。 OneDrive でPDFドキュメントを開くと、データがテキストタグの場所に結合されます。
+OneDriveフォルダーに、Word文書から生成されたPDFが表示されるようになりました。 OneDriveでPDF文書を開くと、データがテキストタグの場所に結合されます。
 
 
-## パート 3:PDFを 1 つに
+## パート3:PDFを1つに組み合わせる
 
-Word 文書を生成してPDFに変換したので、次のパートでは、複数のPDF文書を結合します。
+Word文書を生成してPDFに変換したので、次は複数のPDF文書を組み合わせることになりました。
 
 >[!NOTE]
 >
->前のアクションでは、ドキュメントのコピーをファイルとして OneDrive に保存しました。 Merge Tools などのツールを使用するために、PDFを OneDrive に保存する必要はありません。 代わりに、あるアクションの出力を次のアクションに直接渡すことができます。これは、各アクションの後に OneDrive に保存するよりも便利です。 しかし、デモンストレーションの目的で、これらのファイルを OneDrive に保存しています。
+>前の操作では、文書のコピーをファイルとしてOneDriveに保存しました。 結合ツールなどのPDFを使用するには、ファイルをOneDriveに保存する必要はありません。 代わりに、1つのアクションから次のアクションに出力を直接渡すことができます。これは、各アクションの後にOneDriveに保存するよりも優れています。 ただし、デモの目的では、これらのファイルをOneDriveに保存します。
 
-### 結合の追加PDF手順
+### 「結合PDFを追加」手順
 
-1. フローを編集するときは、 **[!UICONTROL +次のステップ]** 」をクリックして、フローの最後にアクションを追加します。
-1. 検索対象 *Adobe PDF Services* 」をクリックします。
-1. 選択 **[!UICONTROL Adobe PDF Services]**&#x200B;を選択します。
-1. ツールバーの「 **[!UICONTROL 結合PDF]** を選択します。
-1. 」を **[!UICONTROL 結合PDFファイル名]** 」フィールドに、目的のファイル名を入力します (*CombinedDocument.pdf*)。
-1. 」を **[!UICONTROL ファイルコンテンツ —1]** 」フィールドで、「 **[!UICONTROL 動的コンテンツ]** パネルを使用して、 *PDFファイルの内容* 値を **[!UICONTROL Word をPDF]** ステップ
-1. 次の文書を追加するには、 **+ [!UICONTROL 新しいアイテムの追加]**&#x200B;を選択します。
-1. 」を **[!UICONTROL ファイルの内容 — 2]** 」フィールドで、「 **[!UICONTROL 動的コンテンツ]** パネルを使用して、 **[!UICONTROL 出力ファイルの内容]** 値を *Word テンプレートからドキュメントを生成* ステップ
+1. フローの編集時に、 **[!UICONTROL +次のステップ]** をクリックして、フローの最後にアクションを追加します。
+1. 検索 *Adobe PDF Services* をクリックします。
+1. 選択 **[!UICONTROL Adobe PDF Services]**.
+1. を選択します **[!UICONTROL PDFを結合]** アクション：
+1. を **[!UICONTROL 結合PDFファイル名]** フィールドに、目的のファイル名を入力します(例：*CombinedDocument.pdf*)を参照してください。
+1. を **[!UICONTROL ファイルコンテンツ – 1]** フィールドで、 **[!UICONTROL 動的コンテンツ]** 挿入するパネル *PDFファイルコンテンツ* 値を **[!UICONTROL WordをPDFに変換]** 手順
+1. 次の文書を追加するには、 **+ [!UICONTROL 新しいアイテムを追加]**.
+1. を **[!UICONTROL ファイルコンテンツ – 2]** フィールドで、 **[!UICONTROL 動的コンテンツ]** 挿入するパネル **[!UICONTROL 出力ファイルコンテンツ]** 値を *Wordテンプレートから文書を生成* 手順
 
-![Microsoft Power Automate の「PDFの結合」アクション](assets/mergePDFAction.png)
+![Microsoft Power Automateの「PDFを結合」アクション](assets/mergePDFAction.png)
 
-### 結合されたPDFを OneDrive に保存
+### 結合したPDFをOneDriveに保存
 
-文書が結合されたら、文書を OneDrive に保存し直すことができます。
+文書が結合されたら、文書をOneDriveに保存し直すことができます。
 
-1. Power Automate で、 **+ [!UICONTROL 新しいステップ]**&#x200B;を選択します。
-1. 検索対象 *OneDrive* 」をクリックします。
-1. 職場または個人の OneDrive アカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**&#x200B;を選択します。
-1. 検索対象 *ファイルの作成* 」をクリックします。
-1. 選択 **[!UICONTROL ファイルの作成]**&#x200B;を選択します。
-1. 」を **[!UICONTROL フォルダパス]** 」フィールドで、フォルダーアイコンを選択して、OneDrive 内のファイルの保存場所を指定します。
-1. 」を **[!UICONTROL ファイル名]** 」フィールドで、ファイルの名前を設定します。 出力はPDFなので、ファイル名の末尾は.pdf にする必要があります。
-1. 」を **[!UICONTROL ファイルコンテンツ]** フィールド、使用 **[!UICONTROL 動的コンテンツ]** パネルを使用して、 *PDFファイルの内容* 値を **[!UICONTROL 結合PDF]** ステップ
+1. Power Automateで、 **+ [!UICONTROL 新しい手順]**.
+1. 検索 *OneDrive* をクリックします。
+1. 職場または個人のOneDriveアカウントを選択するには、 **[!UICONTROL OneDrive for Business]** または **[!UICONTROL OneDrive]**.
+1. 検索 *ファイルを作成* をクリックします。
+1. 選択 **[!UICONTROL ファイルを作成]**.
+1. を **[!UICONTROL フォルダーパス]** フィールドで、フォルダーアイコンを選択して、OneDrive内のファイルの保存先を指定します。
+1. を **[!UICONTROL ファイル名]** フィールドに、ファイルの名前を設定します。 出力はPDFなので、ファイル名の末尾は.pdfにする必要があります。
+1. を **[!UICONTROL ファイルコンテンツ]** フィールド、使用 **[!UICONTROL 動的コンテンツ]** 挿入するパネル *PDFファイルコンテンツ* 値を **[!UICONTROL PDFを結合]** 手順
 
-   ![Microsoft Power Automate のフローの概要](assets/flowOverviewSavedMergedDocument.png)
+   ![Microsoft Power Automateのフローの概要](assets/flowOverviewSavedMergedDocument.png)
 
-### フローを試す
+### 体験版のフロー
 
 1. 「**[!UICONTROL 保存]**」を選択します。
-1. 選択 **[!UICONTROL テスト]**&#x200B;を選択します。
-1. 選択 **[!UICONTROL 手動]** その後 **[!UICONTROL 保存とテスト]**&#x200B;を選択します。
+1. 選択 **[!UICONTROL テスト]**.
+1. 選択 **[!UICONTROL 手動]** その後 **[!UICONTROL 保存とテスト]**.
 1. 「**[!UICONTROL 続行]**」を選択します。
-1. 値を入力 *名*, *姓*&#x200B;および *給与*&#x200B;を選択します。
-1. 選択 **[!UICONTROL フローを実行]**&#x200B;を選択します。
+1. 値を入力 *名前（名）*, *姓*、および *給与*.
+1. 選択 **[!UICONTROL フローを実行]**.
 
-OneDrive フォルダーに、1 つ目と 2 つ目のドキュメントのPDFが結合された状態で表示されます。
+OneDriveフォルダーには、1つ目と2つ目の文書のページが結合されたPDFーが表示されます。
 
-## パート 4:ProtectPDF文書
+## パート4:Protect PDF文書
 
-ドキュメントを生成した後、OneDrive に保存する前に追加の手順を追加することで、ドキュメントを編集から保護できます。
+ドキュメントを生成した後、OneDriveに保存する前に追加の手順を追加することで、ドキュメントが編集されないように保護できます。
 
 ### PDF を保護
 
-1. Power Automate でフローを編集する際に、 **+** 間に **[!UICONTROL 結合PDF]** アクションと **[!UICONTROL ファイル 3 を作成]** を選択します。
+1. Power Automateでフローを編集する際に、 **+** 間に **[!UICONTROL PDFを結合]** actionおよび **[!UICONTROL ファイル3を作成]** アクション：
 
-   ![新しいアクションを追加するための 2 つのアクション間のプラス記号](assets/addActionToProtect.png)
+   ![新しいアクションを追加する2つのアクションの間のプラス記号](assets/addActionToProtect.png)
 
-1. 選択 **[!UICONTROL アクションの追加]**&#x200B;を選択します。
-1. 検索対象 *Adobe PDF Services* 」をクリックします。
-1. 選択 **[!UICONTROL Adobe PDF Services]**&#x200B;を選択します。
-1. ツールバーの「 **[!UICONTROL ProtectPDFの表示]** を選択します。
-1. 」を **[!UICONTROL ファイル名]** 」フィールドで、拡張子.pdf で終わる名前を設定します。
-1. 設定 **[!UICONTROL パスワード]** 」フィールドにパスワードを入力して、文書を開きます。
-1. 」を **[!UICONTROL ファイルコンテンツ]** 」フィールドで、「 **[!UICONTROL 動的コンテンツ]** パネルを使用して、 *PDFファイルの内容* 値を **[!UICONTROL 結合PDF]** ステップ
+1. 選択 **[!UICONTROL アクションを追加]**.
+1. 検索 *Adobe PDF Services* をクリックします。
+1. 選択 **[!UICONTROL Adobe PDF Services]**.
+1. を選択します **[!UICONTROL ProtectPDFの表示]** アクション：
+1. を **[!UICONTROL ファイル名]** フィールドに、拡張子.pdfで終わる名前を希望する名前に設定します。
+1. 設定する **[!UICONTROL Password]** をクリックし、指定したパスワードに文書を開きます。
+1. を **[!UICONTROL ファイルコンテンツ]** フィールドで、 **[!UICONTROL 動的コンテンツ]** 挿入するパネル *PDFファイルコンテンツ* 値を **[!UICONTROL PDFを結合]** 手順
 
-### OneDrive への保存の更新
+### OneDriveに保存を更新
 
-ドキュメントが保護されたら、ファイルを OneDrive に保存し直すことができます。 この例では、既存の **ファイル 3 を作成** 新しい *ファイルコンテンツ* 値。
+ドキュメントが保護されたら、ファイルをOneDriveに保存し直すことができます。 この例では、既存 **ファイル3を作成** 新規アクション *ファイルコンテンツ* 値を返します。
 
-1. カーソルを **[!UICONTROL ファイルコンテンツ]** フィールドを **[!UICONTROL ファイル 3 を作成]** を選択します。
-1. 次の **[!UICONTROL 動的コンテンツ]** パネルを使用して、 *PDFファイルの内容* 値を **ProtectPDFの表示** ステップ
+1. カーソルを **[!UICONTROL ファイルコンテンツ]** フィールドを **[!UICONTROL ファイル3を作成]** アクション：
+1. 次を使用します **[!UICONTROL 動的コンテンツ]** 挿入するパネル *PDFファイルコンテンツ* 値を **ProtectPDFの表示** 手順
 
-### フローを試す
+### 体験版のフロー
 
 1. 「**[!UICONTROL 保存]**」を選択します。
-1. 選択 **[!UICONTROL テスト]**&#x200B;を選択します。
-1. 選択 **[!UICONTROL 手動]** その後 **[!UICONTROL 保存とテスト]**&#x200B;を選択します。
+1. 選択 **[!UICONTROL テスト]**.
+1. 選択 **[!UICONTROL 手動]** その後 **[!UICONTROL 保存とテスト]**.
 1. 「**[!UICONTROL 続行]**」を選択します。
-1. 値を入力 *名*, *姓*&#x200B;および *給与*&#x200B;を選択します。
-1. 選択 **[!UICONTROL フローを実行]**&#x200B;を選択します。
+1. 値を入力 *名前（名）*, *姓*、および *給与*.
+1. 選択 **[!UICONTROL フローを実行]**.
 
-OneDrive フォルダーに結合されたPDFが表示され、文書を表示するためにパスワードの入力を求められます。
+OneDriveフォルダーに、文書を閲覧するためのパスワードの入力を求める複合PDFが表示されます。
 
 ## 次の手順
 
-このチュートリアルでは、Word 文書をPDFに変換し、データに基づいて文書を生成し、文書を結合し、パスワードで保護しました。 詳しくは、Microsoft Power Automate のAdobe PDF Services コネクタで使用できるその他のアクションをご覧ください。
+このチュートリアルでは、Word文書をPDFに変換し、データに基づいて文書を生成し、文書を結合して、パスワードで保護しました。 詳しくは、Microsoft Power AutomateのAdobe PDFサービスコネクタで使用できるその他のアクションを確認してください。
 
-* Microsoft Power Automate で使用できる作成済みのテンプレートを表示します。
-* 学ぶ [記事](https://medium.com/adobetech/tagged/microsoft-power-automate) Adobe技術ブログ
-* レビュー [文書](https://developer.adobe.com/document-services/docs/overview/document-generation-api/) (Adobe文書生成 API)。
+* Microsoft Power Automateで使用可能な、作成済みのテンプレートを表示します。
+* 学ぶ [記事](https://medium.com/adobetech/tagged/microsoft-power-automate) Adobeテクニカルブログで公開されています。
+* レビュー [文書](https://developer.adobe.com/document-services/docs/overview/document-generation-api/) Adobe Document Generation API用。

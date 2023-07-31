@@ -1,13 +1,14 @@
 ---
 title: レビューと承認
-description: チームをまたいだ共同作業のために文書のレビューと承認のワークフローを構築する方法をご紹介します
+description: クロスチーム共同作業のためのドキュメントのレビューと承認ワークフローを構築する方法について説明します
 type: Tutorial
 role: Developer
 level: Intermediate
+feature: Use Cases
 thumbnail: KT-8094.jpg
 jira: KT-8094
 exl-id: d704620f-d06a-4714-9d09-3624ac0fcd3a
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 1%
@@ -16,51 +17,51 @@ ht-degree: 1%
 
 # レビューと承認
 
-![ユースケースのヒーローバナー](assets/UseCaseReviewsHero.jpg)
+![ユースケースの英雄バナー](assets/UseCaseReviewsHero.jpg)
 
-COVID-19 が急速に拡大する中、多くの企業ではチーム間のリモートコラボレーションが必要になりました。 [デジタルドキュメントの共有とレビュー](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) チームや部門間のリソースに一連の課題をもたらします。
+COVID-19の大流行の間、多くの企業でチーム間のリモート・コラボレーションが必要となりました。 [デジタルドキュメントの共有とレビュー](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) チームと部門間のリソースに関する一連の課題を提示します。
 
-これには、様々なファイル形式でドキュメントを共有すること、コンテンツを効果的にレビューしてコメントを追加すること、最新の編集内容と同期することが含まれます。 [!DNL Adobe Acrobat Services] API は、アプリケーション開発者がユーザーのこれらの課題を解決できるように設計されています。
+例えば、異なるファイル形式でのドキュメントの共有、コンテンツの効果的なレビューとコメント、最新の編集内容との同期などの課題があります。 [!DNL Adobe Acrobat Services] APIは、アプリケーション開発者がユーザーに対してこれらの課題を解決できるように設計されています。
 
 ## 学習内容
 
-この実践チュートリアルでは、Node.js および Express Web アプリケーションでドキュメントのレビューと承認のワークフローを構築する方法を説明します。 このチュートリアルに沿って作業を進めるには、Node.js の経験が必要です。
+この実践チュートリアルでは、Node.jsとExpress Webアプリケーションでドキュメントのレビューと承認のワークフローを構築する方法を説明します。 このチュートリアルを実行するには、Node.jsの使用経験が必要です。
 
-アプリケーションには次の機能があります。
+このアプリケーションには次の機能があります。
 
-* 様々なファイル形式をPDF
+* 異なるファイル形式をPDFに変換
 
-* ファイルのアップロードの有効化
+* ファイルアップロードを有効にする
 
 * ユーザーがコメントや注釈を追加できるようにする
 
-* コメントとともにPDFを表示します。
+* PDFとそのコメントを表示する
 
-* ユーザープロファイルでコメントの作成者を識別できるようにする
+* ユーザープロファイルを有効にしてコメント作成者を識別
 
-* ユーザーがダウンロードできる最終PDFにファイルを結合します。
+* ファイルを結合して最終的なPDFを作成し、ダウンロードする
 
-## 関連する API とリソース
+## 関連APIとリソース
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-* [PDF埋め込み API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
+* [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
 * [プロジェクトコード](https://github.com/contentlab-io/adobe_reviews_and_approvals)
 
-## AdobeAPI 資格情報の作成
+## AdobeAPI資格情報を作成しています
 
-コードを開始する前に、 [資格情報の作成](https://www.adobe.com/go/dcsdks_credentials) Adobe PDF Embed API とAdobe PDF Services API 用。 PDF埋め込み API は無料で使用できます。 PDFサービス API は 6 か月間無料で使用できます。その後、 [従量制プラン](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) 1 ドキュメントトランザクションあたり\$0.05 です。
+コードを開始する前に、次のことを行う必要があります [資格情報の作成](https://www.adobe.com/go/dcsdks_credentials) Adobe PDF Embed APIおよびAdobe PDF Services API用。 PDF埋め込みAPIは無料で使用できます。 PDFサービスAPIは6か月間無料で使用できます。その後、次のプランに切り替えることができます。 [従量課金制のプラン](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) 文書トランザクションあたり\$0.05です。
 
-PDFサービス API の資格情報を作成する場合は、 **パーソナライズされたコードサンプルの作成** 」オプションを選択し、言語として Node.js を選択します。 ZIP ファイルを保存し、pdftools-api-credentials.json と private.key を Node.js Express プロジェクトのルートディレクトリに抽出します。
+PDFサービスAPIの資格情報を作成するときに、 **パーソナライズされたコードサンプルの作成** を選択し、言語としてNode.jsを選択します。 ZIPファイルを保存し、 pdftools-api-credentials.jsonとprivate.keyをNode.js Expressプロジェクトのルートディレクトリに抽出します。
 
 ## プロジェクトと依存関係の設定
 
-Node.js および Express プロジェクトを設定して、「public」という名前のフォルダーから静的ファイルを提供します。 環境設定に応じて、プロジェクトの方法を設定できます。 すぐに使い始めるには、 [Express アプリジェネレータ](https://expressjs.com/en/starter/generator.html)を選択します。 または、シンプルさを維持したい場合は、 [ゼロから始める](https://expressjs.com/en/starter/hello-world.html) コードを単一の JavaScript ファイルに保存できます。 上記にリンクしたサンプルプロジェクトでは、1 ファイルのアプローチを使用し、すべてのコードを index.js に保持しています。
+「public」という名前のフォルダから静的ファイルを提供するように、Node.jsとExpressプロジェクトを設定します。 環境設定に応じて、プロジェクトの方法を設定できます。 すばやく起動して実行するには、 [Express app generator](https://expressjs.com/en/starter/generator.html). または、シンプルな構成にする場合は、 [ゼロから作成](https://expressjs.com/en/starter/hello-world.html) コードを1つのJavaScriptファイルに保存します。 上記のリンクのサンプルプロジェクトでは、1ファイルによるアプローチを使用し、コード全体をindex.jsに保存しています。
 
-コピー `pdftools-api-credentials.json` および `private.key` ファイルをカスタマイズして、プロジェクトのルートディレクトリにコピーします。 また、資格ファイルがある場合は、.gitignore ファイルに追加して、資格ファイルが誤ってリポジトリに送信されないようにします。
+をコピー `pdftools-api-credentials.json` および `private.key` パーソナライズされたコードサンプルからプロジェクトのルートディレクトリまでのファイル。 また、資格情報ファイルが誤ってリポジトリに送信されないように、.gitignoreファイルがある場合は、追加します。
 
-次に、 `npm install @adobe/documentservices-pdftools-node-sdk` インストール・サービス用の Node.js SDK をPDFします。 このモジュールをインポートし、次のように依存関係の残りの部分をインポートした後に、コード内（サンプルプロジェクトの index.js）に API 資格情報オブジェクトを作成します。
+次に実行 `npm install @adobe/documentservices-pdftools-node-sdk` PDFサービス用のNode.js SDKをインストールします。 このモジュールを読み込み、残りの依存関係の読み込み後、コード内（サンプルプロジェクトのindex.js）にAPI資格情報オブジェクトを作成します。以下に例を示します。
 
 ```
   const PDFToolsSdk = require( "@adobe/documentservices-pdftools-node-sdk" );
@@ -94,13 +95,13 @@ Node.js および Express プロジェクトを設定して、「public」とい
   } );
 ```
 
-これで、 [!DNL Acrobat Services] API
+これで、を使用する準備ができました [!DNL Acrobat Services] API。
 
-## ファイルのPDF
+## ファイルのPDFへの変換
 
-ドキュメントワークフローの最初の部分では、エンドユーザーは共有するドキュメントをアップロードする必要があります。 この機能を有効にするには、アップロード機能を追加し、さまざまなドキュメントファイル形式をPDFに統合して、レビュープロセスに備えます。
+文書ワークフローの前半では、エンドユーザーが共有する文書をアップロードする必要があります。 これを可能にするには、アップロード機能を追加し、異なる文書ファイルフォーマットをPDFに統合して、レビュープロセスに備えます。
 
-最初に、 [PDFサービス API の例](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html)を選択します。 この例では、OCR（光学式文字認識）、パスワード保護と削除、圧縮など、その他の重要な機能のスニペットも示しています。
+PDFまず、 [PDFサービスAPIのスニペット例](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html). この例では、光学式文字認識(OCR)、パスワード保護と削除、圧縮など、その他の重要な機能のスニペットも示しています。
 
 ```
 function fileToPDF( filename, outputFilename, callback ) {
@@ -122,20 +123,20 @@ function fileToPDF( filename, outputFilename, callback ) {
   }
 ```
 
-この関数を使用して、アップロードされたドキュメントからPDFを作成できるようになりました。
+アップロードした文書から、この機能を使用してPDFを作成できるようになりました。
 
 ## ファイルのアップロード処理
 
-次に、サーバーは、文書を受信して処理するために、Web サーバー上のファイルアップロードエンドポイントを必要とします。
+次に、サーバーはドキュメントを受信して処理するために、webサーバー上にファイルアップロードエンドポイントを必要とします。
 
-まず、アップロードフォルダー内にフォルダーを作成し、「drafts」という名前を付けます。 アップロードしたファイルと変換したPDFファイルを保存します。 次に、 `npm install express-fileupload` express-FileUpload モジュールをインストールし、コードでミドルウェアを Express に追加するには：
+まず、アップロードフォルダー内にフォルダーを作成し、「drafts」という名前を付けます。 アップロードしたファイルと変換したPDFファイルはここに保存します。 次に実行 `npm install express-fileupload` express-FileUploadモジュールをインストールし、コード内でミドルウェアをExpressに追加するには：
 
 ```
 const fileUpload = require( "express-fileupload" );
 app.use( fileUpload() );
 ```
 
-次に、 `/upload `」エンドポイントをクリックし、アップロードしたファイルを同じファイル名で下書きフォルダー内に保存します。 次に、前に記述した関数を呼び出して、同じドキュメントのPDFファイルを作成します ( まだPDF形式でない場合 )。 アップロードした元のドキュメントの名前に基づいて、新しいPDFファイルのファイル名を生成することができます。
+次に `/upload `アップロードしたファイルを保存し、同じファイル名で「下書き」フォルダーに保存します。 次に、先ほど記述した関数を呼び出して、同じ文書のPDFファイルを作成します(まだPDF書式になっていない場合)。 アップロードされた元の文書の名前に基づいて、新しいPDFファイルのファイル名を作成できます。
 
 ```
 // Create a PDF file from an uploaded file
@@ -165,7 +166,7 @@ app.post( "/upload", ( req, res ) => {
 
 ## アップロードページの作成
 
-Web アプリケーションからファイルをアップロードするには、 `index.html` アップロードフォルダー内の web ページ。 ページで、/upload エンドポイントにファイルを送信するファイルアップロードフォームを追加します。
+Webアプリケーションからファイルをアップロードするには、 `index.html` アップロードフォルダー内のwebページ。 ページで、 /uploadエンドポイントにファイルを送信するファイルアップロードフォームを追加します。
 
 ```
 <form ref="uploadForm" 
@@ -177,17 +178,17 @@ Web アプリケーションからファイルをアップロードするには�
   </form>
 ```
 
-![Web ページのアップロードファイル機能のスクリーンショット](assets/reviews_1.png)
+![Webページの「ファイルをアップロード」機能のスクリーンショット](assets/reviews_1.png)
 
-Node.js サーバーにドキュメントをアップロードできるようになりました。 サーバーはアップロード/下書きフォルダー内にファイルを保存し、それに加えてPDF形式のバージョンを作成します。
+ドキュメントをNode.jsサーバーにアップロードできるようになりました。 アップロード/下書きフォルダー内にファイルが保存され、そのファイルと一緒にPDFフォーマットのバージョンが作成されます。
 
-アップロードした文書を埋め込む準備ができました。PDF埋め込み API を使用して、ユーザーが文書に簡単にコメントや注釈を追加できるようにします。
+これでアップロードした文書を埋め込む準備が整いました。この場合は、Adobe Embed APIを使用して、PDFが文書に簡単にコメントや注釈を追加できるようにしてください。
 
-## 列挙，PDFファイル
+## PDFファイルを列挙しています
 
-一般的なドキュメントワークフローでは複数のドキュメントが使用されるため、ドキュメントのリストを表示し、各ドキュメントをアプリケーションの新しいドキュメントレビューページにリンクする必要があります。
+一般的なドキュメントワークフローには複数のドキュメントが含まれる場合があるため、ドキュメントのリストを表示して、それぞれをアプリの新しいドキュメントレビューページにリンクする必要があります。
 
-まず、Server Code 内に/files エンドポイントを追加します。このエンドポイントは、uploads/drafts フォルダーに格納されているすべてのPDFファイルのリストを取得して返します。
+まず、サーバーコード内で、 uploads/draftsフォルダーに保存されているすべてのPDFファイルのリストを取得して返す/filesエンドポイントを追加します。
 
 ```
 const fs = require( "fs" );
@@ -209,11 +210,11 @@ return res.json( files.filter( f =\> f.endsWith( ".pdf" ) ) );
 } );
 ```
 
-新しい `/download/:file` web ページに埋め込むために、アップロードされたPDFファイルへのアクセスを提供するルート。
+追加 `/download/:file` アップロードされたPDFファイルにアクセスしてwebページに埋め込むルート。
 
 >[!NOTE]
 >
->運用アプリケーションでは、要求が有効なユーザーから送信されたものであり、ユーザーがドキュメントにアクセスできることを確認するために、認証と承認を追加する必要があります。
+>実稼働アプリケーションでは、要求が有効なユーザーから送信されていること、およびユーザーに文書へのアクセスが許可されていることを確認するために、認証と承認を追加する必要があります。
 
 ```
 app.get( "/download/:file", function( req, res ){
@@ -222,11 +223,11 @@ app.get( "/download/:file", function( req, res ){
 });
 ```
 
-読み込み時に入力されるファイルリストエレメントで index.html ページを更新します。 各アイテムは draft.html Web ページにリンクでき、クエリ文字列パラメーターを使用してファイル名をページに渡します。
+読み込み時に入力されるファイルリスト要素でindex.htmlページを更新します。 各アイテムはdraft.html webページにリンクでき、クエリ文字列パラメーターを使用してファイル名をページに渡します。
 
 >[!NOTE]
 >
->jQuery を使用して各アイテムを追加するので、Web ページに jQuery ライブラリを読み込むか、別のメソッドを使用してエレメントを追加する必要があります。
+>各アイテムの追加にはjQueryを使用するため、webページにjQueryライブラリを読み込むか、別のメソッドを使用してエレメントを追加する必要があります。
 
 ```
   <ul id="filelist">
@@ -253,25 +254,25 @@ app.get( "/download/:file", function( req, res ){
   </script>
 ```
 
-![レビュー用のファイルを選択した画面](assets/reviews_2.png)
+![レビューするファイルを選択したスクリーンショット](assets/reviews_2.png)
 
-## PDF
+## PDFの埋め込み
 
-これで、Web アプリケーション内にPDFファイルを埋め込んで表示できます。
+これで、webアプリケーション内にPDFファイルを埋め込んで表示する準備ができました。
 
-「draft.html」という名前の Web ページを作成し、ページに埋め込みエレメントの divPDFを追加します。
+「draft.html」という名前のwebページを作成し、そのページに埋め込みPDF用のdivエレメントを追加します。
 
 ```
   <div id="adobe-dc-view"></div>
 ```
 
-含める [!DNL Acrobat Services] ライブラリ：
+を含む [!DNL Acrobat Services] ライブラリ：
 
 ```
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 ```
 
-カスタムスクリプトタグ内で、クエリ文字列パラメーターからファイル名を解析して、ページに埋め込むファイルを確認します。
+カスタムスクリプトタグ内で、クエリ文字列パラメーターからファイル名を解析して、ページに埋め込むファイルを特定します。
 
 ```
   <script type="text/javascript">
@@ -280,7 +281,7 @@ app.get( "/download/:file", function( req, res ){
   </script>
 ```
 
-指定したPDFファイルを div エレメント内の埋め込みビューに読み込む、adobe_dc_view_sdk.ready イベントのドキュメントイベントリスナーを追加します。 クライアント ID は、埋め込み API 資格情報PDFから使用します。 コメントと注釈を有効にするには、FULL_WINDOW モードでビューを埋め込み、showAnnotationsTools オプションを true に設定します。
+指定したPDFファイルをdivエレメント内の埋め込みビューに読み込むadobe_dc_view_sdk.readyイベントのドキュメントイベントリスナーを追加します。 PDF Embed APIの資格情報からクライアントIDを使用します。 コメントと注釈を有効にして、ビューをFULL_WINDOWモードに埋め込み、showAnnotationsToolsオプションをtrueに設定します。
 
 ```
   document.addEventListener( "adobe_dc_view_sdk.ready", () => { 
@@ -302,7 +303,7 @@ app.get( "/download/:file", function( req, res ){
 
 ## ユーザープロファイルの作成
 
-このビューでは、コメントと注釈はデフォルトで「ゲスト」と表示されます。 現在のレビュー担当者のコメントと注釈の名前を設定するには、ページコード内のユーザープロファイルのコールバックをコールバックビューにPDFします。 プロファイルの例を次に示します。 ユーザー認証を含む本格的なアプリケーションでは、このように、ログインユーザーセッションのプロファイル情報を設定して、レビューワークフローで文書の各コメントを識別できます。
+デフォルトでは、コメントと注釈は、このビューで「ゲスト」として表示されます。 PDFビューにページコードでユーザープロファイルのコールバックを登録することで、コメントとアノテーションの現在のレビュー担当者の名前を設定できます。 プロファイルの例を次に示します。 ユーザー認証を含む本格的なアプリケーションでは、ログインしたユーザーセッションのプロファイル情報を、この方法で設定して、レビューワークフロー内の文書の各コメントを識別できます。
 
 ```
   adobeDCView.registerCallback(
@@ -325,13 +326,13 @@ app.get( "/download/:file", function( req, res ){
   );
 ```
 
-この Web ページを使用してアップロードされた文書を表示し、注釈を付けると、プロファイルによって特定のユーザーとして識別されます。
+このwebページを使用して、アップロードされたドキュメントを表示および注釈を追加する場合、プロファイルによって特定のユーザーとして識別されます。
 
-## 文書のフィードバックの保存
+## 文書のフィードバックを保存中
 
-ユーザーが文書に注釈を追加した後、「 **保存します。** デフォルトでは、 **保存** 更新されたインストールファイルをPDFします。 このアクションを変更して、サーバー上の現在のPDFファイルを更新します。
+ユーザーが文書にコメントしたら、 **をクリックします。** デフォルトでは、 **保存** 更新されたPDFファイルをダウンロードします。 サーバ上の現在のPDFファイルを更新するには、このアクションを変更します。
 
-新しい `/save` uploads/drafts フォルダー内のサーバーファイルを上書きするPDFコードへのエンドポイント：
+追加 `/save` アップロード/下書きフォルダー内のPDFファイルを上書きするサーバーコードのエンドポイント：
 
 ```
   // Overwrite the PDF file with latest PDF changes and annotations
@@ -350,7 +351,7 @@ app.get( "/download/:file", function( req, res ){
   } );
 ```
 
-コンテンツを/savePDFにアップロードする SAVE_API のエンドポイント表示コールバックを登録します。 必要に応じて、autoSaveFrequency 値を変更して、タイマーの変更を自動的に保存し、完了時に現在埋め込まれているファイルにメタデータを追加することができます。
+コンテンツを/saveエンドポイントにアップロードするSAVE_APIのPDFビューコールバックを登録します。 必要に応じて、autoSaveFrequencyの値を変更して、アプリケーションが自動的にタイマーに変更を保存し、完了時に現在埋め込まれているファイルに追加のメタデータを含めるようにすることができます。
 
 ```
   adobeDCView.registerCallback(
@@ -382,13 +383,13 @@ app.get( "/download/:file", function( req, res ){
   );
 ```
 
-下書き文書のコメントと注釈がサーバーに保存されるようになりました。 また、 [コールバックの方法について詳しく見る](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#callbacks-workflows) ワークフローに合わせる 例えば、 [status コールバック](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#status-callback) 複数のユーザーが同じドキュメントを同時にレビューしてコメントする場合に、ファイルの競合を処理するのに役立ちます。
+下書き文書へのコメントと注釈がサーバーに保存されるようになりました。 次のことができます [コールバックの方法の詳細](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#callbacks-workflows) ワークフローに合わせる 例えば [ステータスコールバック](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#status-callback) 複数のユーザーが同じドキュメントを同時にレビューおよびコメントする場合のファイルの競合の処理に役立ちます。
 
-最後の手順では、編集サービス API を使用して、すべての編集済み文書を 1 つのPDFファイルにPDFします。
+最後のステップでは、PDFサービスAPIを使用して、編集したすべての文書を1つのPDFファイルに結合します。
 
-## 結合、PDFファイル
+## PDFファイルを結合中
 
-PDFの組み合わせコードは、PDFの作成コードに似ていますが、CombineFiles 操作を使用し、各ファイルを入力として追加します。
+PDF結合コードはPDF作成コードに似ていますが、CombineFilesオペレーションを使用し、各ファイルを入力として追加します。
 
 ```
   function combineFilesToPDF( files, outputFilename, callback ) {
@@ -412,9 +413,9 @@ PDFの組み合わせコードは、PDFの作成コードに似ていますが�
  }
 ```
 
-## 最終ダウンロードのPDF
+## 最終PDFのダウンロード
 
-/finalize というエンドポイントを追加して、この関数を呼び出し、 `uploads/drafts` フォルダーを `Final.pdf` ファイルをダウンロードします。
+PDF /finalizeという名前のエンドポイントを追加します。このエンドポイントは、 `uploads/drafts` フォルダーを `Final.pdf` ファイルをダウンロードします。
 
 ```
   app.get( "/finalize", ( req, res ) => {
@@ -432,18 +433,18 @@ PDFの組み合わせコードは、PDFの作成コードに似ていますが�
   } );
 ```
 
-最後に、メインの index.html Web ページに、この/finalize エンドポイントへのリンクを追加します。 このリンクを使用すると、ドキュメントワークフローの結果をダウンロードできます。
+最後に、メインのindex.html webページで、この/finalizeエンドポイントへのリンクを追加します。 このリンクを使用すると、ユーザーは文書ワークフローの結果をダウンロードできます。
 
 ```
 <a href="/finalize">Download final PDF</a>
 ```
 
-![最終的なドキュメントのダウンロードのスクリーンショット](assets/reviews_3.png)
+![最終ドキュメントをダウンロードしたスクリーンショット](assets/reviews_3.png)
 
 ## 次の手順
 
-この実践チュートリアルでは、 [!DNL Acrobat Services] API は [ドキュメント共有とレビューワークフロー](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) を Web アプリケーションに追加します。 このアプリケーションを使用すると、リモートワーカーはファイルを共有したり、チームメイトと共同作業したりできます。これは、在宅勤務の従業員や請負業者にとって特に役立ちます。
+この実践チュートリアルで示したのは、次の方法です [!DNL Acrobat Services] APIは [ドキュメント共有とレビューワークフロー](https://www.adobe.io/apis/documentcloud/dcsdk/review-and-approval.html) をWebアプリケーションに追加します。 このアプリケーションを使用すると、リモートワーカーはファイルを共有し、チームメイトと共同作業を行うことができます。これは、特に在宅勤務の従業員や請負業者に役立ちます。
 
-これらのテクニックを使用して、アプリまたは探索で共同作業を有効にすることができます [PDFサービスノード SDK サンプル](https://github.com/adobe/pdftools-node-sdk-samples) および [PDF埋め込み API サンプル](https://github.com/adobe/pdf-embed-api-samples) GitHub で、Adobeの API の使用方法に関するインスピレーションを得ることができます。
+これらの方法を使用して、アプリでの共同作業や検索を可能にすることができます [PDFサービスノードSDKサンプル](https://github.com/adobe/pdftools-node-sdk-samples) および [PDF埋め込みAPIサンプル](https://github.com/adobe/pdf-embed-api-samples) AdobeのAPIの他の使用方法に関するインスピレーションを得るには、GitHubをご覧ください。
 
-さっそく自分のアプリで文書の共有とレビューを有効にしましょう 新規登録 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) 開発者アカウント Adobe PDF Embed に無料でアクセスし、他の API の 6 ヶ月間の無料体験版をお試しください。 体験版の終了後は、次の操作を実行できます [従量制の](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) ビジネスの成長に合わせて、文書トランザクションあたり 0.05 USD で利用可能
+独自のアプリでドキュメントの共有とレビューを有効にしますか？ 新規登録 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) 開発者アカウント。 Adobe PDF Embedには無料でアクセスでき、他のAPIの6か月間無料体験版をご利用いただけます。 体験版の終了後は、 [従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) ビジネスの成長に応じて、文書トランザクションあたり\$0.05です。

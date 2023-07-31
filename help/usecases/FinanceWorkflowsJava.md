@@ -1,64 +1,65 @@
 ---
-title: Java での財務文書ワークフローの管理
-description: '"[!DNL Adobe Acrobat Services] PDF財務文書のデータを処理および抽出するために必要なすべてのツール、サービス、および機能を提供します」'
+title: Javaでの財務文書ワークフローの管理
+description: ”[!DNL Adobe Acrobat Services] PDFの財務文書のデータを処理および抽出するために必要なすべてのツール、サービス、機能を提供します」
 type: Tutorial
 role: Developer
 level: Intermediate
+feature: Use Cases
 thumbnail: KT-7482.jpg
 jria: KT-7482
 exl-id: 3bdc2610-d497-4a54-afc0-8b8baa234960
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%
 
 ---
 
-# Java での財務文書ワークフローの管理
+# Javaでの財務文書ワークフローの管理
 
-![ユースケースのヒーローバナー](assets/UseCaseFinancialHero.jpg)
+![ユースケースの英雄バナー](assets/UseCaseFinancialHero.jpg)
 
-金融業界では、PDFファイルを広範囲に使用してデータを交換しています。文書の形式、デザイン、構造を維持するのに役立つためです。 この堅牢なフォーマットにより、金融アナリストとアドバイザーは、クライアントが十分な情報に基づいた意思決定を行うのを支援できます。
+金融業界では、文書のフォーマット、デザイン、構造を維持するために、PDFファイルを広範囲にわたって使用してデータを交換しています。 この堅牢な形式により、財務アナリストやアドバイザーは、顧客が十分な情報に基づいて意思決定を行えるように支援できます。
 
-ただし、PDF形式は、特に複数のデータソースを組み合わせる場合など、処理や自動化が困難になる可能性があります。これは、金融業界の一般的なユースケースです。 PDF文書を処理するカスタムソリューションの構築は選択肢の 1 つですが、ソフトウェアやインフラストラクチャに多大な時間とコストを費やす必要はありません。 [!DNL Adobe Acrobat Services] には、PDFドキュメントのデータを処理および抽出するために必要なすべてのツール、サービス、および機能が用意されています。
+ただし、PDFフォーマットは、特に複数のデータソースを組み合わせる場合（金融業界で一般的なユースケース）には、処理と自動化が難しい場合があります。 PDF文書を処理するカスタムソリューションを構築することも選択肢の1つですが、ソフトウェアやインフラストラクチャに多くの時間とコストを費やす必要はありません。 [!DNL Adobe Acrobat Services] PDF文書のデータを処理および抽出するために必要なすべてのツール、サービス、および機能を提供します。
 
 ## 学習内容
 
-この実践チュートリアルでは、 [!DNL Adobe Acrobat Services] API [!DNL Java Spring Boot] します。 PDF文書からコンテンツを抽出し、Excel などの他のデータ形式に変換し、複数のPDFを結合し、リソースをパスワードで保護するモデルビューコントローラー (MVC) アプリケーションを構築します。 このチュートリアルでは、Adobe [PDF埋め込み API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)を選択します。
+この実践チュートリアルでは、の使用方法について説明します。 [!DNL Adobe Acrobat Services] API [!DNL Java Spring Boot] アプリケーション。 PDF文書からコンテンツを抽出してExcelなどの他のデータ形式に変換し、複数のリソースを結合してPDFを保護するモデルビューコントローラ(MVC)アプリを構築します。 このチュートリアルでは、PDF文書を処理し、Adobeを使用してwebサイトに表示する方法を説明します [PDF埋め込みAPI](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
 
-## 関連する API とリソース
+## 関連APIとリソース
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-* [PDF埋め込み API](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
+* [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
 * [プロジェクトサンプル](https://github.com/adobe/pdftools-java-sdk-samples)
 
 ## 設定
 
-[!DNL Adobe Acrobat Services] は、認証システムを使用してリソースアクセスを制御します。 サービスにアクセスするには、組織またはアプリケーションの API キーをAdobeにリクエストする必要があります。 API キーがある場合は、次のセクションに進みます。 新しい API キーを作成するには、 [はじめに](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) 」を [!DNL Acrobat Services] サイト。 1,000 件のドキュメントトランザクションを最大 6 か月間使用できる無料体験版を使用してキーを作成できます。
+[!DNL Adobe Acrobat Services] は、認証システムを使用してリソースアクセスを制御します。 サービスにアクセスするには、組織またはアプリケーションのAPIキーをAdobeにリクエストする必要があります。 APIキーがある場合は、次のセクションに進みます。 新しいAPIキーを作成するには、 [はじめに](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) を [!DNL Acrobat Services] サイト。 キーは無料体験版を使用して作成できます。この無料体験版では、最大6か月間で使用できる1,000件の文書トランザクションを提供します。
 
-このチュートリアルに沿って作業を進めるには、2 組の API キーが必要です。
+このチュートリアルを実行するには、次の2つのAPIキーセットが必要です。
 
-* Adobe PDF Services:PDF文書の処理に使用
+* Adobe PDF Services —PDF文書の処理に使用
 
 * Adobe PDF Embed API
 
-資格情報を作成したら、PDFサービス API の資格情報と秘密キーを [!DNL Spring Boot] アプリケーションを呼び出します。 詳しくは、 [Maven および Gradle ライブラリと依存関係](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=services) 」を [!DNL Adobe Acrobat Services] web サイトを開きます。 先に進む前に、必要なパッケージとライブラリをすべて設定してください。
+資格情報を作成した後、PDFサービスAPIの資格情報と秘密キーを [!DNL Spring Boot] 「リソース」セクション内のアプリケーションです。 詳細については、 [MavenとGradleのライブラリと依存関係](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=services) を [!DNL Adobe Acrobat Services] webサイトを開きます。 作業を進める前に、必要なすべてのパッケージとライブラリを設定してください。
 
-![ディレクトリサービス API 資格情報のPDFの場所のスクリーンショット](assets/FAWJ_1.png)
+![PDFサービスAPI資格情報のディレクトリの場所のスクリーンショット](assets/FAWJ_1.png)
 
-ロギングサービスを設定するには、 [Adobe文書](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=services) を選択し、「ログ」セクションまでスクロールします。
+ログサービスを構成するには、次のサイトにアクセスします。 [Adobeドキュメント](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=services) 「ログ」セクションまでスクロールします。
 
 >[!NOTE]
 >
-> 実稼働環境では、バージョン管理で秘密鍵を保存しないでください。 資格情報の不正使用を防ぐには、必ずシークレット資格情報コンテナーまたはキー挿入サービスを使用してください。
+> 運用環境では、秘密鍵をバージョン管理に保存しないでください。 資格情報の不正使用を防ぐために、常に秘密の資格情報コンテナーまたはキーインジェクションサービスを使用してください。
 
-これで [!DNL Spring Boot] アプリケーションが設定されたら、顧客のPDFの処理とレポートの生成を続行できます。
+次に、 [!DNL Spring Boot] アプリケーションが設定されている場合は、PDFの処理に進み、お客様向けのレポートを作成できます。
 
 ## レポートデータの送信
 
-Adobe PDF Services API を使用するには、まず `ExecutionContext` 指定した資格情報を使用します。 アプリケーション内に資格情報があるので、ファイルから資格情報を読み取って、次のようにコンテキストを作成できます。
+Adobe PDFサービスAPIを使用するには、まず `ExecutionContext` 指定した資格情報が使用されます。 アプリケーション内に資格情報があるので、ファイルから読み取り、次のようにコンテキストを作成できます。
 
 ```
 Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
@@ -68,23 +69,23 @@ Credentials credentials = Credentials.serviceAccountCredentialsBuilder()
 ExecutionContext executionContext = ExecutionContext.create(credentials);
 ```
 
-次に、コンテキストを取得してPDF文書を処理 次の操作を実行できます。
+次に、PDF文書を処理するためのコンテキストを取得します。 実行できるアクションは次のとおりです。
 
-* PDFドキュメントを Excel、Word、またはグラフィックに変換する
+* PDF文書をExcel、Wordまたはグラフィック形式に変換
 
-* PDF文書の作成 (HTML、Excel、Word など )
+* PDF文書(HTML、Excel、Wordなど)を作成
 
-* 複数のPDF文書の結合
+* 複数のPDF文書を結合する
 
-* ProtectしてPDF文書の保護を解除（パスワードが必要）
+* PDF文書をProtectして保護解除する（パスワードが必要）
 
-* ネットワークでのPDFドキュメントの配信を最適化する
+* PDF文書をネットワーク配信に最適化する
 
-これらのサンプルはすべて、 [GitHub サンプル](https://github.com/adobe/pdfservices-java-sdk-samples/tree/master/src/main/java/com/adobe/pdfservices/operation/samples) します。
+これらのサンプルはすべて、 [GitHubサンプル](https://github.com/adobe/pdfservices-java-sdk-samples/tree/master/src/main/java/com/adobe/pdfservices/operation/samples) リポジトリ。
 
-次の [!DNL Spring Boot]を使用すると、String パスまたはファイルがアップロードされているストリームを使用してファイルを取得できます。 実行するすべての操作を初期化し、入力ファイルパスを設定する必要があります。 このチュートリアルでは、 [ブラックロック](https://www.blackrock.com/us/individual/products/investment-funds)を選択します。 独自のレポートを含め、他のソースを使用できます。
+次に、 [!DNL Spring Boot]を指定すると、文字列パスまたはファイルがアップロードされているストリームを使用してファイルを取得できます。 実行するすべての操作を初期化し、入力ファイルパスを設定する必要があります。 PDFこのチュートリアルでは、一般に公開されている [ブラックロック](https://www.blackrock.com/us/individual/products/investment-funds). 独自のレポートなど、他のソースを使用できます。
 
-まず、 [FileRef](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/io/FileRef.html) オブジェクトを選択します。 簡単にするために、文字列パスでファイルにフォーカスします。 次に、パス内のファイルを Excel から Excel に変換する操作をPDFします。
+まず、 [FileRef](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/io/FileRef.html) オブジェクトをファイルから削除します。 わかりやすくするために、文字列パスによるファイルに焦点を当てます。 以下では、パスに含まれるファイルをPDFからExcelに変換する手順を説明します。
 
 ```
 ExecutionContext executionContext = ExecutionContext.create(credentials);
@@ -95,7 +96,7 @@ FileRef inputPdf = FileRef.createFromLocalFile(INPUT_PDF);
 exportOperation.setInput(inputPdf);
 ```
 
-この手順の後、プログラムはPDFで最初の操作を実行する準備ができました。 次に、操作を実行し、結果を Excel シートに表示します。
+この手順を実行すると、プログラムはPDF上で最初のオペレーションを実行する準備が整います。 次に、操作を実行して、Excelシートに結果を取得します。
 
 ```
 try {
@@ -106,19 +107,19 @@ try {
 }
 ```
 
-このシナリオでは、1 つのPDFファイルのみ また、複数のメディアファイルをPDFして、それらを 1 つのファイルに結合することもできます。 財務データ・レポートでは、複数のソースからの資金を処理して包括的なレポートを作成する必要があるため、複数のファイルを使用するのが一般的です。
+この場合、PDFファイルは1つしか処理されません。 複数のPDFファイルから始めて、それらを1つのファイルに結合することもできます。 財務データのレポートでは、複数のファイルを使用することが一般的です。これは、包括的なレポートを提供するために、複数のソースから資金を処理する必要があるためです。
 
 ## レポートの生成
 
-[!DNL Adobe Acrobat Services] では、そのままの状態で Excel ドキュメントを処理することはできませんが、コミュニティフレームワークとライブラリを使用してコンテンツを処理することはできます。
+[!DNL Adobe Acrobat Services] は、Excelドキュメントの既製の処理をサポートしていませんが、コミュニティフレームワークとライブラリを使用してコンテンツを処理できます。
 
-例えば、 [Apache POI](https://poi.apache.org/) を使用して、 [!DNL Java Spring Boot] または、Excel ファイルに対して他の手動タスクや自動化タスクを実行することもできます。
+例えば、 [Apache POI](https://poi.apache.org/) Excel(または他のMicrosoftドキュメント)を [!DNL Java Spring Boot] または、Excelファイルに対して他の手動または自動タスクを実行することもできます。
 
-この例では、PDF文書から、3 つの資金の正味資産額を抽出し、表に示します。 また、要件や利用可能なデータに基づいて、チャートや表などの他の情報も取得できます。 他のソースからデータを取り込むこともできます。
+この例では、PDF文書から始めて、3つの資金の純資産額を抽出し、表に示します。 要件と使用可能なデータに基づいて、チャートや表などの他の情報を取得することもできます。 他のソースからデータを取り込むこともできます。
 
-レポートが生成されたら（この例では Excel 形式）、Adobe PDF Services の操作を使用して、レポートをPDFドキュメントに変換し直して保護できます。
+この例では、Excel形式でレポートが生成された後に、Adobe PDF Servicesのオペレーションを使用してレポートをPDFの文書に変換し、保護することができます。
 
-レポートを Excel 形式からPDF文書に変換するには、次の操作を行います。
+レポートをExcel書式からPDF文書に変換するには、次の操作を実行します。
 
 ```
 ExecutionContext executionContext = ExecutionContext.create(credentials);
@@ -138,11 +139,11 @@ try {
 
 >[!TIP]
 >
-> 要求が来るたびにオブジェクトを再作成する必要がなくなるように、Spring の依存性注入を使用して `ExecutionContext` します。
+> 要求が来るたびにオブジェクトを再作成する必要がないようにするには、Springの依存性注入を使用して `ExecutionContext` オブジェクトです。
 
-このコードは、レポートからPDFドキュメントを Excel 形式で生成します。
+このコードは、レポートからExcelフォーマットのPDF文書を生成します。
 
-このPDFを顧客に提供する前に、パスワードで保護できます。 この保護を処理する別の操作を作成します。 [ProtectPDFOperation](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/pdfops/ProtectPDFOperation.html)を選択し、 [ProtectPDFOptions](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/pdfops/options/protectpdf/package-summary.html) 」をクリックして、文書にパスワードを追加します。
+このPDFをお客様に提供する前に、パスワードで保護することができます。 この保護を処理する別の操作を作成します。 [ProtectPDFOperation](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/pdfops/ProtectPDFOperation.html)、次を使用 [ProtectPDFOptions](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/pdfops/options/protectpdf/package-summary.html) をクリックして、文書にパスワードを追加します。
 
 ```
 ProtectPDFOptions options = ProtectPDFOptions.passwordProtectOptionsBuilder()
@@ -152,17 +153,17 @@ ProtectPDFOptions options = ProtectPDFOptions.passwordProtectOptionsBuilder()
 ProtectPDFOperation operation = ProtectPDFOperation.createNew(options);
 ```
 
-次に、入力を指定して操作を実行します。 不正アクセスを防ぐために、作成されるファイルにはパスワードが設定されている必要があります。
+次に、入力を指定して操作を実行します。 結果のファイルには、不正アクセスを防止するためのパスワードが必要です。
 
 ## レポートの表示
 
-PDFレポートが生成されたら、Adobe PDF Embed API を使用して Web サイトにレポートを表示できます。 この JavaScript API を使用すると、Web 開発者は Web ブラウザー内でネイティブにPDFドキュメントを読み込んでレンダリングできます。
+PDFレポートが生成されたので、Adobe PDF Embed APIを使用して、webサイトでレポートを表示できます。 このJavaScript APIを使用すると、Web開発者はWebブラウザー内でPDFドキュメントをネイティブに読み込んでレンダリングできます。
 
 >[!NOTE]
 >
-> この時点で、2 番目の資格情報トークン（クライアント ID）が必要です。
+> この時点で、2番目の資格情報トークンであるクライアントIDが必要になります。
 
-を [!DNL Spring Boot] アプリケーションで、HTMLレポートを表示する次のPDFスニペットを
+を [!DNL Spring Boot] PDFレポートを表示する場所に、次のHTMLスニペットを追加します。
 
 ```
 <div id="pdf-viewer"></div>
@@ -186,16 +187,16 @@ PDFレポートが生成されたら、Adobe PDF Embed API を使用して Web �
 </script>
 ```
 
-このスクリプトは、PDFドキュメントを読み込み、閲覧者がドキュメントに注釈やコメントを追加できるようにします。 Firefox に示すように、この Embed API は次のように表示されます。
+このスクリプトは、PDF文書を読み込み、閲覧者が文書に注釈を付けたり、注釈を付けたりできるようにします。 Firefoxに表示されるこのEmbed APIのビューは次のとおりです。
 
-![Firefox のPDF文書のスクリーンショット](assets/FAWJ_2.png)
+![FirefoxのPDFドキュメントのスクリーンショット](assets/FAWJ_2.png)
 
-PDF埋め込み API は、レポートに注釈を付けるだけでなく、PDFのプレビューに必要なすべてのツールを提供します。
+PDF埋め込みAPIには、PDFのプレビューとレポートの注釈付けに必要なすべてのツールが用意されています。
 
 ## 次の手順
 
-この実践チュートリアルでは、 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) API を使用して、これらのサービスを使用して財務データを処理し、PDF上の意思決定のためのレポートを生成する方法について説明しました。 API をシステムに統合する方法を示し、 [!DNL Java Spring Boot] フレームワークの例として、PDF・ドキュメントの迅速な処理がいかに容易であるかを示します。
+この実践チュートリアルでは、 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) APIと、これらのサービスを使用してPDFデータを処理し、財務上の意思決定に関するレポートを作成する方法について説明しました。 このデモでは、APIをシステムに統合する方法を示し、 [!DNL Java Spring Boot] サンプルフレームワークとして、PDF文書の迅速な処理の簡単さを示します。
 
-概要 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) Adobe PDF Services がお客様のビジネスにどのように役立つのかをご案内します。 SDK で使用できる機能について詳しくは、 [GitHub リポジトリ](https://github.com/adobe/pdftools-java-sdk-samples) サンプルを入手し、方法を調べる [PDF埋め込み API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) では、アプリケーション内のPDFをすばやく表示できます。
+検索 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) また、Adobe PDFサービスがお客様のビジネスに何ができるかをご確認ください。 SDKで使用可能なその他の機能については、 [GitHubリポジトリー](https://github.com/adobe/pdftools-java-sdk-samples) サンプルの場合は、次の手順を試してください [PDF埋め込みAPI](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) アプリケーション内のPDFをすばやく表示できます。
 
-文書を簡単に結合して操作し、金融機関の顧客に役立つPDFレポートを作成するには、まず無料の電子サインアップを行います [Adobe開発者アカウント](https://www.adobe.io/apis/documentcloud/dcsdk/) 今日です。
+財務クライアント向けに役立つPDFレポートを作成し、文書を簡単に組み合わせて操作するには、まず無料でサインアップします [Adobe開発者アカウント](https://www.adobe.io/apis/documentcloud/dcsdk/) 今日。

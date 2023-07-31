@@ -1,21 +1,22 @@
 ---
-title: Acrobat Sign APITutorials
-description: Acrobat Sign API の概要ページ
+title: ACROBAT SIGN API TUTORIALS
+description: Acrobat Sign APIの概要ページ
 type: Tutorial
 role: Developer
 level: Beginner, Intermediate, Experienced
+feature: Acrobat Sign API
 thumbnail: KT-11079.jpg
 exl-id: 79603883-26cd-439c-9cfd-6178c4544b93
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 11%
 
 ---
 
-# Acrobat Sign API チュートリアル
+# Acrobat Sign APIチュートリアル
 
-![Acrobat Sign API バナー](../assets/acrobatsignhero.png)
+![Acrobat Sign APIバナー](../assets/acrobatsignhero.png)
 
 Acrobat Sign API を使用すると、アプリケーションを作成し、Acrobat Sign UI と機能をアプリケーションに埋め込むことができます。
 
@@ -30,7 +31,7 @@ Acrobat Sign API を使用すると、アプリケーションを作成し、Acr
     <div>
     <a href="signapi.md"><strong>はじめに</strong></a>
     </div>
-    <em>アプリケーションに Sign API を含めて、署名やその他の情報を収集する方法について説明します</em>
+    <em>アプリケーションにSign APIを含めて、署名やその他の情報を収集する方法を説明します</em>
     <br>
   </td>
   <td>
@@ -51,20 +52,20 @@ Acrobat Sign API を使用すると、アプリケーションを作成し、Acr
 </tr>
 </table>
 
-## Acrobat Sign Embed のクイックスタートガイド
+## Acrobat Sign埋め込みクイックスタートガイド
 
-アプリケーションに OEM バージョンのAcrobat Signを組み込む方法について説明します。 このガイドは、アプリケーション内に署名プロセスを構築して埋め込む OEM パートナーを対象としています。
+Acrobat SignのOEM版をアプリケーションに組み込む方法を説明します。 このガイドは、アプリケーション内に署名プロセスを構築し、組み込んでいるOEMパートナー向けに特別に設計されています。
 
 <table style="table-layout:fixed">
 <tr>
  <td>
    <a href="sign-up-developer-account.md">
-      <img alt="開発者アカウントへのサインアップ" src="assets/Signingup_1280.png" />
+      <img alt="デベロッパーアカウントにサインアップ" src="assets/Signingup_1280.png" />
    </a>
     <div>
-   <a href="sign-up-developer-account.md"><strong>開発者アカウントへのサインアップ</strong></a>
+   <a href="sign-up-developer-account.md"><strong>デベロッパーアカウントにサインアップ</strong></a>
     </div>
-    <em>Sign および API 機能が完全に有効なAcrobat Signのデベロッパーアカウントにサインアップする方法を説明します</em>
+    <em>Acrobat Signのデベロッパーアカウントに新規登録する方法について説明します。このアカウントは、SignおよびAPI機能が完全に有効になっています</em>
     <br>
   </td>
   <td>
@@ -84,7 +85,7 @@ Acrobat Sign API を使用すると、アプリケーションを作成し、Acr
     <div>
    <a href="creating-an-embed-link.md"><strong>埋め込みリンクの作成</strong></a>
     </div>
-    <em>OAuth の埋め込みリンクを作成する方法について説明します。これは、アプリケーションがユーザーに対する権限を取得する方法です</em>
+    <em>アプリケーションがユーザーの権限を取得する方法であるOAuthの埋め込みリンクを作成する方法について説明します</em>
     <br>
   </td>
   <td>
@@ -94,7 +95,7 @@ Acrobat Sign API を使用すると、アプリケーションを作成し、Acr
     <div>
    <a href="generating-an-access-token.md"><strong>アクセストークンの生成</strong></a>
     </div>
-    <em>Acrobat Sign API で使用できるアクセストークンを生成する方法について説明します</em>
+    <em>Acrobat Sign APIで使用できるアクセストークンを生成する方法について説明します</em>
     <br>
   </td>
 </tr>
@@ -106,7 +107,7 @@ Acrobat Sign API を使用すると、アプリケーションを作成し、Acr
     <div>
    <a href="creating-a-transient-document.md"><strong>一時的なドキュメントの作成</strong></a>
     </div>
-    <em>Acrobat Sign AP で使用できる一時的なドキュメントの作成方法について説明します</em>
+    <em>Acrobat Sign APで使用できる一時的なドキュメントを作成する方法について説明します</em>
     <br>
   </td>
   <td>

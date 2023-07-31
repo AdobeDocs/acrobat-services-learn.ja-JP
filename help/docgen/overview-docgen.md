@@ -1,13 +1,14 @@
 ---
-title: 文書生成 APITutorials
-description: ドキュメント生成 API チュートリアルの概要
+title: Document Generation API Tutorials
+description: Document Generation APIチュートリアルの概要
 type: Tutorial
 role: Developer
 level: Beginner, Intermediate, Experienced
+feature: Document Generation API
 thumbnail: KT-7480.jpg
 kt: 7480
 exl-id: 519a41a2-33af-4022-8919-2cb69995c46c
-source-git-commit: 0c434db1665d4cb6ce6aff6f329e300f22129df9
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -15,30 +16,30 @@ ht-degree: 0%
 ---
 
 
-# 文書生成 API チュートリアル
+# Document Generation APIチュートリアル
 
-![文書生成 API バナー](../assets/docgenhero.jpg)
+![Document Generation APIバナー](../assets/docgenhero.jpg)
 
-ドキュメント生成 API は、Word テンプレートと JSON データからPDFドキュメントと Word ドキュメントを作成します。
+Document Generation APIは、WordテンプレートとJSONデータからPDF文書とWord文書を作成します。
 
 >[!NOTE]
 >
->ドキュメント生成 API は、PDFサービス API に含まれています。
+>Document Generation APIは、PDFサービスAPIに含まれています。
 
 ## テンプレートの作成
 
-ドキュメント生成 API では、最終的なドキュメントを生成するために、入力データとともにドキュメントテンプレート（テンプレートタグ付き）を受け取ります。 文書テンプレート内のすべてのテンプレートタグを、データ入力に対応する実際の値に基づく動的コンテンツに置き換えることにより、最終文書を生成する。
+Document Generation APIでは、入力データとともに（テンプレートタグが付いた）文書テンプレートを受け入れ、最終文書を生成します。 最終文書は、データ入力に対応する実際の値に基づいて、文書テンプレート内のすべてのテンプレートタグを動的コンテンツに置き換えることによって生成される。
 
 <table style="table-layout:fixed">
 <tr>
  <td>
    <a href="taggeroverview.md">
-      <img alt="ドキュメント生成Adobeの概要" src="assets/Taggeroverview_thumb.png" />
+      <img alt="Adobe文書生成タガーの概要" src="assets/Taggeroverview_thumb.png" />
    </a>
     <div>
-   <a href="taggeroverview.md"><strong>ドキュメント生成Adobeの概要</strong></a>
+   <a href="taggeroverview.md"><strong>Adobe文書生成タガーの概要</strong></a>
     </div>
-    <em>Adobeドキュメント生成 API で使用するように設計されたAdobeドキュメント生成タグの概要を取得</em>
+    <em>AdobeのDocument Generation APIで使用するように設計されたAdobeのDocument Generation Taggerの概要を確認します</em>
     <br>
   </td>
   <td>
@@ -48,7 +49,7 @@ ht-degree: 0%
     <div>
    <a href="taggeraddtexttags.md"><strong>テキストタグの追加</strong></a>
     </div>
-    <em>Adobe文書生成タグを使用して、Microsoft Word テンプレートにテキストタグを追加し、Adobe文書生成 API で使用する方法を説明します</em>
+    <em>AdobeのDocument Generation APIで使用するAdobeのDocument Generation Taggerを使用して、Microsoft Wordテンプレートにテキストタグを追加する方法について説明します</em>
     <br>
   </td>
   <td>
@@ -58,17 +59,17 @@ ht-degree: 0%
     <div>
    <a href="taggeraddimagetags.md"><strong>画像タグの追加</strong></a>
     </div>
-    <em>Adobe文書生成タグを使用してMicrosoft Word テンプレートに画像タグを追加し、Adobe文書生成 API を使用して画像を文書に動的にプッシュする方法について説明します</em>
+    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートに画像タグを追加し、AdobeのDocument Generation APIを使用して画像を文書に動的にプッシュする方法について説明します。</em>
     <br>
   </td>
   <td>
    <a href="taggertables.md">
-      <img alt="テーブルおよびリストタグの追加" src="assets/Taggertables_thumb.png" />
+      <img alt="表とリストタグの追加" src="assets/Taggertables_thumb.png" />
    </a>
     <div>
-   <a href="taggertables.md"><strong>テーブルおよびリストタグの追加</strong></a>
+   <a href="taggertables.md"><strong>表とリストタグの追加</strong></a>
     </div>
-    <em>Adobe文書生成タグを使用して、Microsoft Word テンプレートに表やリストのタグを追加する方法を説明します。Adobe文書生成 API を使用して、データに基づいて表やリストの行を動的に追加できます</em>
+    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートに表とリストタグを追加し、AdobeのDocument Generation APIを使用してデータに基づいて表またはリストの行を動的に追加する方法について説明します。</em>
     <br>
   </td>
 </tr>
@@ -80,7 +81,7 @@ ht-degree: 0%
     <div>
    <a href="taggercalculations.md"><strong>数値計算タグの設定</strong></a>
     </div>
-    <em>Microsoft Word テンプレートで数値計算タグを設定し、Adobe文書生成タグを使用して、Adobe文書生成 API でデータ値の集計または演算を計算する方法について説明します</em>
+    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートで数値計算タグを設定し、AdobeのDocument Generation APIを使用してデータ値の集計または計算を行う方法について説明します。</em>
     <br>
   </td>
   <td>
@@ -90,7 +91,7 @@ ht-degree: 0%
     <div>
    <a href="taggerconditional.md"><strong>条件付きコンテンツの設定</strong></a>
     </div>
-    <em>Adobe文書生成タグを使用してMicrosoft Word テンプレートのセクションを設定し、Adobe文書生成 API を使用して、データに基づいて文書のセクションを動的に含めたり除外したりする方法について説明します</em>
+    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートのセクションを設定し、AdobeのDocument Generation APIを使用してデータに基づいて文書のセクションを動的に含めるか除外する方法について説明します</em>
     <br>
   </td>
   <td>

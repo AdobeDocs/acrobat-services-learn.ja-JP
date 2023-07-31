@@ -1,70 +1,71 @@
 ---
-title: PDFサービス API を使用した Word、PowerPoint などへのPDFの書き出し
-description: Node.js、Java および.Net 言語のサンプル・ファイルを使用して、PDF・サービス API エクスポート操作を実行する方法を説明します
+title: PDFサービスAPIを使用したWordやPowerPointなどへのPDFの書き出し
+description: Node.js、Java、.Netの言語用のサンプルファイルを使用して、PDFサービスAPIの書き出し処理を実行する方法について説明します
 type: Tutorial
 role: Developer
 level: Intermediate
+feature: PDF Services API
 thumbnail: KT-6674.jpg
 kt: 6674
 exl-id: 55f5b04e-0249-47d9-9131-2f9ec01db7e8
-source-git-commit: 2d1151c17dfcfa67aca05411976f4ef17adf421b
+source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 5%
 
 ---
 
-# PDFサービス API を使用した Word、PowerPoint などへのPDFの書き出し
+# PDFサービスAPIを使用したWordやPowerPointなどへのPDFの書き出し
 
-![PDFHero 画像の作成](assets/ExportPDF_hero.jpg)
+![PDFのヒーロー画像を作成](assets/ExportPDF_hero.jpg)
 
-Adobe PDFサービス API は、API を使用してPDFファイルを MS Office、テキスト、および画像に変換します。 既存のPDFを活用してコンテンツの編集や分析を行う場合は、多くの一般的なユースケースが存在します。PDFサービス API を使用すると、開発者はこの機能を既存のシステムやアプリケーションに簡単に組み込むことができます。 PDFファイルを MS Word に変換して、コンテンツの編集、承認、後で署名用に送信して、カスタムの契約ワークフローを作成できます。 また、PDFコンテンツを MS Excel 形式に書き出して、請求書や財務計算、データ分析に使用できます。
+Adobe PDF Services APIは、APIを使用して、PDFファイルをMS Office、テキスト、および画像に変換します。 コンテンツの編集や分析に既存のPDFを活用する一般的なユースケースは数多く存在します。PDFサービスを利用することで、API開発者は既存のシステムやアプリケーションにこの機能を簡単に組み込むことができます。 PDFファイルをMS Wordに変換すると、コンテンツの編集や承認を行えるほか、後で署名用に送信して、カスタム契約ワークフローを構築できます。 または、請求書や財務計算、データ分析のために、PDFのコンテンツをMS Excelフォーマットにエクスポートします。
 
-Export 操作では、次の変換ファイルPDFがサポートされます。
+エクスポート操作では、次のPDFファイル変換がサポートされます。
 
-* Microsoft Word(DOC、DOCX) へのPDF
-* Microsoft PowerPoint(PPTX) のPDF
-* Microsoft Excel(XLSX) へのPDF
-* PDFからテキスト (RTF)
-* PDFから画像 (JPEG、PNG)
+* Microsoft Word(DOC、DOCX)へのPDF
+* Microsoft PowerPoint(PPTX)へのPDF
+* Microsoft Excel (XLSX)へのPDF
+* PDFテキスト変換(RTF)
+* PDFから画像(JPEG、PNG)
 
-このチュートリアルでは、Node.js、Java および.Net 言語のサンプル・ファイルを使用して、最初のPDF・サービス API エクスポート操作を実行する方法の基本を学習します。
+このチュートリアルでは、Node.js、Java、および.Net言語用のサンプルファイルを使用して、最初のPDFサービスAPI書き出し操作を実行する方法の基本を学習します。
 
-## 手順 1:資格情報を作成し、環境を設定します。
+## 手順1：資格情報を作成して環境を設定する：
 
-以下の入門チュートリアルを使用して、API 資格情報の作成、サンプルファイルのダウンロード、環境の設定を行います。
+以下の入門チュートリアルを使用して、API資格情報を作成し、サンプルファイルをダウンロードして、環境を設定します。
 
-[PDFサービス API と Java 入門](gettingstartedjava.md)
+[PDFサービスAPIおよびJavaの概要](gettingstartedjava.md)
 
-[PDFサービス APIと.Net 入門](gettingstartednet.md)
+[PDFサービスAPIおよび.Netの概要](gettingstartednet.md)
 
-[PDFサービス API と Node.js 入門](createpdffromhtml.md)
+[PDFサービスAPIおよびNode.jsの概要](createpdffromhtml.md)
 
-## 手順 2:サンプルファイルを使用した PDF の書き出し操作の実行
+## 手順2：サンプルファイルを使用したPDFを書き出し操作を実行する
 
 **Java**
 
 1. コマンドプロンプトを開きます。
 
-1. サンプルコードディレクトリにディレクトリを変更します。
+1. ディレクトリをサンプルコードディレクトリに変更します。
 
-   例： C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-java-samples
+   例えば、 C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-java-samplesのように入力します。
 
 1. 次のコマンドを実行します:
 
    `mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.platform.operation.samples.exportpdf.ExportPDFToDOCX`
 
-PDFは src/main/resources ディレクトリに作成されます。
+PDFはsrc/main/resourcesディレクトリに作成されます。
 
 **.Net**
 
 1. コマンドプロンプトを開きます。
 
-1. サンプルコードディレクトリにディレクトリを変更します。
+1. ディレクトリをサンプルコードディレクトリに変更します。
 
-   例： C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-NetSamples
+   例えば、 C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-NetSamplesのように入力します。
 
-1. ディレクトリを ExportPDFtoDocx ディレクトリに再度変更します。
+1. 再度ディレクトリをExportPDFtoDocxディレクトリに変更します。
 
 1. 次のコマンドを実行します:
 
@@ -76,23 +77,23 @@ PDFは同じディレクトリに作成されます。
 
 1. コマンドプロンプトを開きます。
 
-1. サンプルコードディレクトリにディレクトリを変更します。
+1. ディレクトリをサンプルコードディレクトリに変更します。
 
-   例： C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
+   例えば、 C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samplesのように入力します。
 
 1. 次のコマンドを実行します:
 
    `node src/ocr/ocr-pdf.js`
 
-PDFは、出力で指定された場所（デフォルトでは pdfServicesSdkResult ディレクトリ）に作成されます。
+PDFは、出力で指定されている場所（デフォルトではpdfServicesSdkResultディレクトリ）に作成されます。
 
-## 結論
+## 最後のアイデア
 
-これで、既存のアプリケーションにインポートして概念実証を開始できる実例が完成しました。 各サンプルディレクトリには、別のサンプルが表示され、イメージフォーマットにPDFファイルを書き出すことができます。 上記と同じ手順で、そのサンプルも実行できます。 別の形式に変更するには、コードを新しい形式に更新します。
+これで、既存のアプリケーションに読み込んで概念実証を開始できる作業例ができました。 各サンプルディレクトリには、PDFファイルをimage formatに書き出す別のサンプルが表示されます。 上記の同じ手順を使用すると、そのサンプルも実行できます。 別の形式に変更するには、コードを希望の新しい形式に更新します。
 
 SupportedTargetFormats.PPTX
 
-次のような出力結果が得られます。
+保存先の結果：
 
 output/exportPdfOutput.PPTX
 
@@ -100,10 +101,10 @@ output/exportPdfOutput.PPTX
 
 ## リソースと次のステップ
 
-* その他のヘルプやサポートについては、 [[!DNL Adobe Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) コミュニティフォーラム
+* その他のヘルプとサポートについては、 [[!DNL Adobe Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) フォーラム
 
-* PDFサービス API [文書](https://www.adobe.com/go/pdftoolsapi_doc)
+* PDFサービスAPI [文書](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) PDFサービス API の質問
+* [FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) PDFサービスAPIに関する質問
 
 * [お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform) ライセンスと価格に関する質問
