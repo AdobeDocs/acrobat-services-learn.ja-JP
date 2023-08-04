@@ -1,14 +1,14 @@
 ---
 title: PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します
 description: PDFサービスAPI内には、PDFを作成および操作したり、PDFからMS Officeやその他のフォーマットにエクスポートしたりするために使用できるサービスがいくつかあります
-type: Tutorial
+feature: PDF Services API
 role: Developer
 level: Beginner
-feature: PDF Services API
-thumbnail: KT-6673.jpg
+type: Tutorial
 jira: KT-6673
+thumbnail: KT-6673.jpg
 exl-id: 1bd01bb8-ca5e-4a4a-8646-3d97113e2c51
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 0%

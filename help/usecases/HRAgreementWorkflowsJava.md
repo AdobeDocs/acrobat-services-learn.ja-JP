@@ -1,14 +1,14 @@
 ---
 title: Javaでの人事文書ワークフロー
 description: ”[!DNL Adobe Acrobat Services] APIは、PDF機能をHR Webアプリケーションに簡単に組み込むことができます」
-type: Tutorial
+feature: Use Cases
 role: Developer
 level: Intermediate
-feature: Use Cases
-thumbnail: KT-7474.jpg
+type: Tutorial
 jira: KT-7474
+thumbnail: KT-7474.jpg
 exl-id: add4cc5c-06e3-4ceb-930b-e8c9eda5ca1f
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '1899'
 ht-degree: 2%

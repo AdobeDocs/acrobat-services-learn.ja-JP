@@ -1,14 +1,14 @@
 ---
 title: 従業員オンボーディングの最新化
 description: 以下を使用して、従業員のオンボーディングを最新化する方法について説明します [!DNL Adobe Acrobat Services] API
+feature: Use Cases
 role: Developer
 level: Intermediate
 type: Tutorial
-feature: Use Cases
-thumbnail: KT-10203.jpg
 jira: KT-10203
+thumbnail: KT-10203.jpg
 exl-id: 0186b3ee-4915-4edd-8c05-1cbf65648239
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '1514'
 ht-degree: 1%

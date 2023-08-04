@@ -1,14 +1,14 @@
 ---
 title: Javaでの財務文書ワークフローの管理
 description: ”[!DNL Adobe Acrobat Services] PDFの財務文書のデータを処理および抽出するために必要なすべてのツール、サービス、機能を提供します」
-type: Tutorial
+feature: Use Cases
 role: Developer
 level: Intermediate
-feature: Use Cases
+type: Tutorial
+jira: KT-7482
 thumbnail: KT-7482.jpg
-jria: KT-7482
 exl-id: 3bdc2610-d497-4a54-afc0-8b8baa234960
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%

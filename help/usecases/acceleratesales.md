@@ -1,14 +1,14 @@
 ---
 title: セールス・プロセスの促進
 description: ドキュメントのエクスペリエンスを統合して販売を促進する方法を説明します [!DNL Adobe Acrobat Services]
+feature: Use Cases
 role: Developer
 level: Intermediate
 type: Tutorial
-feature: Use Cases
-thumbnail: KT-10222.jpg
 jira: KT-10222
+thumbnail: KT-10222.jpg
 exl-id: 9430748f-9e2a-405f-acac-94b08ad7a5e3
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '1755'
 ht-degree: 0%

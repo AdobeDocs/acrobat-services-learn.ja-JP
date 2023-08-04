@@ -1,14 +1,14 @@
 ---
 title: 請求書の処理
 description: 顧客請求書の自動生成、パスワード保護、配信を行う方法を説明します
+feature: Use Cases
 role: Developer
 level: Intermediate
 type: Tutorial
-feature: Use Cases
-thumbnail: KT-8145.jpg
 jira: KT-8145
+thumbnail: KT-8145.jpg
 exl-id: 5871ef8d-be9c-459f-9660-e2c9230a6ceb
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '1427'
 ht-degree: 1%

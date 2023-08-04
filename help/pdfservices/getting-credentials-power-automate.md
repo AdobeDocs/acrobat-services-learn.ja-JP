@@ -1,14 +1,14 @@
 ---
 title: Microsoft Power Automateの資格情報の取得
 description: 資格情報を取得して、Adobe PDFサービスの使用またはトライアルを開始する方法について説明します。
-type: Tutorial
+feature: PDF Services API
 role: Developer
 level: Beginner
-feature: PDF Services API
-thumbnail: KT-10382.jpg
+type: Tutorial
 jira: KT-10382
+thumbnail: KT-10382.jpg
 exl-id: 68ec654f-74aa-41b7-9103-44df13402032
-source-git-commit: b65ffa3efa3978587564eb0be0c0e7381c8c83ab
+source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 3%
