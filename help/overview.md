@@ -8,16 +8,14 @@ jira: KT-7463
 type: Tutorial
 thumbnail: KT-7463.jpg
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '121'
 ht-degree: 4%
 
 ---
 
 # [!DNL Adobe Acrobat Services] APIチュートリアル
-
-![[!DNL Acrobat Services] バナー](assets/acrobatserviceshero.jpg)
 
 [!DNL Adobe Acrobat Services] には、 [!DNL Adobe PDF Services API]、および [!DNL Adobe PDF Embed API]、および [!DNL Adobe Document Generation API]、および [!DNL Adobe PDF Extract API] および [!DNL Adobe PDF Accessibility Auto-Tag API]. 後者の2つのAPIとそのSDKは、次の場所にバンドルされています。 [!DNL Adobe PDF Services API] 有料サービスの一部として。 [!DNL PDF Embed API] は無料で提供されます。 これらのAPIは、最新のクラウドベースのWebサービスのセットを介して、ドキュメントコンテンツの生成、操作、変換を自動化します。 これらは、ドキュメントに対するユーザー操作の制御、PDFワークフローの合理化、使用と保持の促進など、シンプルで迅速なブランドエクスペリエンスを提供するのに役立ちます。 これらのチュートリアルでは、最新の状態に迅速に到達し、ブランド化されたシンプルで高速なエクスペリエンスを提供します。 [!DNL Adobe Acrobat Services] API。
 
