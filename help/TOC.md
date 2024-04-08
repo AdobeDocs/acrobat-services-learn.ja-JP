@@ -1,6 +1,6 @@
 ---
 user-guide-title: ”[!DNL Adobe Acrobat Services]”
-breadcrumb-title: "[!DNL Acrobat Services]"
+breadcrumb-title: ”[!DNL Acrobat Services]”
 user-guide-description: 詳細情報： [!DNL Adobe Acrobat Services]
 solution: Acrobat Services
 feature-set: Acrobat Services
@@ -8,10 +8,10 @@ feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation 
 role: Developer
 level: Beginner, Intermediate, Experienced
 auto-video-transcripts: true
-source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
+source-git-commit: c64f1519438addb4081469afaed811fbf03ac88e
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 7%
+source-wordcount: '213'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 7%
 # [!DNL Adobe Acrobat Services] API TUTORIALS {#tutorials}
 
 + [概要](overview.md)
-+ PDF Services API {#pdfservices}
++ PDFサービスAPI {#pdfservices}
    + [概要](pdfservices/overview-pdfservices.md)
    + [Microsoft Power Automateの資格情報の取得](pdfservices/getting-credentials-power-automate.md)
    + [Microsoft Power Automateで最初のフローを作成](pdfservices/create-workflow-power-automate.md)
@@ -30,6 +30,7 @@ ht-degree: 7%
    + [Adobe PDFサービスAPIを使用したOCRPDFファイルの書き出し](pdfservices/ocr.md)
 + Document Generation API {#docgen}
    + [概要](docgen/overview-docgen.md)
+   + [ドキュメント生成の自動化](docgen/automate-doc-gen.md)
    + テンプレートの作成 {#docgentemplates}
       + [Adobe文書生成タガーの概要](docgen/taggeroverview.md)
       + [テキストタグの追加](docgen/taggeraddtexttags.md)
@@ -42,7 +43,7 @@ ht-degree: 7%
 + PDF埋め込みAPI {#pdfembed}
    + [概要](pdfembed/overview-embed.md)
    + [PDFのオンラインエクスペリエンスを制御し、分析を収集](pdfembed/controlpdfexperience.md)
-+ Acrobat Sign API {#acrobatsign}
++ ACROBAT SIGN API {#acrobatsign}
    + [概要](acrobatsign/overview-sign.md)
    + [Adobe Sign APIの概要](acrobatsign/signapi.md)
    + OEM/組み込みパートナー {#oem}
