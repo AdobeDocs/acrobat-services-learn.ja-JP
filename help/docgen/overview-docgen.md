@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-7480
 thumbnail: KT-7480.jpg
 exl-id: 519a41a2-33af-4022-8919-2cb69995c46c
-source-git-commit: 5354dc45fe27cd4dccbbe62d502277bc44441d9b
+source-git-commit: e35377fb467aac8581a5f81d2efb74fb442a6dc5
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Document Generation APIは、WordテンプレートとJSONデータからPDF文�
       <img alt="ドキュメント生成の自動化" src="assets/automate-doc-gen.png" />
    </a>
   </td>
-    <td>
+  <td>
     <img alt="スペーサー" src="../assets/WhiteBanner_Placeholder.png" />
     <div>
     <br>

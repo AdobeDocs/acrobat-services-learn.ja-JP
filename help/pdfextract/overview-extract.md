@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-9247
 thumbnail: KT-9247.jpg
 exl-id: db340959-e7dc-4e46-939d-3b8c29749ebd
-source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
+source-git-commit: e35377fb467aac8581a5f81d2efb74fb442a6dc5
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,11 @@ Adobe Senseiの機械学習を利用したwebサービスで、あらゆるPDF�
 <table style="table-layout:fixed">
 <tr>
  <td>
+   <a href="automate-content-extraction.md">
+      <img alt="コンテンツ抽出の自動化" src="assets/automate-content-extraction.png" />
+   </a>
+  </td>
+  <td>
    <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html">
       <img alt="解析PDF:PDFのExtract APIを使用してJSONデータを操作するのと同じくらい簡単です。" src="assets/ParsingPDF_1280.png" />
    </a>
@@ -33,11 +38,6 @@ Adobe Senseiの機械学習を利用したwebサービスで、あらゆるPDF�
    <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html"><strong>解析PDF:PDFのExtract APIを使用してJSONデータを操作するのと同じくらい簡単です。</strong></a>
     </div>
     <em>Adobe PDFサービスAPIのPDFエクストラクトサービスを使用して、JSONの解析と同様に簡単にPDFを解析する方法について説明します</em>
-    <br>
-  </td>
-  <td>
-    <img alt="スペーサー" src="../assets/WhiteBanner_Placeholder.png" />
-    <div>
     <br>
   </td>
   <td>
