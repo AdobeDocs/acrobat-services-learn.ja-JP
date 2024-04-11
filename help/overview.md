@@ -8,22 +8,22 @@ jira: KT-7463
 type: Tutorial
 thumbnail: KT-7463.jpg
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
+source-git-commit: c130591ed32bb1aab457556938fc994756e8b04a
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 4%
+source-wordcount: '125'
+ht-degree: 2%
 
 ---
 
 # [!DNL Adobe Acrobat Services] APIチュートリアル
 
-[!DNL Adobe Acrobat Services] には、 [!DNL Adobe PDF Services API]、および [!DNL Adobe PDF Embed API]、および [!DNL Adobe Document Generation API]、および [!DNL Adobe PDF Extract API] および [!DNL Adobe PDF Accessibility Auto-Tag API]. 後者の2つのAPIとそのSDKは、次の場所にバンドルされています。 [!DNL Adobe PDF Services API] 有料サービスの一部として。 [!DNL PDF Embed API] は無料で提供されます。 これらのAPIは、最新のクラウドベースのWebサービスのセットを介して、ドキュメントコンテンツの生成、操作、変換を自動化します。 これらは、ドキュメントに対するユーザー操作の制御、PDFワークフローの合理化、使用と保持の促進など、シンプルで迅速なブランドエクスペリエンスを提供するのに役立ちます。 これらのチュートリアルでは、最新の状態に迅速に到達し、ブランド化されたシンプルで高速なエクスペリエンスを提供します。 [!DNL Adobe Acrobat Services] API。
+[!DNL Adobe Acrobat Services] には6つの主なAPIがあります。 [!DNL Adobe PDF Services API]、および [!DNL Adobe PDF Embed API]、および [!DNL Adobe Document Generation API]、および [!DNL Adobe PDF Accessibility Auto-Tag API]、その [!DNL Adobe PDF Extract API]、および [!DNL Adobe PDF Accessibility Auto-Tag API]. 後者の2つのAPIとそのSDKは、次の場所にバンドルされています。 [!DNL Adobe PDF Services API] 有料サービスの一部として。 [!DNL PDF Embed API] は無料で提供されます。 これらのAPIは、最新のクラウドベースのWebサービスのセットを介して、ドキュメントコンテンツの生成、操作、変換を自動化します。 これらは、ドキュメントに対するユーザー操作の制御、PDFワークフローの合理化、使用と保持の促進など、シンプルで迅速なブランドエクスペリエンスを提供するのに役立ちます。 これらのチュートリアルでは、最新の状態に迅速に到達し、ブランド化されたシンプルで高速なエクスペリエンスを提供します。 [!DNL Adobe Acrobat Services] API。
 
 <table style="table-layout:fixed">
 <tr>
  <td>
    <a href="pdfservices/overview-pdfservices.md">
-      <img alt="PDF Services API" src="assets/pdfservicescard.png" />
+      <img alt="PDFサービスAPI" src="assets/pdfservicescard.png" />
    </a>
   </td>
   <td>
@@ -32,18 +32,23 @@ ht-degree: 4%
    </a>
   </td>
   <td>
-   <a href="pdfextract/overview-extract.md">
-      <img alt="PDFエクストラクトAPI" src="assets/pdfextractcard.png" />
+   <a href="pdfaccessibility/overview-accessibility.md">
+      <img alt="PDFアクセシビリティ自動タグ付けAPI" src="assets/PDFAccessibility.png" />
    </a>
   </td>
   <td>
-   <a href="pdfembed/overview-embed.md">
-      <img alt="Adobe PDF Tools APIおよびJavaの概要" src="assets/pdfembedcard.png" />
+   <a href="pdfextract/overview-extract.md">
+      <img alt="PDFエクストラクトAPI" src="assets/pdfextractcard.png" />
    </a>
   </td>
 </tr>
 <tr>
   <td>
+   <a href="pdfembed/overview-embed.md">
+      <img alt="Adobe PDF Tools APIおよびJavaの概要" src="assets/pdfembedcard.png" />
+   </a>
+  </td>
+ <td>
    <a href="acrobatsign/overview-sign.md">
       <img alt="Acrobat Sign API" src="assets/acrobatsigncard.png" />
    </a>
@@ -52,11 +57,6 @@ ht-degree: 4%
    <a href="usecases/overview-usecases.md">
       <img alt="[!DNL Adobe Acrobat Services] APIの使用例" src="assets/usecasescard.png" />
    </a>
-  </td>
-  <td>
-    <img alt="スペーサー" src="assets/GrayBanner_Placeholder.png" />
-    <div>
-    <br>
   </td>
   <td>
     <img alt="スペーサー" src="assets/GrayBanner_Placeholder.png" />
