@@ -8,9 +8,9 @@ feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation 
 role: Developer
 level: Beginner, Intermediate, Experienced
 auto-video-transcripts: true
-source-git-commit: 073dc25717c22ef238bc81338223945b9fee2ef7
+source-git-commit: 794e4418a6cbff45b75775121404f239aa41f8e0
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '235'
 ht-degree: 3%
 
 ---
@@ -44,6 +44,9 @@ ht-degree: 3%
 + PDFエクストラクトAPI {#pdfextract}
    + [概要](pdfextract/overview-extract.md)
    + [コンテンツ抽出の自動化](pdfextract/automate-content-extraction.md)
++ PDFeシールAPI {#eseal}
+   + [概要](pdfelectronicseal/overview-electronic-seal.md)
+   + [eシールを自動適用](pdfelectronicseal/automatically-apply-electronic-seal.md)
 + PDF埋め込みAPI {#pdfembed}
    + [概要](pdfembed/overview-embed.md)
    + [PDFのオンラインエクスペリエンスを制御し、分析を収集](pdfembed/controlpdfexperience.md)
