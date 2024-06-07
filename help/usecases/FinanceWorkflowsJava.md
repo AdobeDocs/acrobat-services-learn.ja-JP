@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-7482
 thumbnail: KT-7482.jpg
 exl-id: 3bdc2610-d497-4a54-afc0-8b8baa234960
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: 558bd677d3b357a98488ada9dda1054bb21b81af
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 関連APIとリソース
 
-* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
@@ -85,7 +85,7 @@ ExecutionContext executionContext = ExecutionContext.create(credentials);
 
 次に、 [!DNL Spring Boot]を指定すると、文字列パスまたはファイルがアップロードされているストリームを使用してファイルを取得できます。 実行するすべての操作を初期化し、入力ファイルパスを設定する必要があります。 PDFこのチュートリアルでは、一般に公開されている [ブラックロック](https://www.blackrock.com/us/individual/products/investment-funds). 独自のレポートなど、他のソースを使用できます。
 
-まず、 [FileRef](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/io/FileRef.html) オブジェクトをファイルから削除します。 わかりやすくするために、文字列パスによるファイルに焦点を当てます。 以下では、パスに含まれるファイルをPDFからExcelに変換する手順を説明します。
+まず、ファイルからFileRefオブジェクトをキャプチャします。 わかりやすくするために、文字列パスによるファイルに焦点を当てます。 以下では、パスに含まれるファイルをPDFからExcelに変換する手順を説明します。
 
 ```
 ExecutionContext executionContext = ExecutionContext.create(credentials);
@@ -143,7 +143,7 @@ try {
 
 このコードは、レポートからExcelフォーマットのPDF文書を生成します。
 
-このPDFをお客様に提供する前に、パスワードで保護することができます。 この保護を処理する別の操作を作成します。 [ProtectPDFOperation](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/pdfops/ProtectPDFOperation.html)、次を使用 [ProtectPDFOptions](https://opensource.adobe.com/pdfservices-java-sdk-samples/apidocs/latest/com/adobe/pdfservices/operation/pdfops/options/protectpdf/package-summary.html) をクリックして、文書にパスワードを追加します。
+このPDFをお客様に提供する前に、パスワードで保護することができます。 この保護を処理する別の操作ProtectPDFOperationを作成し、ProtectPDFOptionsを使用して文書にパスワードを追加します。
 
 ```
 ProtectPDFOptions options = ProtectPDFOptions.passwordProtectOptionsBuilder()
