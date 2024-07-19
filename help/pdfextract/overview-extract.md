@@ -35,9 +35,9 @@ Adobe Senseiの機械学習を利用したwebサービスで、あらゆるPDF�
       <img alt="解析PDF:PDFのExtract APIを使用してJSONデータを操作するのと同じくらい簡単です。" src="assets/ParsingPDF_1280.png" />
    </a>
     <div>
-   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html"><strong>解析PDF:PDFのExtract APIを使用してJSONデータを操作するのと同じくらい簡単です。</strong></a>
+   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/parsing-pdf.html"><strong>解析PDF: PDF Extract APIを使用してJSONデータを操作するのと同じくらい簡単です</strong></a>
     </div>
-    <em>Adobe PDFサービスAPIのPDFエクストラクトサービスを使用して、JSONの解析と同様に簡単にPDFを解析する方法について説明します</em>
+    <em>Adobe PDF Services APIのPDFエクストラクトサービスを使用して、JSONの解析と同じくらい簡単にPDFを解析する方法を説明します</em>
     <br>
   </td>
   <td>

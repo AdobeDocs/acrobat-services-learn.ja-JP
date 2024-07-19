@@ -10,14 +10,14 @@ thumbnail: KT-6674.jpg
 exl-id: 55f5b04e-0249-47d9-9131-2f9ec01db7e8
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 5%
+source-wordcount: '478'
+ht-degree: 0%
 
 ---
 
 # PDFサービスAPIを使用したWordやPowerPointなどへのPDFの書き出し
 
-![PDFのヒーロー画像を作成](assets/ExportPDF_hero.jpg)
+![PDFのヒーロー画像の作成](assets/ExportPDF_hero.jpg)
 
 Adobe PDF Services APIは、APIを使用して、PDFファイルをMS Office、テキスト、および画像に変換します。 コンテンツの編集や分析に既存のPDFを活用する一般的なユースケースは数多く存在します。PDFサービスを利用することで、API開発者は既存のシステムやアプリケーションにこの機能を簡単に組み込むことができます。 PDFファイルをMS Wordに変換すると、コンテンツの編集や承認を行えるほか、後で署名用に送信して、カスタム契約ワークフローを構築できます。 または、請求書や財務計算、データ分析のために、PDFのコンテンツをMS Excelフォーマットにエクスポートします。
 
@@ -51,7 +51,7 @@ Adobe PDF Services APIは、APIを使用して、PDFファイルをMS Office、�
 
    例えば、 C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-java-samplesのように入力します。
 
-1. 次のコマンドを実行します:
+1. 次のコマンドを実行します。
 
    `mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.platform.operation.samples.exportpdf.ExportPDFToDOCX`
 
@@ -67,7 +67,7 @@ PDFはsrc/main/resourcesディレクトリに作成されます。
 
 1. 再度ディレクトリをExportPDFtoDocxディレクトリに変更します。
 
-1. 次のコマンドを実行します:
+1. 次のコマンドを実行します。
 
    `dotnet run ExportPDFToDocx.csproj`
 
@@ -81,7 +81,7 @@ PDFは同じディレクトリに作成されます。
 
    例えば、 C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samplesのように入力します。
 
-1. 次のコマンドを実行します:
+1. 次のコマンドを実行します。
 
    `node src/ocr/ocr-pdf.js`
 
@@ -101,10 +101,10 @@ output/exportPdfOutput.PPTX
 
 ## リソースと次のステップ
 
-* その他のヘルプとサポートについては、 [[!DNL Adobe Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) フォーラム
+* 追加のヘルプとサポートについては、[[!DNL Adobe Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all)コミュニティフォーラムにアクセスしてください
 
-* PDFサービスAPI [文書](https://www.adobe.com/go/pdftoolsapi_doc)
+* PDFサービスAPI [ドキュメント](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) PDFサービスAPIに関する質問
+* PDFサービスAPIの質問に関する[FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197)
 
-* [お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform) ライセンスと価格に関する質問
+* ライセンスと価格に関する質問については、[お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform)ください

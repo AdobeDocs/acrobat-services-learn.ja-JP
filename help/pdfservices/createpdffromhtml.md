@@ -10,14 +10,14 @@ thumbnail: KT-6673.jpg
 exl-id: 1bd01bb8-ca5e-4a4a-8646-3d97113e2c51
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
 
 # PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します
 
-![PDFのヒーロー画像を作成](assets/createpdffromhtml_hero.jpg)
+![PDFのヒーロー画像の作成](assets/createpdffromhtml_hero.jpg)
 
 新しいAdobe PDF Services APIにより、これまで以上に簡単に文書ワークフローのデジタル化を実現できます。このAPIを使用すると、開発者は、複雑な業務ワークフローのニーズを満たすために、複数の強力なPDF操作サービスから選択できます。 容易に利用できるこれらのクラウドベースのWebサービスを使用して、複雑なアーキテクチャ、実装戦略、およびテクノロジーの向上を合理化できます。
 
@@ -36,9 +36,9 @@ PDFサービスAPI内には、PDFを作成および操作したり、PDFからMS
 
 ## 資格情報の取得とサンプルファイルのダウンロード
 
-最初の手順は、使用のロックを解除するための資格情報（APIキー）を取得することです。 [こちらから無料体験版に新規登録](https://www.adobe.com/go/dcsdks_credentials) 「Get Started」をクリックして、新しい資格情報を作成します。
+最初の手順は、使用のロックを解除するための資格情報（APIキー）を取得することです。 [こちらから無料体験版に登録](https://www.adobe.com/go/dcsdks_credentials)し、[使用を開始]をクリックして新しい資格情報を作成してください。
 
-![API キー](assets/apikey.png)
+![APIキー](assets/apikey.png)
 
 「個人アカウント」を選択して無料体験版に登録することは重要です。
 
@@ -60,7 +60,7 @@ PDFサービスAPI内には、PDFを作成および操作したり、PDFからMS
 
 「Create personalized code sample」オプションを選択しなかった場合は、Adobe.ioコンソールからクライアントID（APIキー）をコピーする必要があります。
 
-![コード例](assets/codesample.png)
+![コードサンプル](assets/codesample.png)
 
 PDFToolsSDK-Node.jsSamples.zipの内容を解凍します。
 
@@ -102,15 +102,15 @@ PDFは、出力で指定されている場所（デフォルトではpdfServices
 
 ## リソースと次のステップ
 
-* その他のヘルプとサポートについては、Adobeを参照してください [[!DNL Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) フォーラム
+* その他のヘルプとサポートについては、[[!DNL Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) Adobeフォーラムにアクセスしてください
 
-PDFサービスAPI [文書](https://www.adobe.com/go/pdftoolsapi_doc)
+PDFサービスAPI [ドキュメント](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) PDFサービスAPIに関する質問
+* PDFサービスAPIの質問に関する[FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197)
 
-* [お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform) ライセンスと価格に関する質問
+* ライセンスと価格に関する質問については、[お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform)ください
 
-* 関連記事:
+* 関連記事：
   [新しいPDFサービスAPIは、文書ワークフロー用にさらに多くの機能を提供します](https://community.adobe.com/t5/document-services-apis/new-pdf-tools-api-brings-more-capabilities-for-document-services/m-p/11294170)
 
-  [7月リリース [!DNL Adobe Acrobat Services]:PDFの埋め込みおよびPDFサービス](https://medium.com/adobetech/july-release-of-adobe-document-services-pdf-embed-and-pdf-tools-17211bf7776d)
+  [7月リリース [!DNL Adobe Acrobat Services]: PDFの埋め込みとPDFのサービス](https://medium.com/adobetech/july-release-of-adobe-document-services-pdf-embed-and-pdf-tools-17211bf7776d)

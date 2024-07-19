@@ -10,20 +10,20 @@ thumbnail: KT-6676.jpg
 exl-id: 4a8f2119-c464-496b-bdc8-35dd387bef25
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
 # Adobe PDF Services APIおよびJavaの概要
 
-![PDFのヒーロー画像を作成](assets/GettingStartedJava_hero.jpg)
+![PDFのヒーロー画像の作成](assets/GettingStartedJava_hero.jpg)
 
 利用可能なすべてのWebサービスにアクセスできるように用意されたサンプルファイルを、開発者はわずか数分で開始できます。 このチュートリアルでは、PDFサービスJava SDKを使用してサンプルの実行を開始するためのすべての手順について説明します。
 
 ## 手順1：資格情報の取得とサンプルファイルのダウンロード
 
-最初の手順は、使用のロックを解除するための資格情報（APIキー）を取得することです。 [こちらから無料体験版に新規登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) 「Get Started」をクリックして、新しい資格情報を作成します。
+最初の手順は、使用のロックを解除するための資格情報（APIキー）を取得することです。 [こちらから無料体験版に登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)し、[使用を開始]をクリックして新しい資格情報を作成してください。
 
 ![手順 1](assets/GettingStartedJava_step1.png)
 
@@ -43,33 +43,33 @@ ht-degree: 0%
 
 ## 手順2: Java環境を設定する
 
-1. インストール [Java 8以上](https://www.oracle.com/java/technologies/javase-downloads.html) まだお持ちでない場合に
-1. 実行 `javac -version` をクリックして、インストールを確認します。
+1. [Java 8以上](https://www.oracle.com/java/technologies/javase-downloads.html)をお持ちでない場合は、インストールしてください。
+1. `javac -version`を実行してインストールを確認してください。
 1. JDK binフォルダーがPATH変数に含まれていることを確認します（方法はOSによって異なります）。
-1. インストール [Maven](https://maven.apache.org/install.html) 使用していない場合は、お好みのツールを使用します。
+1. ご希望のツールを使用して[Maven](https://maven.apache.org/install.html)をインストールしてください（まだインストールしていない場合）。
 
 パーソナライズされたサンプルは、すぐに実行できるサンプルコード、埋め込まれた資格情報のjsonファイル、事前設定された接続から依存関係まで、あらゆるものを提供します。
 
-1. ダウンロード [サンプルプロジェクト](https://github.com/adobe/pdftools-java-sdk-samples).
+1. [サンプルプロジェクト](https://github.com/adobe/pdftools-java-sdk-samples)をダウンロードします。
 1. Mavenでサンプルプロジェクトをビルドします。 mvn clean install.
 1. コマンドラインまたは任意のIDEでサンプルコードをテストします。
 
 ## 最後のアイデア
 
-PDFサービスAPIは、一般的なワークフローを自動化し、処理負荷をクラウドに移行することで、手動プロセスを排除するのに役立ちます。 Adobe PDF Embed APIをBrowser Services APIと共に使用すると、PDFの処理がPDFごとに異なる場合に、効率的で信頼性が高く、予測可能なプロセスを構築して、正しく実行および表示することができます **毎回** プラットフォームまたはデバイスに関係なく
+PDFサービスAPIは、一般的なワークフローを自動化し、処理負荷をクラウドに移行することで、手動プロセスを排除するのに役立ちます。 Adobe PDF Embed APIをBrowser Services APIと共に利用することで、PDFの扱いがブラウザーによって異なる場合は、PDFやデバイスに関係なく、**毎回**&#x200B;正しく実行され、表示される、合理的で信頼性の高い予測可能なプロセスを構築できます。
 
 ## リソースと次のステップ
 
-* その他のヘルプとサポートについては、Adobeを参照してください [[!DNL Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) フォーラム
+* その他のヘルプとサポートについては、[[!DNL Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) Adobeフォーラムにアクセスしてください
 
-* PDFサービスAPI [文書](https://www.adobe.com/go/pdftoolsapi_doc)
+* PDFサービスAPI [ドキュメント](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) PDFサービスAPIに関する質問
+* PDFサービスAPIの質問に関する[FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197)
 
-* [お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform) ライセンスと価格に関する質問
+* ライセンスと価格に関する質問については、[お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform)ください
 
 * 関連記事
 
   [新しいPDFサービスAPIは、文書ワークフロー用にさらに多くの機能を提供します](https://community.adobe.com/t5/document-services-apis/new-pdf-tools-api-brings-more-capabilities-for-document-services/m-p/11294170)
 
-  [7月リリース [!DNL Adobe Acrobat Services]:PDFの埋め込みおよびPDFサービス](https://medium.com/adobetech/july-release-of-adobe-document-services-pdf-embed-and-pdf-tools-17211bf7776d)
+  [7月リリース [!DNL Adobe Acrobat Services]: PDFの埋め込みとPDFのサービス](https://medium.com/adobetech/july-release-of-adobe-document-services-pdf-embed-and-pdf-tools-17211bf7776d)

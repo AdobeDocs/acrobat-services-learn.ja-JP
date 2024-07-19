@@ -10,20 +10,20 @@ thumbnail: KT-8093.jpg
 exl-id: 2f2bf1c2-1b33-4eee-9fd2-5d0b77e6b0a9
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1346'
-ht-degree: 1%
+source-wordcount: '1292'
+ht-degree: 0%
 
 ---
 
 # レポートの作成と編集
 
-![ユースケースの英雄バナー](assets/UseCaseReportHero.jpg)
+![使用事例の英雄バナー](assets/UseCaseReportHero.jpg)
 
-財務、教育、マーケティングなどの業界では、PDFを使用して顧客や関係者とデータを共有しています。 PDFを使用すると、誰でも表示できる形式で、テーブル、グラフィック、インタラクティブコンテンツを含むリッチドキュメントを簡単に共有できます。 [!DNL Adobe Acrobat Services] APIを使用すると、これらの企業はMicrosoft Word、Microsoft Excel、グラフィック、およびその他の多様な文書フォーマットから共有可能なPDFレポートを作成できます。
+財務、教育、マーケティングなどの業界では、PDFを使用して顧客や関係者とデータを共有しています。 PDFを使用すると、誰でも表示できる形式で、テーブル、グラフィック、インタラクティブコンテンツを含むリッチドキュメントを簡単に共有できます。 これらの企業は、[!DNL Adobe Acrobat Services]個のAPIを使用して、Microsoft Word、Microsoft Excel、グラフィック、およびその他の様々な文書形式から共有可能なPDFレポートを作成できます。
 
-言ってみろ [ソーシャルメディアトラッキング会社を経営する](https://www.adobe.io/apis/documentcloud/dcsdk/on-demand-report-creation.html). 顧客がサイトのパスワードで保護された部分にログインして、キャンペーン分析を表示します。 多くの場合、経営幹部、株主、寄付者、その他の利害関係者と統計を共有したいと考えています。 ダウンロード可能なPDF文書は、番号やグラフなどを顧客に伝える場合に便利です。
+例えば、[ソーシャルメディア追跡会社を経営する](https://www.adobe.io/apis/documentcloud/dcsdk/on-demand-report-creation.html)とします。 顧客がサイトのパスワードで保護された部分にログインして、キャンペーン分析を表示します。 多くの場合、経営幹部、株主、寄付者、その他の利害関係者と統計を共有したいと考えています。 ダウンロード可能なPDF文書は、番号やグラフなどを顧客に伝える場合に便利です。
 
-組み込むことによって [PDFサービスAPI](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) webサイトにログインすると、顧客ごとに外出先でPDFレポートを作成できます。 PDFを作成し、それらを1つの便利なレポートにまとめることができます。このレポートは、お客様がダウンロードし、関係者に渡すことができます。
+[PDFサービスAPI](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html)をWebサイトに組み込むと、お客様の外出先でPDFレポートを作成できます。 PDFを作成し、それらを1つの便利なレポートにまとめることができます。このレポートは、お客様がダウンロードし、関係者に渡すことができます。
 
 ## 学習内容
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ## 関連APIとリソース
 
-* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 ![パーソナライズされたレポートを取得する方法のスクリーンショット](assets/report_1.png)
 
-このプロジェクトは、からダウンロードできます。 [GitHubリポジトリー](https://github.com/afzaal-ahmad-zeeshan/express-adobe-pdf-tools).
+このプロジェクトは、[GitHubリポジトリ](https://github.com/afzaal-ahmad-zeeshan/express-adobe-pdf-tools)からダウンロードできます。
 
 次に、レポートを公開する方法について説明します。
 
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 シンプルにするために、ここではファイルシステムベースのアップロードと処理のみを使用してください。 Express.jsでは、 fsモジュールを使用して、ディレクトリ内の使用可能なファイルをすべて一覧表示できます。
 
-同じページで、お客様が確認できるように管理者がレポートファイルをサーバーにアップロードできるようにします。 これらのファイルは、Microsoft Word、Microsoft Excel、HTML、 [他のデータ形式]https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf)（グラフィックファイルを含む） 管理ページは次のようになります。
+同じページで、お客様が確認できるように管理者がレポートファイルをサーバーにアップロードできるようにします。 これらのファイルは、Microsoft Word、Microsoft Excel、HTMLおよび[その他のデータ形式]https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf)など、様々な形式で保存できます。 管理ページは次のようになります。
 
 ![管理者権限のスクリーンショット](assets/report_2.png)
 
@@ -92,7 +92,7 @@ PDFサービスSDKを使用して、データ入力からPDFレポートを作�
 $ npm install --save @adobe/documentservices-pdftools-node-sdk
 ```
 
-開始する前に、API資格情報、 [Adobeがない](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getcred). 次を使用： [!DNL Acrobat Services] 勘定 [6か月無料、その後従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) 文書トランザクションあたり\$0.05です。
+開始する前に、API資格情報([Adobeからの解放](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getcred))が必要です。 [!DNL Acrobat Services]アカウント[を6か月間無料で使用した後、従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で文書トランザクション1件につきわずか\$0.05で利用できます。
 
 アーカイブファイルをダウンロードし、JSONファイルを展開して、資格情報と秘密鍵を取得します。 サンプルプロジェクトで、 srcディレクトリにファイルを配置します。
 
@@ -131,7 +131,7 @@ console.log('Exception encountered while executing operation', err);
 
 上記のコードでは、資格情報を読み取り、実行コンテキストを作成します。 PDFサービスSDKでは、リクエストを認証するために実行コンテキストが必要です。
 
-次に、PDFを作成する操作を実行して、RAW文書をPDF形式に変換します。 最後に、 `outputPdf` PDFレポートをコピーするパラメーターです。 コード例では、このコードはsrc/helpers/pdf.jsファイルの下にあります。 このチュートリアルの後半で、PDFモジュールを読み込み、このメソッドを呼び出します。
+次に、PDFを作成する操作を実行して、RAW文書をPDF形式に変換します。 最後に、`outputPdf`パラメーターを使用してPDFレポートをコピーします。 コード例では、このコードはsrc/helpers/pdf.jsファイルの下にあります。 このチュートリアルの後半で、PDFモジュールを読み込み、このメソッドを呼び出します。
 
 前のセクションで示したように、お客様は次のページに移動して、PDFに変換するレポートを選択できます。
 
@@ -209,7 +209,7 @@ res.status(500).render("crash", { error: error });
 }
 ```
 
-このコードは、複数の入力ドキュメントのコンパイルされたレポートを生成します。 追加された関数は、 `combinePdf` PDFファイルのパス名のリストを取得し、1つの出力PDFを返すメソッド。
+このコードは、複数の入力ドキュメントのコンパイルされたレポートを生成します。 追加された関数は、`combinePdf`メソッドだけです。このメソッドは、PDFファイルのパス名の一覧を受け取り、1つの出力PDFを返します。
 
 これで、ソーシャルメディアダッシュボードの顧客は、自分のアカウントから関連するレポートを選択し、1つの便利なPDFとしてダウンロードできるようになりました。 このダッシュボードを使用すると、管理者やその他の関係者、キャンペーンの成功をデータ、表、グラフで表示できます。この形式は例外なく開きやすい形式です。
 
@@ -217,6 +217,6 @@ res.status(500).render("crash", { error: error });
 
 この実践チュートリアルでは、お客様が関連するレポートを簡単に共有できるPDFとしてダウンロードできるように、PDFサービスAPIの使用方法について説明しました。 Node.jsアプリケーションを作成して、PDFのレポート作成および読み取りサービス用のPDFサービスAPIの機能を紹介しました。 このアプリケーションでは、お客様が1つのレポート文書をダウンロードする方法や、複数の文書を組み合わせて1つのPDFレポートに結合する方法を示しました。
 
-このAdobeを利用したアプリケーションは、次の用途に役立ちます [ソーシャルメディアダッシュボードのお客様](https://www.adobe.io/apis/documentcloud/dcsdk/on-demand-report-creation.html) 必要なレポートを取得して共有します。受信者全員が、自分のデバイスにMicrosoft Officeまたはその他のソフトウェアがインストールされているかどうかを心配する必要はありません。 独自のアプリケーションで同じ方法を使用して、ユーザーがドキュメントを表示、結合、ダウンロードできるようにすることができます。 または、Adobeのその他多くのAPIをチェックして、署名の追加や追跡などを行うことができます。
+このAdobe対応アプリケーションを使用すると、[ソーシャルメディアダッシュボードのお客様](https://www.adobe.io/apis/documentcloud/dcsdk/on-demand-report-creation.html)は、必要なレポートを取得して共有することができます。受け取ったすべてのユーザーがデバイスにMicrosoft Officeなどのソフトウェアをインストールしているかどうかを心配する必要はありません。 独自のアプリケーションで同じ方法を使用して、ユーザーがドキュメントを表示、結合、ダウンロードできるようにすることができます。 または、Adobeのその他多くのAPIをチェックして、署名の追加や追跡などを行うことができます。
 
-使用を開始するには、無料を申請してください [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) 次に、従業員と顧客の魅力的なレポートエクスペリエンスを作成します。 6か月間アカウントを無料でお楽しみください [従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) マーケティングの取り組みが拡大すると、文書トランザクションあたり\$0.05になります。
+開始するには、無料の[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)アカウントをクレームし、従業員と顧客の魅力的なレポートエクスペリエンスを作成します。 6か月間アカウントを無料で利用でき、マーケティング活動の拡大に合わせて[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で、1つのドキュメントトランザクションにつき\$0.05になります。

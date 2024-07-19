@@ -10,24 +10,24 @@ thumbnail: KT-8096.jpg
 exl-id: 92f955f0-add5-4570-aa3a-ea63055dadb2
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 2%
+source-wordcount: '1714'
+ht-degree: 0%
 
 ---
 
 # 従業員の内定通知の管理
 
-![ユースケースの英雄バナー](assets/UseCaseOfferHero.jpg)
+![使用事例の英雄バナー](assets/UseCaseOfferHero.jpg)
 
-従業員の内定通知は、従業員が組織で最初に体験する通知の1つです。 その結果、オファーレターがブランドであることを確認したいが、毎回ワープロで最初から文字を作成する必要はない。 [!DNL Adobe Acrobat Services] APIは、 [新入社員へのオファーレターの作成と配信](https://www.adobe.io/apis/documentcloud/dcsdk/employee-offer-letters.html).
+従業員の内定通知は、従業員が組織で最初に体験する通知の1つです。 その結果、オファーレターがブランドであることを確認したいが、毎回ワープロで最初から文字を作成する必要はない。 [!DNL Adobe Acrobat Services] APIは、[新しい従業員へのオファーレターの作成および配信](https://www.adobe.io/apis/documentcloud/dcsdk/employee-offer-letters.html)の主要な部分を処理するための高速で簡単かつ効果的な方法を提供します。
 
 ## 学習内容
 
-この実践チュートリアルでは、従業員の詳細を入力するユーザーのwebフォームを表示するNode Expressプロジェクトの設定について段階的に説明します。 これらの詳細は、 [!DNL Acrobat Services] Adobe Sign APIを使用して署名のためにお客様に配信できるPDFとして、Web上でオファーレターを作成します。
+この実践チュートリアルでは、従業員の詳細を入力するユーザーのwebフォームを表示するNode Expressプロジェクトの設定について段階的に説明します。 これらの詳細は、Web上で[!DNL Acrobat Services]を使用して、Adobe Sign APIを使用して署名のためにお客様に配信できるPDFとしてオファーレターを作成します。
 
 ## 関連APIとリソース
 
-* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [Adobe文書生成API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
 
@@ -35,29 +35,29 @@ ht-degree: 2%
 
 * [Document Generation Tagger Wordアドイン](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin)
 
-* [プロジェクトサンプル](https://www.adobe.io/apis/documentcloud/dcsdk/employee-offer-letters.html)
+* [プロジェクトのサンプル](https://www.adobe.io/apis/documentcloud/dcsdk/employee-offer-letters.html)
 
 ## はじめに
 
-[Node.js](https://nodejs.org/) は、プログラミングプラットフォームです。 これには、Express webサーバーなどの膨大なライブラリのセットが付属しています。 [Node.jsのダウンロード](https://nodejs.org/en/download/) 手順に従って、この優れたオープンソース開発環境をインストールしてください。
+[Node.js](https://nodejs.org/)はプログラミングプラットフォームです。 これには、Express webサーバーなどの膨大なライブラリのセットが付属しています。 [Node.js](https://nodejs.org/en/download/)をダウンロードし、手順に従って、この優れたオープンソース開発環境をインストールします。
 
-Node.jsでAdobe Document Generation APIを使用するには、 [Document Generation API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html) アカウントにアクセスしたり、新しいアカウントに新規登録したりするためのサイトです。 アカウント: [6か月無料、その後従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) ドキュメントのトランザクションあたりわずか0.05ドルで、リスクフリーを試して、会社の成長に応じてのみ支払うことができます。
+Node.jsでAdobe Document Generation APIを使用するには、[Document Generation API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)サイトに移動してアカウントにアクセスするか、新しいアカウントにサインアップしてください。 お客様のアカウントは、6か月間[無料、その後は従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で、ドキュメントのトランザクション1件につきわずか0.05ドルです。無料体験して、会社の成長に応じてのみ支払うことができます。
 
-にログインした後 [Adobe Developer Console](https://console.adobe.io/)、をクリック **[!UICONTROL 新規プロジェクトを作成]**. デフォルトでは、プロジェクト名は「Project 1」です。 「 **[!UICONTROL プロジェクトを編集]** をクリックして、名前を「Offer Letter Generator」に変更します。 画面の中央には、 **[!UICONTROL 新しいプロジェクトの作成]** セクションに追加します。 プロジェクトのセキュリティを有効にするには、次の手順を実行します。
+[Adobe Developer Console](https://console.adobe.io/)にサインインしたら、**[!UICONTROL [新しいプロジェクトの作成]]**&#x200B;をクリックします。 デフォルトでは、プロジェクト名は「Project 1」です。 **[!UICONTROL プロジェクトの編集]**&#x200B;ボタンをクリックして、名前を「Offer Letter Generator」に変更します。 画面の中央には、**[!UICONTROL 新しいプロジェクトの開始]**&#x200B;セクションがあります。 プロジェクトのセキュリティを有効にするには、次の手順を実行します。
 
-クリック **APIを追加**. 選択可能なAPIが多数あります。 を **[!UICONTROL 製品でフィルタリング]** セクション、選択 **[!UICONTROL Document Cloud]**&#x200B;を選択し、 **[!UICONTROL Next]**.
+[**APIの追加**]をクリックします。 選択可能なAPIが多数あります。 **[!UICONTROL Document Cloudでフィルター]**&#x200B;セクションで、**[!UICONTROL 製品]**&#x200B;を選択し、[**[!UICONTROL 次へ]**]をクリックします。
 
-ここで、APIにアクセスするための資格情報を生成します。 資格情報は、 JSON Webトークン([JWT](https://jwt.io/))：安全な通信のためのオープンスタンダードです。 JWTに精通していて、すでにキーを生成している場合は、ここで公開キーをアップロードできます。 または、以下を選択して続行します。 **オプション1** Adobeにキーを生成してもらいます。
+ここで、APIにアクセスするための資格情報を生成します。 資格情報は、JSON Webトークン([JWT](https://jwt.io/))：安全な通信のためのオープンな標準の形式です。 JWTに精通していて、すでにキーを生成している場合は、ここで公開キーをアップロードできます。 または、**オプション1**&#x200B;を選択して、Adobeにキーを生成してもらうこともできます。
 
 ![資格情報を生成するスクリーンショット](assets/offer_1.png)
 
-「 **[!UICONTROL キーペアを生成]** をクリックします。 config.zipファイルをダウンロードできます。 アーカイブファイルを解凍します。 このファイルには、certificate_pub.crtとprivate.keyの2つのファイルが含まれています。 後者はプライベートな認証情報を含み、制御不能な場合に偽の文書を生成するために使用される可能性があるため、安全に保たれるようにしてください。
+**[!UICONTROL [キーペアの生成]]**&#x200B;ボタンをクリックします。 config.zipファイルをダウンロードできます。 アーカイブファイルを解凍します。 このファイルには、certificate_pub.crtとprivate.keyの2つのファイルが含まれています。 後者はプライベートな認証情報を含み、制御不能な場合に偽の文書を生成するために使用される可能性があるため、安全に保たれるようにしてください。
 
-「**[!UICONTROL 次へ]**」をクリックします。いいえ、PDF生成APIへのアクセスを有効にします。 を **[!UICONTROL 製品プロファイルの選択]** 画面、確認 **[!UICONTROL 企業PDFサービス開発者]**&#x200B;を選択し、 **[!UICONTROL 設定したAPIを保存]** をクリックします。 これで、APIの使用を開始する準備ができました。
+「**[!UICONTROL 次へ]**」をクリックします。いいえ、PDF生成APIへのアクセスを有効にします。 **[!UICONTROL 製品プロファイルを選択]**&#x200B;画面で、**[!UICONTROL エンタープライズPDFサービスデベロッパー]**&#x200B;にチェックを入れ、**[!UICONTROL 構成されたAPIを保存]**&#x200B;ボタンをクリックします。 これで、APIの使用を開始する準備ができました。
 
 ## プロジェクトの設定
 
-コードを実行するためのノードプロジェクトを設定します。 この例では、 [Visual Studioコード](https://code.visualstudio.com/) （VSコード）をエディターとして使用します。 「letter-generator」というフォルダーを作成し、VSコードで開きます。 から **[!UICONTROL ファイル]** メニュー、選択 **[!UICONTROL ターミナル]** \> **[!UICONTROL 新しいターミナル]** このフォルダ内のシェルを開きます。 次のコマンドを入力して、ノードがパスにインストールされていることを確認します。
+コードを実行するためのノードプロジェクトを設定します。 この例では、エディターとして[Visual Studio Code](https://code.visualstudio.com/) (VS Code)を使用しています。 「letter-generator」というフォルダーを作成し、VSコードで開きます。 **[!UICONTROL ファイル]**&#x200B;メニューから、**[!UICONTROL ターミナル]** \> **[!UICONTROL 新しいターミナル]**&#x200B;を選択して、このフォルダーのシェルを開きます。 次のコマンドを入力して、ノードがパスにインストールされていることを確認します。
 
 ```
 node -v
@@ -73,9 +73,10 @@ node -v
 npm init
 ```
 
-Nodeプロジェクトに関する質問が表示されます。 これらの質問はほとんどスキップできますが、プロジェクト名が「letter-generator」で、エントリポイントが **index.js**. 選択 **はい** プロジェクトの初期化を完了します。
+Nodeプロジェクトに関する質問が表示されます。 これらの質問の多くはスキップできますが、プロジェクト名が「letter-generator」で、エントリポイントが&#x200B;**index.js**&#x200B;であることを確認してください。 **はい**&#x200B;を選択して、プロジェクトの初期化を完了します。
 
-package.jsonファイルが作成されました。 ノードはこのファイルを使用してプロジェクトを整理します。 index.jsを作成する前に、次のコマンドを使用してAdobeライブラリを追加する必要があります。
+package.jsonファイルが作成されました。 ノードはこのファイルを使用してプロジェクトを整理します。 index.jsを作成する前に、次の内容のAdobeライブラリを追加する必要があります
+コマンド：
 
 ```
 npm install --save @adobe/documentservices-pdftools-node-sdk
@@ -115,7 +116,7 @@ console.log(`Candidate offer letter app listening on port ${port}!`)
 });
 ```
 
-getルートが **index.html** ファイル。 この名前と次の簡単な形式でHTMLファイルを作成してみましょう。 CSSスタイルやその他のデザイン要素は、必要に応じて後から追加することもできます。 以下のフォームは、候補者がウェルカムレターを作成する際の基本的な詳細情報を入力するものです。
+getルートは&#x200B;**index.html**&#x200B;ファイルを返します。 この名前と次の簡単な形式でHTMLファイルを作成してみましょう。 CSSスタイルやその他のデザイン要素は、必要に応じて後から追加することもできます。 以下のフォームは、候補者がウェルカムレターを作成する際の基本的な詳細情報を入力するものです。
 
 ```
 <!DOCTYPE html>
@@ -159,11 +160,11 @@ getルートが **index.html** ファイル。 この名前と次の簡単な形
 node app.js
 ```
 
-「Candidate offer letter app listening on port 8000」というメッセージが表示されます。 ブラウザーを開いて <http://localhost:8000/>フォームは次のようになります。
+「Candidate offer letter app listening on port 8000」というメッセージが表示されます。 ブラウザを<http://localhost:8000/>に開くと、フォームは次のようになります。
 
 ![Webフォームのスクリーンショット](assets/offer_2.png)
 
-フォームがそれ自体に投稿することに注意してください。 データを入力して **文字を生成，** コンソールに次の情報が表示されます。
+フォームがそれ自体に投稿することに注意してください。 データを入力して&#x200B;**Generate Letter,**&#x200B;をクリックすると、コンソールに次の情報が表示されます。
 
 ```
 Got body: { firstname: 'John',
@@ -172,7 +173,7 @@ salary: '887888',
 startdate: '2021-04-01' }
 ```
 
-このコンソールログをWebサービス呼び出しに置き換えます [!DNL Acrobat Services]. まず、情報のJSONベースのモデルを作成する必要があります。 このモデルの書式は次のようになります。
+このコンソールログを[!DNL Acrobat Services]へのWebサービス呼び出しに置き換えます。 まず、情報のJSONベースのモデルを作成する必要があります。 このモデルの書式は次のようになります。
 
 ```
 {
@@ -238,7 +239,7 @@ console.log('Exception encountered while executing operation', err);
 }
 ```
 
-そこには多くのコードが展開されています。 まず本編から始めましょう。 `documentMergeOperation`. このセクションでは、JSONデータを取り出して、Wordドキュメントテンプレートに結合します。 次の用途で [Adobeサイトの例](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade) 参考になりますが、ここでは独自の簡単な例を作成しましょう。 Wordを開いて、空の新規文書を作成します。 好きなだけカスタマイズできますが、少なくとも次のようなものがあります。
+そこには多くのコードが展開されています。 まず主要な部分である`documentMergeOperation`を取り上げましょう。 このセクションでは、JSONデータを取り出して、Wordドキュメントテンプレートに結合します。 Adobeサイト](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade)の[例を参考にできますが、簡単な例を独自に作成しましょう。 Wordを開いて、空の新規文書を作成します。 好きなだけカスタマイズできますが、少なくとも次のようなものがあります。
 
 X様、
 
@@ -246,23 +247,23 @@ X様、
 
 ようこそ
 
-プロジェクトのルートにある「resources」というフォルダーに、ドキュメントを「OfferLetter-Template.docx」という名前で保存します。 ドキュメントに3つのXが記載されています。 これらのXsは、JSON情報用の一時的なプレースホルダーです。 これらのプレースホルダーの代わりに特別な構文を使用することもできますが、Adobeでは、この作業を簡単にするWordアドインを提供しています。 アドインをインストールするには、Adobeに移動します [Document Generation Tagger Wordアドイン](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin) サイト。
+プロジェクトのルートにある「resources」というフォルダーに、ドキュメントを「OfferLetter-Template.docx」という名前で保存します。 ドキュメントに3つのXが記載されています。 これらのXsは、JSON情報用の一時的なプレースホルダーです。 これらのプレースホルダーの代わりに特別な構文を使用することもできますが、Adobeでは、この作業を簡単にするWordアドインを提供しています。 アドインをインストールするには、Adobe[Document Generation Tagger Wordアドイン](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin)サイトに移動します。
 
-OfferLetter-Templateで、新しい **文書の生成** をクリックします。 サイドパネルが開きます。 「**今すぐ始める**」をクリックします。サンプルのJSONデータに貼り付けるテキスト領域が表示されます。 JSONの「offer-data」スニペットを上記からテキスト領域にコピーします。 次のように表示されます。
+OfferLetter-Templateで、新しい&#x200B;**Document Generation**&#x200B;ボタンをクリックします。 サイドパネルが開きます。 **開始**&#x200B;をクリックします。 サンプルのJSONデータに貼り付けるテキスト領域が表示されます。 JSONの「offer-data」スニペットを上記からテキスト領域にコピーします。 次のように表示されます。
 
 ![文字とコードのスクリーンショット](assets/offer_3.png)
 
-「 **タグの生成** をクリックします。 文書内の適切な位置に挿入するタグのドロップダウンメニューが表示されます。 ドキュメントの最初のXをハイライト表示し、 **[!UICONTROL firstname]**. クリック **[!UICONTROL テキストを挿入]** 「X君」が「X君」に変わる ```{{`offer_letter`.firstname}}```,&quot;. これは、 `documentMergeOperation`. 続けて、該当するXsで残りの3つのタグを追加します。 OfferLetter-template.docxを必ず保存してください。 次のようになります。
+「**タグを生成**」ボタンをクリックします。 文書内の適切な位置に挿入するタグのドロップダウンメニューが表示されます。 文書の最初のXをハイライト表示し、**[!UICONTROL firstname]**&#x200B;を選択します。 **[!UICONTROL テキストを挿入]**&#x200B;をクリックすると、「X様」が「X様```{{`offer_letter`.firstname}}```様」に変更されます。 このタグは`documentMergeOperation`の正しい形式です。 続けて、該当するXsで残りの3つのタグを追加します。 OfferLetter-template.docxを必ず保存してください。 次のようになります。
 
 ```{{`offer_letter`.firstname}} {{`offer_letter`.lastname}}``` 様
 
-$.のポジションを提供させていただきます ```{{`offer_letter`.salary}}``` 1年です。 開始日： ```{{`offer_letter`.startdate}}```.
+年間$ ```{{`offer_letter`.salary}}```のポジションを提供いたします。 開始日は```{{`offer_letter`.startdate}}```です。
 
 ようこそ
 
-Wordテンプレートに、JSON形式と一致するマークアップが含まれるようになりました。 例えば、 ```{{`offer_letter`.`firstname`}}``` word文書の冒頭で、JSONデータの「firstname」セクションの値に置き換えられます。
+Wordテンプレートに、JSON形式と一致するマークアップが含まれるようになりました。 例えば、Word文書の冒頭の```{{`offer_letter`.`firstname`}}```は、JSONデータの「firstname」セクションの値に置き換えられます。
 
-アプリに戻る `generateLetter` 関数に渡します。 REST呼び出しをセキュリティで保護するには、プロジェクトルートにpdftools-api-credentials.jsonという名前の新しいファイルを作成します。 次のJSONデータをペーストして、のサービスアカウント(JWT)セクションから詳細を追加します。 [Developer Console](https://console.adobe.io/).
+`generateLetter`関数に戻ります。 REST呼び出しをセキュリティで保護するには、プロジェクトルートにpdftools-api-credentials.jsonという名前の新しいファイルを作成します。 次のJSONデータを貼り付け、[開発者コンソール](https://console.adobe.io/)のサービスアカウント(JWT)セクションから詳細を追加して調整してください。
 
 ```
 {
@@ -278,19 +279,20 @@ Wordテンプレートに、JSON形式と一致するマークアップが含ま
 }
 ```
 
-* クライアントID、クライアントシークレット、組織IDは、 **[!UICONTROL 資格情報の詳細]** コンソールのセクション。
+* クライアントID、クライアントシークレット、および組織IDは、コンソールの&#x200B;**[!UICONTROL 資格情報の詳細]**&#x200B;セクションから直接コピーできます。
 
-* アカウントIDは **テクニカルアカウントID**.
+* アカウントIDは&#x200B;**テクニカルアカウントID**&#x200B;です。
 
-* 先ほど生成したprivate.keyファイルをプロジェクトにコピーし、pdftools-api-credentials.jsonファイルのprivate_key_fileセクションにその名前を入力します。 必要に応じて、ここに秘密鍵ファイルへのパスを追加できます。 一度は制御できないので、それを安全に保つことを忘れないでください。
+* 前に生成したprivate.keyファイルをプロジェクトにコピーし、その名前を
+pdftools-api-credentials.jsonファイル。 必要に応じて、ここに秘密鍵ファイルへのパスを追加できます。 一度は制御できないので、それを安全に保つことを忘れないでください。
 
-JSONデータが入力されたPDFを生成するには、に戻ります **[!UICONTROL 候補者の詳細を入力]** webフォームを作成してデータを投稿できます。 文書をAdobeからダウンロードする必要があるため少し時間がかかりますが、 OfferLetter.pdfという名前のファイルが「output」という名前の新しいフォルダーに作成されています。
+JSONデータが入力されたPDFを作成するには、**[!UICONTROL 候補の詳細を入力]** Webフォームに戻り、データを投稿してください。 文書をAdobeからダウンロードする必要があるため少し時間がかかりますが、 OfferLetter.pdfという名前のファイルが「output」という名前の新しいフォルダーに作成されています。
 
 ## 次の手順
 
-これだ！ これは始まりに過ぎない。 Wordアドインの「ドキュメントの生成」タブの「詳細」セクションを調べると、すべてのプレースホルダーマーカーが関連付けられたJSONデータから取得されているわけではないことに気づきます。 署名タグを追加することもできます。 これらのタグを使用すると、結果の文書を取得して、アップロードし、 [Adobe Sign](https://acrobat.adobe.com/ca/en/sign.html) 配送して新しい従業員に署名するために。 Adobe Sign APIの使用方法については、「今日から始める」を参照してください。 JWTトークンで保護されたREST呼び出しを使用しているため、このプロセスは類似しています。
+これだ！ これは始まりに過ぎない。 Wordアドインの「ドキュメントの生成」タブの「詳細」セクションを調べると、すべてのプレースホルダーマーカーが関連付けられたJSONデータから取得されているわけではないことに気づきます。 署名タグを追加することもできます。 これらのタグを使用すると、結果の文書を[Adobe Sign](https://acrobat.adobe.com/ca/en/sign.html)にアップロードして配信し、新しい社員に署名できます。 Adobe Sign APIの使用方法については、「今日から始める」を参照してください。 JWTトークンで保護されたREST呼び出しを使用しているため、このプロセスは類似しています。
 
-上記の1つの文書例は、組織が次の条件を満たす必要がある場合に、アプリケーションの基礎として使用できます [季節雇用を増やす](https://www.adobe.io/apis/documentcloud/dcsdk/employee-offer-letters.html) 複数の場所の従業員の数。 実証されたように、メインフローは、オンラインアプリケーションを介して候補からデータを取ることです。 このデータは、オファーレターのフィールドに入力し、電子サイン用に送信するために使用されます。
+上記の単一のドキュメントの例は、組織が複数の事業所の従業員を[季節的な雇用を](https://www.adobe.io/apis/documentcloud/dcsdk/employee-offer-letters.html)増やす必要がある場合に、適用の基礎として使用できます。 実証されたように、メインフローは、オンラインアプリケーションを介して候補からデータを取ることです。 このデータは、オファーレターのフィールドに入力し、電子サイン用に送信するために使用されます。
 
-[!DNL Adobe Acrobat Services] 6か月間無料で使用できます [従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) 文書のトランザクションあたりわずか0.05 USDで、ビジネスの成長に合わせてオファーレターのワークフローを調整できます。 宛先 [開始する](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
-独自のテンプレートを作成し、 [デベロッパーアカウントの新規登録](https://www.adobe.io/).
+[!DNL Adobe Acrobat Services]は6か月間無料で使用でき、その後[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で文書トランザクション1件につきわずか0.05 USDで利用できます。ビジネスの成長に合わせてオファーレターのワークフローを拡張できます。 [使用を開始する](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
+独自のテンプレートを作成するには、[デベロッパーアカウントに新規登録](https://www.adobe.io/)してください。

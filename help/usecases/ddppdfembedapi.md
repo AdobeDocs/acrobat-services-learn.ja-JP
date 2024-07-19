@@ -10,29 +10,29 @@ thumbnail: KT-8090.jpg
 exl-id: 3aa9aa40-a23c-409c-bc0b-31645fa01b40
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1903'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
 
 # デジタルドキュメントパブリッシング
 
-![ユースケースの英雄バナー](assets/UseCaseDigitalHero.jpg)
+![使用事例の英雄バナー](assets/UseCaseDigitalHero.jpg)
 
-電子文書はどこにでもあります。実際には存在する可能性があります。 [何兆というPDF](https://itextpdf.com/en/blog/technical-notes/do-you-know-how-many-pdf-documents-exist-world) 世界的にみると、その数は毎日増えているのです。 PDFビューアをwebページに埋め込むと、HTMLやCSSを再設計したり、webサイトへのアクセスを妨げたりすることなく、文書を表示できるようになります。
+電子文書はどこにでもあります。実際、世界中に[兆個ものPDF](https://itextpdf.com/en/blog/technical-notes/do-you-know-how-many-pdf-documents-exist-world)が存在すると考えられ、その数は毎日増加しています。 PDFビューアをwebページに埋め込むと、HTMLやCSSを再設計したり、webサイトへのアクセスを妨げたりすることなく、文書を表示できるようになります。
 
-人気のあるシナリオを見てみましょう。 会社が勤める [Webサイトのホワイトペーパー](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html)
-アプリケーションやサービスのコンテキストを提供する。 このサイトのマーケターは、ユーザーがPDFベースのコンテンツをどのように操作し、webページやブランドと組み合わせるかを理解したいと考えています。 彼らはホワイトペーパーを～として公開することを決定しました [ゲーテッド量](https://whatis.techtarget.com/definition/gated-content-ungated-content#:~:text=Gated%20content%20is%20online%20materials,about%20their%20jobs%20and%20organizations.)、それらをダウンロードできるユーザーを制御します。
+人気のあるシナリオを見てみましょう。 ある企業が[ホワイトペーパーをWebサイトに投稿している](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html)
+アプリケーションやサービスのコンテキストを提供する。 このサイトのマーケターは、ユーザーがPDFベースのコンテンツをどのように操作し、webページやブランドと組み合わせるかを理解したいと考えています。 ホワイトペーパーを[ゲート付きコンテンツ](https://whatis.techtarget.com/definition/gated-content-ungated-content#:~:text=Gated%20content%20is%20online%20materials,about%20their%20jobs%20and%20organizations.)として公開することを決定し、誰がダウンロードできるかを管理しています。
 
 ## 学習内容
 
-この実践チュートリアルでは、以下を使用して、webページ内に埋め込まれたPDF文書を表示する方法について学習します。 [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)無料で簡単に使用できます。 これらの例では、JavaScript、Node.js、Express.js、HTML、CSSを使用しています。 完全なプロジェクトコードは、次の場所で表示できます [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1).
+この実践チュートリアルでは、[Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)を使用して、webページ内に埋め込まれたPDF文書を表示する方法について説明します。この方法は無料で簡単に利用できます。 これらの例では、JavaScript、Node.js、Express.js、HTML、CSSを使用しています。 [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1)で完全なプロジェクトコードを表示できます。
 
 ## 関連APIとリソース
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [プロジェクトコード](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1)
 
@@ -40,9 +40,9 @@ ht-degree: 0%
 
 まず、Node.jsとExpressを使用して、見栄えの良いテンプレートを使用し、ダウンロード用にいくつかのPDFを提供するサイトを作成しましょう。
 
-まず、 [node.jsのダウンロードとインストール](https://nodejs.org/en/download/).
+まず、[Node.js](https://nodejs.org/en/download/)をダウンロードしてインストールします。
 
-最小限のWebアプリケーション構造でNode.jsプロジェクトを簡単に作成するには、アプリケーションジェネレータツールをインストールします `` `express-generator` ``.
+最小限のWebアプリケーション構造でNode.jsプロジェクトを簡単に作成するには、アプリケーションジェネレーターツール`` `express-generator` ``をインストールしてください。
 
 ```
 npm install express-generator -g
@@ -67,31 +67,31 @@ npm install
 npm start
 ```
 
-最後に、次のサイトを開きます： <http://localhost:3000>.
+最後に、<http://localhost:3000>でWebサイトを開きます。
 
-![基本的なwebサイトのスクリーンショット](assets/ddp_1.png)
+![基本Webサイトのスクリーンショット](assets/ddp_1.png)
 
 これで、基本的なwebサイトが作成されました。
 
 ## ホワイトペーパーのデータをレンダリング中
 
-Webサイトにホワイトペーパーを投稿するには、これらの文書を表示するためのホワイトペーパーのデータをWebサイト上で定義および準備します。 まず、プロジェクトのルートに新しい\\dataフォルダーを作成します。 利用できるホワイトペーパーの情報は、という名前の新しいファイルに含まれています [data.json](https://github.com/marcelooliveira/EmbedPDF/blob/main/pdf-app/data/data.json)を作成します。これはdataフォルダに格納されます。
+Webサイトにホワイトペーパーを投稿するには、これらの文書を表示するためのホワイトペーパーのデータをWebサイト上で定義および準備します。 まず、プロジェクトのルートに新しい\\dataフォルダーを作成します。 使用可能なホワイトペーパーに関する情報は、[data.json](https://github.com/marcelooliveira/EmbedPDF/blob/main/pdf-app/data/data.json)という名前の新しいファイルから取得されます。このファイルはdataフォルダーに格納されます。
 
-Webアプリを洗練された素晴らしい外観にするには、 [Bootstrap](https://getbootstrap.com/) および [素晴らしいフォント](https://fontawesome.com/) フロントエンドライブラリ。
+Webアプリを洗練された外観にするには、[フォント](https://getbootstrap.com/)と[Bootstrapの素晴らしい](https://fontawesome.com/)フロントエンドライブラリをインストールします。
 
 ```
 npm install bootstrap
 npm install font-awesome
 ```
 
-app.jsファイルを開き、これらのディレクトリを静的ファイルのソースとして含めて、既存のファイルの後に配置します `` `express.static` `` 行を追加します。
+app.jsファイルを開き、これらのディレクトリを静的ファイルのソースとして含め、既存の`` `express.static` ``行の後に配置します。
 
 ```
 app.use(express.static(path.join(__dirname, '/node_modules/bootstrap/dist')));
 app.use(express.static(path.join(__dirname, '/node_modules/font-awesome')));
 ```
 
-PDF文書を含めるには、プロジェクトの\\publicフォルダーの下に\\pdfsという名前のフォルダーを作成します。 PDFとサムネールは自分で作成するのではなく、このファイルからコピーできます [GitHubリポジトリフォルダー](https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app/public) を\\pdfフォルダーと\\imageフォルダーに移動します。
+PDF文書を含めるには、プロジェクトの\\publicフォルダーの下に\\pdfsという名前のフォルダーを作成します。 PDFとサムネイルは自分で作成する代わりに、この[GitHubリポジトリフォルダー](https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app/public)から\\pdfsフォルダーと\\imageフォルダーにコピーできます。
 
 \\public\\pdfsフォルダーに、次のPDF文書が含まれるようになりました。
 
@@ -99,9 +99,9 @@ PDF文書を含めるには、プロジェクトの\\publicフォルダーの下
 
 \\public\\imagesフォルダには、各PDF文書のサムネイルが含まれている必要があります。
 
-![PDFサムネールのスクリーンショット](assets/ddp_3.png)
+![PDFのサムネールのスクリーンショット](assets/ddp_3.png)
 
-次に、ホームページをルーティングするロジックが含まれている\\routes\\index.jsファイルを開きます。 data.jsonファイルからホワイトペーパーのデータを使用するには、ファイルシステムへのアクセスと対話を担当するNode.jsモジュールを読み込む必要があります。 次に、 `fs` \\routes\\index.jsファイルの最初の行で次のように定数を指定します。
+次に、ホームページをルーティングするロジックが含まれている\\routes\\index.jsファイルを開きます。 data.jsonファイルからホワイトペーパーのデータを使用するには、ファイルシステムへのアクセスと対話を担当するNode.jsモジュールを読み込む必要があります。 次に、\\routes\\index.jsファイルの最初の行で`fs`定数を次のように宣言します。
 
 ```
 const fs = require('fs');
@@ -120,29 +120,29 @@ let papers = JSON.parse(rawdata);
 res.render('index', { title: 'Embedding PDF', papers: papers });
 ```
 
-ホームページにホワイトペーパーのコレクションを表示するには、\\views\\index.ejsファイルを開き、既存のコードをプロジェクトのコードに置き換えます。 [索引ファイル](https://github.com/marcelooliveira/EmbedPDF/blob/main/pdf-app/views/index.ejs).
+ホームページにホワイトペーパーのコレクションを表示するには、\\views\\index.ejsファイルを開き、既存のコードをプロジェクトの[インデックスファイル](https://github.com/marcelooliveira/EmbedPDF/blob/main/pdf-app/views/index.ejs)のコードに置き換えます。
 
-npm startとopenを再実行します <http://localhost:3000> 利用可能なホワイトペーパーのコレクションを表示します。
+npm startを再実行し、<http://localhost:3000>を開いて、使用可能なホワイトペーパーのコレクションを表示します。
 
 ![ホワイトペーパーのサムネールのスクリーンショット](assets/ddp_4.png)
 
-次のセクションでは、webサイトの強化と使用について説明します [PDF埋め込みAPI](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) をクリックして、webページにPDF文書を表示します。 PDF埋め込みAPIは無料で使用できます。API資格情報を取得するだけで済みます。
+次のセクションでは、Webサイトの拡張と[PDF埋め込みAPI](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)を使用して、PDFドキュメントをWebページに表示します。 PDF埋め込みAPIは無料で使用できます。API資格情報を取得するだけで済みます。
 
 ## PDF埋め込みAPI資格情報の取得
 
-無料のPDF埋め込みAPI資格情報を取得するには、 [開始する](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) 新しいアカウントにサインアップするか、既存のアカウントにログインした後のページです。
+無料のPDF埋め込みAPI資格情報を取得するには、新しいアカウントにサインアップするか、既存のアカウントにログインした後、[開始](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)ページにアクセスしてください。
 
-クリック **新しい資格情報の作成** その後 **使用開始：**
+**[新しい資格情報の作成]**&#x200B;をクリックして、**開始：**&#x200B;してください
 
 ![新しい資格情報の作成方法のスクリーンショット](assets/ddp_5.png)
 
 この時点で、無料アカウントをお持ちでない場合は、無料アカウントに登録するよう求められます。
 
-選択 **PDF埋め込みAPI**、資格情報の名前とアプリケーションドメインを入力します。 次を使用します **localhost** webアプリをローカルでテストしているため、ドメインになっています。
+**PDF埋め込みAPI**&#x200B;を選択し、資格情報の名前とアプリケーションドメインを入力してください。 Webアプリをローカルでテストするため、**localhost**&#x200B;ドメインを使用します。
 
-![PDF埋め込みAPIの新しい資格情報の作成のスクリーンショット](assets/ddp_6.png)
+![PDF埋め込みAPIの新しい資格情報を作成するスクリーンショット](assets/ddp_6.png)
 
-「 **資格情報の作成** PDF資格情報にアクセスしてクライアントID（APIキー）を取得するためのボタン。
+「**資格情報を作成**」ボタンをクリックして、PDFの資格情報にアクセスし、クライアントID(API KEY)を取得します。
 
 ![新しい資格情報のコピー方法のスクリーンショット](assets/ddp_7.png)
 
@@ -166,19 +166,19 @@ require('dotenv').config();
 
 ## WebアプリでのPDFの表示
 
-PDF埋め込みAPIを使用して、サイトにPDFを表示できるようになりました。 ライブを開く [PDF埋め込みAPIデモ](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf).
+PDF埋め込みAPIを使用して、サイトにPDFを表示できるようになりました。 ライブ[PDF埋め込みAPIデモ](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)を開きます。
 
 ![ライブPDF埋め込みAPIデモのスクリーンショット](assets/ddp_8.png)
 
 左側のパネルで、webサイトのニーズに最適な埋め込みモードを選択できます。
 
-* **フルウィンドウ**：このPDFはwebページのすべての領域をカバーします
+* **フルウィンドウ**: PDFはWebページのすべての領域をカバーします
 
-* **サイズ変更コンテナ**:PDFはwebページ内に、サイズが制限されたdivで1ページずつ表示されます
+* **サイズのコンテナー**: PDFは、Webページ内に、サイズが制限されたDivで一度に1ページずつ表示されます
 
-* **インライン**:PDF全体がwebページ内のdivに表示されます
+* **インライン**: Webページ内のdivにPDF全体が表示されます
 
-* **ライトボックス**:PDFは、webページの上にレイヤーとして表示されます
+* **ライトボックス**: PDFは、Webページの上にレイヤーとして表示されます
 
 ホワイトペーパーにはインライン埋め込みモードを使用し、後でコードジェネレータを使用してアプリケーションにPDFを埋め込むことをお勧めします。
 
@@ -293,15 +293,15 @@ res.render('in-line', { title: paper.title, paper: paper });
 module.exports = router;
 ```
 
-もう一度「 [ライブデモ](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf) PDF埋め込みAPIコードを自動的に生成します。 クリック **インライン** 左パネルから：
+[ライブデモ](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)をもう一度見て、PDF埋め込みAPIコードを自動的に生成します。 左パネルから&#x200B;**インライン**&#x200B;をクリックします。
 
 ![ライブPDF埋め込みAPIデモのスクリーンショット](assets/ddp_8.png)
 
-クリック **コードを生成** サイズコンテナPDFビューアの表示に必要なHTMLコードを確認するには、次の手順を実行します。
+**[コードの生成]**&#x200B;をクリックして、サイズ変更されたコンテナーPDFビューアーの表示に必要なHTMLコードを確認します。
 
 ![コードプレビューのスクリーンショット](assets/ddp_9.png)
 
-クリック **コードをコピー** コードをin-line.ejsファイルに貼り付けます。
+「**コードのコピー**」をクリックして、コードをin-line.ejsファイルに貼り付けます。
 
 ```
 <div>
@@ -341,13 +341,13 @@ embedMode: "IN_LINE"
 </script>
 ```
 
-npm startコマンドを使用してアプリケーションを実行し、 <http://localhost:3000>.
+npm startコマンドを使用してアプリケーションを実行し、<http://localhost:3000>でwebサイトを開きます。
 
 ![PDFの白紙のサムネールのスクリーンショット](assets/ddp_10.png)
 
-最後に、1枚の白い紙を選択し、 **文書を表示** インライン埋め込みPDFで新しいページを開くには：
+最後に、1枚の白書を選択し、**文書を表示**&#x200B;をクリックして、インラインで埋め込まれたPDFで新しいページを開きます。
 
-![PDFホワイトペーパーのスクリーンショット ](assets/ddp_11.png)
+![PDFのホワイトペーパー](assets/ddp_11.png)のスクリーンショット
 
 「PDFをダウンロード」と「PDFをプリント」のオプションが表示されるようになりました。
 
@@ -526,7 +526,7 @@ showFullScreen: <%= permissions.showFullScreen %>
 
 サイト訪問者は、情報を送信した後にのみPDFにアクセスできるようになりました。
 
-![埋め込みビューアに表示されたPDFコンテンツのスクリーンショット](assets/ddp_15.png)
+![埋め込まれたビューアーのPDFの内容のスクリーンショット](assets/ddp_15.png)
 
 ## イベントの有効化
 
@@ -547,16 +547,16 @@ console.log(event);
 
 ![コードのスクリーンショット](assets/ddp_16.png)
 
-このデータは次に送信できます： [Adobe Analytics](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=view) または他の分析ツール。
+このデータは、[Adobe Analytics](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=view)またはその他の分析ツールに送信できます。
 
 ## 次の手順
 
-[!DNL Acrobat Services] APIは、PDF中心のワークフローを使用して、デジタルパブリッシングの課題を開発者が簡単に解決するのに役立ちます。 ここまでで、ホワイトペーパーのコレクションを表示するサンプルのNode Webアプリを作成する方法を説明しました。 次に、 [無料のAPI資格情報](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) また、ホワイトペーパーへのアクセスを制限し、4つのうちいずれかに表示できるようにしました [埋め込みモード](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf).
+[!DNL Acrobat Services]個のAPIにより、PDF中心のワークフローを使用して、開発者はデジタルパブリッシングの課題を簡単に解決できます。 ここまでで、ホワイトペーパーのコレクションを表示するサンプルのNode Webアプリを作成する方法を説明しました。 次に、[無料のAPI資格情報](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を取得し、ホワイトペーパーへの制限付きアクセスを構築します。このアクセスは、4つの[埋め込みモード](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)のいずれかで表示できます。
 
-このワークフローを組み合わせると、 [仮説的市場家](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html) 見込み客の連絡先情報を収集し、ホワイトペーパーのダウンロードと、PDFの問い合わせ相手に関する統計情報を表示します。 これらの機能をwebサイトに組み込んで、ユーザーのエンゲージメントを促進および監視できます。
+このワークフローを統合すると、[架空のマーケティング担当者](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html)は、ホワイトペーパーのダウンロードと引き換えに潜在顧客の連絡先情報を収集し、PDFの利用者に関する統計情報を表示することができます。 これらの機能をwebサイトに組み込んで、ユーザーのエンゲージメントを促進および監視できます。
 
-angularやReactの開発者の方は、ぜひ試してみてください [追加サンプル](https://github.com/adobe/pdf-embed-api-samples) PDF埋め込みAPIをReactやAngularのプロジェクトと連携させる方法を取り上げています。
+angularやReactの開発者は、PDF埋め込みAPIをReactやAngularのプロジェクトと連携させる方法を紹介する[その他のサンプル](https://github.com/adobe/pdf-embed-api-samples)をお試しください。
 
-Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 チェックアウト [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk) 無料。 その他に実行できる操作を確認するには、以下を使用してAdobe PDF Services APIを試してください [従量制の](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)[着氷](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html).
+Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk)を無料でご利用いただけます。 他に実行できる操作を確認するには、Adobe PDFサービスAPIを[goprに応じた支払い](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)[アイシング](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)でお試しください。
 
-[開始する](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) 使用する [!DNL Adobe Acrobat Services] 今日のAPI。
+[今すぐ[!DNL Adobe Acrobat Services]個のAPIを使用して](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を開始できます。

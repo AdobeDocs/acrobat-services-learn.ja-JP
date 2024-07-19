@@ -10,7 +10,7 @@ thumbnail: KT-8117.jpg
 exl-id: 2fef89cf-640d-4ff4-9282-070bce8bba78
 source-git-commit: e2debb7ef139f890cdfc158f7634ee5c836fab32
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '123'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ PDF埋め込みAPIは、忠実度の高いPDFを埋め込み、共同作業を�
       <img alt="PDFのオンラインエクスペリエンスを制御し、分析を収集" src="assets/ControlPDF_thumb.png" />
    </a>
     <div>
-   <a href="controlpdfexperience.md"><strong>PDFのオンラインエクスペリエンスを制御し、分析を収集</strong></a>
+   <a href="controlpdfexperience.md"><strong>PDFのオンラインエクスペリエンスを制御し、分析を収集する</strong></a>
     </div>
-    <em>Adobe PDF Embed APIを使用して外観をコントロールし、共同作業を有効にし、ユーザーがPDFーとどのように対話したかについて、ページや検索に費やした時間などの分析を収集する方法について説明します</em>
+    <em>Adobe PDF Embed APIを使用して外観をコントロールし、共同作業を有効にし、ユーザーがPDFーとどのように対話したかについて、ページや検索に費やした時間を含めた分析を収集する方法を説明します</em>
     <br>
   </td>
   <td>
@@ -36,9 +36,9 @@ PDF埋め込みAPIは、忠実度の高いPDFを埋め込み、共同作業を�
       <img alt="プロのようにweb上でPDFを組み合わせる" src="assets/Wrangle_1280.png" />
    </a>
     <div>
-   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/pdf-embed-api.html"><strong>プロのようにweb上でPDFを組み合わせる</strong></a>
+   <a href="https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/pdf-embed-api.html"><strong>Web上でプロのようにPDFを組み合わせる</strong></a>
     </div>
-    <em>無料のAdobe PDF Embed APIを使用してwebサイトでPDFを使いやすくする方法について説明します</em>
+    <em>無料のAdobe PDF Embed APIを使用してWebサイトでPDFを使いやすくする方法を確認してください</em>
     <br>
   </td>
   <td>

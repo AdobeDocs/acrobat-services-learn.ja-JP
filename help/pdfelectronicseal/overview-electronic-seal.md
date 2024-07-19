@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Adobe PDF eシールAPI Tutorials
 
-Adobe PDF eシールAPIは、次の場所にある特定のTSP（トラストサービスプロバイダー）が発行した証明書を使用して、大規模な文書にeシールを適用します [AdobeのApproved Trust List(AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html). eシールは、文書のIDと整合性を確認するのに役立ちます。 これは、大規模な文書のeシールに使用でき、PDFサービスAPIに含まれています。
+Adobe PDF Electronic Seal APIは、[AdobeのApproved Trust List (AATL)](https://helpx.adobe.com/acrobat/kb/approved-trust-list1.html)にある特定のTSP （トラストサービスプロバイダー）によって発行された証明書を使用して、大規模な文書にeシールを適用します。 eシールは、文書のIDと整合性を確認するのに役立ちます。 これは、大規模な文書のeシールに使用でき、PDFサービスAPIに含まれています。
 
 <table style="table-layout:fixed">
 <tr>

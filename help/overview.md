@@ -1,6 +1,6 @@
 ---
-title: ”[!DNL Adobe Acrobat Services] API Tutorials"
-description: の概要ページ [!DNL Adobe Acrobat Services]
+title: 「[!DNL Adobe Acrobat Services] API Tutorials」
+description: ' [!DNL Adobe Acrobat Services]の概要ページ'
 feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API, PDF Electronic Seal API, PDF Extract API, PDF Accessibility Auto-Tag API
 role: Developer
 level: Beginner, Intermediate, Experienced
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 # [!DNL Adobe Acrobat Services] APIチュートリアル
 
-[!DNL Adobe Acrobat Services] には、次の6つの主なAPIがあります。
+[!DNL Adobe Acrobat Services]には6つの主なAPIがあります：
 
 * [!DNL Adobe PDF Services API]
 * [!DNL Adobe PDF Embed API]
@@ -26,7 +26,7 @@ ht-degree: 2%
 * [!DNL Adobe PDF Extract API]
 * [!DNL Adobe PDF Accessibility Auto-Tag API]
 
-後者の2つのAPIとそのSDKは、次の場所にバンドルされています。 [!DNL Adobe PDF Services API] 有料サービスの一部として。 [!DNL PDF Embed API] は無料で提供されます。 これらのAPIは、最新のクラウドベースのWebサービスのセットを介して、ドキュメントコンテンツの生成、操作、変換を自動化します。 これらは、ドキュメントに対するユーザー操作の制御、PDFワークフローの合理化、使用と保持の促進など、シンプルで迅速なブランドエクスペリエンスを提供するのに役立ちます。 これらのチュートリアルでは、最新の状態に迅速に到達し、ブランド化されたシンプルで高速なエクスペリエンスを提供します。 [!DNL Adobe Acrobat Services] API。
+後の2つのAPIとそのSDKは、有料サービスの一部として[!DNL Adobe PDF Services API]にバンドルされています。 [!DNL PDF Embed API]は無料サービスです。 これらのAPIは、最新のクラウドベースのWebサービスのセットを介して、ドキュメントコンテンツの生成、操作、変換を自動化します。 これらは、ドキュメントに対するユーザー操作の制御、PDFワークフローの合理化、使用と保持の促進など、シンプルで迅速なブランドエクスペリエンスを提供するのに役立ちます。 これらのチュートリアルでは、[!DNL Adobe Acrobat Services] APIを使用して、ブランド化されたエクスペリエンスをよりシンプルかつ迅速に提供します。
 
 <table style="table-layout:fixed">
 <tr>

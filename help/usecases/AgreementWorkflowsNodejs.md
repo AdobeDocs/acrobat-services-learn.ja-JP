@@ -1,6 +1,6 @@
 ---
 title: Node.jsの契約書ワークフロー
-description: ”[!DNL Adobe Acrobat Services] APIにより、PDF機能をWebアプリケーションに簡単に組み込むことができます」
+description: 「[!DNL Adobe Acrobat Services]個のAPIで、PDF機能をwebアプリケーションに簡単に組み込むことができます」
 feature: Use Cases
 role: Developer
 level: Beginner
@@ -11,16 +11,16 @@ keywords: おすすめ
 exl-id: 44a03420-e963-472b-aeb8-290422c8d767
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 1%
+source-wordcount: '2094'
+ht-degree: 0%
 
 ---
 
 # Node.jsの契約書ワークフロー
 
-![ユースケースの英雄バナー](assets/UseCaseAgreementHero.jpg)
+![使用事例の英雄バナー](assets/UseCaseAgreementHero.jpg)
 
-多くのビジネスアプリケーションやプロセスでは、提案や契約書などの文書が必要です。 PDF文書を使用すると、ファイルの安全性と修正可能性を高めることができます。 また、クライアントがドキュメントをすばやく簡単に完了できるように、電子署名のサポートも提供します。 [!DNL Adobe Acrobat Services] APIは、PDF機能をwebアプリケーションに簡単に組み込むことができます。
+多くのビジネスアプリケーションやプロセスでは、提案や契約書などの文書が必要です。 PDF文書を使用すると、ファイルの安全性と修正可能性を高めることができます。 また、クライアントがドキュメントをすばやく簡単に完了できるように、電子署名のサポートも提供します。 [!DNL Adobe Acrobat Services]個のAPIは、PDF機能をWebアプリケーションに簡単に組み込むことができます。
 
 ## 学習内容
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 関連APIとリソース
 
-* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
@@ -36,31 +36,31 @@ ht-degree: 1%
 
 * [プロジェクトコード](https://github.com/adobe/pdftools-node-sdk-samples)
 
-## 設定する [!DNL Adobe Acrobat Services]
+## [!DNL Adobe Acrobat Services]をセットアップしています
 
-使用を開始するには、使用する資格情報を設定してください [!DNL Adobe Acrobat Services]. アカウントを登録し、 [Node.jsクイックスタート](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#node-js) を使用して、より大きなアプリケーションに機能を統合する前に、認証情報を検証することができます。
+開始するには、[!DNL Adobe Acrobat Services]を使用する資格情報を設定してください。 アカウントを登録し、[Node.js Quickstart](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#node-js)を使用して資格情報の機能を確認してから、機能を大規模なアプリケーションに統合してください。
 
-まず、Adobeデベロッパーアカウントを取得します。 その後、 [開始する](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) ページで、 *開始する* 「新しい資格情報を作成」の下にあるオプション。 6か月間で使用できる1,000件の文書トランザクションを提供する無料体験版にサインアップできます。
+まず、Adobeデベロッパーアカウントを取得します。 次に、[開始](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK)ページで、[新しい資格情報の作成]の[*開始*]オプションを選択します。 6か月間で使用できる1,000件の文書トランザクションを提供する無料体験版にサインアップできます。
 
-![新しい資格情報の作成の画像](assets/AWNjs_1.png)
+![新しい資格情報の作成画像](assets/AWNjs_1.png)
 
 次の「新しい資格情報を作成」ページで、PDF埋め込みAPIとPDFサービスAPIのどちらを選択するかを求められます。
 
-選択 *PDFサービスAPI*.
+*PDFサービスAPI*&#x200B;を選択します。
 
-アプリケーションの名前を入力し、表示されたボックスをオンにします。 *パーソナライズされたコードサンプルの作成*. このボックスをオンにすると、コードサンプルに資格情報が自動的に埋め込まれます。 このチェックボックスをオフのままにした場合は、アプリケーションに資格情報を手動で追加する必要があります。
+アプリケーションの名前を入力し、[*パーソナライズされたコードサンプルの作成*]ボックスをオンにします。 このボックスをオンにすると、コードサンプルに資格情報が自動的に埋め込まれます。 このチェックボックスをオフのままにした場合は、アプリケーションに資格情報を手動で追加する必要があります。
 
-選択 *Node.js* をクリックします。 *資格情報の作成*.
+アプリケーションの種類として&#x200B;*Node.js*&#x200B;を選択し、*資格情報の作成*&#x200B;をクリックします。
 
-しばらくすると、認証情報を含むサンプルプロジェクトの.zipファイルのダウンロードが開始されます。 のNode.jsパッケージ [!DNL Acrobat Services] は、サンプルプロジェクトコードの一部としてすでに含まれています。
+しばらくすると、認証情報を含むサンプルプロジェクトの.zipファイルのダウンロードが開始されます。 [!DNL Acrobat Services]のNode.jsパッケージは、既にサンプルプロジェクトコードの一部として含まれています。
 
-![「PDFサービスAPI資格証明の選択」の図](assets/AWNjs_2.png)
+![PDFサービスAPI資格情報を選択する画像](assets/AWNjs_2.png)
 
 ## サンプルプロジェクトの手動設定
 
 「新しい資格情報を作成」ページからサンプルプロジェクトをダウンロードしないことを選択した場合は、プロジェクトを手動で設定することもできます。
 
-次からコードをダウンロードします（資格情報は埋め込みません）: [GitHub](https://github.com/adobe/pdftools-node-sdk-samples). このバージョンのコードを使用する場合は、使用前にpdftools-api-credentials.jsonファイルに資格情報を追加する必要があります。
+[GitHub](https://github.com/adobe/pdftools-node-sdk-samples)からコードをダウンロードします（資格情報は埋め込まれません）。 このバージョンのコードを使用する場合は、使用前にpdftools-api-credentials.jsonファイルに資格情報を追加する必要があります。
 
 ```
 {
@@ -78,7 +78,7 @@ ht-degree: 1%
 
 自分のアプリケーションの場合は、秘密キーファイルと資格情報ファイルをアプリケーションソースにコピーする必要があります。
 
-以下の場合は、Node.jsパッケージをインストールする必要があります [!DNL Acrobat Services]. パッケージをインストールするには、次のコマンドを使用します。
+[!DNL Acrobat Services]のNode.jsパッケージをインストールしてください。 パッケージをインストールするには、次のコマンドを使用します。
 
 ```
 npm install --save @adobe/documentservices-pdftools-node-sdk
@@ -154,7 +154,7 @@ router.post('/', (req, res, next) => {
 
 この関数を実行すると、ファイルはアプリケーションのアップロードフォルダーに保存され、その後の処理に使用できます。
 
-次に、ファイルを元の形式からPDFに変換します。 先ほどダウンロードしたサンプルコードには、 `create-pdf-from-docx.js` 文書をPDFに変換します。 次の関数 `convertDocumentToPDF`、アップロードされた文書を取り出し、別のフォルダーのPDFーに変換します。
+次に、ファイルを元の形式からPDFに変換します。 以前にダウンロードしたサンプルコードには、文書をPDFに変換するための`create-pdf-from-docx.js`という名前のスクリプトが含まれています。 次の関数`convertDocumentToPDF`は、アップロードされた文書を受け取り、別のフォルダー内のPDFーに変換します：
 
 ```
 function convertDocumentToPDF(sourcePath, destinationPath)
@@ -232,7 +232,7 @@ htmlToPDFOperation.execute(executionContext)
 });
 ```
 
-関数 `setCustomOptions` 用紙サイズなどのその他のPDF設定を指定します。 この関数では、ページサイズが11.5 x 11インチに設定されています。
+関数`setCustomOptions`は、用紙サイズなど、その他のPDF設定を指定します。 この関数では、ページサイズが11.5 x 11インチに設定されています。
 
 ```
 const setCustomOptions = (htmlToPDFOperation) => {    
@@ -250,21 +250,21 @@ const setCustomOptions = (htmlToPDFOperation) => {
 
 いくつかの用語を含むHTML文書を開くと、ブラウザーで次の情報が表示されます。
 
-![コンピューター用語のイメージ](assets/AWNjs_3.png)
+![コンピューターの使用条件のイメージ](assets/AWNjs_3.png)
 
 この文書のソースは、CSSファイルとHTMLファイルで構成されています。
 
-![CSSとHTMLファイルのイメージ](assets/AWNjs_4.png)
+![CSSとHTMLファイルの画像](assets/AWNjs_4.png)
 
-HTMLファイルを処理すると、同じテキストがPDF書式で表示されます。
+HTMLファイルを処理すると、PDF書式の同じテキストが表示されます。
 
-![コンピューター用語のPDFファイル](assets/AWNjs_5.png)
+![コンピューター利用条件のPDFファイル](assets/AWNjs_5.png)
 
 ## ページを追加しています
 
-PDFファイルを使用するもう1つの一般的な操作は、用語のリストなどの標準テキストを含むページを最後に追加することです。 Document Toolkitは、複数のPDF文書を1つの文書にまとめることができます。 文書パスのリストがある場合(ここでは `sourceFileList`)を使用する場合、各ファイルのファイル参照をオブジェクトに追加して、結合操作を行うことができます。
+PDFファイルを使用するもう1つの一般的な操作は、用語のリストなどの標準テキストを含むページを最後に追加することです。 Document Toolkitは、複数のPDF文書を1つの文書にまとめることができます。 ドキュメントパス（`sourceFileList`内）の一覧がある場合は、結合操作で各ファイルのファイル参照をオブジェクトに追加できます。
 
-結合操作を実行すると、ソースコンテンツを含む1つのファイルが提供されます。 次を使用できます `saveAsFile` をクリックして、ファイルをストレージに保持します。
+結合操作を実行すると、ソースコンテンツを含む1つのファイルが提供されます。 オブジェクトで`saveAsFile`を使用して、ファイルをストレージに保持できます。
 
 ```
 const executionContext = PDFToolsSDK.ExecutionContext.create(credentials);
@@ -288,23 +288,23 @@ combineOperation.execute(executionContext)
 
 PDFファイルに対して行った操作はいくつかありますが、最終的にはユーザーが文書を表示する必要があります。 AdobeのPDF埋め込みAPIを使用して、文書をwebページに埋め込むことができます。
 
-PDFを表示するページで、 `<div />` 文書を保持し、IDを付与するエレメント。 このIDをすぐに使用します。 Webページで、次を含めます。 `<script />` Adobe JavaScriptライブラリへの参照：
+エレメントを表示するページで、`<div />` PDFを追加して文書を保持し、IDを付与します。 このIDをすぐに使用します。 Webページで、Adobe JavaScriptライブラリへの`<script />`参照を含めます。
 
 ```
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 ```
 
-必要なコードの最後のビットは、Adobe PDF Embed API JavaScriptが読み込まれた後にドキュメントを表示する関数です。 adobe_dc_view\_sdk.readyイベントを介してスクリプトが読み込まれたことを示す通知を受け取ったら、新しいAdobeDC.Viewオブジェクトを作成します。 このオブジェクトには、以前に作成したクライアントIDと要素のIDが必要です。 クライアントIDは、 [Adobe Developer Console](https://console.adobe.io/). 以前に資格情報を生成したときに作成したアプリケーションの設定を表示すると、クライアントIDがそこに表示されます。
+必要なコードの最後のビットは、Adobe PDF Embed API JavaScriptが読み込まれた後にドキュメントを表示する関数です。 adobe_dc_view\_sdk.readyイベントを介してスクリプトが読み込まれたことを示す通知を受け取ったら、新しいAdobeDC.Viewオブジェクトを作成します。 このオブジェクトには、以前に作成したクライアントIDと要素のIDが必要です。 [Adobe Developer Console](https://console.adobe.io/)でクライアントIDを確認します。 以前に資格情報を生成したときに作成したアプリケーションの設定を表示すると、クライアントIDがそこに表示されます。
 
 ![APIクライアントキーのイメージ](assets/AWNjs_6.png)
 
 ## その他のPDFオプション
 
-この [Adobe PDF埋め込みAPIデモ](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf) PDF文書を埋め込むための他の様々なオプションをプレビューできます。
+[Adobe PDF Embed APIのデモ](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)では、PDF文書を埋め込むための他の様々なオプションをプレビューできます。
 
-![埋め込みPDFオプションの画像 ](assets/AWNjs_7.png)
+![埋め込みPDFオプションの画像](assets/AWNjs_7.png)
 
-さまざまなオプションのオンとオフを切り替えて、レンダリング方法をすぐに確認できます。 気に入った組み合わせが見つかったら、 *\&lt;/\>コードの生成* ボタンをクリックすると、これらのオプションを使用して実際のHTMLコードが生成されます。
+さまざまなオプションのオンとオフを切り替えて、レンダリング方法をすぐに確認できます。 気に入った組み合わせが見つかったら、「*\&lt;/\>コードを生成*」ボタンをクリックして、これらのオプションを使用して実際のHTMLコードを生成します。
 
 ![コードプレビューの画像](assets/AWNjs_8.png)
 
@@ -312,25 +312,26 @@ PDFを表示するページで、 `<div />` 文書を保持し、IDを付与す�
 
 文書の準備が整ったら、Adobe Signを使用してデジタル署名を追加して承認を受けることができます。 この機能は、これまでに使用した機能とは少し異なります。 デジタル署名の場合、ユーザー認証にOAuthを使用するようにアプリケーションを設定する必要があります。
 
-アプリケーションを設定するための最初の手順は、次のとおりです。 [アプリケーションの登録](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md) Adobe SignでOAuthを使用します。 ログインしたら、 *アカウント*&#x200B;を開き、 *ADOBE SIGN API* セクションを選択し、 *APIアプリケーション* をクリックして、登録されたアプリケーションのリストを開きます。
+アプリケーションを設定するための最初の手順は、[アプリケーションを登録](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)して、Adobe Sign用のOAuthを使用することです。 ログイン後、*アカウント*&#x200B;をクリックしてアプリの作成画面に移動し、*Adobe Sign API*&#x200B;セクションを開き、*APIアプリ*&#x200B;をクリックして、登録されたアプリの一覧を開きます。
 
-![アプリケーション登録時の最初の手順の画像](assets/AWNjs_9.png)
+![アプリケーション登録時の最初のステップの画像](assets/AWNjs_9.png)
 
 新しいアプリケーションエントリを作成するには、右上隅にあるプラスアイコンをクリックします。
 
 ![画面の右上隅にあるプラスアイコンの画像](assets/AWNjs_10.png)
 
-開いたウィンドウで、アプリケーション名と表示名を入力します。 選択 *お客様* ドメインの場合、 *保存*.
+開いたウィンドウで、アプリケーション名と表示名を入力します。 ドメインの&#x200B;*顧客*&#x200B;を選択し、*[保存]*&#x200B;をクリックします。
 
-![アプリケーション名と表示名の入力先のイメージ](assets/AWNjs_11.png)
+![アプリケーション名と表示名の入力先の画像](assets/AWNjs_11.png)
 
-アプリケーションが作成されたら、リストからアプリケーションを選択し、 *アプリケーションのOAuthを設定*. オプションを選択します。 「リダイレクトURL」に、アプリケーションのURLを入力します。 複数のURLを入力できます。 テストするアプリケーションの値は次のとおりです。
+アプリケーションが作成されたら、リストからアプリケーションを選択し、*[アプリケーションのOAuthの構成]*&#x200B;をクリックします。 オプションを選択します。 「リダイレクトURL」に、アプリケーションのURLを入力します。 複数のURLを入力できます。 テストするアプリケーションの値は次のとおりです。
 
 ```
 http://localhost:3000/signed-in 
 ```
 
-OAuthを使用してトークンを取得するプロセスは標準です。 アプリケーションによって、ログイン用のURLがユーザーに指示されます。 ユーザーが正常にログインすると、ページのクエリパラメーターに追加情報が記載されたアプリケーションにリダイレクトされます。
+OAuthを使用してトークンを取得するプロセスは標準です。 アプリケーションによって、ログイン用のURLがユーザーに指示されます。 ユーザーが正常にログインした後、
+ページのクエリパラメーターに追加情報が含まれていると、アプリケーションにリダイレクトされます。
 
 ログインURLの場合、アプリケーションはクライアントID、リダイレクトURL、および必要なスコープのリストを渡す必要があります。
 
@@ -348,11 +349,11 @@ Adobe SignのIDにログインするように求められます。 ログイン�
 
 ![アクセス確認画面の画像](assets/AWNjs_12.png)
 
-クリックした場合 *アクセスを許可* リダイレクトURLでは、 codeというクエリパラメーターが認証コードを渡します。
+ユーザーがリダイレクトURLで&#x200B;*アクセスを許可*&#x200B;をクリックすると、codeという名前のクエリパラメーターにより認証コードが渡されます。
 
-https://YourServer.com/?code=**\&lt;authorization_code>**\&amp;api_access_point=https://api.adobesign.com&amp;web_access_point=https://secure.adobesign.com
+https://YourServer.com/?code=**\&lt;authorization_code\>**\&amp;api_access_point=https://api.adobesign.com&amp;web_access_point=https://secure.adobesign.com
 
-このコードをクライアントIDとクライアントシークレットとともにAdobe Signサーバーにポストすると、サービスにアクセスするためのアクセストークンが提供されます。 パラメーターの値を保存します `api_access_point` および `web_access_point`. これらの値は、以降の要求で使用されます。
+このコードをクライアントIDとクライアントシークレットとともにAdobe Signサーバーにポストすると、サービスにアクセスするためのアクセストークンが提供されます。 パラメーター`api_access_point`と`web_access_point`の値を保存します。 これらの値は、以降の要求で使用されます。
 
 ```
 var requestURL = ' ${api_access_point}oauth/token?code=${code}'
@@ -368,7 +369,7 @@ request.post(requestURL, {form: { }
 });
 ```
 
-文書に署名が必要な場合は、まず文書をアップロードする必要があります。 アプリケーションは、文書を `api_access_point` oauthトークンの要求中に受信した値。 エンドポイントは `/api/rest/v6/transientDocuments`. リクエストデータは次のようになります。
+文書に署名が必要な場合は、まず文書をアップロードする必要があります。 アプリケーションは、OAUTHトークンの要求中に受信した`api_access_point`値に文書をアップロードできます。 エンドポイントは`/api/rest/v6/transientDocuments`です。 リクエストデータは次のようになります。
 
 ```
 POST /api/rest/v6/transientDocuments HTTP/1.1
@@ -407,9 +408,9 @@ request(uploadRequest, (error, response) => {
 });
 ```
 
-リクエストは、 `transientID` 値を返します。 文書はアップロードされましたが、まだ送信されていません。 文書を送信するには、 `transientID` をクリックして、文書の送信を要求します。
+要求は`transientID`値を返します。 文書はアップロードされましたが、まだ送信されていません。 ドキュメントを送信するには、`transientID`を使用してドキュメントの送信を要求します。
 
-まず、署名される文書の情報を含むJSONオブジェクトを構築します。 次の変数では、 `transientDocumentId` には上記のコードのIDが含まれ、 `agreementDescription` 署名が必要な契約書を説明するテキストが含まれています。 文書に署名するユーザーが、 `participantSetsInfo` 電子メールアドレスと役割で指定します。
+まず、署名される文書の情報を含むJSONオブジェクトを構築します。 次の場合、変数`transientDocumentId`には上記のコードのIDが含まれ、`agreementDescription`には署名が必要な契約書を説明するテキストが含まれています。 `participantSetsInfo`には、文書に署名するユーザーが電子メールアドレスと役割で一覧表示されます。
 
 ```
 var requestBody = {
@@ -434,11 +435,11 @@ request(requestBody, function (error, response) {
 });
 ```
 
-署名者が署名を忘れて別の通知メールが必要になった場合は、以前に受け取ったIDを使用して通知を再度送信します。 唯一の違いは、関係者の参加者IDも追加する必要があることです。 参加者IDを取得するには、GETリクエストを送信します。 `/agreements/{agreementID}/members`.
+署名者が署名を忘れて別の通知メールが必要になった場合は、以前に受け取ったIDを使用して通知を再度送信します。 唯一の違いは、関係者の参加者IDも追加する必要があることです。 `/agreements/{agreementID}/members`にGET要求を送信すると、参加者IDを取得できます。
 
 リマインダーの送信を要求するには、まずリクエストを記述するJSONオブジェクトを構築します。 最小オブジェクトには、参加者IDのリストとリマインダーのステータス（「ACTIVE」、「COMPLETE」、または「CANCELLED」）が必要です。
 
-リクエストには、ユーザーに表示される「note」の値などの追加情報を必要に応じて含めることができます。 または、リマインダーを送信するまでの遅延時間（時間単位） `firstReminderDelay`)またはリマインダーの頻度（「頻度」フィールド内）。DAILY_UNTIL_SIGNED、EVERY_THIRD_DAY_UNTIL_SIGNED、WEEKLY_UNTIL_SIGNEDなどの値を指定できます。
+リクエストには、ユーザーに表示される「note」の値などの追加情報を必要に応じて含めることができます。 または、リマインダーを送信するまでの遅延（`firstReminderDelay`単位）と、DAILY_UNTIL_SIGNED、EVERY_THIRD_DAY_UNTIL_SIGNED、WEEKLY_UNTIL_SIGNEDなどの値を受け入れるリマインダーの頻度（「頻度」フィールドの値）。
 
 ```
 var requestBody = {
@@ -473,7 +474,7 @@ Adobe Sign APIを使用してWebフォームを作成することもできます
 
 ![Adobe Signの管理画面のWebフォームの画像](assets/AWNjs_14.png)
 
-Webフォームを作成するには、フォームを使用します `transientDocumentId`. フォームのタイトルと初期化するステータスを決定します。
+Webフォームを作成するには、フォーム`transientDocumentId`を使用します。 フォームのタイトルと初期化するステータスを決定します。
 
 ```
 var requestBody = {
@@ -514,8 +515,8 @@ request(createWebFormRequest, function (error, response) {
 
 ## 次の手順
 
-クイックスタートと提供されたコードからわかるように、Nodeを使用してPDFおよびデジタルドキュメントの承認プロセスを簡単に導入できます。 [!DNL Adobe Acrobat Services] API。 AdobeのAPIは、既存のクライアントアプリケーションとシームレスに連携します。
+クイックスタートと提供されたコードからわかるように、[!DNL Adobe Acrobat Services] APIを持つNodeを使用して、PDFおよびデジタルドキュメントの承認プロセスを簡単に実装できます。 AdobeのAPIは、既存のクライアントアプリケーションとシームレスに連携します。
 
-呼び出しに必要なスコープを調べたり、呼び出しの構築方法を確認したりするには、からサンプルの呼び出しを構築できます。 [Rest APIドキュメント](https://secure.na4.adobesign.com/public/docs/restapi/v6). この [クイックスタート](https://github.com/adobe/pdftools-node-sdk-samples) その他の機能とファイル形式についても説明します。 [!DNL Adobe Acrobat Services] APIプロセス。
+呼び出しに必要なスコープを検出したり、呼び出しの構築方法を確認したりするには、[Rest APIドキュメント](https://secure.na4.adobesign.com/public/docs/restapi/v6)からサンプル呼び出しを構築します。 [Quickstarts](https://github.com/adobe/pdftools-node-sdk-samples)は、[!DNL Adobe Acrobat Services]個のAPIプロセスの他の機能とファイル形式も示します。
 
-アプリケーションに様々なPDF機能を追加して、文書の閲覧や署名などをすばやく簡単に行うことができます。 まず、以下をご覧ください [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) 今日。
+アプリケーションに様々なPDF機能を追加して、文書の閲覧や署名などをすばやく簡単に行うことができます。 開始するには、今すぐ[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/)をご覧ください。

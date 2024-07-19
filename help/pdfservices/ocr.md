@@ -10,14 +10,14 @@ thumbnail: KT-6677.jpg
 exl-id: 61a9a2d1-94c3-41c2-8f90-a56a938ef245
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 4%
+source-wordcount: '567'
+ht-degree: 0%
 
 ---
 
 # Adobe PDFサービスAPIを使用したOCRPDFファイルの書き出し
 
-![PDFのヒーロー画像を作成](assets/OCR_hero.jpg)
+![PDFのヒーロー画像の作成](assets/OCR_hero.jpg)
 
 OCR(Optical Character Recognition)を使用すると、スキャンしたPDFをロック解除して、テキストを抽出し、検索可能なファイルを作成できます。 強力なクラウドベースのAPIを使用して任意の文書ワークフローにOCRを統合し、テキストのアーカイブ、コピー、検索可能な文書索引の作成に最適なソリューションを提供します。 スキャンされたPDF・リポジトリから検索可能なアーカイブを作成して、重要な情報のロックを解除し、迅速な検索性で時間を節約できます。 または、アップロードされたスキャンからPDFにOCRを適用して、オンボーディングワークフローで使用できるように編集します。
 
@@ -37,7 +37,7 @@ OCR用に提供されているサンプルファイルをすぐに実行でき�
 
 ## サンプルファイルにあるOCRの例を実行します。
 
-このOCR操作では、デフォルトで英語のロケールが使用できますが、ドイツ語、フランス語、デンマーク語、 [その他の言語](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#ocr-with-explicit-language). デフォルトはen-usロケールです。
+このOCR操作では、デフォルトで英語ロケールが使用できますが、ドイツ語、フランス語、デンマーク語および[その他の言語](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#ocr-with-explicit-language)もサポートされます。 デフォルトはen-usロケールです。
 
 特定のロケールを含むOCR操作のオプションを渡す場合、メソッドは、次の2つのオプションを持つ&#39;type&#39;パラメーターも受け入れます。
 
@@ -53,7 +53,7 @@ OCR用に提供されているサンプルファイルをすぐに実行でき�
 
    例：C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-java-samples>。
 
-1. 次のコマンドを実行します:
+1. 次のコマンドを実行します。
 
    `mvn -f pom.xml exec:java -Dexec.mainClass=com.adobe.platform.operation.samples.ocrpdf.OcrPDF`
 
@@ -69,7 +69,7 @@ PDFはsrc/main/resourcesディレクトリに作成されます。
 
 1. ディレクトリをOcrPDFディレクトリにもう一度変更します。
 
-1. 次のコマンドを実行します:
+1. 次のコマンドを実行します。
 
    `dotnet run OcrPDF.csproj`
 
@@ -83,7 +83,7 @@ PDFは同じディレクトリに作成されます。
 
    例： C:\Temp\PDFToolsAPI\adobe-dc-pdf-tools-sdk-node-samples
 
-1. 次のコマンドを実行します:
+1. 次のコマンドを実行します。
 
    `node src/ocr/ocr-pdf.js`
 
@@ -95,14 +95,14 @@ PDFは、出力で指定された場所（デフォルトでは出力ディレ�
 
 ここから、サンプルにある入力ファイルと出力ファイルを置き換えるだけで、独自のPDFを使用して、独自のユースケースの概念実証を完成させることができます。
 
-![Proof of Concept](assets/OCR_poc.png)
+![概念実証](assets/OCR_poc.png)
 
 ## リソースと次のステップ
 
-* その他のヘルプとサポートについては、Adobeを参照してください [[!DNL Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) フォーラム
+* その他のヘルプとサポートについては、[[!DNL Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) Adobeフォーラムにアクセスしてください
 
-* PDFサービスAPI [文書](https://www.adobe.com/go/pdftoolsapi_doc)
+* PDFサービスAPI [ドキュメント](https://www.adobe.com/go/pdftoolsapi_doc)
 
-* [FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197) PDFサービスAPIに関する質問
+* PDFサービスAPIの質問に関する[FAQ](https://community.adobe.com/t5/document-cloud-sdk/faq-for-document-services-pdf-tools-api/m-p/10726197)
 
-* [お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform) ライセンスと価格に関する質問
+* ライセンスと価格に関する質問については、[お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform)ください

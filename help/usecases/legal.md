@@ -10,24 +10,24 @@ thumbnail: KT-8097.jpg
 exl-id: e0c32082-4f8f-4d8b-ab12-55d95b5974c5
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '2006'
-ht-degree: 1%
+source-wordcount: '1890'
+ht-degree: 0%
 
 ---
 
 # 法的契約の管理
 
-![ユースケースの英雄バナー](assets/UseCaseLegalHero.jpg)
+![使用事例の英雄バナー](assets/UseCaseLegalHero.jpg)
 
-デジタル化には課題が伴います。 今日、ほとんどの組織には多くの種類の [法的契約](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html) 作成、編集、承認、および異なる関係者による署名が必要であること。 これらの法的契約では、多くの場合、独自のカスタマイズとブランディングが必要になります。 組織は、安全を確保するために、署名後に保護された形式で保存する必要がある場合もあります。 これらすべてを実現するには、堅牢なドキュメント生成および管理ソリューションが必要です。
+デジタル化には課題が伴います。 現在、ほとんどの組織には、作成、編集、承認、および別の関係者による署名が必要な[法的契約](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html)の多くの種類があります。 これらの法的契約では、多くの場合、独自のカスタマイズとブランディングが必要になります。 組織は、安全を確保するために、署名後に保護された形式で保存する必要がある場合もあります。 これらすべてを実現するには、堅牢なドキュメント生成および管理ソリューションが必要です。
 
 多くのソリューションには、文書生成の機能が備わっていますが、データ入力や条件ロジック（特定のシナリオにのみ適用する条項など）をカスタマイズすることはできません。 会社の法的テンプレートを手動で更新するのは困難で、これらの文書が広範に渡るにつれエラーが発生しやすくなります。 これらのプロセスを自動化する必要性は非常に大きい。
 
 ## 学習内容
 
-この実践チュートリアルでは、次の機能について学習します。 [[!DNL Adobe Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html) 文書のカスタム入力フィールドの生成 また、生成された文書を保護されたポータブルドキュメントフォーマット(PDF)に簡単に変換して、データが操作されないようにする方法についても説明します。
+この実践チュートリアルでは、ドキュメント内のカスタム入力フィールドの生成で[[!DNL Adobe Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)の機能を確認します。 また、生成された文書を保護されたポータブルドキュメントフォーマット(PDF)に簡単に変換して、データが操作されないようにする方法についても説明します。
 
-このチュートリアルでは、契約書からPDFへのコンバージョンを学習する際のプログラミングを少々取り上げます。 効率よく行くには [Microsoft Word](https://www.microsoft.com/en-us/download/office.aspx) および [Node.js](https://nodejs.org/) がPCにインストールされている必要があります。 Node.jsと [ES6構文](https://www.w3schools.com/js/js_es6.asp) も推奨されます。
+このチュートリアルでは、契約書からPDFへのコンバージョンを学習する際のプログラミングを少々取り上げます。 [Microsoft Word](https://www.microsoft.com/en-us/download/office.aspx)と[Node.js](https://nodejs.org/)をPCにインストールすると、効率的に作業を進めることができます。 Node.jsおよび[ES6構文](https://www.w3schools.com/js/js_es6.asp)の基本的な理解も推奨されます。
 
 ## 関連APIとリソース
 
@@ -41,15 +41,15 @@ ht-degree: 1%
 
 ## テンプレート文書の作成
 
-法的文書は、Microsoft Wordアプリケーションを使用するか、Adobeの [サンプルWordテンプレート](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade). それでも、次のようなヘルパーツールを使用せずに、入力をカスタマイズしたり、これらのドキュメントにデジタル署名したりすることは簡単ではありません。 [AdobeDocument Generation Taggerアドイン](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin) Microsoft Word用。
+Microsoft Wordアプリケーションを使用するか、Adobeの[サンプルWordテンプレート](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade)をダウンロードして、法的文書を作成できます。 Adobeそれでも、Microsoft Word用の[Adobe Document Generation Taggerアドイン](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin)などのヘルパーツールを使用せずに、入力をカスタマイズしてこれらの文書にデジタル署名を行うことは簡単ではありません。
 
 Document Generation Taggerは、タグを使用した文書のシームレスなカスタマイズを可能にするMicrosoft Wordアドインです。 これにより、JSONデータを使用して動的に入力する文書テンプレートに動的フィールドを作成できます。
 
-![Wordにアドビドキュメント生成タグを追加する方法のスクリーンショット](assets/legal_1.png)
+![WordにAdoe Document Generation Taggerを追加する方法のスクリーンショット](assets/legal_1.png)
 
 Document Generation Taggerの使用方法を説明するには、このアドインをインストールしてから、簡単な契約書ドキュメントのタグ付けに使用されるJSONデータモデルを作成します。
 
-次をクリックして、Wordの文書生成タガーをインストールします。 **挿入** タブをクリックし、[アドイン]の **個人用アドイン**. [Officeアドイン]メニューで、[AdobeのDocument Generation]を検索し、 **追加** プロセスに従います。 これらの手順は、上記の画面キャプチャで確認できます。
+**[挿入]**&#x200B;タブをクリックしてWordにドキュメント生成タガーをインストールし、次に[アドイン]グループで[**個人用アドイン**]をクリックします。 [Officeアドイン]メニューで、[Adobeドキュメントの生成]を検索し、[**追加**]をクリックして手順に従います。 これらの手順は、上記の画面キャプチャで確認できます。
 
 Document Generation Tagger for Wordアドインのインストール後、単純なJSONデータモデルを作成して、法的なドキュメントにタグを付けます。
 
@@ -71,39 +71,39 @@ Document Generation Tagger for Wordアドインのインストール後、単純
 }
 ```
 
-このJSONドキュメントを保存したら、Document Generation Taggerアドインに読み込みます。 をクリックして文書を取り込みます。 **文書の生成** 下の画面キャプチャに示すように、Word画面の右上にあるAdobeグループに移動します。
+このJSONドキュメントを保存したら、Document Generation Taggerアドインに読み込みます。 以下の画面キャプチャに示すように、Word画面の右上にあるAdobeグループで&#x200B;**Document Generation**&#x200B;をクリックして文書を読み込みます。
 
-![WordでのDocument Generation TaggerアドインのAdobeのスクリーンショット](assets/legal_2.png)
+![WordのAdobe Document Generation Taggerアドインのスクリーンショット](assets/legal_2.png)
 
-ガイドするビデオが表示されます。 タグ付けフィールドを確認するか、をクリックしてすぐに移動できます。 **開始する**. クリック後 **開始する**&#x200B;を選択すると、アップロードフォームが表示されます。 クリック **JSONファイルのアップロード** 作成したばかりのJSONファイルを選択します。 読み込みが完了したら、 **タグを生成** をクリックしてタグを生成します。
+ガイドするビデオが表示されます。 確認するか、[**開始**]をクリックして、直接タグ付けフィールドに移動できます。 **[開始]**&#x200B;をクリックすると、アップロードフォームが表示されます。 **「JSONファイルをアップロード」**&#x200B;をクリックし、作成したJSONファイルを選択します。 読み込みが完了したら、[**タグの生成**]をクリックしてタグを生成します。
 
-タグを取り込んで生成した後、これらのタグを文書に追加できます。 追加するには、タグを表示する正確な場所にカーソルを置きます。 次に、 Document Generation APIからタグを選択し、 **テキストを挿入**. この手順の概要を次の画面に示します。
+タグを取り込んで生成した後、これらのタグを文書に追加できます。 追加するには、タグを表示する正確な場所にカーソルを置きます。 次に、Document Generation APIからタグを選択し、[**テキストの挿入**]をクリックします。 この手順の概要を次の画面に示します。
 
-![ドキュメントへのタグの追加のスクリーンショット](assets/legal_3.png)
+![ドキュメントにタグを追加したスクリーンショット](assets/legal_3.png)
 
-読み込まれたJSONデータモデルを使用して作成された基本的なタグとは別に、高度な機能を使用して、画像、条件ロジック、計算、繰り返し要素、条件フレーズなどの詳細オプションを使用することもできます。 これらの機能には、 **詳細** をクリックします。 これは、以下の画面キャプチャで確認できます。
+読み込まれたJSONデータモデルを使用して作成された基本的なタグとは別に、高度な機能を使用して、画像、条件ロジック、計算、繰り返し要素、条件フレーズなどの詳細オプションを使用することもできます。 これらの機能にアクセスするには、ドキュメント生成タガーパネルで「**詳細**」をクリックします。 これは、以下の画面キャプチャで確認できます。
 
-![Adobeの「Document Generation Tagger」の「Advanced」タブのスクリーンショット](assets/legal_4.png)
+![Adobe文書生成タグの「詳細」タブのスクリーンショット](assets/legal_4.png)
 
 これらの高度な機能は、基本的なタグと同じです。 コンディショナルロジックを含めるには、文書の中から塗りつぶす部分を選択します。 その後、タグの挿入を決定するルールを設定します。
 
-さらに詳しく説明すると、例えば契約書に、コンディショナルのみ含めるセクションがある場合などです。 コンテンツタイプを選択フィールドで、 **セクション。** レコードの選択フィールドで、条件セクションを表示するかどうかを決定するオプションを選択します。 目的の条件演算子を選択し、「値」フィールドにテストする値を設定します。 次に、 **条件を挿入します。** 次の画面キャプチャは、このプロセスを示しています。
+さらに詳しく説明すると、例えば契約書に、コンディショナルのみ含めるセクションがある場合などです。 [コンテンツタイプの選択]フィールドで、[**セクション]を選択します。** [レコードの選択]フィールドで、条件付きセクションを表示するかどうかを決定するオプションを選択します。 目的の条件演算子を選択し、「値」フィールドにテストする値を設定します。 次に、[**条件の挿入]をクリックします。**&#x200B;以下の画面キャプチャは、このプロセスを示しています。
 
-![条件付きコンテンツの挿入のスクリーンショット](assets/legal_5.png)
+![条件付きコンテンツを挿入するスクリーンショット](assets/legal_5.png)
 
-計算の場合は、「算術」または「集計」を選択し、関連する最初のレコード、演算子、および使用可能なテンプレート・タグに基づいて使用する2番目のレコードを含めます。 次に、 **計算の挿入**.
+計算の場合は、「算術」または「集計」を選択し、関連する最初のレコード、演算子、および使用可能なテンプレート・タグに基づいて使用する2番目のレコードを含めます。 次に、[**計算の挿入**]をクリックします。
 
-また、法的契約には多くの場合、当事者の署名が必要です。 「数値計算」セクションのすぐ下にあるAdobe Signテキストタグを使用して、電子サインを挿入できます。 電子サインを含めるには、受信者の数を指定する必要があります。 **署名者**、およびドロップダウンリストのフィールドタイプ。 完了したら、 **Adobe Signテキストタグを挿入** をクリックして、プロセスを完了します。
+また、法的契約には多くの場合、当事者の署名が必要です。 「数値計算」セクションのすぐ下にあるAdobe Signテキストタグを使用して、電子サインを挿入できます。 電子サインを含めるには、受信者の数を指定し、**署名者**&#x200B;を選択して、ドロップダウンリストからフィールドタイプを適宜選択する必要があります。 完了したら、**「Adobe Signテキストタグを挿入」**&#x200B;をクリックして、プロセスを完了します。
 
-データの整合性を確保するには、法的文書を保護された形式で保存します。 使用 [!DNL Acrobat Services] APIを使用すると、文書をPDFの書式にすばやく変換できます。 Document Generation APIを組み込み、このシンプルなアプリケーションを使用して、タグ付き文書をWordからPDFフォーマットに変換します。
+データの整合性を確保するには、法的文書を保護された形式で保存します。 [!DNL Acrobat Services] APIを使用すると、文書をPDF形式にすばやく変換できます。 Document Generation APIを組み込み、このシンプルなアプリケーションを使用して、タグ付き文書をWordからPDFフォーマットに変換します。
 
 ## プロジェクト設定
 
-まず、Node.jsアプリケーションのフォルダ構造を設定します。 この例では、この単純なアプリケーションをAdobeLegalContractAPIと呼びます。 ソースコードを取得できます [こちら](https://github.com/agavitalis/adobe_legal_contracts.git).
+まず、Node.jsアプリケーションのフォルダ構造を設定します。 この例では、この単純なアプリケーションをAdobeLegalContractAPIと呼びます。 ソースコード[ここ](https://github.com/agavitalis/adobe_legal_contracts.git)を取得できます。
 
 ### ディレクトリ構造
 
-AdobeLegalContractAPIという名前のフォルダーを作成し、任意のエディターで開きます。 Node.jsアプリケーションを ```npm init``` 次のフォルダー構造を使用してコマンドを実行します。
+AdobeLegalContractAPIという名前のフォルダーを作成し、任意のエディターで開きます。 次のフォルダー構造を使用して、```npm init```コマンドで基本のNode.jsアプリケーションを作成します。
 
 ```
 ###Directory Structure
@@ -175,11 +175,11 @@ npm install express body-parser morgan multer hbs path config mongoose
 
 これらのコードスニペットでは、ビューのHandlebarsテンプレートエンジンなどのアプリケーション依存関係をインストールしました。
 
-このチュートリアルでは、 [[!DNL Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/) 文書をPDFに変換します。 したがって、このNode.jsアプリケーションの構築方法を順を追って説明する必要はありません。 ただし、次の場所にある完全な作業Node.jsアプリケーションコードを取得できます [GitHub](https://github.com/agavitalis/adobe_legal_contracts.git).
+このチュートリアルでは、[[!DNL Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/)を使用して文書をPDFに変換することに重点を置いています。 したがって、このNode.jsアプリケーションの構築方法を順を追って説明する必要はありません。 ただし、[GitHub](https://github.com/agavitalis/adobe_legal_contracts.git)で動作している完全なNode.jsアプリケーションコードを取得することはできます。
 
-## 統合 [!DNL Adobe Acrobat Services] Node.jsアプリケーションへのAPI
+## [!DNL Adobe Acrobat Services] APIをNode.jsアプリケーションに統合しています
 
-[!DNL Adobe Acrobat Services] APIは、文書をシームレスに操作できるように設計された、クラウドベースの信頼性の高いサービスです。 次の3つのAPIが用意されています。
+[!DNL Adobe Acrobat Services] APIは、ドキュメントをシームレスに操作できるように設計されたクラウドベースの信頼性の高いサービスです。 次の3つのAPIが用意されています。
 
 * Adobe PDF Services API
 
@@ -187,27 +187,27 @@ npm install express body-parser morgan multer hbs path config mongoose
 
 * Adobe文書生成API
 
-使用するには資格情報が必要です [!DNL Acrobat Services] API(PDFのEmbed API資格情報とは異なります) 有効な資格情報がない場合は、 [登録簿](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK) 次の画面キャプチャに示すように、ワークフローを完了します。 楽しむ [6か月間の無料体験後は従量課金](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)文書トランザクションあたり0.05ドルです。
+[!DNL Acrobat Services] APIを使用するには資格情報が必要です(PDFのEmbed API資格情報とは異なります)。 有効な資格情報がない場合は、以下の画面キャプチャに示すように、[登録](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)してワークフローを完了してください。 [6か月間の無料体験後は従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で、ドキュメントのトランザクション1件につきわずか0.05ドルです。
 
 ![新しい資格情報の作成のスクリーンショット](assets/legal_6.png)
 
-サインアッププロセスが完了すると、コードサンプルが自動的にPCにダウンロードされ、開始に役立ちます。 このコード例を抽出して、それに従うことができます。 抽出したコードサンプルのpdftools-api-credentials.jsonファイルとprivate.keyファイルをNode.jsプロジェクトのルートディレクトリに必ずコピーしてください。 アクセスするには資格情報が必要です [!DNL Acrobat Services] APIエンドポイント。 パーソナライズされた資格情報を使用してSDKサンプルをダウンロードすることもできるため、サンプルコードでキーを更新する必要はありません。
+サインアッププロセスが完了すると、コードサンプルが自動的にPCにダウンロードされ、開始に役立ちます。 このコード例を抽出して、それに従うことができます。 抽出したコードサンプルのpdftools-api-credentials.jsonファイルとprivate.keyファイルをNode.jsプロジェクトのルートディレクトリに必ずコピーしてください。 [!DNL Acrobat Services]個のAPIエンドポイントにアクセスするには、資格情報が必要です。 パーソナライズされた資格情報を使用してSDKサンプルをダウンロードすることもできるため、サンプルコードでキーを更新する必要はありません。
 
-Adobe PDF次に、 ```npm install \--save @adobe/documentservices-pdftools-node-sdk``` アプリケーションのルートディレクトリにあるターミナルを使用してコマンドを実行します。 正常にインストールされると、 [!DNL Acrobat Services] アプリケーションで文書を操作するためのAPI。
+次に、アプリケーションのルートディレクトリにあるターミナルを使用して```npm install \--save @adobe/documentservices-pdftools-node-sdk```コマンドを実行し、Adobe PDF Services Node SDKをインストールします。 正常にインストールされると、[!DNL Acrobat Services]個のAPIを使用して、アプリケーション内のドキュメントを操作できます。
 
 ## PDF文書の作成
 
-[!DNL Acrobat Services] APIは、Microsoft Office文書(Word、Excel、PowerPoint)などのPDFの作成をサポートします [サポートされているファイル形式](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf) .txt、.rtf、.bmp、.jpeg、.gif、.tiff、.pngなど。 AcrobatサービスAPIを使用して、法的契約を他のファイル形式からPDFに簡単に変換できます。
+[!DNL Acrobat Services]のAPIは、Microsoft Office文書(Word、Excel、PowerPoint)や、.txt、.rtf、.bmp、.jpeg、.gif、.tiff、.pngなどの[サポートされているファイル形式](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf)からのPDFの作成をサポートしています。 AcrobatサービスAPIを使用して、法的契約を他のファイル形式からPDFに簡単に変換できます。
 
 AdobeDocument Generation APIにより、WordファイルまたはPDFーへの変換が可能になります。 例えば、Wordテンプレートを使用して、編集したテキストをマークするための朱書きなどの契約書を生成できます。 次に、文書をPDFに変換し、PDFサービスAPIを使用して、文書をパスワードで保護したり、署名用に送信したりすることができます。
 
-使用可能なサポートされているファイル形式からPDF文書を作成するには、 [!DNL Acrobat Services].
+使用可能なサポートされているファイル形式からPDF文書を作成するには、[!DNL Acrobat Services]を使用して変換用の文書をアップロードするフォームがあります。
 
-設計されたアップロードフォームが下の画面キャプチャーに表示され、 HTMLとCSSファイルにアクセスできます。 [GitHub](https://github.com/agavitalis/adobe_legal_contracts.git).
+デザインされたアップロードフォームが下の画面キャプチャに表示され、[GitHub](https://github.com/agavitalis/adobe_legal_contracts.git)でHTMLとCSSファイルにアクセスできます。
 
-![フォームアップロードのスクリーンショット](assets/legal_7.png)
+![フォームのアップロードのスクリーンショット](assets/legal_7.png)
 
-次のコードスニペットをcontrollers /createPDFController.jsファイルに追加します。 このコードは、アップロードされた文書を取得し、PDFに変換します。 [!DNL Acrobat Services] オリジナルのアップロード済みファイルと変換後のファイルを別のフォルダーに保存します。
+次のコードスニペットをcontrollers /createPDFController.jsファイルに追加します。 このコードは、アップロードされた文書を取得し、PDFに変換します。 [!DNL Acrobat Services]は、元のアップロードファイルと変換されたファイルを別のフォルダーに保存します。
 
 ```
 ###controllers/createPDFController.js
@@ -276,7 +276,7 @@ console.log('Exception encountered while executing operation', err);
 module.exports = { createPDF, createPDFPost };
 ```
 
-上記のコードスニペットでは、文書モデルが必要であり、 [!DNL Acrobat Services] 以前にインストールしたノードSDK。 次の2つの関数があります。
+上記のコードスニペットには、以前にインストールしたドキュメントモデルと[!DNL Acrobat Services]ノードSDKが必要でした。 次の2つの関数があります。
 
 * createPDFに「文書をアップロード」フォームが表示されます。
 
@@ -284,7 +284,7 @@ module.exports = { createPDF, createPDFPost };
 
 これらの関数は、変換されたPDF文書をviews/outputディレクトリに保存し、PCにダウンロードすることができます。
 
-また、フリーPDF埋め込みAPIを使用して、変換されたPDFファイルをプレビューすることもできます。 PDF埋め込みAPIを使用して、Adobeの資格情報を生成できます [こちら](https://www.adobe.com/go/dcsdks_credentials) (使用中の [!DNL Acrobat Services] 資格情報)を入力し、許可されたドメインを登録してAPIにアクセスします。 手順に従って、アプリケーションのPDF埋め込みAPI資格情報を生成します。 デモもご覧ください [こちら](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)を使用すると、コードを簡単に生成して、すばやく作業を開始できます。
+また、フリーPDF埋め込みAPIを使用して、変換されたPDFファイルをプレビューすることもできます。 PDF埋め込みAPIを使用して、[!DNL Acrobat Services]資格情報とは異なる[ここ](https://www.adobe.com/go/dcsdks_credentials)でAdobe資格情報を生成し、許可されたドメインを登録してAPIにアクセスできます。 手順に従って、アプリケーションのPDF埋め込みAPI資格情報を生成します。 デモの[こちら](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)を確認することもできます。そこから簡単にコードを生成して、すばやく作業を開始できます。
 
 アプリケーションに戻り、アプリケーションのviewフォルダーにlist.hbsファイルとpreview.hbsファイルを作成して、以下のコードスニペットをそれぞれlist.hbsファイルとpreview.hbsファイルに貼り付けます。
 
@@ -415,16 +415,17 @@ res.download(document.url);
 module.exports = {listFiles, previewPDF, downloadPDF };
 ```
 
-上記のコントローラファイルには、 listFiles 、 previewPDF 、 downloadPDFの3つの関数があります。 PDF listFiles関数は、 [!DNL Acrobat Services] API。 previewPDF関数を使用すると、PDFファイルをPDF埋め込みAPIでプレビューできます。また、downloadPDF関数を使用すると、生成されたPDFファイルをPCにダウンロードできます。 以下の画面キャプチャは、PDF埋め込みAPIを使用したPDFプレビューのサンプルを示しています。
+上記のコントローラファイルには、 listFiles 、 previewPDF 、 downloadPDFの3つの関数があります。 listFiles関数は、[!DNL Acrobat Services] APIを使用してこれまでに生成されたすべてのPDFファイルを一覧表示します。 previewPDF関数を使用すると、PDFファイルをPDF埋め込みAPIでプレビューできます。また、downloadPDF関数を使用すると、生成されたPDFファイルをPCにダウンロードできます。 以下の画面キャプチャは、PDF埋め込みAPIを使用したPDFプレビューのサンプルを示しています。
 
 ![PDFプレビューのスクリーンショット](assets/legal_8.png)
 
 ## 要約
 
-この実践チュートリアルでは、Document Generation Tagger Microsoft Wordアドインを使用して文書にタグ付けしました。 その後、統合 [!DNL Acrobat Services] APIをNode.jsアプリケーションに変換し、タグ付き文書をダウンロード可能なPDFフォーマットに変換しますが、PDFに直接契約書を作成することもできます。 最後に、Adobe PDF Embed APIを使用して、生成されたPDFを検証および署名用にプレビューしました。
+この実践チュートリアルでは、Document Generation Tagger Microsoft Wordアドインを使用して文書にタグ付けしました。 次に、[!DNL Acrobat Services] APIをNode.jsアプリケーションに統合し、
+タグ付き文書をダウンロード可能なPDF形式に変換しましたが、PDFに直接契約書を作成することもできます。 最後に、Adobe PDF Embed APIを使用して、生成されたPDFを検証および署名用にプレビューしました。
 
-完成したアプリケーションを使用すると、タグ付けがはるかに簡単になります [法律上の契約テンプレート](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html) ダイナミックフィールドを使用して、PDFに変換、プレビュー、署名をおこなうには、 [!DNL Acrobat Services] API。 一意の契約を作成するのに時間を費やす代わりに、チームは各クライアントに正しい契約を自動的に送信し、ビジネスの成長により多くの時間を費やすことができます。
+完成したアプリを使用すると、[法的な契約テンプレート](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html)に動的フィールドをタグ付けしたり、PDFに変換したり、プレビューしたり、[!DNL Acrobat Services]のAPIを使用して署名したりすることが簡単になります。 一意の契約を作成するのに時間を費やす代わりに、チームは各クライアントに正しい契約を自動的に送信し、ビジネスの成長により多くの時間を費やすことができます。
 
-組織が使用 [!DNL Adobe Acrobat Services] APIは、その完全性と使いやすさを実現します。 何よりも、以下を楽しむことができます。 [6か月間の無料体験後は従量課金](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html). 君は使った分だけお金を払う。 さらに、PDF埋め込みAPIは常に無料です。
+組織は、[!DNL Adobe Acrobat Services]個のAPIを使用して、完全性と使いやすさを実現しています。 特に、[6か月間の無料体験後、従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)をお楽しみいただけます。 君は使った分だけお金を払う。 さらに、PDF埋め込みAPIは常に無料です。
 
-文書のフローを改善して、生産性を向上させましょう。 [開始する](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) 今日。
+文書のフローを改善して、生産性を向上させましょう。 [今すぐ](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を開始してください。

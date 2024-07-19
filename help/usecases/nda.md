@@ -10,14 +10,14 @@ thumbnail: KT-8098.jpg
 exl-id: f4ec0182-a46e-43aa-aea3-bf1d19f1a4ec
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 3%
+source-wordcount: '1072'
+ht-degree: 0%
 
 ---
 
 # NDAの作成
 
-![ユースケースの英雄バナー](assets/UseCaseNDAHero.jpg)
+![使用事例の英雄バナー](assets/UseCaseNDAHero.jpg)
 
 組織は、外部のコントリビューターと協力してサービスや製品を構築します。 機密保持契約(NDA)は、これらの共同作業の重要な要素です。 これにより、すべての当事者がいずれかの事業体に損害を与える可能性のある機密情報を解放することを拘束します。
 
@@ -25,11 +25,11 @@ ht-degree: 3%
 
 ## 学習内容
 
-この実践チュートリアルでは、会社に特化したMicrosoft Word NDAテンプレートの作成方法を説明します。 Microsoft Word向けAdobe無料アドイン、 [Adobe文書生成タガー](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo)を選択し、動的な値を入力する「タグ」を挿入します。 JSONデータをテンプレートに渡し、動的PDFを作成する方法について説明します。 作成されたPDFは、業務要件や目標に応じて、電子メールで送信したり、ブラウザーで共同作業者に表示したりできます。 Node.js、JavaScript、Express.js、HTML、CSSの使い方を学びましょう。
+この実践チュートリアルでは、会社に特化したMicrosoft Word NDAテンプレートの作成方法を説明します。 Microsoft Word向けのAdobeの無料アドインである[Adobe文書生成タグ](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo)には、動的値を入力するための「タグ」が挿入されます。 JSONデータをテンプレートに渡し、動的PDFを作成する方法について説明します。 作成されたPDFは、業務要件や目標に応じて、電子メールで送信したり、ブラウザーで共同作業者に表示したりできます。 Node.js、JavaScript、Express.js、HTML、CSSの使い方を学びましょう。
 
 ## 関連APIとリソース
 
-使用 [!DNL Adobe Acrobat Services]動的データを使用して、PDF文書をその場で作成できます。 [!DNL Acrobat Services] は、自動化するためのAdobe Document Generation APIを含むPDFツールのスイートを提供します [NDAの作成](https://www.adobe.io/apis/documentcloud/dcsdk/nda-creation.html).
+[!DNL Adobe Acrobat Services]を使用すると、動的データを使用してPDF文書をその場で作成できます。 [!DNL Acrobat Services]は、[NDA作成](https://www.adobe.io/apis/documentcloud/dcsdk/nda-creation.html)を自動化するためのAdobe Document Generation APIを含むPDFツールスイートを提供します。
 
 * [Adobe文書生成API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
 
@@ -75,25 +75,25 @@ Microsoft Word内でこの構造を使用して、テンプレートを作成し
 
 Microsoft Word文書にNDAテンプレートを作成します。 Adobe PDF Services APIでは、サービスがJSONドキュメントから値を注入できるタグがMicrosoft Wordドキュメントに含まれている必要があります。 すべてのAdobeリクエストのテンプレートは同じですが、JSONの動的データが変わります。 このタグは、1つのMicrosoft Wordテンプレートを使用して、NDA文書の生成を自動化し、プロセスを高速化することで、この場合にすべてのベンダーのPDF文書を作成するのに役立ちます。
 
-をインストールできます。 [無料のDocument Generation Taggerアドイン](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo) をMicrosoft Wordに追加します。 組織に所属している場合は、Microsoft Office管理者に依頼して、すべてのユーザー向けの無償アドインのインストールを依頼できます。
+Microsoft Wordに[無料のDocument Generation Taggerアドイン](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo)をインストールできます。 組織に所属している場合は、Microsoft Office管理者に依頼して、すべてのユーザー向けの無償アドインのインストールを依頼できます。
 
-アドインをインストールすると、[ホーム]タブの[Adobe]カテゴリにアドインが表示されます。 タブを開くには、 **文書の生成**:
+アドインをインストールすると、[ホーム]タブの[Adobe]カテゴリにアドインが表示されます。 タブを開くには、**ドキュメントの生成**&#x200B;を選択します。
 
-![WordでのDocument Generationアドインのスクリーンショット](assets/nda_1.png)
+![WordのDocument Generationアドインのスクリーンショット](assets/nda_1.png)
 
 タブ内で、サンプルのJSONドキュメントをアップロードできます。 この文書は、Microsoft Wordテンプレートの作成にのみ使用するので、サンプルにすることができます。
 
 ![Document Generationアドインのサンプルデータのスクリーンショット](assets/nda_2.png)
 
-選択 **タグの生成** テンプレート内で使用できるアイテムを表示します。 JSON構造から抽出されたプロパティは次のとおりです。これにより、テンプレートで使用できます。
+「**タグを生成**」を選択して、テンプレート内で使用できるアイテムを表示します。 JSON構造から抽出されたプロパティは次のとおりです。これにより、テンプレートで使用できます。
 
 ![Document Generationアドインのテキストタグのスクリーンショット](assets/nda_3.png)
 
-これらの機能は、 `authorizedSigner` フィールドに入力します。 その他のフィールドは折り返され、Microsoft Wordでビューを展開できます。 アドインには、テーブル、リスト、計算値などの高度なデータオプションも用意されています。
+`authorizedSigner`フィールドの機能です。 その他のフィールドは折り返され、Microsoft Wordでビューを展開できます。 アドインには、テーブル、リスト、計算値などの高度なデータオプションも用意されています。
 
 ## タグの作成
 
-テンプレートの作成や、 [既存のテンプレート](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade) Microsoft Wordに取り込みます。 文書を設定したら、アドインで対応するトークンをクリックして、各フィールドにタグを追加します。
+テンプレートを作成するか、[既存のテンプレート](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade)をMicrosoft Wordに読み込んでください。 文書を設定したら、アドインで対応するトークンをクリックして、各フィールドにタグを追加します。
 
 Microsoft Wordファイル内の次のテンプレート：
 
@@ -123,7 +123,7 @@ Document Generation TaggerはAdobe Sign APIと統合されます。 この統合
 
 このコードは、ブラウザーで次のユーザーインターフェイス(UI)を生成します。
 
-![「NDAを作成」ユーザーインターフェイスのスクリーンショット](assets/nda_5.png)
+![[NDAの作成]ユーザーインターフェイスのスクリーンショット](assets/nda_5.png)
 
 管理者がユーザーを選択すると、アプリはAdobe PDFサービスを使用して、外出先でNDAを生成します。
 
@@ -171,9 +171,9 @@ res.status(500).render("crash", { error: error });
 }
 ```
 
-以下を表示できます [完全なサンプルコード](https://github.com/afzaal-ahmad-zeeshan/adobe-docugen-sample) をGitHubで実行します。
+GitHubで[完全なサンプルコード](https://github.com/afzaal-ahmad-zeeshan/adobe-docugen-sample)を表示できます。
 
-Microsoftこのコードでは、JSONドキュメントと、 [!DNL Adobe Acrobat Services] SDK。 応答で、出力を受け取り、アプリケーションのファイルシステムに保存します。 生成された文書を電子メールでクライアントに転送したり、無料の [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+このコードでは、[!DNL Adobe Acrobat Services] SDKへのAPI呼び出しでJSONドキュメントとMicrosoft Wordテンプレートを使用します。 応答で、出力を受け取り、アプリケーションのファイルシステムに保存します。 無料の[Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)を使用すると、生成されたドキュメントをメールでクライアントに転送したり、ブラウザー内でプレビューを表示したりできます。
 
 この呼び出しにより、次のNDAドキュメントが作成されます。
 
@@ -181,13 +181,13 @@ Microsoftこのコードでは、JSONドキュメントと、 [!DNL Adobe Acroba
 
 [!DNL Adobe Acrobat Services] APIは、コンテンツを挿入してPDF文書を作成します。 これらのツールを使用しないと、Officeドキュメントを処理し、未加工のPDFファイル形式で作業するためのコードを記述しなければならない場合があります。 Adobe PDFサービスを使用すると、これらの手順をすべて1回のAPI呼び出しで実行できます。
 
-今すぐ使用 [ADOBE SIGN API](https://www.adobe.io/apis/documentcloud/sign.html) をクリックして、NDAへの署名を依頼し、最終的な署名済み文書をすべての関係者に配信します。 Adobe Signから通知 [webhookの使用](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md). このwebhookをリッスンして、NDAのステータスを取得できます。
+[Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)を使用して、NDAに対する署名を依頼し、最終的な署名済み文書をすべての関係者に配信します。 Adobe Signから[Webhookを使用して](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md)通知されます。 このwebhookをリッスンして、NDAのステータスを取得できます。
 
-Adobe Signプロセスの詳細な説明については、 [ドキュメントを参照する](https://www.adobe.io/apis/documentcloud/sign/docs.html) または、この詳細なブログ投稿を参照してください。
+Adobe Signプロセスの詳細については、[ドキュメントを参照](https://www.adobe.io/apis/documentcloud/sign/docs.html)するか、この詳細なブログ投稿を参照してください。
 
 ## 次の手順
 
-この実践チュートリアルでは、Microsoft WordテンプレートとJSONデータファイルを使用してAdobe文書を動的に生成するために、PDF文書生成Taggerを使用します。 アドインは以下を実現しました [ndaを自動的に作成](https://www.adobe.io/apis/documentcloud/dcsdk/nda-creation.html) 各関係者に合わせてカスタマイズしたら、Sign APIを使用して署名を収集します。
+この実践チュートリアルでは、Microsoft WordテンプレートとJSONデータファイルを使用してAdobe文書を動的に生成するために、PDF文書生成Taggerを使用します。 このアドインにより、[各関係者に合わせてカスタマイズされたNDAを自動的に作成](https://www.adobe.io/apis/documentcloud/dcsdk/nda-creation.html)し、Sign APIを使用して署名を収集できました。
 
-これらの方法を使用して独自のNDAやその他のドキュメントを動的に作成することで、チームが生産性の高い作業に集中する時間を節約できます。 検索 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html) を使用して、選択した言語とランタイムのAPIとSDKを検索し、PDF関数をアプリケーションに直接追加して、PDF文書をすばやく作成できます。 [開始する](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) 6か月間の無料体験後
-[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) 文書トランザクションあたり0.05ドルのみです。
+これらの方法を使用して独自のNDAやその他のドキュメントを動的に作成することで、チームが生産性の高い作業に集中する時間を節約できます。 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html)を検索して、選択した言語およびランタイムのAPIとSDKを見つけてください。アプリケーションに直接PDF関数を追加して、PDF文書をすばやく作成できます。 6か月間の無料体験後は、[使用を開始](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
+[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) （ドキュメントトランザクションあたり$0.05のみ）。

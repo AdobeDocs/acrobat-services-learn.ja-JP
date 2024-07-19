@@ -1,6 +1,6 @@
 ---
 title: Javaでの人事文書ワークフロー
-description: ”[!DNL Adobe Acrobat Services] APIは、PDF機能をHR Webアプリケーションに簡単に組み込むことができます」
+description: 「[!DNL Adobe Acrobat Services]個のAPIで、PDF機能を人事Webアプリケーションに簡単に組み込むことができます」
 feature: Use Cases
 role: Developer
 level: Intermediate
@@ -10,14 +10,14 @@ thumbnail: KT-7474.jpg
 exl-id: add4cc5c-06e3-4ceb-930b-e8c9eda5ca1f
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 2%
+source-wordcount: '1777'
+ht-degree: 0%
 
 ---
 
 # Javaでの人事文書ワークフロー
 
-![ユースケースの英雄バナー](assets/UseCaseHRHero.jpg)
+![使用事例の英雄バナー](assets/UseCaseHRHero.jpg)
 
 多くの企業では、新入社員に関する文書（在宅勤務者の労働協約など）が必要です。 従来、企業は、これらの文書を管理および保存が困難な形式で物理的に管理していました。 電子ドキュメントに切り替える場合、PDFファイルは他の種類のファイルよりも安全で、変更が難しいため、最適な選択肢です。 さらに、デジタル署名もサポートしています。
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 ## 関連APIとリソース
 
-* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
 
@@ -35,21 +35,21 @@ ht-degree: 2%
 
 ## API資格情報を生成中
 
-まず、Adobe PDFサービスAPIの無料体験版にサインアップします。 に移動 [Adobe](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) [webサイト](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) を押しながら *開始する* 下のボタン *新しい資格情報の作成*. 無料体験版では、6か月間で使用できる1,000件の文書トランザクションを提供します。 次のページ（下記参照）で、サービス(PDFサービスAPI)を選択し、資格情報の名前（例：HRDocumentWFCredentials）を入力して、説明を入力します。
+まず、Adobe PDFサービスAPIの無料体験版にサインアップします。 [Adobe](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) [Webサイト](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK)に移動し、*新しい資格情報の作成*&#x200B;の下にある&#x200B;*開始*&#x200B;ボタンをクリックします。 無料体験版では、6か月間で使用できる1,000件の文書トランザクションを提供します。 次のページ（下記参照）で、サービス(PDFサービスAPI)を選択し、資格情報名（HRDocumentWFCredentialsなど）を入力して、説明を入力します。
 
-言語（この例ではJava）を選択し、 *パーソナライズされたコードサンプルの作成*. 最後の手順では、コードサンプルに、使用する事前入力されたpdftools-api-credentials.jsonファイルと、API内でアプリを認証するためのプライベートキーが既に含まれていることを確認します。
+言語（この例ではJava）を選択し、[*パーソナライズされたコードサンプルの作成*]をオンにします。 最後の手順では、コードサンプルに、使用する事前入力されたpdftools-api-credentials.jsonファイルと、API内でアプリを認証するためのプライベートキーが既に含まれていることを確認します。
 
-最後に、 *資格情報の作成* をクリックします。 これにより、資格情報が生成され、サンプルのダウンロードが自動的に開始されます。
+最後に、*資格情報の作成*&#x200B;ボタンをクリックします。 これにより、資格情報が生成され、サンプルのダウンロードが自動的に開始されます。
 
-![「資格情報を新規作成」のスクリーンショット](assets/HRWJ_1.png)
+![資格情報の新規作成のスクリーンショット](assets/HRWJ_1.png)
 
 資格情報が機能していることを確認するには、ダウンロードしたサンプルを開きます。 ここでは、IntelliJ IDEAを使用しています。 ソースコードを開くと、統合開発環境(IDE)によってビルドエンジンの入力が求められます。 このサンプルではMavenを使用していますが、環境設定によってはGradleを使用して作業することもできます。
 
-次に、 `mvn clean install` Mavenは、jarファイルを構築することを目標としています。
+次に、`mvn clean install` Maven目標を実行してjarファイルをビルドします。
 
 最後に、次に示すようにCombinePDFサンプルを実行します。 このコードは、出力フォルダー内にPDFを生成します。
 
-![メニューからCombinePDFサンプルスクリーンショットを実行](assets/HRWJ_2.png)
+![CombinePDFサンプルスクリーンショットを実行するメニュー](assets/HRWJ_2.png)
 
 ## Spring MVCアプリケーションの作成
 
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 まず、Java 8言語とJarパッケージを使用するようにプロジェクト設定を構成します（以下のスクリーンショットを参照）。
 
-![ばね初期化子のスクリーンショット](assets/HRWJ_3.png)
+![Spring Initializrのスクリーンショット](assets/HRWJ_3.png)
 
 次に、Spring Web（Webから）とThymeleaf（テンプレートエンジンから）を追加します。
 
@@ -132,7 +132,7 @@ public class PersonForm {
 }
 ```
 
-このクラスには、次の2つのプロパティが含まれています。 `firstName` および `lastName`. また、この簡単な検証を使用して、2文字から30文字の間にあるかどうかを確認します。
+このクラスには2つのプロパティが含まれています： `firstName`と`lastName`。 また、この簡単な検証を使用して、2文字から30文字の間にあるかどうかを確認します。
 
 モデルクラスを指定すると、コントローラを作成できます（コンパニオンコードのPersonController.javaを参照）。
 
@@ -202,9 +202,9 @@ public class PersonController {
 
 ここで、個人のデータフォームをレンダリングした後に、選択したフィールドに動的に値を入力して、バーチャルコントラクトを含むPDF文書を生成します。 具体的には、個人データをあらかじめ作成された契約に入力する必要があります。
 
-ここでは、簡略化のために、ヘッダ、サブヘッダ、文字列定数のみを使用します。 「この契約は、\に対して準備されました&lt;full name=&quot;&quot; of=&quot;&quot; the=&quot;&quot; person=&quot;&quot;>“。
+ここでは、簡略化のために、「この契約は\&lt;人のフルネーム\>に対して用意されました」というヘッダー、サブヘッダー、および文字列定数のみを使用します。
 
-この目標を達成するには、まずAdobeの [ダイナミックHTMLからPDFを作成する](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-dynamic-html) 例： このサンプルコードを分析すると、動的HTMLフィールドの生成プロセスは次のように動作することがわかります。
+この目標を達成するには、Adobeの[動的HTMLからPDFを作成する](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-dynamic-html)の例から始めます。 このサンプルコードを分析すると、動的HTMLフィールドの生成プロセスは次のように動作することがわかります。
 
 まず、静的なコンテンツと動的なコンテンツを含むHTMLページを準備する必要があります。 ダイナミックパーツは、JavaScriptを使用して更新されます。 つまり、PDFサービスAPIは、JSONオブジェクトをHTMLに注入します。
 
@@ -242,7 +242,7 @@ public class PersonController {
 
 次に、依存するすべてのJavaScriptファイルとCSSファイルを含むHTMLーを圧縮する必要があります。 PDFサービスAPIは、HTMLファイルを受け付けません。 代わりに、入力としてzipファイルが必要です。 この場合、zipファイルをsrc\\main\\resources\\contract\\index.zipに保存します。
 
-その後、 `PersonController` POSTリクエストを処理する別の方法を使用する場合：
+後で、`PersonController`を追加して、POST要求を処理する別の方法を使用できます。
 
 ```
 @PostMapping("/")
@@ -260,15 +260,15 @@ public String checkPersonInfo(@Valid PersonForm personForm,
 
 提供された個人情報を使用してPDF契約書を作成し、contract-actionsビューをレンダリングします。 後者は、生成されたPDFへのリンクとPDFへの署名を提供します。
 
-では、その方法を見てみましょう `CreateContract` メソッドが機能します（完全なリストは以下のとおりです）。 このメソッドは、次の2つのフィールドを使用します。
+`CreateContract`メソッドがどのように機能するかを見てみましょう（完全なリストは以下のとおりです）。 このメソッドは、次の2つのフィールドを使用します。
 
-* `LOGGER`log4jから任意の例外に関するデバッグ情報
+* log4jの`LOGGER`から、例外に関するデバッグ情報
 
-* `contractFilePath`生成されたPDFへのファイルパスを含む
+* 生成されたPDFへのファイルパスを含む`contractFilePath`
 
-この `CreateContract` このメソッドは、資格情報を設定し、HTMLからPDFを作成します。 契約書に個人のデータを渡して入力するには、 `setCustomOptionsAndPersonData` ヘルパー： このメソッドは、フォームから個人のデータを取得し、前述のJSONオブジェクトを介して生成されたPDFに送信します。
+`CreateContract`メソッドは資格情報を設定し、HTMLからPDFを作成します。 コントラクトにユーザーのデータを渡して入力するには、`setCustomOptionsAndPersonData`ヘルパーを使用します。 このメソッドは、フォームから個人のデータを取得し、前述のJSONオブジェクトを介して生成されたPDFに送信します。
 
-また、 `setCustomOptionsAndPersonData` ヘッダーとフッターを無効にしてPDFの外観をコントロールする方法を示します。 これらの手順が完了したら、PDFファイルをoutput/contract.pdfに保存し、最終的に以前に生成されたファイルを削除します。
+また、`setCustomOptionsAndPersonData`では、ヘッダーとフッターを無効にしてPDFの表示を制御する方法も示されています。 これらの手順が完了したら、PDFファイルをoutput/contract.pdfに保存し、最終的に以前に生成されたファイルを削除します。
 
 ```
 private static final Logger LOGGER = LoggerFactory.getLogger(PersonController.class);
@@ -325,7 +325,7 @@ private static void setCustomOptionsAndPersonData(
 }
 ```
 
-契約の生成時に、動的な個人固有のデータを固定契約条件とマージすることもできます。 これを行うには、 [静的HTMLからのPDFの作成](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-dynamic-html) 例： または、次の操作を行うこともできます。 [2つのPDFを結合](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-static-html).
+契約の生成時に、動的な個人固有のデータを固定契約条件とマージすることもできます。 これを行うには、[静的HTMLからPDFを作成する](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-dynamic-html)の例に従ってください。 または、[2つのPDFを結合](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf-from-static-html)することもできます。
 
 ## ダウンロード用のPDFファイルの提示
 
@@ -348,7 +348,7 @@ private static void setCustomOptionsAndPersonData(
 </html>
 ```
 
-次に、 `downloadContract` 内のメソッド `PersonController` 次のようにクラスを設定します。
+次に、`PersonController`クラス内で`downloadContract`メソッドを次のように実装します。
 
 ```
 @RequestMapping("/pdf")
@@ -376,7 +376,7 @@ public void downloadContract(HttpServletResponse response)
 
 ![データ値のスクリーンショット](assets/HRWJ_6.png)
 
-クリック後 *送信* ボタンをクリックすると、フォームが検証され、PDFはHTML(resources/contract/index.html)に基づいて生成されます。 PDFをダウンロードできる別のビュー(contract-details)が表示されます。
+[*送信*]ボタンをクリックすると、フォームが検証され、HTML (resources/contract/index.html)に基づいてPDFが生成されます。 PDFをダウンロードできる別のビュー(contract-details)が表示されます。
 
 ![PDFをダウンロードできるスクリーンショット](assets/HRWJ_7.png)
 
@@ -390,11 +390,11 @@ Webブラウザーでレンダリングすると、PDFは次のようになり�
 
 認証トークンを取得するには、いくつかの手順を実行する必要があります。
 
-まず、 [開発者アカウント](https://acrobat.adobe.com/jp/ja/sign/developer-form.html).
+まず、[開発者アカウント](https://acrobat.adobe.com/jp/ja/sign/developer-form.html)を登録します。
 
-CLIENTアプリケーションを [Adobe Signポータル](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
+[Adobe Signポータル](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)でCLIENTアプリケーションを作成します。
 
-説明に従って、アプリケーションのOAuthを設定します [こちら](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) および [こちら](https://secure.eu1.adobesign.com/public/static/oauthDoc.jsp). クライアント識別子とクライアントシークレットを書き留めます。 その後、 `https://www.google.com` リダイレクトURIおよび次のスコープとして：
+[こちら](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md)と[こちら](https://secure.eu1.adobesign.com/public/static/oauthDoc.jsp)で説明されているように、アプリケーションのOAuthを構成します。 クライアント識別子とクライアントシークレットを書き留めます。 その後、`https://www.google.com`をリダイレクトURIおよび次のスコープとして使用できます。
 
 * user_login: self
 
@@ -404,7 +404,7 @@ CLIENTアプリケーションを [Adobe Signポータル](https://www.adobe.io/
 
 * agreement_send: account
 
-\の代わりにクライアントIDを使用して、次のようにURLを準備します。&lt;client_id>:
+\&lt;CLIENT_ID\>の代わりにクライアントIDを使用して、次のようにURLを準備します。
 
 ```
 https://secure.eu1.adobesign.com/public/oauth?redirect_uri=https://www.google.com
@@ -413,15 +413,16 @@ https://secure.eu1.adobesign.com/public/oauth?redirect_uri=https://www.google.co
 &scope=user_login:self+agreement_read:account+agreement_write:account+agreement_send:account
 ```
 
-Webブラウザーに上記のURLを入力します。 google.comにリダイレクトされ、コードはcode=\としてアドレスバーに表示されます。&lt;your_code>例：
+Webブラウザーに上記のURLを入力します。 google.comにリダイレクトされ、コードがアドレスバーにcode=\&lt;YOUR_CODE\>として表示されます。
+例：
 
 ```
 https://www.google.com/?code=<YOUR_CODE>&api_access_point=https://api.eu1.adobesign.com/&web_access_point=https://secure.eu1.adobesign.com%2F
 ```
 
-\に指定した値に注意してください。&lt;your_code> およびapi_access_pointをサポートしています。
+\&lt;YOUR_CODE\>とapi_access_pointに指定した値に注意してください。
 
-アクセストークンを提供するHTTP POSTリクエストを送信するには、クライアントID \&lt;your_code>、およびapi_access_pointの値を指定します。 次を使用できます [Postman](https://helpx.adobe.com/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html) またはcURL:
+アクセストークンを提供するHTTP POSTリクエストを送信するには、クライアントID、\&lt;YOUR_CODE\>、およびapi_access_pointの値を使用します。 [Postman](https://helpx.adobe.com/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html)またはcURLを使用できます：
 
 ```
 curl --location --request POST "https://**api.eu1.adobesign.com**/oauth/token"
@@ -453,7 +454,7 @@ access_tokenを書き留めます。 クライアントコードを認証する�
 
 ## Adobe Sign Java SDKの使用
 
-アクセストークンを取得すると、REST API呼び出しをAdobe Signに送信できます。 このプロセスを簡単にするには、Adobe Sign Java SDKを使用します。 ソースコードは以下で入手できます。 [Adobe GitHubリポジトリー](https://github.com/adobe-sign/AdobeSignJavaSdk).
+アクセストークンを取得すると、REST API呼び出しをAdobe Signに送信できます。 このプロセスを簡単にするには、Adobe Sign Java SDKを使用します。 ソースコードは、[Adobe GitHubリポジトリ](https://github.com/adobe-sign/AdobeSignJavaSdk)で利用できます。
 
 このパッケージをアプリケーションと統合するには、コードを複製する必要があります。 次に、Mavenパッケージ（mvnパッケージ）を作成し、次のファイルをプロジェクトにインストールします（これらのファイルは、adobe-sign-sdkフォルダーのコンパニオンコードにあります）。
 
@@ -475,7 +476,7 @@ access_tokenを書き留めます。 クライアントコードを認証する�
 
 * target/lib/swagger-annotations-1.5.15.jar
 
-IntelliJ IDEAでは、次を使用してそれらのファイルを依存関係として追加できます *プロジェクト構造* （ファイル/プロジェクト構造）。
+IntelliJ IDEAでは、*プロジェクト構造* （ファイル/プロジェクト構造）を使用して、これらのファイルを依存関係として追加できます。
 
 ## PDFを署名用に送信しています
 
@@ -500,9 +501,9 @@ IntelliJ IDEAでは、次を使用してそれらのファイルを依存関係�
 </html>
 ```
 
-次に、別のコントローラを追加します。 `AdobeSignController`を実装する `sendContractMethod` （コンパニオンコードを参照）。 この方法は次のように動作します。
+次に、`sendContractMethod`を実装する別のコントローラー`AdobeSignController`を追加します（コンパニオンコードを参照）。 この方法は次のように動作します。
 
-まず、 `ApiClient` APIエンドポイントを取得します。
+まず、`ApiClient`を使用してAPIエンドポイントを取得します。
 
 ```
 ApiClient apiClient = new ApiClient();
@@ -578,7 +579,7 @@ participantSetInfo.setRole(ParticipantSetInfo.RoleEnum.SIGNER);
 agreementCreationInfo.addParticipantSetsInfoItem(participantSetInfo);
 ```
 
-最後に、 `createAgreement` Adobe Sign Java SDKのメソッド：
+最後に、Adobe Sign Java SDKから`createAgreement`メソッドを使用して契約書を送信します。
 
 ```
 // Create agreement using the transient document.
@@ -589,11 +590,11 @@ AgreementCreationResponse agreementCreationResponse = agreementsApi.createAgreem
 System.out.println("Agreement sent, ID: " + agreementCreationResponse.getId());
 ```
 
-このコードを実行すると、（コードで指定されたアドレスへの）電子メールが届きます `<email_address>)` （契約書の署名リクエスト）。 電子メールにはハイパーリンクが含まれており、受信者はAdobe Signポータルにアクセスして、署名を実行できます。 Adobe Sign Developer Portal（以下の図を参照）に文書が表示されます。また、プログラムを使用して署名プロセスをトラックすることもできます。 [getAgreementInfo](https://github.com/adobe-sign/AdobeSignJavaSdk/blob/master/docs/AgreementsApi.md#getAgreementInfo) メソッドです。
+このコードを実行すると、契約書の署名要求を含む電子メール（コードで`<email_address>)`として指定されたアドレス宛）が送信されます。 電子メールにはハイパーリンクが含まれており、受信者はAdobe Signポータルにアクセスして、署名を実行できます。 Adobe Sign Developer Portal（以下の図を参照）に文書が表示されます。また、[getAgreementInfo](https://github.com/adobe-sign/AdobeSignJavaSdk/blob/master/docs/AgreementsApi.md#getAgreementInfo)メソッドを使用して、プログラムで署名プロセスをトラックすることもできます。
 
-最後に、次に示すようにPDFサービスAPIを使用して、PDFをパスワードで保護することもできます [例](https://github.com/adobe/pdfservices-java-sdk-samples/tree/master/src/main/java/com/adobe/pdfservices/operation/samples/protectpdf).
+最後に、これらの[例](https://github.com/adobe/pdfservices-java-sdk-samples/tree/master/src/main/java/com/adobe/pdfservices/operation/samples/protectpdf)に示すように、PDFサービスAPIを使用してPDFをパスワードで保護することもできます。
 
-![契約詳細のスクリーンショット](assets/HRWJ_9.png)
+![契約の詳細のスクリーンショット](assets/HRWJ_9.png)
 
 ## 次の手順
 
@@ -601,4 +602,4 @@ System.out.println("Agreement sent, ID: " + agreementCreationResponse.getId());
 
 さらに例を挙げると、フォームの受信者がリモートで安全に署名できるように作成できます。 複数の署名が必要な場合は、ワークフロー内の一連のユーザーにフォームを自動的に送信することもできます。 従業員のオンボーディングが改善され、人事部があなたを気に入ってくれるでしょう。
 
-チェックアウト [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/) 数多くのPDF機能をアプリケーションに追加できます。
+今すぐ[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/)をチェックして、アプリケーションに多くのPDF機能を追加してください。

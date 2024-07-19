@@ -10,38 +10,38 @@ thumbnail: KT-8095.jpg
 exl-id: a22230b5-1ff2-4870-84da-f06a904c99e1
 source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
 workflow-type: tm+mt
-source-wordcount: '1364'
-ht-degree: 1%
+source-wordcount: '1298'
+ht-degree: 0%
 
 ---
 
 # 検索とインデックス作成
 
-![ユースケースの英雄バナー](assets/UseCaseSearchingHero.jpg)
+![使用事例の英雄バナー](assets/UseCaseSearchingHero.jpg)
 
-多くの場合、組織はハードコピー文書やスキャンしたファイルをデジタル化する必要があります。 よく考えて [シナリオ](https://docs.google.com/document/d/11jZdVQAw-3fyE3Y-sIqFFTlZ4m02LsCC/edit). ある法律事務所では、デジタル・ファイルを作成するためにスキャンした数千もの法的契約を処理しています。 彼らは、これらの法的契約のいずれかに特定の条項があるかどうか、または彼らが改訂する必要があります補足を決定したいと考えています。 コンプライアンスには正確性が必要です。 このソリューションでは、デジタルドキュメントのインベントリを作成し、テキストを検索可能にして、この情報を見つけるためのインデックスを作成します。
+多くの場合、組織はハードコピー文書やスキャンしたファイルをデジタル化する必要があります。 この[シナリオ](https://docs.google.com/document/d/11jZdVQAw-3fyE3Y-sIqFFTlZ4m02LsCC/edit)を検討してください。 ある法律事務所では、デジタル・ファイルを作成するためにスキャンした数千もの法的契約を処理しています。 彼らは、これらの法的契約のいずれかに特定の条項があるかどうか、または彼らが改訂する必要があります補足を決定したいと考えています。 コンプライアンスには正確性が必要です。 このソリューションでは、デジタルドキュメントのインベントリを作成し、テキストを検索可能にして、この情報を見つけるためのインデックスを作成します。
 
 編集やダウンストリーム操作のために情報を取得するデジタルアーカイブを作成することは、ほとんどの組織にとって困難です。
 
 ## 学習内容
 
-この実践チュートリアルでは、次の方法について説明します [!DNL Adobe Acrobat Services] APIの機能を使用して、文書をアーカイブし、デジタル化することができます。 これらの機能を確認するには、Express NodeJSアプリケーションを構築してから統合します [!DNL Acrobat Services] アーカイブ、デジタル化、文書変換のためのAPI。
+この実践チュートリアルでは、[!DNL Adobe Acrobat Services]個のAPIの機能を紹介し、文書のアーカイブとデジタル化に簡単に使用する方法を説明します。 これらの機能を確認するには、Express NodeJSアプリケーションを構築し、アーカイブ、デジタル化、およびドキュメント変換用の[!DNL Acrobat Services]個のAPIを統合します。
 
-フォローするには、次が必要です [Node.js](https://nodejs.org/) Node.jsおよび [ES6構文](https://www.w3schools.com/js/js_es6.asp).
+実行するには、[Node.js](https://nodejs.org/)をインストールし、Node.jsおよび[ES6構文](https://www.w3schools.com/js/js_es6.asp)の基本的な理解が必要です。
 
 ## 関連APIとリソース
 
-* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [プロジェクトコード](https://github.com/agavitalis/AdobeDocumentServicesAPIs.git)
 
 ## プロジェクト設定
 
-まず、アプリケーションのフォルダー構造を設定します。 ソースコードを取得できます [こちら](https://github.com/agavitalis/AdobeDocumentAPI.git).
+まず、アプリケーションのフォルダー構造を設定します。 ソースコード[ここ](https://github.com/agavitalis/AdobeDocumentAPI.git)を取得できます。
 
 ## ディレクトリ構造
 
-AdobeDocumentServicesAPIsという名前のフォルダーを作成し、任意のエディターで開きます。 NodeJSの基本アプリケーションの作成 `npm init` 次のフォルダー構造を使用するコマンド：
+AdobeDocumentServicesAPIsという名前のフォルダーを作成し、任意のエディターで開きます。 次のフォルダー構造を使用して、`npm init`コマンドで基本のNodeJSアプリケーションを作成します：
 
 ```
 AdobeDocumentServicesAPIs
@@ -123,9 +123,9 @@ Ensure that the content of your package.json file is similar to this code snippe
 
 これらのコードスニペットは、ビューのHandlebarsテンプレートエンジンなどのアプリケーション依存関係をインストールします。 scriptsタグで、アプリケーションの実行時パラメーターを設定します。
 
-## 統合 [!DNL Acrobat Services] API
+## [!DNL Acrobat Services] APIを統合しています
 
-[!DNL Acrobat Services] には、次の3つのAPIが含まれています。
+[!DNL Acrobat Services]には次の3つのAPIが含まれています：
 
 * Adobe PDF Services API
 
@@ -135,19 +135,19 @@ Ensure that the content of your package.json file is similar to this code snippe
 
 これらのAPIにより、一連のクラウドベースのWebサービスを介してPDFコンテンツの生成、操作、変換が自動化されます。
 
-資格情報を取得するには、次の操作を行います [登録簿](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK) ワークフローを完了します。 PDF埋め込みAPIは無料で使用できます。 PDFサービスAPIとDocument Generation APIは6か月間無料で利用できます。 体験版が終了すると、次のことができます [従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) 文書トランザクション1件につきわずか0.05ドルです。 お客様の会社が成長し、より多くの契約を処理するにつれて、お支払いいただきます。
+資格情報を取得するには、[登録](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)してワークフローを完了する必要があります。 PDF埋め込みAPIは無料で使用できます。 PDFサービスAPIとDocument Generation APIは6か月間無料で利用できます。 体験版が終了すると、1つのドキュメントトランザクションにつき[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で課金されます。 お客様の会社が成長し、より多くの契約を処理するにつれて、お支払いいただきます。
 
 ![資格情報の作成のスクリーンショット](assets/searching_1.png)
 
 サインアップが完了すると、API資格情報を含むコードサンプルがPCにダウンロードされます。 このコード例を展開し、 private.keyとpdftools-api-credentials.jsonファイルをアプリケーションのルートディレクトリに配置します。
 
-今すぐインストール [PDFサービスNode.js SDK](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk) を実行して ` npm install --save @adobe/documentservices-pdftools-node-sdk ` アプリケーションのルートディレクトリにあるターミナルを使用してコマンドを実行します。
+次に、アプリケーションのルートディレクトリでターミナルを使用して` npm install --save @adobe/documentservices-pdftools-node-sdk `コマンドを実行し、[PDFサービスNode.js SDK](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk)をインストールします。
 
 ## PDFの作成
 
-[!DNL Acrobat Services] Microsoft Office文書(Word、Excel、PowerPoint)などのPDFの作成をサポート [サポートされているファイル形式](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf) .txt、.rtf、.bmp、.jpg、.gif、.tiff、.pngなど。
+[!DNL Acrobat Services]では、Microsoft Office文書(Word、Excel、PowerPoint)からのPDFの作成と、その他[サポートされているファイル形式](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf) （.txt、.rtf、.bmp、.jpg、.gif、.tiff、.pngなど）からのフォントの作成がサポートされています。
 
-サポートされているファイル形式からPDF文書を作成するには、このフォームを使用して文書をアップロードします。 フォームのHTMLファイルとCSSファイルには、 [GitHub](https://github.com/agavitalis/AdobeDocumentServicesAPIs.git).
+サポートされているファイル形式からPDF文書を作成するには、このフォームを使用して文書をアップロードします。 [GitHub](https://github.com/agavitalis/AdobeDocumentServicesAPIs.git)で、フォームのHTMLファイルとCSSファイルにアクセスできます。
 
 ![Webフォームのスクリーンショット](assets/searching_2.png)
 
@@ -209,7 +209,7 @@ console.log('Exception encountered while executing operation', err);
 module.exports = { createPDF, createPDFPost };
 ```
 
-このコードスニペットには、 [PDFサービスNode.js SDK](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk). 次の関数を使用します。
+このコードスニペットには、[PDFサービスNode.js SDK](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk)が必要です。 次の関数を使用します。
 
 * createPDF:「文書をアップロード」フォームを表示
 
@@ -219,7 +219,7 @@ module.exports = { createPDF, createPDFPost };
 
 ## テキスト認識の使用
 
-光学式文字認識(OCR)は、画像やスキャンされた文書を検索可能なファイルに変換します。 変換できます [!DNL Acrobat Services] API、画像、スキャンされた文書を検索可能なPDFに提供 OCR操作を実行した後、ファイルは編集可能で検索可能になります。 インデックス作成やその他の用途のために、データストアにファイルの内容を保存することができます。
+光学式文字認識(OCR)は、画像やスキャンされた文書を検索可能なファイルに変換します。 [!DNL Acrobat Services]個のAPI、画像、スキャンされた文書を検索可能なPDFに変換できます。 OCR操作を実行した後、ファイルは編集可能で検索可能になります。 インデックス作成やその他の用途のために、データストアにファイルの内容を保存することができます。
 
 ファイル管理と情報処理が不可欠な組織では、スキャンしたドキュメントの検索とインデックス作成が重要です。 OCR機能を使用すると、このような課題を解決できます。
 
@@ -317,7 +317,7 @@ console.log('Exception encountered while executing operation', err);
 module.exports = { makeOCR, makeOCRPost };
 ```
 
-必要なのは、 [!DNL Acrobat Services] ノードSDK、mongoose、pdf-parse、およびfsモジュール、および文書モデルスキーマ これらのモジュールは、変換されたファイルの内容をMongoDBデータベースに保存するために必要です。
+[!DNL Acrobat Services]ノードSDK、mongoose、pdf-parse、およびfsモジュール、および文書モデルスキーマが必要です。 これらのモジュールは、変換されたファイルの内容をMongoDBデータベースに保存するために必要です。
 
 ここで、2つの関数を作成します。makeOCRはアップロードされたフォームを表示し、makeORPostはアップロードされた文書を処理します。 元のフォームをデータベースに保存し、変換したフォームをアプリケーションの出力フォルダーに保存します。
 
@@ -361,7 +361,7 @@ module.exports = mongoose.model("document", DocumentSchema);
 
 これで、シンプルな検索機能を実装して、ユーザーが簡単なテキスト検索を実行できるようになりました。 また、ダウンロード機能を追加して、PDFファイルのダウンロードを可能にします。
 
-この機能には、検索結果を表示するための簡単なフォームとカードが必要です。 フォームとカードのデザインは、次の場所にあります [GitHub](https://github.com/agavitalis/AdobeDocumentServicesAPIs.git).
+この機能には、検索結果を表示するための簡単なフォームとカードが必要です。 フォームとカードのデザインは、[GitHub](https://github.com/agavitalis/AdobeDocumentServicesAPIs.git)で確認できます。
 
 下のスクリーンショットは、検索機能と検索結果を示しています。 任意の検索結果をダウンロードできます。
 
@@ -422,13 +422,13 @@ res.download(download.link);
 
 ## 次の手順
 
-この実践チュートリアルでは、を統合しました [!DNL Acrobat Services] APIをNode.jsアプリケーションに組み込み、APIを使用して、ファイルをPDFに変換する文書変換を実装する。 画像やスキャンしたファイルを検索できるようにするOCR機能を追加しました。 次に、ダウンロードできるようにファイルをフォルダーに保存しました。
+この実践チュートリアルでは、[!DNL Acrobat Services]個のAPIをNode.jsアプリケーションに統合し、APIを使用してファイルをPDFに変換する文書変換を実装しました。 画像やスキャンしたファイルを検索できるようにするOCR機能を追加しました。 次に、ダウンロードできるようにファイルをフォルダーに保存しました。
 
 次に、テキストに変換された文書をOCRで検索する検索機能を追加しました。 最後に、これらのファイルを簡単にダウンロードできるダウンロード機能を実装しました。 完成したアプリケーションを使用すると、法律会社が特定のテキストを簡単に検索および処理できます。
 
-使用方法 [!DNL Acrobat Services] ドキュメント変換は、他のサービスと比較して堅牢性と使いやすさから、強くお勧めします。 アカウントをすばやく作成して、の機能を活用できます。 [!DNL Acrobat Services] ドキュメントの変換と管理のためのAPI。
+他のサービスと比べて堅牢性と使いやすいため、ドキュメント変換に[!DNL Acrobat Services]を使用することを強くお勧めします。 アカウントをすばやく作成して、ドキュメントの変換と管理のための[!DNL Acrobat Services]個のAPIの機能の利用を開始できます。
 
-これで、の使用方法を理解できました [!DNL Acrobat Services] APIを使用すれば、練習を積んでスキルを向上させることができます。 このチュートリアルで使用したリポジトリーをコピーして、先ほど学習したスキルを試すことができます。 さらに、このアプリケーションの再構築を試みても、 [!DNL Acrobat Services] API。
+[!DNL Acrobat Services]個のAPIの使い方をよく理解したので、練習を積んでスキルを向上させることができます。 このチュートリアルで使用したリポジトリーをコピーして、先ほど学習したスキルを試すことができます。 さらに優れた点として、[!DNL Acrobat Services]個のAPIの可能性を無制限に調査しながら、このアプリケーションを再構築できます。
 
-独自のアプリでドキュメントの共有とレビューを有効にしますか？ 新規登録 [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
-開発者アカウント。 6か月間の無料体験後 [従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html) ビジネスの成長に応じて、文書トランザクションあたり\$0.05です。
+独自のアプリでドキュメントの共有とレビューを有効にしますか？ [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)にサインアップ
+開発者アカウント。 6か月間の無料体験版を利用した後、[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で、ビジネスの成長に合わせて文書トランザクションあたり\$0.05を支払うことができます。

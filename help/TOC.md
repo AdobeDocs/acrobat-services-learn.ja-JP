@@ -1,7 +1,7 @@
 ---
-user-guide-title: ”[!DNL Adobe Acrobat Services]”
-breadcrumb-title: ”[!DNL Acrobat Services]”
-user-guide-description: 詳細情報： [!DNL Adobe Acrobat Services]
+user-guide-title: "[!DNL Adobe Acrobat Services]"
+breadcrumb-title: "[!DNL Acrobat Services]"
+user-guide-description: ' [!DNL Adobe Acrobat Services]に関する詳細情報'
 solution: Acrobat Services
 feature-set: Acrobat Services
 feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API, PDF Accessibility Auto-Tag API, PDF Electronic Seal API, PDF Extract API
@@ -16,7 +16,7 @@ ht-degree: 3%
 ---
 
 
-# [!DNL Adobe Acrobat Services] API TUTORIALS {#tutorials}
+# [!DNL Adobe Acrobat Services]個のAPI Tutorials {#tutorials}
 
 + [概要](overview.md)
 + PDFサービスAPI {#pdfservices}
@@ -31,35 +31,35 @@ ht-degree: 3%
 + Document Generation API {#docgen}
    + [概要](docgen/overview-docgen.md)
    + [ドキュメント生成の自動化](docgen/automate-doc-gen.md)
-   + テンプレートの作成 {#docgentemplates}
+   + テンプレート{#docgentemplates}を作成しています
       + [Adobe文書生成タガーの概要](docgen/taggeroverview.md)
       + [テキストタグの追加](docgen/taggeraddtexttags.md)
       + [画像タグの追加](docgen/taggeraddimagetags.md)
       + [表とリストタグの追加](docgen/taggertables.md)
       + [数値計算タグの設定](docgen/taggercalculations.md)
       + [条件付きコンテンツの設定](docgen/taggerconditional.md)
-+ PDFアクセシビリティ自動タグ付けAPI {#pdfaccessibility}
++ PDFアクセシビリティ自動タグAPI {#pdfaccessibility}
    + [概要](pdfaccessibility/overview-accessibility.md)
    + [文書に自動的にタグ付けしてアクセシビリティを向上](pdfaccessibility/automatically-add-tags.md)
 + PDFエクストラクトAPI {#pdfextract}
    + [概要](pdfextract/overview-extract.md)
    + [コンテンツ抽出の自動化](pdfextract/automate-content-extraction.md)
-+ PDFeシールAPI {#eseal}
++ PDF eシールAPI {#eseal}
    + [概要](pdfelectronicseal/overview-electronic-seal.md)
    + [eシールを自動適用](pdfelectronicseal/automatically-apply-electronic-seal.md)
 + PDF埋め込みAPI {#pdfembed}
    + [概要](pdfembed/overview-embed.md)
    + [PDFのオンラインエクスペリエンスを制御し、分析を収集](pdfembed/controlpdfexperience.md)
-+ ACROBAT SIGN API {#acrobatsign}
++ Acrobat Sign API {#acrobatsign}
    + [概要](acrobatsign/overview-sign.md)
    + [Adobe Sign APIの概要](acrobatsign/signapi.md)
-   + OEM/組み込みパートナー {#oem}
+   + OEM/埋め込みパートナー{#oem}
       + [デベロッパーアカウントにサインアップ](acrobatsign/sign-up-developer-account.md)
       + [アプリケーションの作成](acrobatsign/creating-your-application.md)
       + [埋め込みリンクの作成](acrobatsign/creating-an-embed-link.md)
       + [アクセストークンの生成](acrobatsign/generating-an-access-token.md)
       + [一時的なドキュメントの作成](acrobatsign/creating-a-transient-document.md)
-+ 使用事例 {#usecases}
++ 使用事例{#usecases}
    + [概要](usecases/overview-usecases.md)
    + [法的なワークフローの自動化](usecases/automatelegalworkflows.md)
    + [従業員オンボーディングの最新化](usecases/employeeonboarding.md)

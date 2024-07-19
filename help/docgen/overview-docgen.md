@@ -63,7 +63,7 @@ Document Generation APIでは、入力データとともに（テンプレート
     <div>
    <a href="taggeroverview.md"><strong>Adobe文書生成タガーの概要</strong></a>
     </div>
-    <em>AdobeのDocument Generation APIで使用するように設計されたAdobeのDocument Generation Taggerの概要を確認します</em>
+    <em>Adobe Document Generation APIで使用するように設計されたAdobe Document Generation Taggerの概要を取得します</em>
     <br>
   </td>
   <td>
@@ -71,7 +71,7 @@ Document Generation APIでは、入力データとともに（テンプレート
       <img alt="テキストタグの追加" src="assets/Taggertexttags_thumb.png" />
    </a>
     <div>
-   <a href="taggeraddtexttags.md"><strong>テキストタグの追加</strong></a>
+   <a href="taggeraddtexttags.md"><strong>テキストタグを追加しています</strong></a>
     </div>
     <em>AdobeのDocument Generation APIで使用するAdobeのDocument Generation Taggerを使用して、Microsoft Wordテンプレートにテキストタグを追加する方法について説明します</em>
     <br>
@@ -81,9 +81,9 @@ Document Generation APIでは、入力データとともに（テンプレート
       <img alt="画像タグの追加" src="assets/Taggerimagetags_thumb.png" />
    </a>
     <div>
-   <a href="taggeraddimagetags.md"><strong>画像タグの追加</strong></a>
+   <a href="taggeraddimagetags.md"><strong>画像タグを追加しています</strong></a>
     </div>
-    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートに画像タグを追加し、AdobeのDocument Generation APIを使用して画像を文書に動的にプッシュする方法について説明します。</em>
+    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートに画像タグを追加し、AdobeのDocument Generation APIを使用して画像を文書に動的にプッシュする方法について説明します</em>
     <br>
   </td>
   <td>
@@ -91,9 +91,9 @@ Document Generation APIでは、入力データとともに（テンプレート
       <img alt="表とリストタグの追加" src="assets/Taggertables_thumb.png" />
    </a>
     <div>
-   <a href="taggertables.md"><strong>表とリストタグの追加</strong></a>
+   <a href="taggertables.md"><strong>テーブルとリストタグを追加しています</strong></a>
     </div>
-    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートに表とリストタグを追加し、AdobeのDocument Generation APIを使用してデータに基づいて表またはリストの行を動的に追加する方法について説明します。</em>
+    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートにテーブルとリストタグを追加し、AdobeのDocument Generation APIを使用してデータに基づいてテーブルまたはリストの行を動的に追加する方法について説明します</em>
     <br>
   </td>
 </tr>
@@ -103,9 +103,9 @@ Document Generation APIでは、入力データとともに（テンプレート
       <img alt="数値計算タグの設定" src="assets/Taggercalculations_thumb.png" />
    </a>
     <div>
-   <a href="taggercalculations.md"><strong>数値計算タグの設定</strong></a>
+   <a href="taggercalculations.md"><strong>数値計算タグを設定しています</strong></a>
     </div>
-    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートで数値計算タグを設定し、AdobeのDocument Generation APIを使用してデータ値の集計または計算を行う方法について説明します。</em>
+    <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートで数値計算タグを設定し、AdobeのDocument Generation APIを使用してデータ値の集計または算術を計算する方法について説明します</em>
     <br>
   </td>
   <td>
@@ -113,7 +113,7 @@ Document Generation APIでは、入力データとともに（テンプレート
       <img alt="条件付きコンテンツの設定" src="assets/Taggerconditional_thumb.png" />
    </a>
     <div>
-   <a href="taggerconditional.md"><strong>条件付きコンテンツの設定</strong></a>
+   <a href="taggerconditional.md"><strong>条件付きコンテンツを設定しています</strong></a>
     </div>
     <em>AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートのセクションを設定し、AdobeのDocument Generation APIを使用してデータに基づいて文書のセクションを動的に含めるか除外する方法について説明します</em>
     <br>
