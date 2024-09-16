@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8093
 thumbnail: KT-8093.jpg
 exl-id: 2f2bf1c2-1b33-4eee-9fd2-5d0b77e6b0a9
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c74a36116349490af29e66fd81ad59c93174c258
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 シンプルにするために、ここではファイルシステムベースのアップロードと処理のみを使用してください。 Express.jsでは、 fsモジュールを使用して、ディレクトリ内の使用可能なファイルをすべて一覧表示できます。
 
-同じページで、お客様が確認できるように管理者がレポートファイルをサーバーにアップロードできるようにします。 これらのファイルは、Microsoft Word、Microsoft Excel、HTMLおよび[その他のデータ形式]https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf)など、様々な形式で保存できます。 管理ページは次のようになります。
+同じページで、お客様が確認できるように管理者がレポートファイルをサーバーにアップロードできるようにします。 これらのファイルは、Microsoft Word、Microsoft Excel、HTML、およびグラフィックファイルを含む[その他のデータ形式](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/howtos.html#create-a-pdf)など、さまざまな形式で保存できます。 管理ページは次のようになります。
 
 ![管理者権限のスクリーンショット](assets/report_2.png)
 

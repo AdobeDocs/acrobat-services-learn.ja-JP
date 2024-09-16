@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10202
 thumbnail: KT-10202.jpg
 exl-id: 2a1752b8-9641-40cc-a0af-1dce6cf49346
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c74a36116349490af29e66fd81ad59c93174c258
 workflow-type: tm+mt
 source-wordcount: '2826'
 ht-degree: 0%
@@ -552,7 +552,7 @@ Acrobat Signの認証トークンの作成方法の詳細については、[こ�
   }
 ```
 
-更新が変更されたときに通知を受け取る、より効率的な方法は、Webhooksを使用することです。[こちら](https://opensource.adobe.com/acrobat-sign/developer_guide/webhookapis.htmlで詳細を確認できます。
+更新が変更されたときに通知を受け取る、より効率的な方法は、Webhooksを使用して行う方法です。[こちら](https://opensource.adobe.com/acrobat-sign/developer_guide/webhookapis.html)で、この方法の詳細を確認できます。
 
 ## 署名済み文書を保存
 
