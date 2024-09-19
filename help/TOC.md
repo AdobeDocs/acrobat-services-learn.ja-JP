@@ -8,7 +8,7 @@ feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation 
 role: Developer
 level: Beginner, Intermediate, Experienced
 auto-video-transcripts: true
-source-git-commit: 255a2425fcde4443d8502a92aa0274fac30f7279
+source-git-commit: ad13c28a0c218fc0027afc02445e5ed532c2340d
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 3%
@@ -73,9 +73,9 @@ ht-degree: 3%
    + [レポートの作成と編集](usecases/reportcreation.md)
    + [求人情報](usecases/jobposting.md)
    + [学生・教職員間の連携](usecases/educationcollab.md)
-   + [Node.jsの契約書ワークフロー](usecases/AgreementWorkflowsNodejs.md)
-   + [Javaでの人事文書ワークフロー](usecases/HRAgreementWorkflowsJava.md)
-   + [Javaでの財務文書ワークフローの管理](usecases/FinanceWorkflowsJava.md)
+   + [Node.jsの契約書ワークフロー](usecases/agreementworkflowsnodejs.md)
+   + [Javaでの人事文書ワークフロー](usecases/hragreementworkflowsjava.md)
+   + [Javaでの財務文書ワークフローの管理](usecases/financeworkflowsjava.md)
    + [請求書の処理](usecases/invoices.md)
    + [デジタルドキュメントパブリッシング](usecases/ddppdfembedapi.md)
 
