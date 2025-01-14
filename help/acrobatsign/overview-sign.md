@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-11079
 thumbnail: KT-11079.jpg
 exl-id: 79603883-26cd-439c-9cfd-6178c4544b93
-source-git-commit: 63c4b6979a4aaa6698ee00264c4ef59ed6b16148
+source-git-commit: 3df27690c677d8ad51e8f26ea95b5da12694f89a
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '305'
 ht-degree: 6%
 
 ---
@@ -53,7 +53,7 @@ Acrobat Sign API を使用すると、アプリケーションを作成し、Acr
 
 ## Acrobat Sign埋め込みクイックスタートガイド
 
-Acrobat SignのOEM版をアプリケーションに組み込む方法を説明します。 このガイドは、アプリケーション内に署名プロセスを構築し、組み込んでいるOEMパートナー向けに特別に設計されています。
+OEM版のAcrobat Signをアプリケーションに埋め込む方法について説明します。 このガイドは、アプリケーション内に署名プロセスを構築し、組み込んでいるOEMパートナー向けに特別に設計されています。
 
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
