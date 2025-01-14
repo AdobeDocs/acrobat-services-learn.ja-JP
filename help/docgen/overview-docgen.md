@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-7480
 thumbnail: KT-7480.jpg
 exl-id: 519a41a2-33af-4022-8919-2cb69995c46c
-source-git-commit: 63c4b6979a4aaa6698ee00264c4ef59ed6b16148
+source-git-commit: 9235b07277fe642adebc00fade4c10245d4b04bf
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -26,34 +26,35 @@ Document Generation APIは、WordテンプレートとJSONデータからPDF文�
 
 ## 文書の生成
 
-
-<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
-<div class="columns">
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Automate document generation">
-        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
-            <div class="card-image">
-                <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" title="ドキュメント生成の自動化" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/media_1ba1ac23538622ab48b7a2f84fbb5c56d310fba66.png?width=400&format=webply&optimize=medium" alt="ドキュメント生成の自動化"
-                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
-                    </a>
-                </figure>
-            </div>
-            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                <div class="top-card-content">
-                    <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" target="_self" rel="referrer" title="ドキュメント生成の自動化">ドキュメント生成の自動化</a>
-                    </p>
-                    <p class="is-size-6">大規模な文書を自動的に生成する方法を学ぶ</p>
-                </div>
-                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/docgen/automate-doc-gen" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">視聴</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+<table style="table-layout:fixed">
+<tr>
+  <td>
+    <a href="automate-doc-gen.md">
+      <img alt="ドキュメント生成の自動化" src="assets/automate-doc-gen.png" />
+    </a>
+    <div>
+      <a href="automate-doc-gen.md"><strong>ドキュメント生成の自動化</strong></a>
+      </div>
+      大規模な文書を自動的に生成する方法を学ぶ
+      <br>
+  </td>
+ <td>
+       <img alt="スペーサー" src="../assets/WhiteBanner_Placeholder.png">
+       <div>
+       <br>
+ </td>
+ <td>
+       <img alt="スペーサー" src="../assets/WhiteBanner_Placeholder.png">
+       <div>
+       <br>
+ </td>
+ <td>
+       <img alt="スペーサー" src="../assets/WhiteBanner_Placeholder.png">
+       <div>
+       <br>
+ </td>
+</tr>
+</table>
 
 ## テンプレートの作成
 
