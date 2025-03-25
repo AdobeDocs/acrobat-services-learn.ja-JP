@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8090
 thumbnail: KT-8090.jpg
 exl-id: 3aa9aa40-a23c-409c-bc0b-31645fa01b40
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 0%
@@ -21,12 +21,12 @@ ht-degree: 0%
 
 電子文書はどこにでもあります。実際、世界中に[兆個ものPDF](https://itextpdf.com/en/blog/technical-notes/do-you-know-how-many-pdf-documents-exist-world)が存在すると考えられ、その数は毎日増加しています。 PDFビューアをwebページに埋め込むと、HTMLやCSSを再設計したり、webサイトへのアクセスを妨げたりすることなく、文書を表示できるようになります。
 
-人気のあるシナリオを見てみましょう。 ある企業が[ホワイトペーパーをWebサイトに投稿している](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html)
+人気のあるシナリオを見てみましょう。 ある企業が[ホワイトペーパーをWebサイトに投稿している](https://developer.adobe.com/document-services/use-cases/content-publishing/digital-content-publishing)
 アプリケーションやサービスのコンテキストを提供する。 このサイトのマーケターは、ユーザーがPDFベースのコンテンツをどのように操作し、webページやブランドと組み合わせるかを理解したいと考えています。 ホワイトペーパーを[ゲート付きコンテンツ](https://whatis.techtarget.com/definition/gated-content-ungated-content#:~:text=Gated%20content%20is%20online%20materials,about%20their%20jobs%20and%20organizations.)として公開することを決定し、誰がダウンロードできるかを管理しています。
 
 ## 学習内容
 
-この実践チュートリアルでは、[Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)を使用して、webページ内に埋め込まれたPDF文書を表示する方法について説明します。この方法は無料で簡単に利用できます。 これらの例では、JavaScript、Node.js、Express.js、HTML、CSSを使用しています。 [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1)で完全なプロジェクトコードを表示できます。
+この実践チュートリアルでは、[Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed)を使用して、webページ内に埋め込まれたPDF文書を表示する方法について説明します。この方法は無料で簡単に利用できます。 これらの例では、JavaScript、Node.js、Express.js、HTML、CSSを使用しています。 [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1)で完全なプロジェクトコードを表示できます。
 
 ## 関連APIとリソース
 
@@ -126,7 +126,7 @@ npm startを再実行し、<http://localhost:3000>を開いて、使用可能な
 
 ![ホワイトペーパーのサムネールのスクリーンショット](assets/ddp_4.png)
 
-次のセクションでは、Webサイトの拡張と[PDF埋め込みAPI](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)を使用して、PDFドキュメントをWebページに表示します。 PDF埋め込みAPIは無料で使用できます。API資格情報を取得するだけで済みます。
+次のセクションでは、Webサイトの拡張と[PDF埋め込みAPI](https://developer.adobe.com/document-services/apis/pdf-embed)を使用して、PDFドキュメントをWebページに表示します。 PDF埋め込みAPIは無料で使用できます。API資格情報を取得するだけで済みます。
 
 ## PDF埋め込みAPI資格情報の取得
 
@@ -547,16 +547,16 @@ console.log(event);
 
 ![コードのスクリーンショット](assets/ddp_16.png)
 
-このデータは、[Adobe Analytics](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=view)またはその他の分析ツールに送信できます。
+このデータは、[Adobe Analytics](https://developer.adobe.com/document-services/docs/overview/pdf-embed-api)またはその他の分析ツールに送信できます。
 
 ## 次の手順
 
 [!DNL Acrobat Services]個のAPIにより、PDF中心のワークフローを使用して、開発者はデジタルパブリッシングの課題を簡単に解決できます。 ここまでで、ホワイトペーパーのコレクションを表示するサンプルのNode Webアプリを作成する方法を説明しました。 次に、[無料のAPI資格情報](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を取得し、ホワイトペーパーへの制限付きアクセスを構築します。このアクセスは、4つの[埋め込みモード](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)のいずれかで表示できます。
 
-このワークフローを統合すると、[架空のマーケティング担当者](https://www.adobe.io/apis/documentcloud/dcsdk/digital-content-publishing.html)は、ホワイトペーパーのダウンロードと引き換えに潜在顧客の連絡先情報を収集し、PDFの利用者に関する統計情報を表示することができます。 これらの機能をwebサイトに組み込んで、ユーザーのエンゲージメントを促進および監視できます。
+このワークフローを統合すると、[架空のマーケティング担当者](https://developer.adobe.com/document-services/use-cases/content-publishing/digital-content-publishing)は、ホワイトペーパーのダウンロードと引き換えに潜在顧客の連絡先情報を収集し、PDFの利用者に関する統計情報を表示することができます。 これらの機能をwebサイトに組み込んで、ユーザーのエンゲージメントを促進および監視できます。
 
 angularやReactの開発者は、PDF埋め込みAPIをReactやAngularのプロジェクトと連携させる方法を紹介する[その他のサンプル](https://github.com/adobe/pdf-embed-api-samples)をお試しください。
 
-Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/viesdk)を無料でご利用いただけます。 他に実行できる操作を確認するには、Adobe PDFサービスAPIを[goprに応じた支払い](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)[アイシング](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)でお試しください。
+Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/)を無料でご利用いただけます。 他に実行できる操作を確認するには、Adobe PDFサービスAPIを[goprに応じた支払い](https://developer.adobe.com/document-services/pricing/main)[アイシング](https://developer.adobe.com/document-services/pricing/main)でお試しください。
 
 [今すぐ[!DNL Adobe Acrobat Services]個のAPIを使用して](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を開始できます。

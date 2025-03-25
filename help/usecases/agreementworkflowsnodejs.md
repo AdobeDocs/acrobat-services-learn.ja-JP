@@ -1,6 +1,6 @@
 ---
 title: Node.jsの契約書ワークフロー
-description: 「[!DNL Adobe Acrobat Services]個のAPIで、PDF機能をwebアプリケーションに簡単に組み込むことができます」
+description: '[!DNL Adobe Acrobat Services]個のAPIで、PDF機能をWebアプリケーションに簡単に組み込むことができます'
 feature: Use Cases
 role: Developer
 level: Beginner
@@ -9,7 +9,7 @@ jira: KT-7473
 thumbnail: KT-7473.jpg
 keywords: おすすめ
 exl-id: 44a03420-e963-472b-aeb8-290422c8d767
-source-git-commit: f8a31b8f98d99bf1f3787e0f0f19cc9f26e24d8d
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '2094'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 
 * [プロジェクトコード](https://github.com/adobe/pdftools-node-sdk-samples)
 
@@ -294,7 +294,7 @@ PDFファイルに対して行った操作はいくつかありますが、最�
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 ```
 
-必要なコードの最後のビットは、Adobe PDF Embed API JavaScriptが読み込まれた後にドキュメントを表示する関数です。 adobe_dc_view\_sdk.readyイベントを介してスクリプトが読み込まれたことを示す通知を受け取ったら、新しいAdobeDC.Viewオブジェクトを作成します。 このオブジェクトには、以前に作成したクライアントIDと要素のIDが必要です。 [Adobe Developer Console](https://console.adobe.io/)でクライアントIDを確認します。 以前に資格情報を生成したときに作成したアプリケーションの設定を表示すると、クライアントIDがそこに表示されます。
+必要なコードの最後のビットは、Adobe PDF Embed API JavaScriptが読み込まれた後にドキュメントを表示する関数です。 adobe_dc_view\_sdk.readyイベントを介してスクリプトが読み込まれたことを示す通知を受け取ったら、新しいAdobeDC.Viewオブジェクトを作成します。 このオブジェクトには、以前に作成したクライアントIDと要素のIDが必要です。 [Adobe Developer Console](https://developer.adobe.com/console/)でクライアントIDを確認します。 以前に資格情報を生成したときに作成したアプリケーションの設定を表示すると、クライアントIDがそこに表示されます。
 
 ![APIクライアントキーのイメージ](assets/AWNjs_6.png)
 
@@ -312,7 +312,7 @@ PDFファイルに対して行った操作はいくつかありますが、最�
 
 文書の準備が整ったら、Adobe Signを使用してデジタル署名を追加して承認を受けることができます。 この機能は、これまでに使用した機能とは少し異なります。 デジタル署名の場合、ユーザー認証にOAuthを使用するようにアプリケーションを設定する必要があります。
 
-アプリケーションを設定するための最初の手順は、[アプリケーションを登録](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)して、Adobe Sign用のOAuthを使用することです。 ログイン後、*アカウント*&#x200B;をクリックしてアプリの作成画面に移動し、*Adobe Sign API*&#x200B;セクションを開き、*APIアプリ*&#x200B;をクリックして、登録されたアプリの一覧を開きます。
+アプリケーションを設定するための最初の手順は、[アプリケーションを登録](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)して、Adobe Sign用のOAuthを使用することです。 ログイン後、*アカウント*&#x200B;をクリックしてアプリの作成画面に移動し、*Adobe Sign API*&#x200B;セクションを開き、*APIアプリ*&#x200B;をクリックして、登録されたアプリの一覧を開きます。
 
 ![アプリケーション登録時の最初のステップの画像](assets/AWNjs_9.png)
 
@@ -519,4 +519,4 @@ request(createWebFormRequest, function (error, response) {
 
 呼び出しに必要なスコープを検出したり、呼び出しの構築方法を確認したりするには、[Rest APIドキュメント](https://secure.na4.adobesign.com/public/docs/restapi/v6)からサンプル呼び出しを構築します。 [Quickstarts](https://github.com/adobe/pdftools-node-sdk-samples)は、[!DNL Adobe Acrobat Services]個のAPIプロセスの他の機能とファイル形式も示します。
 
-アプリケーションに様々なPDF機能を追加して、文書の閲覧や署名などをすばやく簡単に行うことができます。 開始するには、今すぐ[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/)をご覧ください。
+アプリケーションに様々なPDF機能を追加して、文書の閲覧や署名などをすばやく簡単に行うことができます。 開始するには、今すぐ[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage/)をご覧ください。

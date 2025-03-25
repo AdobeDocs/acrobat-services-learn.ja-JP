@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10379
 thumbnail: KT-10379.jpg
 exl-id: 095b705f-c380-42cc-9329-44ef7de655ee
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1955'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
 ### 必要なもの
 
 * **Adobe PDFサービスの試用版または製品版の資格情報**
-Microsoft Power Automateで資格情報を取得および設定する方法について詳しくは、[ここ](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html)を参照してください。
+Microsoft Power Automateで資格情報を取得および設定する方法について詳しくは、[ここ](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate)を参照してください。
 * **プレミアムコネクタを使用したMicrosoft Power Automate**
 Power Automateのライセンスレベルを確認する方法については、[こちら](https://docs.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types)を参照してください。
 * **OneDrive**
@@ -46,7 +46,7 @@ Power Automateのライセンスレベルを確認する方法については、
 
 ### 資格情報の取得
 
-このチュートリアルを完了するには、Adobe PDFサービス向けMicrosoft Power Automateで資格情報が既に設定されている必要があります。 この手順をまだ完了していない場合は、[説明](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfservices/getting-credentials-power-automate.html)を参照してください。
+このチュートリアルを完了するには、Adobe PDFサービス向けMicrosoft Power Automateで資格情報が既に設定されている必要があります。 この手順をまだ完了していない場合は、[説明](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate)を参照してください。
 
 ## パート1：新しいフローを作成し、WordをPDFに変換する
 

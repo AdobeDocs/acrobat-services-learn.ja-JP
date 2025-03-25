@@ -8,9 +8,9 @@ type: Tutorial
 jira: KT-8092
 thumbnail: KT-8092.jpg
 exl-id: 0e24c8fd-7fda-452c-96f9-1e7ab1e06922
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 複数のユーザーが含まれるwebサイトを操作する場合は、すべてのユーザーにスムーズなエクスペリエンスを提供するエクスペリエンスをデザインすることが重要です。
 
-次のようなシナリオを想像してください：雇用主が[求人情報をアップロード](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html)できるWebサイトがある。 求職者にとっては、投稿に関連するすべてのドキュメントを一貫した形式で簡単に表示できると便利です。 ただし、雇用主にとって、情報を添付するファイル形式は何でも構いません。 両方のユーザーの利便性を高めるために、アップロードしたすべての文書を自動的にPDFに変換し、投稿にインラインで埋め込むことができます。
+次のようなシナリオを想像してください：雇用主が[求人情報をアップロード](https://developer.adobe.com/document-services/use-cases/content-publishing/job-posting)できるWebサイトがある。 求職者にとっては、投稿に関連するすべてのドキュメントを一貫した形式で簡単に表示できると便利です。 ただし、雇用主にとって、情報を添付するファイル形式は何でも構いません。 両方のユーザーの利便性を高めるために、アップロードしたすべての文書を自動的にPDFに変換し、投稿にインラインで埋め込むことができます。
 
 ## 学習内容
 
@@ -37,13 +37,13 @@ ht-degree: 0%
 
 ## AdobeAPI資格情報を作成しています
 
-まず、Adobe PDF Embed API （無料で使用）およびAdobe PDF Services API用に[資格情報](https://www.adobe.com/go/dcsdks_credentials)を作成する必要があります（6か月間無料、その後[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で1つのドキュメントトランザクションにつき\$0.05になります）。 PDFサービスAPIの資格情報を作成する際に、[パーソナライズされたコードサンプルの作成]オプションをオンにします。 ZIPファイルを保存し、 pdftools-api-credentials.jsonとprivate.keyをNode.js Expressプロジェクトのルートディレクトリに抽出します。
+まず、Adobe PDF Embed API （無料で使用）およびAdobe PDF Services API用に[資格情報](https://www.adobe.com/go/dcsdks_credentials)を作成する必要があります（6か月間無料、その後[従量課金制](https://developer.adobe.com/document-services/pricing/main)で1つのドキュメントトランザクションにつき\$0.05になります）。 PDFサービスAPIの資格情報を作成する際に、[パーソナライズされたコードサンプルの作成]オプションをオンにします。 ZIPファイルを保存し、 pdftools-api-credentials.jsonとprivate.keyをNode.js Expressプロジェクトのルートディレクトリに抽出します。
 
-また、自由に使用できる埋め込みAPIのAPIキーも必要です。 [プロジェクト](https://console.adobe.io/projects)から、作成したプロジェクトに移動します。 次に、「**プロジェクトに追加**」をクリックし、「**API**」を選択します。 最後に、**PDF埋め込みAPI**&#x200B;をクリックします。
+また、自由に使用できる埋め込みAPIのAPIキーも必要です。 [プロジェクト](https://developer.adobe.com/console/projects)から、作成したプロジェクトに移動します。 次に、「**プロジェクトに追加**」をクリックし、「**API**」を選択します。 最後に、**PDF埋め込みAPI**&#x200B;をクリックします。
 
 PDF埋め込みAPIのドメインを指定します。 APIキーは公開されている必要があります（ブラウザーで実行されるコードで検索してください）。 ドメインを指定すると、別のドメインのユーザーがAPIキーを使用できなくなります。
 
-「localhost」をドメインとして使用することはできません。 「testing.local」などのドメインを指定し、コンピューター上のhostsファイルを編集して、ドメインをコンピューターの127.0.0.1にリダイレクトします。 次に、アプリケーションをlocalhost:3000でテストする代わりに、testing.local:3000でテストできます。 完了したら、プロジェクトページでPDF埋め込みAPIのAPIキーを探します。
+「localhost」をドメインとして使用することはできません。 「testing.local」などのドメインを指定し、コンピューター上のhostsファイルを編集して、そのドメインをコンピューターである127.0.0.1にリダイレクトします。 次に、アプリケーションをlocalhost:3000でテストする代わりに、testing.local:3000でテストできます。 完了したら、プロジェクトページでPDF埋め込みAPIのAPIキーを探します。
 
 ## アップロードフォームとハンドラーの追加
 
@@ -274,7 +274,7 @@ views/ディレクトリで、次の内容のjob.jadeファイルを作成しま
 
 ## 次の手順
 
-この実践チュートリアルでは、[!DNL Acrobat Services]でNode.jsを使用して、アップロードされた[求人情報](https://www.adobe.io/apis/documentcloud/dcsdk/job-posting.html)をさまざまな形式でPDFに変換する方法について説明しました。 作成されたPDFは、webページに埋め込まれました。 同じ機能をwebサイトに追加できるようになりました。これにより、求職者が見つけやすい求人情報やパンフレットなどを簡単にアップロードできます。 これらの機能は、誰もが夢の仕事を見つけるために必要な情報を得るのを助けます。
+この実践チュートリアルでは、[!DNL Acrobat Services]でNode.jsを使用して、アップロードされた[求人情報](https://developer.adobe.com/document-services/use-cases/content-publishing/job-posting)をさまざまな形式でPDFに変換する方法について説明しました。 作成されたPDFは、webページに埋め込まれました。 同じ機能をwebサイトに追加できるようになりました。これにより、求職者が見つけやすい求人情報やパンフレットなどを簡単にアップロードできます。 これらの機能は、誰もが夢の仕事を見つけるために必要な情報を得るのを助けます。
 
 [!DNL Acrobat Services]は、主要なドキュメント処理機能をwebサイトまたはアプリに追加するのに役立ちます。 これらのAPIの機能について詳しくは、次のquickstartドキュメントを参照してください。
 
@@ -282,4 +282,4 @@ views/ディレクトリで、次の内容のjob.jadeファイルを作成しま
 
 * [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-Webサイトにユーザーフレンドリーなドキュメント処理機能を追加するには、[無料体験版に新規登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)してください。 Adobe PDF Embed APIは常に無料で使用でき、Adobe PDF Services APIは6か月間が無料です。この後はドキュメントごとのトランザクションでわずか\$0.05になるため、事業の成長に合わせて[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で利用できます。
+Webサイトにユーザーフレンドリーなドキュメント処理機能を追加するには、[無料体験版に新規登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)してください。 Adobe PDF Embed APIは常に無料で使用でき、Adobe PDF Services APIは6か月間が無料です。この後はドキュメントごとのトランザクションでわずか\$0.05になるため、事業の成長に合わせて[従量課金制](https://developer.adobe.com/document-services/pricing/main)で利用できます。

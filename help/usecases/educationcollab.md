@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8091
 thumbnail: KT-8091.jpg
 exl-id: 570a635c-e539-4afc-a475-ecf576415217
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1385'
 ht-degree: 0%
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 教育機関は、PDF文書を使用して学習教材を学生と共有します。 PDFは、教員が文書を交換できる形式です。
 
-[Adobe PDFサービスAPI](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html)と[Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)をアプリに統合することで、教職員と生徒が共に学習できる単一のプラットフォームを提供できます。 例えば、アプリを使用して、学生は課題やレポートカードに関する質問を行ったり、グループの課題で共同作業を行うことができます。
+[Adobe PDFサービスAPI](https://developer.adobe.com/document-services/apis/pdf-services)と[Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed)をアプリに統合することで、教職員と生徒が共に学習できる単一のプラットフォームを提供できます。 例えば、アプリを使用して、学生は課題やレポートカードに関する質問を行ったり、グループの課題で共同作業を行うことができます。
 
 Node.jsアプリケーションがPDFサービスAPIにアクセスするための公式SDKがあります。 これにより、Microsoft WordやMicrosoft Excelなどの文書を
-PDF。 また、複数のレポートの結合、ページの並べ替え、PDFの保護など、より高度な操作を実行できます。 詳しくは、[製品ドキュメント](https://www.adobe.io/apis/documentcloud/dcsdk/)を参照してください。
+PDF。 また、複数のレポートの結合、ページの並べ替え、PDFの保護など、より高度な操作を実行できます。 詳しくは、[製品ドキュメント](https://developer.adobe.com/document-services/homepage/)を参照してください。
 
 ## 学習内容
 
-この実践チュートリアルでは、[教職員と生徒がPDFでリソースを簡単に共有できる](https://www.adobe.io/apis/documentcloud/dcsdk/student-teacher-collaboration.html)オンライン学習プラットフォームの作成方法について説明します。 このチュートリアルでは、Node.js JavaScriptランタイム(Node.js)とPDFサービスを使用して作成された[学習ポータル](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-tools-for-teachers)を使用します。
+この実践チュートリアルでは、[教職員と生徒がPDFでリソースを簡単に共有できる](https://developer.adobe.com/document-services/use-cases/collaboration/student-teacher-collaboration)オンライン学習プラットフォームの作成方法について説明します。 このチュートリアルでは、Node.js JavaScriptランタイム(Node.js)とPDFサービスを使用して作成された[学習ポータル](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-tools-for-teachers)を使用します。
 
 学習ポータルには次の機能があります。
 
@@ -67,7 +67,7 @@ PDF。 また、複数のレポートの結合、ページの並べ替え、PDF�
 学生は、あらゆる種類の1つまたは複数の文書(Microsoft Word、Excel、PowerPointなど)や、その他の一般的なテキストおよび画像ファイルの種類をPDFに変換できます。 ラーニングポータルは、PDFサービスを使用して、ファイルをPDFに変換します。
 
 独自の学習ポータルを作成するには、まず独自の資格情報を作成する必要があります。 [新規登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)して
-6か月間と最大1,000件の文書処理にPDFサービスAPIを無料で使用できます。 その後、クラスが割り当てを増やしているため、[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)でドキュメントトランザクションあたり\$0.05になります。
+6か月間と最大1,000件の文書処理にPDFサービスAPIを無料で使用できます。 その後、クラスが割り当てを増やしているため、[従量課金制](https://developer.adobe.com/document-services/pricing/main)でドキュメントトランザクションあたり\$0.05になります。
 
 学生がダッシュボードからドキュメントを選択すると、次のように表示されます。
 
@@ -171,7 +171,7 @@ PDF文書で注釈を有効にするには、引数`showAnnotationTools` : true�
 
 教師や学校は、学生がオンラインプラットフォームをどのように使用しているかを確認することが重要です。 これにより、教師は課題のパフォーマンスを向上させるのに役立つリソースを使用して学生をサポートできます。 PDF埋め込みAPIは、分析と統合され、ユーザーが文書を開く、読む、閉じるなど、発生するすべてのイベントを測定するために使用できます。 PDFサービスAPIを使用すると、教員は印刷、ダウンロード、ファイル編集を無効にして、アカデミックな学習の一貫性を維持することもできます。
 
-[Adobe Analytics](https://www.adobe.io/apis/experiencecloud/analytics.html)ライセンスをお持ちの場合は、[すぐに使える統合](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfembed/controlpdfexperience.html?lang=en#adobe-analytics)を使用できます。 それ以外の場合は、コールバックを使用して、PDFサービスを[Google](https://experienceleague.adobe.com/docs/document-services/tutorials/pdfembed/controlpdfexperience.html?lang=en#google-analytics)などの他の分析プロバイダーと連携します。
+[Adobe Analytics](https://developer.adobe.com/analytics-apis/docs/2.0/)ライセンスをお持ちの場合は、[すぐに使える統合](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience#adobe-analytics)を使用できます。 それ以外の場合は、コールバックを使用して、PDFサービスを[Google](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience#google-analytics)などの他の分析プロバイダーと連携します。
 
 ドキュメントイベントの測定を有効にするには、Adobe DCビューインスタンスで`registerCallback`メソッドを使用してイベントハンドラーをアタッチします。 文書を開いたり、ページを読んだりといった基本的なメトリクスをコンソールに表示できます。 メトリックはログに保存したり、他の分析ストアに公開することもできます。
 
@@ -197,7 +197,7 @@ Webブラウザーコンソールの画面キャプチャを次に示します�
 
 このスクリーンショットは、学生が課題ファイルを開き、最初のページを読んだことを示しています。追加ページまでスクロールしなかったか、文書に1ページしかなかった場合に、ファイルをダウンロードしたことを示しています。 これらの指標を収集して分析を実行し、学生の行動を研究できます。
 
-また、[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html)はPDF埋め込みAPIと統合されているため、Adobe Analyticsスイートのサブスクリプションをお持ちの場合は、サブスクリプションでメトリックスを公開できます。 Adobe Analyticsでメトリックを公開するには、スイートIDをPDF埋め込みAPIコンストラクタに渡すだけです。 (PDFサービスAPI資格情報ではなく、PDF埋め込みAPI資格情報を使用する必要があります)。
+また、[Adobe Analytics](https://business.adobe.com/products/adobe-analytics.html)はPDF埋め込みAPIと統合されているため、Adobe Analyticsスイートのサブスクリプションをお持ちの場合は、サブスクリプションでメトリックスを公開できます。 Adobe Analyticsでメトリックを公開するには、スイートIDをPDF埋め込みAPIコンストラクタに渡すだけです。 (PDFサービスAPI資格情報ではなく、PDF埋め込みAPI資格情報を使用する必要があります)。
 
 次に、スイートIDをPDFのEmbed APIコンストラクタに渡す方法を示すサンプルコードを示します。
 
@@ -211,8 +211,8 @@ var adobeDCView = new AdobeDC.View({
 
 ## 次の手順
 
-この実践チュートリアルでは、PDFサービスAPIとPDF埋め込みAPIを使用して学習ポータルを構築する方法を確認し、[生徒と教職員の効果的な共同作業](https://www.adobe.io/apis/documentcloud/dcsdk/student-teacher-collaboration.html)を促進しました。 このポータルを使用すると、教員は学習教材を任意の形式でアップロードし、PDFサービスAPIを使用してPDFに変換できます。 その後、学生はPDF埋め込みAPIを使用して、これらのPDFをプレビューできます。
+この実践チュートリアルでは、PDFサービスAPIとPDF埋め込みAPIを使用して学習ポータルを構築する方法を確認し、[生徒と教職員の効果的な共同作業](https://developer.adobe.com/document-services/use-cases/collaboration/student-teacher-collaboration)を促進しました。 このポータルを使用すると、教員は学習教材を任意の形式でアップロードし、PDFサービスAPIを使用してPDFに変換できます。 その後、学生はPDF埋め込みAPIを使用して、これらのPDFをプレビューできます。
 
 これで、PDFレポートに注釈を付ける方法、注釈をアーカイブする方法、およびPDFレポートの使用状況を追跡する方法が分かったので、これらのソリューションを独自のプロジェクトに導入できるようになりました。
 
-[!DNL Adobe Acrobat Services]個のAPIを使用して、Webサイト上のユーザーフレンドリーでインタラクティブなPDF体験を作成できます。 6か月間Adobe PDFサービスAPIを無料で利用した後は、(AWSまたは直接契約を通じて)[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で、1件の文書取引でわずか$ 0.05の利用が可能です。 時間制限なしでAdobe PDF Embedを無料で使用できます。 無料アカウントを作成して、今すぐ[使用を開始](https://www.adobe.com/go/dcsdks_credentials)しましょう。
+[!DNL Adobe Acrobat Services]個のAPIを使用して、Webサイト上のユーザーフレンドリーでインタラクティブなPDF体験を作成できます。 6か月間Adobe PDFサービスAPIを無料で利用した後は、(AWSまたは直接契約を通じて)[従量課金制](https://developer.adobe.com/document-services/pricing/main)で、1件の文書取引でわずか$ 0.05の利用が可能です。 時間制限なしでAdobe PDF Embedを無料で使用できます。 無料アカウントを作成して、今すぐ[使用を開始](https://www.adobe.com/go/dcsdks_credentials)しましょう。

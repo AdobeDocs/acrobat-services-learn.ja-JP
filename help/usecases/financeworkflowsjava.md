@@ -1,6 +1,6 @@
 ---
 title: Javaでの財務文書ワークフローの管理
-description: 「[!DNL Adobe Acrobat Services]は、PDFの財務文書のデータを処理および抽出するために必要なすべてのツール、サービス、および機能を提供します」
+description: '[!DNL Adobe Acrobat Services]は、PDFの財務文書のデータを処理および抽出するために必要なすべてのツール、サービス、および機能を提供します'
 feature: Use Cases
 role: Developer
 level: Intermediate
@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-7482
 thumbnail: KT-7482.jpg
 exl-id: 3bdc2610-d497-4a54-afc0-8b8baa234960
-source-git-commit: ad13c28a0c218fc0027afc02445e5ed532c2340d
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 学習内容
 
-この実践チュートリアルでは、[!DNL Java Spring Boot]個のアプリケーションに[!DNL Adobe Acrobat Services]個のAPIを使用する方法について学習します。 PDF文書からコンテンツを抽出してExcelなどの他のデータ形式に変換し、複数のリソースを結合してPDFを保護するモデルビューコントローラ(MVC)アプリを構築します。 このチュートリアルでは、Adobe [PDF埋め込みAPI](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)を使用してPDF文書を処理し、Webサイトで表示する方法について説明します。
+この実践チュートリアルでは、[!DNL Java Spring Boot]個のアプリケーションに[!DNL Adobe Acrobat Services]個のAPIを使用する方法について学習します。 PDF文書からコンテンツを抽出してExcelなどの他のデータ形式に変換し、複数のリソースを結合してPDFを保護するモデルビューコントローラ(MVC)アプリを構築します。 このチュートリアルでは、Adobe [PDF埋め込みAPI](https://developer.adobe.com/document-services/apis/pdf-embed)を使用してPDF文書を処理し、Webサイトで表示する方法について説明します。
 
 ## 関連APIとリソース
 
@@ -45,11 +45,11 @@ ht-degree: 0%
 
 * Adobe PDF Embed API
 
-資格情報を作成した後、Resourcesセクション内の[!DNL Spring Boot]アプリケーションにPDFサービスAPI資格情報と秘密キーをコピーします。 [!DNL Adobe Acrobat Services] Webサイトの[MavenとGradleのライブラリと依存関係](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=services)の詳細をご覧ください。 作業を進める前に、必要なすべてのパッケージとライブラリを設定してください。
+資格情報を作成した後、Resourcesセクション内の[!DNL Spring Boot]アプリケーションにPDFサービスAPI資格情報と秘密キーをコピーします。 [!DNL Adobe Acrobat Services] Webサイトの[MavenとGradleのライブラリと依存関係](https://developer.adobe.com/document-services/docs/overview/pdf-services-api)の詳細をご覧ください。 作業を進める前に、必要なすべてのパッケージとライブラリを設定してください。
 
 ![PDFサービスAPI資格情報のディレクトリの場所のスクリーンショット](assets/FAWJ_1.png)
 
-ログサービスを構成するには、[Adobeドキュメント](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=services)にアクセスし、[ログ]セクションまでスクロールします。
+ログサービスを構成するには、[Adobeドキュメント](https://developer.adobe.com/document-services/docs/overview/pdf-services-api)にアクセスし、[ログ]セクションまでスクロールします。
 
 >[!NOTE]
 >
@@ -195,8 +195,8 @@ PDF埋め込みAPIには、PDFのプレビューとレポートの注釈付け�
 
 ## 次の手順
 
-この実践チュートリアルでは、[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/)のAPIについて説明し、これらのサービスを使用してPDFデータを処理し、財務上の意思決定に関するレポートを作成する方法について説明しました。 サンプルフレームワークとして[!DNL Java Spring Boot]を使用してAPIをシステムに組み込む方法を示し、PDF文書の迅速な処理がどれほど簡単かを示しました。
+この実践チュートリアルでは、[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage/)のAPIについて説明し、これらのサービスを使用してPDFデータを処理し、財務上の意思決定に関するレポートを作成する方法について説明しました。 サンプルフレームワークとして[!DNL Java Spring Boot]を使用してAPIをシステムに組み込む方法を示し、PDF文書の迅速な処理がどれほど簡単かを示しました。
 
-[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/)を検索して、Adobe PDFサービスがお客様のビジネスに何ができるかを確認してください。 SDKで利用できるその他の機能については、[GitHubリポジトリー](https://github.com/adobe/pdftools-java-sdk-samples)でサンプルを確認し、[Application Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)によってPDF内のPDFをすばやく表示する方法を確認してください。
+[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage/)を検索して、Adobe PDFサービスがお客様のビジネスに何ができるかを確認してください。 SDKで利用できるその他の機能については、[GitHubリポジトリー](https://github.com/adobe/pdftools-java-sdk-samples)でサンプルを確認し、[Application Embed API](https://developer.adobe.com/document-services/apis/pdf-embed)によってPDF内のPDFをすばやく表示する方法を確認してください。
 
-金融関係の顧客に役立つPDFレポートを作成したり、文書を簡単に組み合わせて操作するには、まず今すぐ無料の[Adobe開発者アカウント](https://www.adobe.io/apis/documentcloud/dcsdk/)にサインアップしてください。
+金融関係の顧客に役立つPDFレポートを作成したり、文書を簡単に組み合わせて操作するには、まず今すぐ無料の[Adobe開発者アカウント](https://developer.adobe.com/document-services/homepage/)にサインアップしてください。

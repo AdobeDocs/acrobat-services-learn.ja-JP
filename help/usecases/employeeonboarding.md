@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10203
 thumbnail: KT-10203.jpg
 exl-id: 0186b3ee-4915-4edd-8c05-1cbf65648239
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1434'
 ht-degree: 0%
@@ -35,9 +35,9 @@ APIではありませんが、開発者は無料の[PDF埋め込みAPI](https://
 
 ## Acrobat Signとは
 
-[Acrobat Sign](https://www.adobe.com/jp/sign.html)は、電子サインサービスの分野で世界をリードしています。 複数の署名を含む様々なワークフローを使用して、署名用に文書を送信できます。 Acrobat Signでは、署名や追加情報が必要なワークフローもサポートしています。 これらの機能はすべて、柔軟なオーサリングシステムを備えた強力なダッシュボードでサポートされています。
+[Acrobat Sign](https://www.adobe.com/acrobat/business/sign.html)は、電子サインサービスの分野で世界をリードしています。 複数の署名を含む様々なワークフローを使用して、署名用に文書を送信できます。 Acrobat Signでは、署名や追加情報が必要なワークフローもサポートしています。 これらの機能はすべて、柔軟なオーサリングシステムを備えた強力なダッシュボードでサポートされています。
 
-[!DNL Acrobat Services]と同様に、Acrobat Signには[無料体験版](https://www.adobe.com/sign.html#sign_free_trial)があります。これにより、開発者はダッシュボード経由と使いやすいRESTベースのAPIの両方で署名プロセスをテストできます。
+[!DNL Acrobat Services]と同様に、Acrobat Signには[無料体験版](https://www.adobe.com/acrobat/business/sign.html#sign_free_trial)があります。これにより、開発者はダッシュボード経由と使いやすいRESTベースのAPIの両方で署名プロセスをテストできます。
 
 ## オンボーディングシナリオ
 
@@ -192,7 +192,7 @@ combineFilesOperation.execute(executionContext)
 
 ## 署名プロセス
 
-オンボーディングプロセスの最後の段階で、従業員は、内で定義されたすべてのポリシーを読み、同意したことを示す契約書に署名する必要があります。 [Acrobat Sign](https://www.adobe.com/jp/sign.html)は、[API](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html)を介した自動化ワークフローを含め、さまざまなワークフローや統合をサポートしています。 大雑把に言えば、最終段階は次の通り。
+オンボーディングプロセスの最後の段階で、従業員は、内で定義されたすべてのポリシーを読み、同意したことを示す契約書に署名する必要があります。 [Acrobat Sign](https://www.adobe.com/acrobat/business/sign.html)は、[API](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html)を介した自動化ワークフローを含め、さまざまなワークフローや統合をサポートしています。 大雑把に言えば、最終段階は次の通り。
 
 まず、署名が必要なフォームを含む文書をデザインします。 これには、 Adobe Signユーザーダッシュボードでデザインしたビジュアルを含め、複数の方法があります。 別のオプションとして、Document Generation Wordアドインを使用してタグを挿入することもできます。 次の使用例は、署名と日付を要求します。
 
@@ -206,6 +206,6 @@ combineFilesOperation.execute(executionContext)
 
 ## 実際に試す
 
-この記事に記載されているすべての項目を今すぐテストできます。 [!DNL Adobe Acrobat Services] API [無料体験版](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)では現在、6か月間で1,000件の無料リクエストが可能です。 Acrobat Signの[無料体験版](https://www.adobe.com/sign.html#sign_free_trial)では、透かし入りの契約書をテスト用に送信できます。
+この記事に記載されているすべての項目を今すぐテストできます。 [!DNL Adobe Acrobat Services] API [無料体験版](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)では現在、6か月間で1,000件の無料リクエストが可能です。 Acrobat Signの[無料体験版](https://www.adobe.com/acrobat/business/sign.html#sign_free_trial)では、透かし入りの契約書をテスト用に送信できます。
 
-ご質問がある場合は[サポートフォーラム](https://community.adobe.com/t5/document-services-apis/ct-p/ct-Document-Cloud-SDK)は、Adobeの開発者やサポートスタッフによって毎日監視されています。 さらにインスピレーションを得るには、次の[ペーパークリップ](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)のエピソードを必ずキャッチしてください。 ニュースやデモ、お客様とのトークを定期的に行っています。
+ご質問がある場合は [サポートフォーラム](https://community.adobe.com/t5/acrobat-services-api/ct-p/ct-Document-Cloud-SDK)は、Adobeの開発者やサポートスタッフによって毎日監視されています。 さらにインスピレーションを得るには、次の[ペーパークリップ](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)のエピソードを必ずキャッチしてください。 ニュースやデモ、お客様とのトークを定期的に行っています。

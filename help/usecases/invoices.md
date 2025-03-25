@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8145
 thumbnail: KT-8145.jpg
 exl-id: 5871ef8d-be9c-459f-9660-e2c9230a6ceb
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ビジネスが活況を呈している場合には素晴らしいことですが、これらすべての請求書を準備する時期になると、生産性が低下します。 請求書の手動生成には時間がかかるだけでなく、エラーが発生して費用が失われたり、誤った金額で顧客を怒らせたりするリスクもあります。
 
-例えば、ダニエルは、医療用品会社の[経理部門](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html)[に勤務しています](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html)。 月末になったので、彼女はいくつかの異なるシステムから情報を引き出し、その精度を再確認し、請求書をフォーマットしています。 この作業が完了すると、彼女はついに文書をPDFに変換し（専用のソフトウェアを購入しなくても誰でも文書を閲覧できます）、それぞれのお客様にパーソナライズされた請求書を送信できるようになります。
+例えば、ダニエルは、医療用品会社の[経理部門](https://developer.adobe.com/document-services/use-cases/financial/invoices)[に勤務しています](https://developer.adobe.com/document-services/use-cases/financial/invoices)。 月末になったので、彼女はいくつかの異なるシステムから情報を引き出し、その精度を再確認し、請求書をフォーマットしています。 この作業が完了すると、彼女はついに文書をPDFに変換し（専用のソフトウェアを購入しなくても誰でも文書を閲覧できます）、それぞれのお客様にパーソナライズされた請求書を送信できるようになります。
 
 毎月の請求書が完成しても、Danielleはその請求書を逃すことはできません。 一部のお客様は月額以外の請求サイクルを使用しているため、常に誰かの請求書を作成しています。 場合によっては、お客様が請求書を編集して未払いすることがあります。 その後、Danielleは、この請求書の不一致のトラブルシューティングに時間を費やします。 この調子で彼女は仕事を全部ついていくために助手を雇う必要がある。
 
@@ -37,9 +37,9 @@ Danielleが必要としているのは、月末にバッチで請求書を迅速
 
 * [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-* [Adobe文書生成API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
+* [Adobe文書生成API](https://developer.adobe.com/document-services/apis/doc-generation)
 
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 
 * [プロジェクトコード](https://github.com/afzaal-ahmad-zeeshan/adobe-pdf-invoice-generation)
 
@@ -107,7 +107,7 @@ Document Generation APIは、配列内の要素の集約などの複雑な操作
 
 Adobe PDF Services Node.js software development kit(SDK)を使用して、MicrosoftのWord文書とJSON文書を組み合わせます。 Document Generation APIを使用して、Node.jsアプリケーションを構築して請求書を作成します。
 
-PDFサービスAPIにはDocument Generation Serviceが含まれているため、両方に同じ資格情報を使用できます。 [6か月間の無料体験版](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)を利用した後、文書のトランザクション1件につきわずか0.05ドルをお支払いください。
+PDFサービスAPIにはDocument Generation Serviceが含まれているため、両方に同じ資格情報を使用できます。 [6か月間の無料体験版](https://developer.adobe.com/document-services/pricing/main)を利用した後、文書のトランザクション1件につきわずか0.05ドルをお支払いください。
 
 PDFを結合するコードは次のとおりです。
 
@@ -224,11 +224,11 @@ async function applyPassword(password, inputFile, outputFile) {
 
 ## 次の手順
 
-この実践チュートリアルでは、Danielleが[請求](https://www.adobe.io/apis/documentcloud/dcsdk/invoices.html)で会計を処理するのに役立つ簡単なアプリを作成しました。 PDFサービスAPIとDocument Generation SDKを使用して、JSONドキュメントから顧客注文情報をMicrosoft Wordテンプレートに入力し、PDFの請求書を作成しました。 次に、[パスワードサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)によってPDF保護サービスを使用して、各文書をパスワードで保護しました。
+この実践チュートリアルでは、Danielleが[請求](https://developer.adobe.com/document-services/use-cases/financial/invoices)で会計を処理するのに役立つ簡単なアプリを作成しました。 PDFサービスAPIとDocument Generation SDKを使用して、JSONドキュメントから顧客注文情報をMicrosoft Wordテンプレートに入力し、PDFの請求書を作成しました。 次に、[パスワードサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)によってPDF保護サービスを使用して、各文書をパスワードで保護しました。
 
 Danielleは請求書を自動的に生成できるので、顧客が請求書を編集する心配はありません。すべての手作業をサポートするアシスタントを雇う必要もありません。 買掛金ファイルのコスト削減に余分な時間をかけることができます。
 
-簡単であることが分かりました。他のAdobeツールを使用して、このシンプルなアプリを拡張し、webサイトに請求書を埋め込むことができます。 例えば、顧客はいつでも請求書や残高を表示できます。 [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html)は無料でご利用いただけます。 さらに、人事部や営業部に移動して、契約書を自動化し、電子サインを収集することもできます。
+簡単であることが分かりました。他のAdobeツールを使用して、このシンプルなアプリを拡張し、webサイトに請求書を埋め込むことができます。 例えば、顧客はいつでも請求書や残高を表示できます。 [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed)は無料でご利用いただけます。 さらに、人事部や営業部に移動して、契約書を自動化し、電子サインを収集することもできます。
 
-あらゆる可能性を試し、独自の便利なアプリケーションの構築を開始するには、無料の[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)アカウントを作成して、今すぐ使用を開始してください。 6か月間の無料体験後は[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)です
+あらゆる可能性を試し、独自の便利なアプリケーションの構築を開始するには、無料の[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)アカウントを作成して、今すぐ使用を開始してください。 6か月間の無料体験後は[従量課金制](https://developer.adobe.com/document-services/pricing/main)です
 ビジネスの拡大・縮小に合わせて、文書トランザクションあたり0.05ドルで利用できます。

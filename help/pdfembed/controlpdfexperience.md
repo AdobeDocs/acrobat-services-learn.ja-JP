@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-7487
 thumbnail: KT-7487.jpg
 exl-id: 64ffdacb-d6cb-43e7-ad10-bbd8afc0dbf4
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 0%
@@ -63,7 +63,7 @@ ht-degree: 0%
 **必要な項目**
 
 * チュートリアルリソース[ダウンロード](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial)
-* Adobe ID [こちら](https://accounts.adobe.com/jp)から入手してください
+* Adobe ID [こちら](https://account.adobe.com/ja)から入手してください
 * Webサーバー（Node JS、PHPなど）
 * HTML/JavaScript/CSSに関する実務知識
 
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 ### 資格情報の取得
 
-1. [Adobe.ioのwebサイト](https://www.adobe.io/)に移動します。
+1. [Adobe.ioのwebサイト](https://developer.adobe.com/)に移動します。
 1. 「魅力的なドキュメントエクスペリエンスを構築する」の「**[!UICONTROL 詳細情報]**」をクリックします。
 
    ![[詳細情報]ボタンのスクリーンショット](assets/ControlPDF_1.png)
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 使用するコードを作成しました。 独自のコードを使用できますが、デモはチュートリアルのリソースに関連しています。 サンプルコード[こちら](https://github.com/benvanderberg/adobe-pdf-embed-api-tutorial)をダウンロードします。
 
-1. [[!DNL Adobe Acrobat Services] webサイト](https://www.adobe.io/apis/documentcloud/dcsdk/)に移動します。
+1. [[!DNL Adobe Acrobat Services] webサイト](https://developer.adobe.com/document-services/homepage/)に移動します。
 
    ![[!DNL Adobe Acrobat Services]のWebサイトのスクリーンショット](assets/ControlPDF_6.png)
 
@@ -218,7 +218,7 @@ ht-degree: 0%
 
 PDF埋め込みAPIの一部として使用できるJavaScriptイベントは数多くあります。 [!DNL Adobe Acrobat Services]のドキュメントからアクセスできます。
 
-1. [ドキュメント](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html)サイトに移動します。
+1. [ドキュメント](https://developer.adobe.com/document-services/docs/overview)サイトに移動します。
 1. APIの一部として使用できる様々なイベントタイプを確認します。 これらは参考になり、今後のプロジェクトでも役立ちます。
 
    ![参照ガイドのスクリーンショット](assets/ControlPDF_17.png)
@@ -326,4 +326,4 @@ Adobe PDF Embed APIは、Adobe Analyticsとの事前定義済みの連携を提�
 
 ## その他の参考資料
 
-その他のリソースは、[こちら](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html)で確認できます。
+その他のリソースは、[こちら](https://developer.adobe.com/document-services/docs/overview)で確認できます。

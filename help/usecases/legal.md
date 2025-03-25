@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8097
 thumbnail: KT-8097.jpg
 exl-id: e0c32082-4f8f-4d8b-ab12-55d95b5974c5
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1890'
 ht-degree: 0%
@@ -19,29 +19,29 @@ ht-degree: 0%
 
 ![使用事例の英雄バナー](assets/UseCaseLegalHero.jpg)
 
-デジタル化には課題が伴います。 現在、ほとんどの組織には、作成、編集、承認、および別の関係者による署名が必要な[法的契約](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html)の多くの種類があります。 これらの法的契約では、多くの場合、独自のカスタマイズとブランディングが必要になります。 組織は、安全を確保するために、署名後に保護された形式で保存する必要がある場合もあります。 これらすべてを実現するには、堅牢なドキュメント生成および管理ソリューションが必要です。
+デジタル化には課題が伴います。 現在、ほとんどの組織には、作成、編集、承認、および別の関係者による署名が必要な[法的契約](https://developer.adobe.com/document-services/use-cases/agreements-and-contracts/legal-contracts)の多くの種類があります。 これらの法的契約では、多くの場合、独自のカスタマイズとブランディングが必要になります。 組織は、安全を確保するために、署名後に保護された形式で保存する必要がある場合もあります。 これらすべてを実現するには、堅牢なドキュメント生成および管理ソリューションが必要です。
 
 多くのソリューションには、文書生成の機能が備わっていますが、データ入力や条件ロジック（特定のシナリオにのみ適用する条項など）をカスタマイズすることはできません。 会社の法的テンプレートを手動で更新するのは困難で、これらの文書が広範に渡るにつれエラーが発生しやすくなります。 これらのプロセスを自動化する必要性は非常に大きい。
 
 ## 学習内容
 
-この実践チュートリアルでは、ドキュメント内のカスタム入力フィールドの生成で[[!DNL Adobe Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)の機能を確認します。 また、生成された文書を保護されたポータブルドキュメントフォーマット(PDF)に簡単に変換して、データが操作されないようにする方法についても説明します。
+この実践チュートリアルでは、ドキュメント内のカスタム入力フィールドの生成で[[!DNL Adobe Acrobat Services] API](https://developer.adobe.com/document-services/apis/doc-generation)の機能を確認します。 また、生成された文書を保護されたポータブルドキュメントフォーマット(PDF)に簡単に変換して、データが操作されないようにする方法についても説明します。
 
 このチュートリアルでは、契約書からPDFへのコンバージョンを学習する際のプログラミングを少々取り上げます。 [Microsoft Word](https://www.microsoft.com/en-us/download/office.aspx)と[Node.js](https://nodejs.org/)をPCにインストールすると、効率的に作業を進めることができます。 Node.jsおよび[ES6構文](https://www.w3schools.com/js/js_es6.asp)の基本的な理解も推奨されます。
 
 ## 関連APIとリソース
 
-* [Adobe文書生成API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
+* [Adobe文書生成API](https://developer.adobe.com/document-services/apis/doc-generation)
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 
 * [プロジェクトコード](https://github.com/agavitalis/adobe_legal_contracts.git)
 
 ## テンプレート文書の作成
 
-Microsoft Wordアプリケーションを使用するか、Adobeの[サンプルWordテンプレート](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html#sample-blade)をダウンロードして、法的文書を作成できます。 Adobeそれでも、Microsoft Word用の[Adobe Document Generation Taggerアドイン](https://www.adobe.io/apis/documentcloud/dcsdk/docs.html?view=docgen-addin)などのヘルパーツールを使用せずに、入力をカスタマイズしてこれらの文書にデジタル署名を行うことは簡単ではありません。
+Microsoft Wordアプリケーションを使用するか、Adobeの[サンプルWordテンプレート](https://developer.adobe.com/document-services/apis/doc-generation#sample-blade)をダウンロードして、法的文書を作成できます。 Adobeそれでも、Microsoft Word用の[Adobe Document Generation Taggerアドイン](https://developer.adobe.com/document-services/docs/overview/document-generation-api/wordaddin)などのヘルパーツールを使用せずに、入力をカスタマイズしてこれらの文書にデジタル署名を行うことは簡単ではありません。
 
 Document Generation Taggerは、タグを使用した文書のシームレスなカスタマイズを可能にするMicrosoft Wordアドインです。 これにより、JSONデータを使用して動的に入力する文書テンプレートに動的フィールドを作成できます。
 
@@ -175,7 +175,7 @@ npm install express body-parser morgan multer hbs path config mongoose
 
 これらのコードスニペットでは、ビューのHandlebarsテンプレートエンジンなどのアプリケーション依存関係をインストールしました。
 
-このチュートリアルでは、[[!DNL Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/)を使用して文書をPDFに変換することに重点を置いています。 したがって、このNode.jsアプリケーションの構築方法を順を追って説明する必要はありません。 ただし、[GitHub](https://github.com/agavitalis/adobe_legal_contracts.git)で動作している完全なNode.jsアプリケーションコードを取得することはできます。
+このチュートリアルでは、[[!DNL Acrobat Services] API](https://developer.adobe.com/document-services/homepage/)を使用して文書をPDFに変換することに重点を置いています。 したがって、このNode.jsアプリケーションの構築方法を順を追って説明する必要はありません。 ただし、[GitHub](https://github.com/agavitalis/adobe_legal_contracts.git)で動作している完全なNode.jsアプリケーションコードを取得することはできます。
 
 ## [!DNL Adobe Acrobat Services] APIをNode.jsアプリケーションに統合しています
 
@@ -187,7 +187,7 @@ npm install express body-parser morgan multer hbs path config mongoose
 
 * Adobe文書生成API
 
-[!DNL Acrobat Services] APIを使用するには資格情報が必要です(PDFのEmbed API資格情報とは異なります)。 有効な資格情報がない場合は、以下の画面キャプチャに示すように、[登録](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)してワークフローを完了してください。 [6か月間の無料体験後は従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で、ドキュメントのトランザクション1件につきわずか0.05ドルです。
+[!DNL Acrobat Services] APIを使用するには資格情報が必要です(PDFのEmbed API資格情報とは異なります)。 有効な資格情報がない場合は、以下の画面キャプチャに示すように、[登録](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)してワークフローを完了してください。 [6か月間の無料体験後は従量課金制](https://developer.adobe.com/document-services/pricing/main)で、ドキュメントのトランザクション1件につきわずか0.05ドルです。
 
 ![新しい資格情報の作成のスクリーンショット](assets/legal_6.png)
 
@@ -424,8 +424,8 @@ module.exports = {listFiles, previewPDF, downloadPDF };
 この実践チュートリアルでは、Document Generation Tagger Microsoft Wordアドインを使用して文書にタグ付けしました。 次に、[!DNL Acrobat Services] APIをNode.jsアプリケーションに統合し、
 タグ付き文書をダウンロード可能なPDF形式に変換しましたが、PDFに直接契約書を作成することもできます。 最後に、Adobe PDF Embed APIを使用して、生成されたPDFを検証および署名用にプレビューしました。
 
-完成したアプリを使用すると、[法的な契約テンプレート](https://www.adobe.io/apis/documentcloud/dcsdk/legal-contracts.html)に動的フィールドをタグ付けしたり、PDFに変換したり、プレビューしたり、[!DNL Acrobat Services]のAPIを使用して署名したりすることが簡単になります。 一意の契約を作成するのに時間を費やす代わりに、チームは各クライアントに正しい契約を自動的に送信し、ビジネスの成長により多くの時間を費やすことができます。
+完成したアプリを使用すると、[法的な契約テンプレート](https://developer.adobe.com/document-services/use-cases/agreements-and-contracts/legal-contracts)に動的フィールドをタグ付けしたり、PDFに変換したり、プレビューしたり、[!DNL Acrobat Services]のAPIを使用して署名したりすることが簡単になります。 一意の契約を作成するのに時間を費やす代わりに、チームは各クライアントに正しい契約を自動的に送信し、ビジネスの成長により多くの時間を費やすことができます。
 
-組織は、[!DNL Adobe Acrobat Services]個のAPIを使用して、完全性と使いやすさを実現しています。 特に、[6か月間の無料体験後、従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)をお楽しみいただけます。 君は使った分だけお金を払う。 さらに、PDF埋め込みAPIは常に無料です。
+組織は、[!DNL Adobe Acrobat Services]個のAPIを使用して、完全性と使いやすさを実現しています。 特に、[6か月間の無料体験後、従量課金制](https://developer.adobe.com/document-services/pricing/main)をお楽しみいただけます。 君は使った分だけお金を払う。 さらに、PDF埋め込みAPIは常に無料です。
 
 文書のフローを改善して、生産性を向上させましょう。 [今すぐ](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を開始してください。

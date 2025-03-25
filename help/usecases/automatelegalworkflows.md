@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10202
 thumbnail: KT-10202.jpg
 exl-id: 2a1752b8-9641-40cc-a0af-1dce6cf49346
-source-git-commit: c74a36116349490af29e66fd81ad59c93174c258
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '2826'
 ht-degree: 0%
@@ -362,7 +362,7 @@ var outputFileName = path.join('output', 'salesOrder_'+Date.now()+".docx");
 
 ## 契約書を署名用に送信
 
-[Adobe Acrobat Sign](https://www.adobe.com/jp/sign.html)を使用すると、1人または複数の受信者に契約書を送信して、文書の閲覧や署名を依頼できます。 REST APIを使用すると、署名用に文書を送信する使いやすいユーザーエクスペリエンスによって、Word、PDF、HTMLなどの形式を選択して署名用に文書を送信できます。
+[Adobe Acrobat Sign](https://www.adobe.com/acrobat/business/sign.html)を使用すると、1人または複数の受信者に契約書を送信して、文書の閲覧や署名を依頼できます。 REST APIを使用すると、署名用に文書を送信する使いやすいユーザーエクスペリエンスによって、Word、PDF、HTMLなどの形式を選択して署名用に文書を送信できます。
 
 次の例では、REST APIドキュメントページを使用して、以前に生成されたドキュメントを取得し、署名用に送信する方法について説明します。 まず、Acrobat Sign webインターフェイスを使用する方法と、REST APIを使用する方法を説明します。
 

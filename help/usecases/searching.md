@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8095
 thumbnail: KT-8095.jpg
 exl-id: a22230b5-1ff2-4870-84da-f06a904c99e1
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1298'
 ht-degree: 0%
@@ -135,7 +135,7 @@ Ensure that the content of your package.json file is similar to this code snippe
 
 これらのAPIにより、一連のクラウドベースのWebサービスを介してPDFコンテンツの生成、操作、変換が自動化されます。
 
-資格情報を取得するには、[登録](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)してワークフローを完了する必要があります。 PDF埋め込みAPIは無料で使用できます。 PDFサービスAPIとDocument Generation APIは6か月間無料で利用できます。 体験版が終了すると、1つのドキュメントトランザクションにつき[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で課金されます。 お客様の会社が成長し、より多くの契約を処理するにつれて、お支払いいただきます。
+資格情報を取得するには、[登録](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)してワークフローを完了する必要があります。 PDF埋め込みAPIは無料で使用できます。 PDFサービスAPIとDocument Generation APIは6か月間無料で利用できます。 体験版が終了すると、1つのドキュメントトランザクションにつき[従量課金制](https://developer.adobe.com/document-services/pricing/main)で課金されます。 お客様の会社が成長し、より多くの契約を処理するにつれて、お支払いいただきます。
 
 ![資格情報の作成のスクリーンショット](assets/searching_1.png)
 
@@ -431,4 +431,4 @@ res.download(download.link);
 [!DNL Acrobat Services]個のAPIの使い方をよく理解したので、練習を積んでスキルを向上させることができます。 このチュートリアルで使用したリポジトリーをコピーして、先ほど学習したスキルを試すことができます。 さらに優れた点として、[!DNL Acrobat Services]個のAPIの可能性を無制限に調査しながら、このアプリケーションを再構築できます。
 
 独自のアプリでドキュメントの共有とレビューを有効にしますか？ [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)にサインアップ
-開発者アカウント。 6か月間の無料体験版を利用した後、[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で、ビジネスの成長に合わせて文書トランザクションあたり\$0.05を支払うことができます。
+開発者アカウント。 6か月間の無料体験版を利用した後、[従量課金制](https://developer.adobe.com/document-services/pricing/main)で、ビジネスの成長に合わせて文書トランザクションあたり\$0.05を支払うことができます。

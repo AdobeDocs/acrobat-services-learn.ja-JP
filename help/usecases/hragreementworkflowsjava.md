@@ -1,6 +1,6 @@
 ---
 title: Javaでの人事文書ワークフロー
-description: 「[!DNL Adobe Acrobat Services]個のAPIで、PDF機能を人事Webアプリケーションに簡単に組み込むことができます」
+description: '[!DNL Adobe Acrobat Services]個のAPIで、PDF機能を人事Webアプリケーションに簡単に組み込むことができます'
 feature: Use Cases
 role: Developer
 level: Intermediate
@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-7474
 thumbnail: KT-7474.jpg
 exl-id: add4cc5c-06e3-4ceb-930b-e8c9eda5ca1f
-source-git-commit: ad13c28a0c218fc0027afc02445e5ed532c2340d
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1777'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 * [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 
 * [プロジェクトコード](https://github.com/dawidborycki/adobe-sign)
 
@@ -392,9 +392,9 @@ Webブラウザーでレンダリングすると、PDFは次のようになり�
 
 まず、[開発者アカウント](https://acrobat.adobe.com/jp/ja/sign/developer-form.html)を登録します。
 
-[Adobe Signポータル](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)でCLIENTアプリケーションを作成します。
+[Adobe Signポータル](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)でCLIENTアプリケーションを作成します。
 
-[こちら](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md)と[こちら](https://secure.eu1.adobesign.com/public/static/oauthDoc.jsp)で説明されているように、アプリケーションのOAuthを構成します。 クライアント識別子とクライアントシークレットを書き留めます。 その後、`https://www.google.com`をリダイレクトURIおよび次のスコープとして使用できます。
+[こちら](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md)と[こちら](https://secure.eu1.adobesign.com/public/static/oauthDoc.jsp)で説明されているように、アプリケーションのOAuthを構成します。 クライアント識別子とクライアントシークレットを書き留めます。 その後、`https://www.google.com`をリダイレクトURIおよび次のスコープとして使用できます。
 
 * user_login: self
 
@@ -602,4 +602,4 @@ System.out.println("Agreement sent, ID: " + agreementCreationResponse.getId());
 
 さらに例を挙げると、フォームの受信者がリモートで安全に署名できるように作成できます。 複数の署名が必要な場合は、ワークフロー内の一連のユーザーにフォームを自動的に送信することもできます。 従業員のオンボーディングが改善され、人事部があなたを気に入ってくれるでしょう。
 
-今すぐ[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/)をチェックして、アプリケーションに多くのPDF機能を追加してください。
+今すぐ[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage/)をチェックして、アプリケーションに多くのPDF機能を追加してください。

@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8089
 thumbnail: KT-8089.jpg
 exl-id: ae1cd9db-9f00-4129-a2a1-ceff1c899a83
-source-git-commit: 2f01f306f5d13bfbaa61442e0e7a89537a62c33c
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1906'
 ht-degree: 0%
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 # Adobe Sign APIの概要
 
-[Acrobat Sign API](https://www.adobe.io/apis/documentcloud/sign.html)は、署名済み契約書の管理方法を強化するための優れた機能です。 開発者はSign APIを使用してシステムを簡単に統合できます。この機能により、信頼性が高く簡単な方法で、文書のアップロード、署名用の送信、リマインダーの送信、電子サインの収集を行うことができます。
+[Acrobat Sign API](https://developer.adobe.com/adobesign-api/)は、署名済み契約書の管理方法を強化するための優れた機能です。 開発者はSign APIを使用してシステムを簡単に統合できます。この機能により、信頼性が高く簡単な方法で、文書のアップロード、署名用の送信、リマインダーの送信、電子サインの収集を行うことができます。
 
 ## 学習内容
 
-この実践チュートリアルでは、開発者がSign APIを使用して、[!DNL Adobe Acrobat Services]で作成されたアプリケーションとワークフローを強化する方法について説明します。 [!DNL Acrobat Services]には、[Adobe PDF Services API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-tools.html)、[Adobe PDF Adobe Embed API](https://www.adobe.io/apis/documentcloud/viesdk) （無料）、および[Document Generation API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)が含まれています。
+この実践チュートリアルでは、開発者がSign APIを使用して、[!DNL Adobe Acrobat Services]で作成されたアプリケーションとワークフローを強化する方法について説明します。 [!DNL Acrobat Services]には、[Adobe PDF Services API](https://developer.adobe.com/document-services/apis/pdf-services)、[Adobe PDF Adobe Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/) （無料）、および[Document Generation API](https://developer.adobe.com/document-services/apis/doc-generation)が含まれています。
 
-詳しくは、Acrobat Sign APIをアプリケーションに組み込んで、署名や、保険フォームの社員情報などの他の情報を収集する方法を確認してください。 簡略化されたHTTPリクエストとレスポンスを含む一般的な手順が使用されます。 これらのリクエストは、お気に入りの言語で実装できます。 [[!DNL Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/)を組み合わせてPDFを作成し、[transient](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md)文書としてSign APIにアップロードして、契約書または[widget](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/overview/terminology.md)ワークフローを使用してエンドユーザー署名を依頼できます。
+詳しくは、Acrobat Sign APIをアプリケーションに組み込んで、署名や、保険フォームの社員情報などの他の情報を収集する方法を確認してください。 簡略化されたHTTPリクエストとレスポンスを含む一般的な手順が使用されます。 これらのリクエストは、お気に入りの言語で実装できます。 [[!DNL Acrobat Services] API](https://developer.adobe.com/document-services/homepage/)を組み合わせてPDFを作成し、[transient](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/overview/terminology.md)文書としてSign APIにアップロードして、契約書または[widget](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/overview/terminology.md)ワークフローを使用してエンドユーザー署名を依頼できます。
 
 ## PDF文書の作成
 
-まず、Microsoft Wordテンプレートを作成し、PDFとして保存します。 または、Document Generation APIを使用してパイプラインを自動化し、Wordで作成されたテンプレートをアップロードしてPDF文書を生成できます。 Document Generation APIは[!DNL Acrobat Services]の一部であり、6か月間は[無料、その後は従量課金制で文書トランザクションあたり$0.05または](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)です。
+まず、Microsoft Wordテンプレートを作成し、PDFとして保存します。 または、Document Generation APIを使用してパイプラインを自動化し、Wordで作成されたテンプレートをアップロードしてPDF文書を生成できます。 Document Generation APIは[!DNL Acrobat Services]の一部であり、6か月間は[無料、その後は従量課金制で文書トランザクションあたり$0.05または](https://developer.adobe.com/document-services/pricing/main)です。
 
 この例のテンプレートは、いくつかの署名者フィールドを入力する単純な文書です。 フィールドに今すぐ名前を付け、後でこのチュートリアルの実際のフィールドを挿入します。
 
@@ -276,7 +276,7 @@ Webフォームの代わりに、契約書を作成することもできます�
 
 署名または承認のために、指定した受信者に文書を送信すると、契約書が作成されます。 APIを使用して、契約書のステータスと完了を追跡できます。
 
-[一時的なドキュメント](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html)、[ライブラリドキュメント](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md)、またはURLを使用して、契約書を作成できます。 この例では、以前に作成されたWebフォームと同様に、契約書は`transientDocumentId`に基づいています。
+[一時的なドキュメント](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html)、[ライブラリドキュメント](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md)、またはURLを使用して、契約書を作成できます。 この例では、以前に作成されたWebフォームと同様に、契約書は`transientDocumentId`に基づいています。
 
 ```
 POST /api/rest/v6/agreements HTTP/1.1
@@ -434,10 +434,10 @@ Company Name","CBJCHBCAABAA5Z84zy69q_Ilpuy5DzUAahVfcNZillDt"
 
 Acrobat Sign APIを使用すると、文書、Webフォーム、契約書を管理できます。 Webフォームと契約書を使用して作成された、シンプルでありながら完全なワークフローは、開発者が任意の言語を使用して実装できる一般的な方法で実行されます。
 
-Sign APIの仕組みについて詳しくは、[API使用のデベロッパーガイド](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/api_usage.md)を参照してください。 このドキュメントには、この記事で行う多くの手順に関する短い記事と、その他の関連トピックが含まれています。
+Sign APIの仕組みについて詳しくは、[API使用のデベロッパーガイド](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/api_usage.md)を参照してください。 このドキュメントには、この記事で行う多くの手順に関する短い記事と、その他の関連トピックが含まれています。
 
-Acrobat Sign APIは、[シングルユーザーおよびマルチユーザーの電子サインプラン](https://acrobat.adobe.com/jp/ja/sign/pricing/plans.html)の複数の階層を通じて利用できるため、ニーズに最適な価格モデルを選ぶことができます。 Sign APIをアプリに簡単に組み込める方法を習得したところで、[Acrobat Sign Webhooks](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/webhooks.md) （プッシュベースのプログラミングモデル）などの他の機能に興味をお持ちかもしれません。 Webhookでは、アプリケーションでAcrobat Signイベントを頻繁に確認する必要がなくなり、イベントが発生したときにSign APIがPOSTコールバックリクエストを実行するHTTP URLを登録できます。 Webhookを使用すると、アプリケーションにリアルタイムで即座に更新を適用できるため、堅牢なプログラミングが可能になります。
+Acrobat Sign APIは、[シングルユーザーおよびマルチユーザーの電子サインプラン](https://acrobat.adobe.com/jp/ja/sign/pricing/plans.html)の複数の階層を通じて利用できるため、ニーズに最適な価格モデルを選ぶことができます。 Sign APIをアプリに簡単に組み込める方法を習得したところで、[Acrobat Sign Webhooks](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/webhooks.md) （プッシュベースのプログラミングモデル）などの他の機能に興味をお持ちかもしれません。 Webhookでは、アプリケーションでAcrobat Signイベントを頻繁に確認する必要がなくなり、イベントが発生したときにSign APIがPOSTコールバックリクエストを実行するHTTP URLを登録できます。 Webhookを使用すると、アプリケーションにリアルタイムで即座に更新を適用できるため、堅牢なプログラミングが可能になります。
 
-6か月間のAdobe PDF Services APIの無料体験期間が終了する時点と、Adobe PDF Embed APIの無料体験版が終了する時点については、[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)を参照してください。
+6か月間のAdobe PDF Services APIの無料体験期間が終了する時点と、Adobe PDF Embed APIの無料体験版が終了する時点については、[従量課金制](https://developer.adobe.com/document-services/pricing/main)を参照してください。
 
 文書の自動作成や文書の署名など、画期的な機能をアプリに追加するには、[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を使い始めてください。

@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8099
 thumbnail: KT-8099.jpg
 exl-id: 219c70de-fec1-4946-b10e-8ab5812562ef
-source-git-commit: 5222e1626f4e79c02298e81d621216469753ca72
+source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 販売提案は、顧客獲得に向けたビジネスの道のりの最初のステップです。 何事にも第一印象は続く。 そのため、最初に顧客とやり取りすることで、ビジネスに対する期待が高まります。 あなたの提案は簡潔、正確、そして便利でなければならない。
 
-契約書と提案書には、その文書構造内に様々な種類のデータが含まれています。 動的データ（クライアント名、見積書の金額など）と静的データ（会社の能力、チームプロファイル、標準のSOW条件などの定型文）の両方が含まれます。 販売提案などのテンプレート文書を作成する場合は、プロジェクトの詳細をボイラープレートテンプレートに手動で置き換えるなど、単調なタスクが伴うことがよくあります。 このチュートリアルでは、動的データとワークフローを使用して、[販売提案の作成](https://www.adobe.io/apis/documentcloud/dcsdk/sales-proposals-and-contracts.html)のための効率的なプロセスを構築します。
+契約書と提案書には、その文書構造内に様々な種類のデータが含まれています。 動的データ（クライアント名、見積書の金額など）と静的データ（会社の能力、チームプロファイル、標準のSOW条件などの定型文）の両方が含まれます。 販売提案などのテンプレート文書を作成する場合は、プロジェクトの詳細をボイラープレートテンプレートに手動で置き換えるなど、単調なタスクが伴うことがよくあります。 このチュートリアルでは、動的データとワークフローを使用して、[販売提案の作成](https://developer.adobe.com/document-services/use-cases/agreements-and-contracts/sales-proposals-and-contracts)のための効率的なプロセスを構築します。
 
 ## 学習内容
 
@@ -35,11 +35,11 @@ ht-degree: 0%
 
 * [npm](https://www.npmjs.com/get-npm)
 
-* [[!DNL Acrobat Services] API](https://www.adobe.io/apis/documentcloud/dcsdk/)
+* [[!DNL Acrobat Services] API](https://developer.adobe.com/document-services/homepage/)
 
-* [Adobe文書生成API](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)
+* [Adobe文書生成API](https://developer.adobe.com/document-services/apis/doc-generation)
 
-* [Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)
+* [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 
 * [Adobe文書生成タガー](https://opensource.adobe.com/pdftools-sdk-docs/docgen/latest/wordaddin.html#add-in-demo)
 
@@ -47,11 +47,11 @@ ht-degree: 0%
 
 これでツールがインストールされたので、問題の解決を開始できます。 提案書には、各クライアントに固有の静的コンテンツと動的コンテンツの両方が含まれます。 ボトルネックが発生するのは、提案を行うたびに両方のタイプのデータが必要になるためです。 静止テキストの入力には時間がかかるため、テキストを自動化し、各クライアントからの動的データを手動で処理することにします。
 
-まず、[Microsoft Forms](https://www.office.com/launch/forms?auth=1) （または推奨のフォームビルダー）でデータキャプチャフォームを作成します。 販売提案に追加されるクライアントからの動的データ用のフォームです。 このフォームに、会社名、日付、住所、プロジェクトの範囲、価格、その他のコメントなど、必要な詳細をクライアントから取得するための質問を入力します。 独自のビルドを作成するには、次の[form](https://forms.office.com/Pages/ShareFormPage.aspx id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__rtiGj5UNElTR0pCQ09ZNkJRUlowSjVQWDNYUEg2RC4u&amp;sharetoken=1AJeMavBAzzxu isrkmUyを参照)。 潜在的なクライアントがフォームに入力し、応答をJSONファイルとして書き出して、ワークフローの次の部分に渡すことを目的としています。
+まず、[Microsoft Forms](https://www.office.com/launch/forms?auth=1) （または推奨のフォームビルダー）でデータキャプチャフォームを作成します。 販売提案に追加されるクライアントからの動的データ用のフォームです。 このフォームに、会社名、日付、住所、プロジェクトの範囲、価格、その他のコメントなど、必要な詳細をクライアントから取得するための質問を入力します。 独自のビルドを作成するには、次の[form]&#x200B;(https://forms.office.com/Pages/ShareFormPage.aspx id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__rtiGj5UNElTR0pCQ09ZNkJRUlowSjVQWDNYUEg2RC4u&amp;sharetoken=1AJeMavBAzzxu isrkmUyを参照)。 潜在的なクライアントがフォームに入力し、応答をJSONファイルとして書き出して、ワークフローの次の部分に渡すことを目的としています。
 
 一部のフォームビルダーでは、データをCSVファイルとして書き出すことしかできません。 そのため、生成されたCSVファイルをJSONファイルに[変換](http://csvjson.com/csv2json)すると便利な場合があります。
 
-静的データは、すべての販売提案書で再利用されます。 したがって、Microsoft Wordのセールスプロポーザルテンプレートを使用して、静的なテキストを提供できます。 この[テンプレート](https://1drv.ms/w/s!AiqaN2pp7giKkmhVu2_2pId9MiPa?e=oeqoQ2)を使用できますが、独自のテンプレートを作成するか、[Adobeテンプレート](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)を使用できます。
+静的データは、すべての販売提案書で再利用されます。 したがって、Microsoft Wordのセールスプロポーザルテンプレートを使用して、静的なテキストを提供できます。 この[テンプレート](https://1drv.ms/w/s!AiqaN2pp7giKkmhVu2_2pId9MiPa?e=oeqoQ2)を使用できますが、独自のテンプレートを作成するか、[Adobeテンプレート](https://developer.adobe.com/document-services/apis/doc-generation)を使用できます。
 
 JSON形式のクライアントからの動的データと、Microsoft Wordテンプレートの静的テキストの両方を取り込んで、クライアントに固有の営業提案を作成する機能が必要になりました。 [!DNL Acrobat Services] APIは、2つを結合し、署名可能なPDFを生成するために使用されます。
 
@@ -79,7 +79,7 @@ JSON形式のクライアントからの動的データと、Microsoft Wordテ�
 
 ## APIの使用
 
-[!DNL Acrobat Services] API [ホームページ](https://www.adobe.io/apis/documentcloud/dcsdk/doc-generation.html)に移動します。 [!DNL Acrobat Services] APIの使用を開始するには、アプリケーションの資格情報が必要です。 下までスクロールして「**無料体験版を開始**」を選択し、資格情報を作成します。 これらのサービスは、6か月間[無料で利用できます。その後、従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)で文書トランザクション1件につきわずか$0.05であるため、必要なものだけを支払うことができます。
+[!DNL Acrobat Services] API [ホームページ](https://developer.adobe.com/document-services/apis/doc-generation)に移動します。 [!DNL Acrobat Services] APIの使用を開始するには、アプリケーションの資格情報が必要です。 下までスクロールして「**無料体験版を開始**」を選択し、資格情報を作成します。 これらのサービスは、6か月間[無料で利用できます。その後、従量課金制](https://developer.adobe.com/document-services/pricing/main)で文書トランザクション1件につきわずか$0.05であるため、必要なものだけを支払うことができます。
 
 **PDFサービスAPI**&#x200B;をサービスとして選択し、以下に示すその他の詳細を入力してください。
 
@@ -137,12 +137,12 @@ console.log('Exception encountered while executing operation', err);
 
 このコードは、[!DNL Acrobat Services]を使用して作成したタグを使用して、MicrosoftフォームからJSONファイルを取得します。 次に、そのデータをMicrosoft Wordで作成した販売提案書テンプレートと結合して、まったく新しいPDFを作成します。 PDFは新しく作成されたに保存されます。/outputフォルダーです。
 
-また、このコードでは[Adobe Sign API](https://www.adobe.io/apis/documentcloud/sign.html)を使用して、生成された販売提案に両社に署名してもらいます。 このAPIの詳細な説明については、このブログ記事を参照してください。
+また、このコードでは[Adobe Sign API](https://developer.adobe.com/adobesign-api/)を使用して、生成された販売提案に両社に署名してもらいます。 このAPIの詳細な説明については、このブログ記事を参照してください。
 
 ## 次の手順
 
-自動化が必要な、非効率的で手間のかかるプロセスから始めました。 [販売提案プロセス](https://www.adobe.io/apis/documentcloud/dcsdk/sales-proposals-and-contracts.html)を自動化および簡素化するために、お客様ごとに手動でドキュメントを作成する代わりに、合理化されたワークフローを作成しました。
+自動化が必要な、非効率的で手間のかかるプロセスから始めました。 [販売提案プロセス](https://developer.adobe.com/document-services/use-cases/agreements-and-contracts/sales-proposals-and-contracts)を自動化および簡素化するために、お客様ごとに手動でドキュメントを作成する代わりに、合理化されたワークフローを作成しました。
 
 Microsoft Formsを使用すると、お客様からそれぞれの提案に含まれる重要なデータを取得できます。 Microsoft Wordでセールスプロポーザルテンプレートを作成し、毎回作成したくない固定テキストを提供しています。 次に、[!DNL Acrobat Services] APIを使用してフォームとテンプレートのデータを結合し、より効率的な方法で顧客の営業提案PDFを作成しました。
 
-この実践チュートリアルでは、これらのAPIで可能なことのほんの一例を示します。 その他のソリューションを見つけるには、[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) APIページにアクセスしてください。 これらのツールはすべて6か月間無料で使用できます。 その後、[従量課金制](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-pricing.html)プランのドキュメントトランザクションあたり0.05ドルをお支払いいただくと、チームが見込み客を販売パイプラインに追加するだけで、お支払いいただくことができます。
+この実践チュートリアルでは、これらのAPIで可能なことのほんの一例を示します。 その他のソリューションを見つけるには、[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) APIページにアクセスしてください。 これらのツールはすべて6か月間無料で使用できます。 その後、[従量課金制](https://developer.adobe.com/document-services/pricing/main)プランのドキュメントトランザクションあたり0.05ドルをお支払いいただくと、チームが見込み客を販売パイプラインに追加するだけで、お支払いいただくことができます。
