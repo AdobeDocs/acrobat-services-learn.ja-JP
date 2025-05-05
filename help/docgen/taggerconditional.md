@@ -18,4 +18,4 @@ ht-degree: 0%
 
 AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートのセクションを設定し、AdobeのDocument Generation APIを使用してデータに基づいて文書のセクションを動的に含めるか除外する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332117?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3411740?hidetitle=true&captions=jpn)

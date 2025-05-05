@@ -17,4 +17,4 @@ ht-degree: 0%
 
 AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートで数値計算タグを設定し、AdobeのDocument Generation APIを使用してデータ値の集計または計算を行う方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332118?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3411746?hidetitle=true&captions=jpn)

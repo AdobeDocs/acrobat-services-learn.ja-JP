@@ -18,4 +18,4 @@ ht-degree: 0%
 
 AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートに画像タグを追加し、AdobeのDocument Generation APIを使用して画像を文書に動的にプッシュする方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332114?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3411733?hidetitle=true&captions=jpn)

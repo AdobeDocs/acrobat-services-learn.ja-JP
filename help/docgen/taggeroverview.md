@@ -19,4 +19,4 @@ ht-degree: 2%
 
 AdobeのDocument Generation APIで使用するように設計されたAdobeのDocument Generation Taggerの概要を確認します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332120?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3411721?hidetitle=true&captions=jpn)

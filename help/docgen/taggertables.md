@@ -17,4 +17,4 @@ ht-degree: 0%
 
 AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートに表とリストタグを追加し、AdobeのDocument Generation APIを使用してデータに基づいて表またはリストの行を動的に追加する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332115?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3411727?hidetitle=true&captions=jpn)

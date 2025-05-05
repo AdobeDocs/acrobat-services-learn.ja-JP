@@ -18,4 +18,4 @@ ht-degree: 0%
 
 AIを使用して、大規模なアクセシビリティ向けに自動的にタグ付けする方法について説明します。 自動的にタグ付けされるため、コンプライアンス達成に必要な時間とコストを削減できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428310?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3446260?hidetitle=true&captions=jpn)
