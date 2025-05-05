@@ -422,7 +422,7 @@ https://www.google.com/?code=<YOUR_CODE>&api_access_point=https://api.eu1.adobes
 
 \&lt;YOUR_CODE\>とapi_access_pointに指定した値に注意してください。
 
-アクセストークンを提供するHTTP POSTリクエストを送信するには、クライアントID、\&lt;YOUR_CODE\>、およびapi_access_pointの値を使用します。 [Postman](https://helpx.adobe.com/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html)またはcURLを使用できます：
+アクセストークンを提供するHTTP POSTリクエストを送信するには、クライアントID、\&lt;YOUR_CODE\>、およびapi_access_pointの値を使用します。 [Postman](https://helpx.adobe.com/jp/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html)またはcURLを使用できます：
 
 ```
 curl --location --request POST "https://**api.eu1.adobesign.com**/oauth/token"

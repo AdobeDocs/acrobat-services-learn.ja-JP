@@ -276,7 +276,7 @@ Webフォームの代わりに、契約書を作成することもできます�
 
 署名または承認のために、指定した受信者に文書を送信すると、契約書が作成されます。 APIを使用して、契約書のステータスと完了を追跡できます。
 
-[一時的なドキュメント](https://helpx.adobe.com/sign/kb/how-to-send-an-agreement-through-REST-API.html)、[ライブラリドキュメント](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md)、またはURLを使用して、契約書を作成できます。 この例では、以前に作成されたWebフォームと同様に、契約書は`transientDocumentId`に基づいています。
+[一時的なドキュメント](https://helpx.adobe.com/jp/sign/kb/how-to-send-an-agreement-through-REST-API.html)、[ライブラリドキュメント](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/samples/send_using_library_doc.md)、またはURLを使用して、契約書を作成できます。 この例では、以前に作成されたWebフォームと同様に、契約書は`transientDocumentId`に基づいています。
 
 ```
 POST /api/rest/v6/agreements HTTP/1.1

@@ -171,7 +171,7 @@ PDF文書で注釈を有効にするには、引数`showAnnotationTools` : true�
 
 教師や学校は、学生がオンラインプラットフォームをどのように使用しているかを確認することが重要です。 これにより、教師は課題のパフォーマンスを向上させるのに役立つリソースを使用して学生をサポートできます。 PDF埋め込みAPIは、分析と統合され、ユーザーが文書を開く、読む、閉じるなど、発生するすべてのイベントを測定するために使用できます。 PDFサービスAPIを使用すると、教員は印刷、ダウンロード、ファイル編集を無効にして、アカデミックな学習の一貫性を維持することもできます。
 
-[Adobe Analytics](https://developer.adobe.com/analytics-apis/docs/2.0/)ライセンスをお持ちの場合は、[すぐに使える統合](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience#adobe-analytics)を使用できます。 それ以外の場合は、コールバックを使用して、PDFサービスを[Google](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience#google-analytics)などの他の分析プロバイダーと連携します。
+[Adobe Analytics](https://developer.adobe.com/analytics-apis/docs/2.0/)ライセンスをお持ちの場合は、[すぐに使える統合](https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience#adobe-analytics)を使用できます。 それ以外の場合は、コールバックを使用して、PDFサービスを[Google](https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience#google-analytics)などの他の分析プロバイダーと連携します。
 
 ドキュメントイベントの測定を有効にするには、Adobe DCビューインスタンスで`registerCallback`メソッドを使用してイベントハンドラーをアタッチします。 文書を開いたり、ページを読んだりといった基本的なメトリクスをコンソールに表示できます。 メトリックはログに保存したり、他の分析ストアに公開することもできます。
 

@@ -116,7 +116,7 @@ Power Automateの使用を開始するには、まず<https://powerautomate.micr
 
 上のスクリーンショットが示すように、職場アカウントに切り替えるか、新しい組織アカウントを設定できます。 利用できるようになったら、Adobe PDFサービスのアクションを追加できます。
 
-[!DNL Adobe Acrobat Services]を使用して最初のMicrosoft Power Automateフローを作成する方法の詳細については、[Microsoft Power Automateで最初のワークフローを作成する](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate)を参照してください。
+[!DNL Adobe Acrobat Services]を使用して最初のMicrosoft Power Automateフローを作成する方法の詳細については、[Microsoft Power Automateで最初のワークフローを作成する](https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate)を参照してください。
 
 ## その他の参考資料
 
