@@ -35,7 +35,7 @@ ht-degree: 0%
 
 1. サンプルコードをダウンロードする言語を選択します（例：Node.js）。
 1. **[!UICONTROL デベロッパー利用条件]**&#x200B;に同意する場合にオンにします。
-1. **[!UICONTROL 資格情報の作成]**を選択します。
+1. **[!UICONTROL 資格情報の作成]**&#x200B;を選択します。
 サンプルファイル、pdfservices-api-credentials.json、認証用のprivate.keyを含むZIPファイルがコンピューターにダウンロードされます。
 
    ![資格情報のスクリーンショット](assets/automatelegal_2.png)

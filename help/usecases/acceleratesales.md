@@ -39,7 +39,7 @@ ht-degree: 0%
 
 1. サンプルコードをダウンロードする言語を選択します（例：Node.js）。
 1. **[!UICONTROL デベロッパー利用条件]**&#x200B;に同意する場合にオンにします。
-1. **[!UICONTROL 資格情報の作成]**を選択します。
+1. **[!UICONTROL 資格情報の作成]**&#x200B;を選択します。
 サンプルファイル、pdfservices-api-credentials.json、認証用のprivate.keyを含むZIPファイルがコンピューターにダウンロードされます。
 
    ![資格情報のスクリーンショット](assets/accsales_2.png)
@@ -189,7 +189,7 @@ Microsoft Wordの表の場合と同様に、スタイル、サイズ、その他
 1. *[!UICONTROL 計算の種類の選択]*&#x200B;で、**[!UICONTROL 集計]**&#x200B;を選択します。
 1. *[!UICONTROL 種類の選択]*&#x200B;で、**[!UICONTROL 合計]**&#x200B;を選択します。
 1. *[!UICONTROL レコードの選択]*&#x200B;で、**[!UICONTROL 参照順序]**&#x200B;を選択します。
-1. *[!UICONTROL 集計を実行する項目を選択]で**2}totalPaymentsDue.price ]**を選択します。**[!UICONTROL 
+1. *[!UICONTROL 集計を実行する項目を選択]で&#x200B;**2&rbrace;totalPaymentsDue.price &#x200B;** を選択します。**
 1. **[!UICONTROL 計算の挿入]**&#x200B;を選択します。
 
 このプロセスでは、値の合計を提供する計算タグが挿入されます。 JSONata計算を使用すると、より高度な計算を行うことができます。 次に例を示します。

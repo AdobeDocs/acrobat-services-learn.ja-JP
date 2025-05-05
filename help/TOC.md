@@ -31,7 +31,7 @@ ht-degree: 3%
 + Document Generation API {#docgen}
    + [概要](docgen/overview-docgen.md)
    + [ドキュメント生成の自動化](docgen/automate-doc-gen.md)
-   + テンプレート{#docgentemplates}を作成しています
+   + テンプレートを作成しています{#docgentemplates}
       + [Adobe文書生成タガーの概要](docgen/taggeroverview.md)
       + [テキストタグの追加](docgen/taggeraddtexttags.md)
       + [画像タグの追加](docgen/taggeraddimagetags.md)

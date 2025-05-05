@@ -239,7 +239,7 @@ console.log('Exception encountered while executing operation', err);
 }
 ```
 
-そこには多くのコードが展開されています。 まず主要な部分である`documentMergeOperation`を取り上げましょう。 このセクションでは、JSONデータを取り出して、Wordドキュメントテンプレートに結合します。 Adobeサイト](https://developer.adobe.com/document-services/apis/doc-generation#sample-blade)の[例を参考にできますが、簡単な例を独自に作成しましょう。 Wordを開いて、空の新規文書を作成します。 好きなだけカスタマイズできますが、少なくとも次のようなものがあります。
+そこには多くのコードが展開されています。 まず主要な部分である`documentMergeOperation`を取り上げましょう。 このセクションでは、JSONデータを取り出して、Wordドキュメントテンプレートに結合します。 Adobeサイト[&#128279;](https://developer.adobe.com/document-services/apis/doc-generation#sample-blade)の例を参考にできますが、簡単な例を独自に作成しましょう。 Wordを開いて、空の新規文書を作成します。 好きなだけカスタマイズできますが、少なくとも次のようなものがあります。
 
 X様、
 

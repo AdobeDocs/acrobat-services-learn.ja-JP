@@ -557,6 +557,6 @@ console.log(event);
 
 angularやReactの開発者は、PDF埋め込みAPIをReactやAngularのプロジェクトと連携させる方法を紹介する[その他のサンプル](https://github.com/adobe/pdf-embed-api-samples)をお試しください。
 
-Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/)を無料でご利用いただけます。 他に実行できる操作を確認するには、Adobe PDFサービスAPIを[goprに応じた支払い](https://developer.adobe.com/document-services/pricing/main)[アイシング](https://developer.adobe.com/document-services/pricing/main)でお試しください。
+Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/)を無料でご利用いただけます。 他に実行できる操作を確認するには、Adobe PDFサービスAPIを[goprに応じた支払い](https://developer.adobe.com/document-services/pricing/main) [アイシング](https://developer.adobe.com/document-services/pricing/main)でお試しください。
 
 [今すぐ[!DNL Adobe Acrobat Services]個のAPIを使用して](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を開始できます。
