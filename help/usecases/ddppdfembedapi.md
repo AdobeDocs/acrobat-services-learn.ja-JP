@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 学習内容
 
-この実践チュートリアルでは、[Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed)を使用して、webページ内に埋め込まれたPDF文書を表示する方法について説明します。この方法は無料で簡単に利用できます。 これらの例では、JavaScript、Node.js、Express.js、HTML、CSSを使用しています。 [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1)で完全なプロジェクトコードを表示できます。
+この実践チュートリアルでは、[Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed)を使用して、webページ内に埋め込まれたPDF文書を表示する方法について説明します。この方法は無料で簡単に利用できます。 これらの例では、JavaScript、Node.js、Express.js、HTML、CSSを使用しています。 [GitHub](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&sa=D&source=editors&ust=1617129543031000&usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1)で完全なプロジェクトコードを表示できます。
 
 ## 関連APIとリソース
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 * [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-* [プロジェクトコード](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&amp;sa=D&amp;source=editors&amp;ust=1617129543031000&amp;usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1)
+* [プロジェクトコード](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&sa=D&source=editors&ust=1617129543031000&usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1)
 
 ## ノードWebアプリケーションの作成
 

@@ -101,7 +101,7 @@ output/exportPdfOutput.PPTX
 
 ## リソースと次のステップ
 
-* 追加のヘルプとサポートについては、[[!DNL Adobe Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all)コミュニティフォーラムにアクセスしてください
+* 追加のヘルプとサポートについては、[[!DNL Adobe Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all)コミュニティフォーラムにアクセスしてください
 
 * PDFサービスAPI [ドキュメント](https://www.adobe.com/go/pdftoolsapi_doc)
 

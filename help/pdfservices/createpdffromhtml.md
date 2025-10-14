@@ -102,7 +102,7 @@ PDFは、出力で指定されている場所（デフォルトではpdfServices
 
 ## リソースと次のステップ
 
-* その他のヘルプとサポートについては、[[!DNL Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&amp;sort=latest_replies&amp;filter=all) Adobeフォーラムにアクセスしてください
+* その他のヘルプとサポートについては、[[!DNL Acrobat Services] API](https://community.adobe.com/t5/document-cloud-sdk/bd-p/Document-Cloud-SDK?page=1&sort=latest_replies&filter=all) Adobeフォーラムにアクセスしてください
 
 PDFサービスAPI [ドキュメント](https://www.adobe.com/go/pdftoolsapi_doc)
 
