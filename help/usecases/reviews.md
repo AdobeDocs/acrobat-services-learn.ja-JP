@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8094
 thumbnail: KT-8094.jpg
 exl-id: d704620f-d06a-4714-9d09-3624ac0fcd3a
-source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
+source-git-commit: b7a20f30a2eb175053c7a25be0411f80dd88899f
 workflow-type: tm+mt
 source-wordcount: '1540'
 ht-degree: 0%
@@ -136,7 +136,7 @@ const fileUpload = require( "express-fileupload" );
 app.use( fileUpload() );
 ```
 
-次に、`/upload `エンドポイントを追加し、アップロードしたファイルを、同じファイル名を使用して下書きフォルダー内に保存します。 次に、先ほど記述した関数を呼び出して、同じ文書のPDFファイルを作成します(まだPDF書式になっていない場合)。 アップロードされた元の文書の名前に基づいて、新しいPDFファイルのファイル名を作成できます。
+次に、`/upload`エンドポイントを追加し、アップロードしたファイルを同じファイル名を使用して下書きフォルダー内に保存します。 次に、先ほど記述した関数を呼び出して、同じ文書のPDFファイルを作成します(まだPDF書式になっていない場合)。 アップロードされた元の文書の名前に基づいて、新しいPDFファイルのファイル名を作成できます。
 
 ```
 // Create a PDF file from an uploaded file
