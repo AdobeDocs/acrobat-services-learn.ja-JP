@@ -18,5 +18,5 @@ ht-degree: 0%
 
 AdobeのDocument Generation APIで使用するAdobeのDocument Generation Taggerを使用して、Microsoft Wordテンプレートにテキストタグを追加する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/332116?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3409660?captions=jpn&hidetitle=true)
 
