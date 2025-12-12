@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-7474
 thumbnail: KT-7474.jpg
 exl-id: add4cc5c-06e3-4ceb-930b-e8c9eda5ca1f
-source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
+source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
 workflow-type: tm+mt
 source-wordcount: '1777'
 ht-degree: 0%
@@ -348,7 +348,7 @@ private static void setCustomOptionsAndPersonData(
 </html>
 ```
 
-次に、`PersonController`クラス内で`downloadContract`メソッドを次のように実装します。
+次に、`downloadContract`クラス内で`PersonController`メソッドを次のように実装します。
 
 ```
 @RequestMapping("/pdf")
@@ -422,7 +422,7 @@ https://www.google.com/?code=<YOUR_CODE>&api_access_point=https://api.eu1.adobes
 
 \&lt;YOUR_CODE\>とapi_access_pointに指定した値に注意してください。
 
-アクセストークンを提供するHTTP POSTリクエストを送信するには、クライアントID、\&lt;YOUR_CODE\>、およびapi_access_pointの値を使用します。 [Postman](https://helpx.adobe.com/jp/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html)またはcURLを使用できます：
+アクセストークンを提供するHTTP POSTリクエストを送信するには、クライアントID、\&lt;YOUR_CODE\>、およびapi_access_pointの値を使用します。 [Postman](https://helpx.adobe.com/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html)またはcURLを使用できます：
 
 ```
 curl --location --request POST "https://**api.eu1.adobesign.com**/oauth/token"
@@ -501,7 +501,7 @@ IntelliJ IDEAでは、*プロジェクト構造* （ファイル/プロジェク
 </html>
 ```
 
-次に、`sendContractMethod`を実装する別のコントローラー`AdobeSignController`を追加します（コンパニオンコードを参照）。 この方法は次のように動作します。
+次に、`AdobeSignController`を実装する別のコントローラー`sendContractMethod`を追加します（コンパニオンコードを参照）。 この方法は次のように動作します。
 
 まず、`ApiClient`を使用してAPIエンドポイントを取得します。
 
@@ -603,3 +603,4 @@ System.out.println("Agreement sent, ID: " + agreementCreationResponse.getId());
 さらに例を挙げると、フォームの受信者がリモートで安全に署名できるように作成できます。 複数の署名が必要な場合は、ワークフロー内の一連のユーザーにフォームを自動的に送信することもできます。 従業員のオンボーディングが改善され、人事部があなたを気に入ってくれるでしょう。
 
 今すぐ[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage/)をチェックして、アプリケーションに多くのPDF機能を追加してください。
+

@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8090
 thumbnail: KT-8090.jpg
 exl-id: 3aa9aa40-a23c-409c-bc0b-31645fa01b40
-source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
+source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
 workflow-type: tm+mt
 source-wordcount: '1722'
 ht-degree: 0%
@@ -557,6 +557,7 @@ console.log(event);
 
 angularやReactの開発者は、PDF埋め込みAPIをReactやAngularのプロジェクトと連携させる方法を紹介する[その他のサンプル](https://github.com/adobe/pdf-embed-api-samples)をお試しください。
 
-Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/)を無料でご利用いただけます。 他に実行できる操作を確認するには、Adobe PDFサービスAPIを[goprに応じた支払い](https://developer.adobe.com/document-services/pricing/main) [アイシング](https://developer.adobe.com/document-services/pricing/main)でお試しください。
+Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/)を無料でご利用いただけます。 他に実行できる操作を確認するには、Adobe PDFサービスAPIを[goprに応じた支払い](https://developer.adobe.com/document-services/pricing/main)[アイシング](https://developer.adobe.com/document-services/pricing/main)でお試しください。
 
-[今すぐ[!DNL Adobe Acrobat Services]個のAPIを使用して](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を開始できます。
+[今すぐ](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)個のAPIを使用して[!DNL Adobe Acrobat Services]を開始できます。
+

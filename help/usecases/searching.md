@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8095
 thumbnail: KT-8095.jpg
 exl-id: a22230b5-1ff2-4870-84da-f06a904c99e1
-source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
+source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
 workflow-type: tm+mt
 source-wordcount: '1298'
 ht-degree: 0%
@@ -141,7 +141,7 @@ Ensure that the content of your package.json file is similar to this code snippe
 
 サインアップが完了すると、API資格情報を含むコードサンプルがPCにダウンロードされます。 このコード例を展開し、 private.keyとpdftools-api-credentials.jsonファイルをアプリケーションのルートディレクトリに配置します。
 
-次に、アプリケーションのルートディレクトリでターミナルを使用して` npm install --save @adobe/documentservices-pdftools-node-sdk `コマンドを実行し、[PDFサービスNode.js SDK](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk)をインストールします。
+次に、アプリケーションのルートディレクトリでターミナルを使用して[コマンドを実行し、](https://www.npmjs.com/package/@adobe/documentservices-pdftools-node-sdk)PDFサービスNode.js SDK` npm install --save @adobe/documentservices-pdftools-node-sdk `をインストールします。
 
 ## PDFの作成
 
@@ -432,3 +432,4 @@ res.download(download.link);
 
 独自のアプリでドキュメントの共有とレビューを有効にしますか？ [[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)にサインアップ
 開発者アカウント。 6か月間の無料体験版を利用した後、[従量課金制](https://developer.adobe.com/document-services/pricing/main)で、ビジネスの成長に合わせて文書トランザクションあたり\$0.05を支払うことができます。
+

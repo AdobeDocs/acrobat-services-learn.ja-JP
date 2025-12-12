@@ -8,7 +8,7 @@ feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation 
 role: Developer
 level: Beginner, Intermediate, Experienced
 auto-video-transcripts: true
-source-git-commit: 3dda76423509e444defc962c12a26c835d63cafa
+source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 7%
@@ -79,3 +79,4 @@ ht-degree: 7%
    + [請求書の処理](usecases/invoices.md)
    + [デジタルドキュメントパブリッシング](usecases/ddppdfembedapi.md)
 + [テスト用の非表示ファイル](hidden-file.md)
+

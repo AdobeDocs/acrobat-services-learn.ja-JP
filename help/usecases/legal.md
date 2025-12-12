@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8097
 thumbnail: KT-8097.jpg
 exl-id: e0c32082-4f8f-4d8b-ab12-55d95b5974c5
-source-git-commit: c6272ee4ec33f89f5db27023d78d1f08005b04ef
+source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
 workflow-type: tm+mt
 source-wordcount: '1890'
 ht-degree: 0%
@@ -284,7 +284,7 @@ module.exports = { createPDF, createPDFPost };
 
 これらの関数は、変換されたPDF文書をviews/outputディレクトリに保存し、PCにダウンロードすることができます。
 
-また、フリーPDF埋め込みAPIを使用して、変換されたPDFファイルをプレビューすることもできます。 PDF埋め込みAPIを使用して、[!DNL Acrobat Services]資格情報とは異なる[ここ](https://www.adobe.com/go/dcsdks_credentials)でAdobe資格情報を生成し、許可されたドメインを登録してAPIにアクセスできます。 手順に従って、アプリケーションのPDF埋め込みAPI資格情報を生成します。 デモの[こちら](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)を確認することもできます。そこから簡単にコードを生成して、すばやく作業を開始できます。
+また、フリーPDF埋め込みAPIを使用して、変換されたPDFファイルをプレビューすることもできます。 PDF埋め込みAPIを使用して、[資格情報とは異なる](https://www.adobe.com/go/dcsdks_credentials)ここ[!DNL Acrobat Services]でAdobe資格情報を生成し、許可されたドメインを登録してAPIにアクセスできます。 手順に従って、アプリケーションのPDF埋め込みAPI資格情報を生成します。 デモの[こちら](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)を確認することもできます。そこから簡単にコードを生成して、すばやく作業を開始できます。
 
 アプリケーションに戻り、アプリケーションのviewフォルダーにlist.hbsファイルとpreview.hbsファイルを作成して、以下のコードスニペットをそれぞれlist.hbsファイルとpreview.hbsファイルに貼り付けます。
 
@@ -429,3 +429,4 @@ module.exports = {listFiles, previewPDF, downloadPDF };
 組織は、[!DNL Adobe Acrobat Services]個のAPIを使用して、完全性と使いやすさを実現しています。 特に、[6か月間の無料体験後、従量課金制](https://developer.adobe.com/document-services/pricing/main)をお楽しみいただけます。 君は使った分だけお金を払う。 さらに、PDF埋め込みAPIは常に無料です。
 
 文書のフローを改善して、生産性を向上させましょう。 [今すぐ](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を開始してください。
+
