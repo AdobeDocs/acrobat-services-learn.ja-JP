@@ -23,5 +23,5 @@ ht-degree: 0%
 >
 >このチュートリアルは、アプリケーション内に署名プロセスを構築し、組み込んでいるOEMパートナーを対象としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/347349?hidetitle=true){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3445409?captions=jpn&hidetitle=true){transcript=true}
 
