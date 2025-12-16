@@ -1,6 +1,6 @@
 ---
-user-guide-title: '[!DNL Adobe Acrobat Services]'
-breadcrumb-title: '[!DNL Acrobat Services]'
+user-guide-title: Adobe Acrobat Services
+breadcrumb-title: Acrobat Services
 user-guide-description: ' [!DNL Adobe Acrobat Services]に関する詳細情報'
 solution: Acrobat Services
 feature-set: Acrobat Services
@@ -8,9 +8,9 @@ feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation 
 role: Developer
 level: Beginner, Intermediate, Experienced
 auto-video-transcripts: true
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: 2b3a807b13c1bfaffa84e6b73909c4f6b024d9c7
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '244'
 ht-degree: 7%
 
 ---
