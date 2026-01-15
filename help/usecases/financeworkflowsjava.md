@@ -45,7 +45,7 @@ ht-degree: 0%
 
 * Adobe PDF Embed API
 
-資格情報を作成した後、Resourcesセクション内の[!DNL Spring Boot]アプリケーションにPDFサービスAPI資格情報と秘密キーをコピーします。 [ Webサイトの](https://developer.adobe.com/document-services/docs/overview/pdf-services-api)MavenとGradleのライブラリと依存関係[!DNL Adobe Acrobat Services]の詳細をご覧ください。 作業を進める前に、必要なすべてのパッケージとライブラリを設定してください。
+資格情報を作成した後、Resourcesセクション内の[!DNL Spring Boot]アプリケーションにPDFサービスAPI資格情報と秘密キーをコピーします。 [&#x200B; Webサイトの](https://developer.adobe.com/document-services/docs/overview/pdf-services-api)MavenとGradleのライブラリと依存関係[!DNL Adobe Acrobat Services]の詳細をご覧ください。 作業を進める前に、必要なすべてのパッケージとライブラリを設定してください。
 
 ![PDFサービスAPI資格情報のディレクトリの場所のスクリーンショット](assets/FAWJ_1.png)
 

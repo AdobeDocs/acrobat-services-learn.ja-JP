@@ -215,4 +215,4 @@ var adobeDCView = new AdobeDC.View({
 
 これで、PDFレポートに注釈を付ける方法、注釈をアーカイブする方法、およびPDFレポートの使用状況を追跡する方法が分かったので、これらのソリューションを独自のプロジェクトに導入できるようになりました。
 
-[!DNL Adobe Acrobat Services]個のAPIを使用して、Webサイト上のユーザーフレンドリーでインタラクティブなPDF体験を作成できます。 6か月間Adobe PDFサービスAPIを無料で利用した後は、(AWSまたは直接契約を通じて)[従量課金制](https://developer.adobe.com/document-services/pricing/main)で、1件の文書取引でわずか$ 0.05の利用が可能です。 時間制限なしでAdobe PDF Embedを無料で使用できます。 無料アカウントを作成して、今すぐ[使用を開始](https://www.adobe.com/go/dcsdks_credentials)しましょう。
+[!DNL Adobe Acrobat Services]個のAPIを使用して、Webサイト上のユーザーフレンドリーでインタラクティブなPDF体験を作成できます。 6か月間Adobe PDFサービスAPIを無料で利用した後は、(AWSまたは直接契約を通じて) [従量課金制](https://developer.adobe.com/document-services/pricing/main)で、1件の文書取引でわずか$ 0.05の利用が可能です。 時間制限なしでAdobe PDF Embedを無料で使用できます。 無料アカウントを作成して、今すぐ[使用を開始](https://www.adobe.com/go/dcsdks_credentials)しましょう。
