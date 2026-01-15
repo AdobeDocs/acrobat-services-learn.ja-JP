@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8092
 thumbnail: KT-8092.jpg
 exl-id: 0e24c8fd-7fda-452c-96f9-1e7ab1e06922
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '1443'
 ht-degree: 0%
@@ -283,4 +283,3 @@ views/ディレクトリで、次の内容のjob.jadeファイルを作成しま
 * [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 Webサイトにユーザーフレンドリーなドキュメント処理機能を追加するには、[無料体験版に新規登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)してください。 Adobe PDF Embed APIは常に無料で使用でき、Adobe PDF Services APIは6か月間が無料です。この後はドキュメントごとのトランザクションでわずか\$0.05になるため、事業の成長に合わせて[従量課金制](https://developer.adobe.com/document-services/pricing/main)で利用できます。
-

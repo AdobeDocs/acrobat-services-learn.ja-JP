@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8097
 thumbnail: KT-8097.jpg
 exl-id: e0c32082-4f8f-4d8b-ab12-55d95b5974c5
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '1890'
 ht-degree: 0%
@@ -429,4 +429,3 @@ module.exports = {listFiles, previewPDF, downloadPDF };
 組織は、[!DNL Adobe Acrobat Services]個のAPIを使用して、完全性と使いやすさを実現しています。 特に、[6か月間の無料体験後、従量課金制](https://developer.adobe.com/document-services/pricing/main)をお楽しみいただけます。 君は使った分だけお金を払う。 さらに、PDF埋め込みAPIは常に無料です。
 
 文書のフローを改善して、生産性を向上させましょう。 [今すぐ](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を開始してください。
-

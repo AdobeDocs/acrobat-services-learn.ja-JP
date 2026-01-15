@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10222
 thumbnail: KT-10222.jpg
 exl-id: 9430748f-9e2a-405f-acac-94b08ad7a5e3
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '1704'
 ht-degree: 0%
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 1. サンプルコードをダウンロードする言語を選択します（例：Node.js）。
 1. **[!UICONTROL デベロッパー利用条件]**&#x200B;に同意する場合にオンにします。
-1. **[!UICONTROL 資格情報の作成]**&#x200B;を選択します。
+1. **[!UICONTROL 資格情報の作成]**を選択します。
 サンプルファイル、pdfservices-api-credentials.json、認証用のprivate.keyを含むZIPファイルがコンピューターにダウンロードされます。
 
    ![資格情報のスクリーンショット](assets/accsales_2.png)
@@ -189,7 +189,7 @@ Microsoft Wordの表の場合と同様に、スタイル、サイズ、その他
 1. *[!UICONTROL 計算の種類の選択]*&#x200B;で、**[!UICONTROL 集計]**&#x200B;を選択します。
 1. *[!UICONTROL 種類の選択]*&#x200B;で、**[!UICONTROL 合計]**&#x200B;を選択します。
 1. *[!UICONTROL レコードの選択]*&#x200B;で、**[!UICONTROL 参照順序]**&#x200B;を選択します。
-1. *[!UICONTROL 集計を実行する項目を選択]で&#x200B;**2&rbrace;totalPaymentsDue.price &#x200B;** [!UICONTROL を選択します。]**
+1. *[!UICONTROL 集計を実行する項目を選択]で**2}totalPaymentsDue.price **[!UICONTROL を選択します。]**
 1. **[!UICONTROL 計算の挿入]**&#x200B;を選択します。
 
 このプロセスでは、値の合計を提供する計算タグが挿入されます。 JSONata計算を使用すると、より高度な計算を行うことができます。 次に例を示します。
@@ -370,10 +370,11 @@ documentMergeOperation.execute(executionContext)
 * PDFを活用する方法を確認するには、 /srcフォルダー内のサンプルスクリプトを使用します
 * [Adobe技術ブログ](https://medium.com/adobetech/tagged/adobe-document-cloud)をフォローして、最新のヒントとコツを確認してください
 * [ペーパークリップ（月間ライブストリーム）](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)のサブスクリプションを購入すると、[!DNL Adobe Acrobat Services]を使用したオートメーションについて学習できます。
+
 =======
+
 * 詳細については、[ドキュメント](https://developer.adobe.com/document-services/docs/overview/)を参照してください
 * Adobe Experience Leagueのその他のチュートリアルを見る
 * PDFを活用する方法を確認するには、 /srcフォルダー内のサンプルスクリプトを使用します
 * [Adobe技術ブログ](https://medium.com/adobetech/tagged/adobe-document-cloud)をフォローして、最新のヒントとコツを確認してください
 * [ペーパークリップ（月間ライブストリーム）](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)のサブスクリプションを購入すると、[!DNL Adobe Acrobat Services]を使用したオートメーションについて学習できます
-

@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10382
 thumbnail: KT-10382.jpg
 exl-id: 68ec654f-74aa-41b7-9103-44df13402032
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 2%
@@ -116,7 +116,7 @@ Power Automateの使用を開始するには、まず<https://powerautomate.micr
 
 上のスクリーンショットが示すように、職場アカウントに切り替えるか、新しい組織アカウントを設定できます。 利用できるようになったら、Adobe PDFサービスのアクションを追加できます。
 
-[!DNL Adobe Acrobat Services]を使用して最初のMicrosoft Power Automateフローを作成する方法の詳細については、[Microsoft Power Automateで最初のワークフローを作成する](https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate)を参照してください。
+[!DNL Adobe Acrobat Services]を使用して最初のMicrosoft Power Automateフローを作成する方法の詳細については、[Microsoft Power Automateで最初のワークフローを作成する](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate)を参照してください。
 
 ## その他の参考資料
 
@@ -127,4 +127,3 @@ Power Automateの使用を開始するには、まず<https://powerautomate.micr
 * アドビのライブビデオコンテンツである[ペーパークリップ](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)には、Power Automateの使用方法を説明するビデオも含まれています。
 * [Adobe技術ブログ](https://medium.com/adobetech/tagged/microsoft-power-automate)には、Power Automateの使用に関する多くの記事があります。
 * 最後に、コア[PDFサービス](https://developer.adobe.com/document-services/docs/overview/)のドキュメントも参照してください。
-

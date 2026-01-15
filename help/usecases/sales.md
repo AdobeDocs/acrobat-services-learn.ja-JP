@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8099
 thumbnail: KT-8099.jpg
 exl-id: 219c70de-fec1-4946-b10e-8ab5812562ef
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%
@@ -146,4 +146,3 @@ console.log('Exception encountered while executing operation', err);
 Microsoft Formsを使用すると、お客様からそれぞれの提案に含まれる重要なデータを取得できます。 Microsoft Wordでセールスプロポーザルテンプレートを作成し、毎回作成したくない固定テキストを提供しています。 次に、[!DNL Acrobat Services] APIを使用してフォームとテンプレートのデータを結合し、より効率的な方法で顧客の営業提案PDFを作成しました。
 
 この実践チュートリアルでは、これらのAPIで可能なことのほんの一例を示します。 その他のソリューションを見つけるには、[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html) APIページにアクセスしてください。 これらのツールはすべて6か月間無料で使用できます。 その後、[従量課金制](https://developer.adobe.com/document-services/pricing/main)プランのドキュメントトランザクションあたり0.05ドルをお支払いいただくと、チームが見込み客を販売パイプラインに追加するだけで、お支払いいただくことができます。
-

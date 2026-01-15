@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-6674
 thumbnail: KT-6674.jpg
 exl-id: 55f5b04e-0249-47d9-9131-2f9ec01db7e8
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -108,4 +108,3 @@ output/exportPdfOutput.PPTX
 * PDFサービスAPIの質問に関する[FAQ](https://community.adobe.com/t5/contentarchivals/contentarchivedpage/message-uid/10726197)
 
 * ライセンスと価格に関する質問については、[お問い合わせ](https://www.adobe.com/go/pdftoolsapi_requestform)ください
-
