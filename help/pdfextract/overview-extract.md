@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-9247
 thumbnail: KT-9247.jpg
 exl-id: db340959-e7dc-4e46-939d-3b8c29749ebd
-source-git-commit: fdcaee94634220a662949252460c40a3f27bbdcc
+source-git-commit: 5d00f4e8b7ed1c36670f0f669110b85e887ffe69
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
@@ -63,4 +63,3 @@ AdobeAIを活用したwebサービスで、あらゆるPDFの構造とコンテ�
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-

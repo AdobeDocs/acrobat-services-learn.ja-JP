@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10382
 thumbnail: KT-10382.jpg
 exl-id: 68ec654f-74aa-41b7-9103-44df13402032
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 2%
@@ -127,4 +127,3 @@ Power Automateの使用を開始するには、まず<https://powerautomate.micr
 * アドビのライブビデオコンテンツである[ペーパークリップ](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)には、Power Automateの使用方法を説明するビデオも含まれています。
 * [Adobe技術ブログ](https://medium.com/adobetech/tagged/microsoft-power-automate)には、Power Automateの使用に関する多くの記事があります。
 * 最後に、コア[PDFサービス](https://developer.adobe.com/document-services/docs/overview/)のドキュメントも参照してください。
-

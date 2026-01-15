@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8145
 thumbnail: KT-8145.jpg
 exl-id: 5871ef8d-be9c-459f-9660-e2c9230a6ceb
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 0%
@@ -232,4 +232,3 @@ Danielleは請求書を自動的に生成できるので、顧客が請求書を
 
 あらゆる可能性を試し、独自の便利なアプリケーションの構築を開始するには、無料の[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)アカウントを作成して、今すぐ使用を開始してください。 6か月間の無料体験後は[従量課金制](https://developer.adobe.com/document-services/pricing/main)です
 ビジネスの拡大・縮小に合わせて、文書トランザクションあたり0.05ドルで利用できます。
-

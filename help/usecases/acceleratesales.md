@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-10222
 thumbnail: KT-10222.jpg
 exl-id: 9430748f-9e2a-405f-acac-94b08ad7a5e3
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '1704'
 ht-degree: 0%
@@ -370,10 +370,11 @@ documentMergeOperation.execute(executionContext)
 * PDFを活用する方法を確認するには、 /srcフォルダー内のサンプルスクリプトを使用します
 * [Adobe技術ブログ](https://medium.com/adobetech/tagged/adobe-document-cloud)をフォローして、最新のヒントとコツを確認してください
 * [ペーパークリップ（月間ライブストリーム）](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)のサブスクリプションを購入すると、[!DNL Adobe Acrobat Services]を使用したオートメーションについて学習できます。
+
 =======
+
 * 詳細については、[ドキュメント](https://developer.adobe.com/document-services/docs/overview/)を参照してください
 * Adobe Experience Leagueのその他のチュートリアルを見る
 * PDFを活用する方法を確認するには、 /srcフォルダー内のサンプルスクリプトを使用します
 * [Adobe技術ブログ](https://medium.com/adobetech/tagged/adobe-document-cloud)をフォローして、最新のヒントとコツを確認してください
 * [ペーパークリップ（月間ライブストリーム）](https://www.youtube.com/playlist?list=PLcVEYUqU7VRe4sT-Bf8flvRz1XXUyGmtF)のサブスクリプションを購入すると、[!DNL Adobe Acrobat Services]を使用したオートメーションについて学習できます
-

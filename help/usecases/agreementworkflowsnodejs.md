@@ -9,7 +9,7 @@ jira: KT-7473
 thumbnail: KT-7473.jpg
 keywords: おすすめ
 exl-id: 44a03420-e963-472b-aeb8-290422c8d767
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '2094'
 ht-degree: 0%
@@ -520,5 +520,3 @@ request(createWebFormRequest, function (error, response) {
 呼び出しに必要なスコープを検出したり、呼び出しの構築方法を確認したりするには、[Rest APIドキュメント](https://secure.na4.adobesign.com/public/docs/restapi/v6)からサンプル呼び出しを構築します。 [Quickstarts](https://github.com/adobe/pdftools-node-sdk-samples)は、[!DNL Adobe Acrobat Services]個のAPIプロセスの他の機能とファイル形式も示します。
 
 アプリケーションに様々なPDF機能を追加して、文書の閲覧や署名などをすばやく簡単に行うことができます。 開始するには、今すぐ[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage/)をご覧ください。
-
-

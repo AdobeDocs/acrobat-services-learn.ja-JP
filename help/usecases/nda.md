@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8098
 thumbnail: KT-8098.jpg
 exl-id: f4ec0182-a46e-43aa-aea3-bf1d19f1a4ec
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 0%
@@ -191,4 +191,3 @@ Adobe Signプロセスの詳細については、[ドキュメントを参照](h
 
 これらの方法を使用して独自のNDAやその他のドキュメントを動的に作成することで、チームが生産性の高い作業に集中する時間を節約できます。 [[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/apis/pdf-services)を検索して、選択した言語およびランタイムのAPIとSDKを見つけてください。アプリケーションに直接PDF関数を追加して、PDF文書をすばやく作成できます。 6か月間の無料体験後は、[使用を開始](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
 [従量課金制](https://developer.adobe.com/document-services/pricing/main) （ドキュメントトランザクションあたり$0.05のみ）。
-

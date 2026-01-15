@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-7480
 thumbnail: KT-7480.jpg
 exl-id: 519a41a2-33af-4022-8919-2cb69995c46c
-source-git-commit: 615250f9aadbd76ebe40578aadb9de9286e7dd55
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 0%
@@ -213,4 +213,3 @@ Document Generation APIでは、入力データとともに（テンプレート
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
-

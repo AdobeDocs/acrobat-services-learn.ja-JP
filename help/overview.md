@@ -8,7 +8,7 @@ jira: KT-7463
 type: Tutorial
 thumbnail: KT-7463.jpg
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-source-git-commit: 2b3a807b13c1bfaffa84e6b73909c4f6b024d9c7
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 5%
@@ -272,3 +272,4 @@ ht-degree: 5%
 </div>
 
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+

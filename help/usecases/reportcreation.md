@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8093
 thumbnail: KT-8093.jpg
 exl-id: 2f2bf1c2-1b33-4eee-9fd2-5d0b77e6b0a9
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 0%
@@ -220,4 +220,3 @@ res.status(500).render("crash", { error: error });
 このAdobe対応アプリケーションを使用すると、[ソーシャルメディアダッシュボードのお客様](https://developer.adobe.com/document-services/use-cases/content-publishing/on-demand-report-creation)は、必要なレポートを取得して共有することができます。受け取ったすべてのユーザーがデバイスにMicrosoft Officeなどのソフトウェアをインストールしているかどうかを心配する必要はありません。 独自のアプリケーションで同じ方法を使用して、ユーザーがドキュメントを表示、結合、ダウンロードできるようにすることができます。 または、Adobeのその他多くのAPIをチェックして、署名の追加や追跡などを行うことができます。
 
 開始するには、無料の[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)アカウントをクレームし、従業員と顧客の魅力的なレポートエクスペリエンスを作成します。 6か月間アカウントを無料で利用でき、マーケティング活動の拡大に合わせて[従量課金制](https://developer.adobe.com/document-services/pricing/main)で、1つのドキュメントトランザクションにつき\$0.05になります。
-

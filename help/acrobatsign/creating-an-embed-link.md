@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-11073
 thumbnail: KT-11073.jpg
 exl-id: 6fc50cc7-bb65-4d4b-9e4f-3b4a3ab8adab
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
@@ -24,4 +24,3 @@ ht-degree: 0%
 >このチュートリアルは、アプリケーション内に署名プロセスを構築し、組み込んでいるOEMパートナーを対象としています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3445409?captions=jpn&hidetitle=true){transcript=true}
-

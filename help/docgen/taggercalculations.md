@@ -6,7 +6,7 @@ role: Developer
 level: Beginner
 thumbnail: 332118.jpg
 exl-id: 562cd1ad-6b43-4f4c-bb58-c63494895a14
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
@@ -18,4 +18,3 @@ ht-degree: 0%
 AdobeのDocument Generation Taggerを使用してMicrosoft Wordテンプレートで数値計算タグを設定し、AdobeのDocument Generation APIを使用してデータ値の集計または計算を行う方法について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3411746?captions=jpn&hidetitle=true)
-

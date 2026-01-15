@@ -8,7 +8,7 @@ type: Tutorial
 jira: KT-8089
 thumbnail: KT-8089.jpg
 exl-id: ae1cd9db-9f00-4129-a2a1-ceff1c899a83
-source-git-commit: bd53d86abb0e5f9ee302c39e07c00101e5a1f8ed
+source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 0%
@@ -441,4 +441,3 @@ Acrobat Sign APIは、[シングルユーザーおよびマルチユーザーの
 6か月間のAdobe PDF Services APIの無料体験期間が終了する時点と、Adobe PDF Embed APIの無料体験版が終了する時点については、[従量課金制](https://developer.adobe.com/document-services/pricing/main)を参照してください。
 
 文書の自動作成や文書の署名など、画期的な機能をアプリに追加するには、[[!DNL Adobe Acrobat Services]](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を使い始めてください。
-
