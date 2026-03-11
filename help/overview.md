@@ -8,10 +8,10 @@ jira: KT-7463
 type: Tutorial
 thumbnail: KT-7463.jpg
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-source-git-commit: 91af98e26fdbc89574e4df7ecadaea9e30584aaf
+source-git-commit: 4d076f7a05fd20b7e864929e74885957f42c5728
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 5%
+source-wordcount: '607'
+ht-degree: 2%
 
 ---
 
@@ -26,10 +26,11 @@ ht-degree: 5%
 * [!DNL Adobe PDF Extract API]
 * [!DNL Adobe PDF Accessibility Auto-Tag API]
 
-後の2つのAPIとそのSDKは、有料サービスの一部として[!DNL Adobe PDF Services API]にバンドルされています。 [!DNL PDF Embed API]は無料サービスです。 これらのAPIは、最新のクラウドベースのWebサービスのセットを介して、ドキュメントコンテンツの生成、操作、変換を自動化します。 これらは、ドキュメントに対するユーザー操作の制御、PDFワークフローの合理化、使用と保持の促進など、シンプルで迅速なブランドエクスペリエンスを提供するのに役立ちます。 これらのチュートリアルでは、[!DNL Adobe Acrobat Services] APIを使用して、ブランド化されたエクスペリエンスをよりシンプルかつ迅速に提供します。
+後の2つのAPIとそのSDKは、有料サービスの一部として[!DNL Adobe PDF Services API]にバンドルされています。[!DNL PDF Embed API] は無料で提供されます。 これらのAPIは、最新のクラウドベースのWebサービスのセットを介して、ドキュメントコンテンツの生成、操作、変換を自動化します。 これらは、ドキュメントに対するユーザー操作の制御、PDFワークフローの合理化、使用と保持の促進など、シンプルで迅速なブランドエクスペリエンスを提供するのに役立ちます。 これらのチュートリアルでは、[!DNL Adobe Acrobat Services] APIを使用して、ブランド化されたエクスペリエンスをよりシンプルかつ迅速に提供します。
 
 <!-- Comment -->
-<!-- CARDS
+<!--
+CARDS
 
 * https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/overview-pdfservices
   {target = _self}
@@ -89,8 +90,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/overview-pdfservices" title="PDFサービスAPI" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/media_1a7b3ae4fc2b8c33c920f81a3eee05dc358108a74.png?width=400&format=webply&optimize=medium" alt="PDFサービスAPI"
+                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/overview-pdfservices" title="PDF Services API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/media_1a7b3ae4fc2b8c33c920f81a3eee05dc358108a74.png?width=400&format=webply&optimize=medium" alt="PDF Services API"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -98,7 +99,7 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/overview-pdfservices" target="_self" rel="referrer" title="PDFサービスAPI">PDFサービスAPI</a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/overview-pdfservices" target="_self" rel="referrer" title="PDF Services API">PDFサービスAPI</a>
                     </p>
                     <p class="is-size-6">node.js、.Net、Java用のSDKを使用して、PDFの作成、変換、OCRなどをPDFするAPI</p>
                 </div>
@@ -204,8 +205,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/overview-embed" title="PDF Embed API" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/media_100c64db6899f092f8a30e0d153091398242f8abc.png?width=400&format=webply&optimize=medium" alt="PDF Embed API"
+                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/overview-embed" title="PDF埋め込みAPI" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/media_100c64db6899f092f8a30e0d153091398242f8abc.png?width=400&format=webply&optimize=medium" alt="PDF埋め込みAPI"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -213,7 +214,7 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/overview-embed" target="_self" rel="referrer" title="PDF Embed API">PDF埋め込みAPI</a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/overview-embed" target="_self" rel="referrer" title="PDF埋め込みAPI">PDF埋め込みAPI</a>
                     </p>
                     <p class="is-size-6">無料のJavascript APIにより、忠実度の高いPDFを埋め込み、共同作業を可能にし、分析を表示</p>
                 </div>

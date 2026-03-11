@@ -7,10 +7,10 @@ level: Beginner, Intermediate, Experienced
 type: Tutorial
 jira: KT-15330
 exl-id: 74198c86-505b-4321-923e-0079e3d767cd
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+source-git-commit: 4d076f7a05fd20b7e864929e74885957f42c5728
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 0%
+source-wordcount: '160'
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,8 @@ ht-degree: 0%
 Adobe PDF Electronic Seal APIは、[AdobeのApproved Trust List (AATL)](https://helpx.adobe.com/jp/acrobat/kb/approved-trust-list1.html)にある特定のTSP （トラストサービスプロバイダー）によって発行された証明書を使用して、大規模な文書にeシールを適用します。 eシールは、文書のIDと整合性を確認するのに役立ちます。 これは、大規模な文書のeシールに使用でき、PDFサービスAPIに含まれています。
 
 <!-- Comment -->
-<!-- CARDS
+<!--
+CARDS
 
 * https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/eseal/automatically-apply-electronic-seal
   {target = _self}
