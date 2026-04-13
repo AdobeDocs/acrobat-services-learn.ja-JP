@@ -8,10 +8,10 @@ feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation 
 role: Developer
 level: Beginner, Intermediate, Experienced
 auto-video-transcripts: true
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+source-git-commit: 2b989e4de21881476330b8085636d8335f34f172
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 7%
+source-wordcount: '246'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 7%
 # [!DNL Adobe Acrobat Services]個のAPI Tutorials {#tutorials}
 
 + [概要](/help/overview.md)
-+ PDFサービスAPI {#pdfservices}
++ PDF Services API {#pdfservices}
    + [概要](/help/pdfservices/overview-pdfservices.md)
    + [Microsoft Power Automateの資格情報の取得](/help/pdfservices/getting-credentials-power-automate.md)
    + [Microsoft Power Automateで最初のフローを作成](/help/pdfservices/create-workflow-power-automate.md)
@@ -47,7 +47,7 @@ ht-degree: 7%
 + PDFeシールAPI {#eseal}
    + [概要](/help/pdfelectronicseal/overview-electronic-seal.md)
    + [eシールを自動適用](/help/pdfelectronicseal/automatically-apply-electronic-seal.md)
-+ PDF Embed API {#pdfembed}
++ PDF埋め込みAPI {#pdfembed}
    + [概要](/help/pdfembed/overview-embed.md)
    + [PDFのオンラインエクスペリエンスを制御し、分析を収集](/help/pdfembed/controlpdfexperience.md)
 + Acrobat Sign API {#acrobatsign}
@@ -59,7 +59,7 @@ ht-degree: 7%
       + [埋め込みリンクの作成](/help/acrobatsign/creating-an-embed-link.md)
       + [アクセストークンの生成](/help/acrobatsign/generating-an-access-token.md)
       + [一時的なドキュメントの作成](/help/acrobatsign/creating-a-transient-document.md)
-+ ユースケース {#usecases}
++ 使用事例 {#usecases}
    + [概要](/help/usecases/overview-usecases.md)
    + [法的なワークフローの自動化](/help/usecases/automatelegalworkflows.md)
    + [従業員オンボーディングの最新化](/help/usecases/employeeonboarding.md)
@@ -78,5 +78,5 @@ ht-degree: 7%
    + [Javaでの財務文書ワークフローの管理](/help/usecases/financeworkflowsjava.md)
    + [請求書の処理](/help/usecases/invoices.md)
    + [デジタルドキュメントパブリッシング](/help/usecases/ddppdfembedapi.md)
-+ [テスト用の非表示ファイル](/help/hidden-file.md)
++ {hide-from-toc}[テスト用の非表示ファイル](/help/hidden-file.md)
 

@@ -2,10 +2,9 @@
 title: 隠しファイル
 description: テスト用の隠しファイル
 hide: true
-hidefromtoc: true
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+source-git-commit: 2b989e4de21881476330b8085636d8335f34f172
 workflow-type: tm+mt
-source-wordcount: '10'
+source-wordcount: '12'
 ht-degree: 0%
 
 ---
