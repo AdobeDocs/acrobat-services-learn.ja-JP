@@ -8,10 +8,16 @@ type: Tutorial
 jira: KT-10203
 thumbnail: KT-10203.jpg
 exl-id: 0186b3ee-4915-4edd-8c05-1cbf65648239
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/cyfUGCD0CzmV6M4TiC9ZpYBrOpqHGgmwK8ByVYqSDbE
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2: id: b1809bd0-a86b-4991-8083-2e3b517fc3b8id: c4d07275-6387-4756-8bf7-681e581ffd27
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 0%
+source-wordcount: 1564
+ht-degree: 1%
 
 ---
 
@@ -23,11 +29,11 @@ ht-degree: 0%
 
 ## [!DNL Adobe Acrobat Services]とは
 
-[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage)は、(PDFだけでなく)文書の操作に関連する一連のAPIです。 このサービススイートは、大まかに言うと、次の3つの主要なカテゴリに分類されます。
+[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/homepage)は、（PDFだけでなく）文書の操作に関連する一連のAPIです。 このサービススイートは、大まかに言うと、次の3つの主要なカテゴリに分類されます。
 
 * 最初に、[PDFサービス](https://developer.adobe.com/document-services/apis/pdf-services/)のツールセットが表示されます。 これらは、PDFやその他の文書を操作するための「ユーティリティ」方式です。 PDFとの間の変換、OCRや最適化の実行、PDFの結合や分割などのサービスが含まれます。 文書処理機能のツールボックスです。
 * [PDFエクストラクトAPI](https://developer.adobe.com/document-services/apis/pdf-extract/)では、強力なAI/MLテクニックを使用してPDFを分析し、コンテンツに関する驚くべき詳細を返します。 これには、テキスト、スタイル、および位置情報が含まれ、CSV/XLS形式で表形式のデータを返したり、画像を取得することもできます。
-* 最後に、[Document Generation API](https://developer.adobe.com/document-services/apis/doc-generation/)を使用すると、開発者はMicrosoft Wordを「テンプレート」として使用し、（任意のソースからの）データと組み合わせて、動的にパーソナライズされた文書(PDFとWord)を生成できます。
+* 最後に、[Document Generation API](https://developer.adobe.com/document-services/apis/doc-generation/)を使用すると、開発者はMicrosoft Wordを「テンプレート」として使用し、（任意のソースからの）データと組み合わせて、動的にパーソナライズされた文書（PDFとWord）を生成できます。
 
 開発者は、[新規登録](https://documentcloud.adobe.com/dc-integration-creation-app-cdn/main.html)して、これらのサービスをすべて無料体験版で試すことができます。 [!DNL Acrobat Services]プラットフォームはRESTベースのAPIを使用していますが、Node、Java、.NET、およびPythonのSDKもサポートしています（現時点ではExtractのみ）。
 

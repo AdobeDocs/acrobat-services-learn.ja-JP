@@ -8,9 +8,16 @@ type: Tutorial
 jira: KT-8098
 thumbnail: KT-8098.jpg
 exl-id: f4ec0182-a46e-43aa-aea3-bf1d19f1a4ec
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/TrET5NQJUcvJYGDJgfTJ6fSfQxjz-l2rFj-D5zQygw0
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2: id: b1809bd0-a86b-4991-8083-2e3b517fc3b8id: c4d07275-6387-4756-8bf7-681e581ffd27
+subfeature_v2: id: b4b3dc0f-b1be-46b4-b8ca-134a4629084aid: c4b1e8f2-d9a8-4792-b5e4-be52bd870028id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: 1220
 ht-degree: 0%
 
 ---
@@ -39,7 +46,7 @@ ht-degree: 0%
 
 * [プロジェクトコード](https://github.com/afzaal-ahmad-zeeshan/adobe-docugen-sample)
 
-* [[!DNL Acrobat Services] キー](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getcred)
+* [[!DNL Acrobat Services]キー](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html#getcred)
 
 ## JSONモデルの作成
 
@@ -190,4 +197,4 @@ Adobe Signプロセスの詳細については、[ドキュメントを参照](h
 この実践チュートリアルでは、Microsoft WordテンプレートとJSONデータファイルを使用してAdobe文書を動的に生成するために、PDF文書生成Taggerを使用します。 このアドインにより、[各関係者に合わせてカスタマイズされたNDAを自動的に作成](https://developer.adobe.com/document-services/use-cases/agreements-and-contracts/nda-creation)し、Sign APIを使用して署名を収集できました。
 
 これらの方法を使用して独自のNDAやその他のドキュメントを動的に作成することで、チームが生産性の高い作業に集中する時間を節約できます。 [[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services/apis/pdf-services)を検索して、選択した言語およびランタイムのAPIとSDKを見つけてください。アプリケーションに直接PDF関数を追加して、PDF文書をすばやく作成できます。 6か月間の無料体験後は、[使用を開始](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)
-[従量課金制](https://developer.adobe.com/document-services/pricing/main) （ドキュメントトランザクションあたり$0.05のみ）。
+[従量課金制](https://developer.adobe.com/document-services/pricing/main)で、ドキュメントトランザクションあたり$0.05のみです。

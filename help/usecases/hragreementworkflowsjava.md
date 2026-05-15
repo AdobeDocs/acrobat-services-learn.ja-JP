@@ -8,10 +8,16 @@ type: Tutorial
 jira: KT-7474
 thumbnail: KT-7474.jpg
 exl-id: add4cc5c-06e3-4ceb-930b-e8c9eda5ca1f
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/3XG9hVuP8EXiHP19m-werP4yFx8ae-VIPuS7N0V2jpQ
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2: id: b1809bd0-a86b-4991-8083-2e3b517fc3b8id: c4d07275-6387-4756-8bf7-681e581ffd27
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '1777'
-ht-degree: 0%
+source-wordcount: 1960
+ht-degree: 1%
 
 ---
 
@@ -27,7 +33,7 @@ ht-degree: 0%
 
 ## 関連APIとリソース
 
-* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 
@@ -35,7 +41,7 @@ ht-degree: 0%
 
 ## API資格情報を生成中
 
-まず、Adobe PDFサービスAPIの無料体験版にサインアップします。 [Adobe](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) [Webサイト](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK)に移動し、*新しい資格情報の作成*&#x200B;の下にある&#x200B;*開始*&#x200B;ボタンをクリックします。 無料体験版では、6か月間で使用できる1,000件の文書トランザクションを提供します。 次のページ（下記参照）で、サービス(PDFサービスAPI)を選択し、資格情報名（HRDocumentWFCredentialsなど）を入力して、説明を入力します。
+まず、Adobe PDFサービスAPIの無料体験版にサインアップします。 [Adobe](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK) [Webサイト](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html?ref=getStartedWithServicesSDK)に移動し、*新しい資格情報の作成*&#x200B;の下にある&#x200B;*開始*&#x200B;ボタンをクリックします。 無料体験版では、6か月間で使用できる1,000件の文書トランザクションを提供します。 次のページ（下記参照）で、サービス（PDFサービスAPI）を選択し、資格情報名（HRDocumentWFCredentialsなど）を入力して、説明を入力します。
 
 言語（この例ではJava）を選択し、[*パーソナライズされたコードサンプルの作成*]をオンにします。 最後の手順では、コードサンプルに、使用する事前入力されたpdftools-api-credentials.jsonファイルと、API内でアプリを認証するためのプライベートキーが既に含まれていることを確認します。
 
@@ -208,7 +214,7 @@ public class PersonController {
 
 まず、静的なコンテンツと動的なコンテンツを含むHTMLページを準備する必要があります。 ダイナミックパーツは、JavaScriptを使用して更新されます。 つまり、PDFサービスAPIは、JSONオブジェクトをHTMLに注入します。
 
-その後、HTMLドキュメントが読み込まれたときに呼び出されるJavaScript関数を使用して、JSONプロパティを取得します。 このJavaScript関数は、選択されたDOM要素を更新します。 個人のデータを保持してspan要素を設定する例を次に示します(コンパニオンコードのsrc\\main\\resources\\contract\\index.htmlを参照)。
+その後、HTMLドキュメントが読み込まれたときに呼び出されるJavaScript関数を使用して、JSONプロパティを取得します。 このJavaScript関数は、選択されたDOM要素を更新します。 個人のデータを保持してspan要素を設定する例を次に示します（コンパニオンコードのsrc\\main\\resources\\contract\\index.htmlを参照）。
 
 ```
 <html>
@@ -348,7 +354,7 @@ private static void setCustomOptionsAndPersonData(
 </html>
 ```
 
-次に、`downloadContract`クラス内で`PersonController`メソッドを次のように実装します。
+次に、`PersonController`クラス内で`downloadContract`メソッドを次のように実装します。
 
 ```
 @RequestMapping("/pdf")
@@ -414,7 +420,7 @@ https://secure.eu1.adobesign.com/public/oauth?redirect_uri=https://www.google.co
 ```
 
 Webブラウザーに上記のURLを入力します。 google.comにリダイレクトされ、コードがアドレスバーにcode=\&lt;YOUR_CODE\>として表示されます。
-例：
+、
 
 ```
 https://www.google.com/?code=<YOUR_CODE>&api_access_point=https://api.eu1.adobesign.com/&web_access_point=https://secure.eu1.adobesign.com%2F
@@ -422,7 +428,7 @@ https://www.google.com/?code=<YOUR_CODE>&api_access_point=https://api.eu1.adobes
 
 \&lt;YOUR_CODE\>とapi_access_pointに指定した値に注意してください。
 
-アクセストークンを提供するHTTP POSTリクエストを送信するには、クライアントID、\&lt;YOUR_CODE\>、およびapi_access_pointの値を使用します。 [Postman](https://helpx.adobe.com/jp/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html)またはcURLを使用できます：
+アクセストークンを提供するHTTP POSTリクエストを送信するには、クライアントID、\&lt;YOUR_CODE\>、およびapi_access_pointの値を使用します。 [Postman](https://helpx.adobe.com/sign/kb/how-to-create-access-token-using-postman-adobe-sign.html)またはcURLを使用できます：
 
 ```
 curl --location --request POST "https://**api.eu1.adobesign.com**/oauth/token"
@@ -501,7 +507,7 @@ IntelliJ IDEAでは、*プロジェクト構造* （ファイル/プロジェク
 </html>
 ```
 
-次に、`AdobeSignController`を実装する別のコントローラー`sendContractMethod`を追加します（コンパニオンコードを参照）。 この方法は次のように動作します。
+次に、`sendContractMethod`を実装する別のコントローラー`AdobeSignController`を追加します（コンパニオンコードを参照）。 この方法は次のように動作します。
 
 まず、`ApiClient`を使用してAPIエンドポイントを取得します。
 

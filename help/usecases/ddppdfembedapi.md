@@ -8,9 +8,16 @@ type: Tutorial
 jira: KT-8090
 thumbnail: KT-8090.jpg
 exl-id: 3aa9aa40-a23c-409c-bc0b-31645fa01b40
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/ps-wxzaqHNuBwOlfWDDEmOamM3ZOmP-4Ys1H4X--Gk0
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2: id: b1809bd0-a86b-4991-8083-2e3b517fc3b8id: c4d07275-6387-4756-8bf7-681e581ffd27
+subfeature_v2: id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: 1968
 ht-degree: 0%
 
 ---
@@ -21,8 +28,8 @@ ht-degree: 0%
 
 電子文書はどこにでもあります。実際、世界中に[兆個ものPDF](https://itextpdf.com/en/blog/technical-notes/do-you-know-how-many-pdf-documents-exist-world)が存在すると考えられ、その数は毎日増加しています。 PDFビューアをwebページに埋め込むと、HTMLやCSSを再設計したり、webサイトへのアクセスを妨げたりすることなく、文書を表示できるようになります。
 
-人気のあるシナリオを見てみましょう。 ある企業が[ホワイトペーパーをWebサイトに投稿している](https://developer.adobe.com/document-services/use-cases/content-publishing/digital-content-publishing)
-アプリケーションやサービスのコンテキストを提供する。 このサイトのマーケターは、ユーザーがPDFベースのコンテンツをどのように操作し、webページやブランドと組み合わせるかを理解したいと考えています。 ホワイトペーパーを[ゲート付きコンテンツ](https://whatis.techtarget.com/definition/gated-content-ungated-content#:~:text=Gated%20content%20is%20online%20materials,about%20their%20jobs%20and%20organizations.)として公開することを決定し、誰がダウンロードできるかを管理しています。
+人気のあるシナリオを見てみましょう。 ある企業がWebサイトに[のホワイトペーパーを掲載しています](https://developer.adobe.com/document-services/use-cases/content-publishing/digital-content-publishing)
+アプリケーションやサービスのコンテキストを提供する。 このサイトのマーケターは、ユーザーがPDFベースのコンテンツをどのように操作し、webページやブランドと組み合わせるかを理解したいと考えています。 ホワイトペーパーを[ゲート付きコンテンツ](https://whatis.techtarget.com/definition/gated-content-ungated-content#:~:text=Gated%20content%20is%20online%20materials,about%20their%20jobs%20and%20organizations。)として公開することを決定し、誰がダウンロードできるかを管理しています。
 
 ## 学習内容
 
@@ -32,7 +39,7 @@ ht-degree: 0%
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [プロジェクトコード](https://www.google.com/url?q=https://github.com/marcelooliveira/EmbedPDF/tree/main/pdf-app&sa=D&source=editors&ust=1617129543031000&usg=AOvVaw2rzSwYuJ_JI7biVIgbNMw1)
 
@@ -557,6 +564,6 @@ console.log(event);
 
 angularやReactの開発者は、PDF埋め込みAPIをReactやAngularのプロジェクトと連携させる方法を紹介する[その他のサンプル](https://github.com/adobe/pdf-embed-api-samples)をお試しください。
 
-Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/)を無料でご利用いただけます。 他に実行できる操作を確認するには、Adobe PDFサービスAPIを[goprに応じた支払い](https://developer.adobe.com/document-services/pricing/main) [アイシング](https://developer.adobe.com/document-services/pricing/main)でお試しください。
+Adobeは、革新的なソリューションでエンドツーエンドのカスタマーエクスペリエンスを構築することを可能にします。 [Adobe PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/)を無料でご利用いただけます。 他に実行できる操作を確認するには、Adobe PDFサービスAPIを[goprに応じた支払い](https://developer.adobe.com/document-services/pricing/main)[アイシング](https://developer.adobe.com/document-services/pricing/main)でお試しください。
 
-[今すぐ](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)個のAPIを使用して[!DNL Adobe Acrobat Services]を開始できます。
+[今すぐ[!DNL Adobe Acrobat Services]個のAPIを使用して](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)を開始できます。

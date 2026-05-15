@@ -8,9 +8,16 @@ type: Tutorial
 jira: KT-8092
 thumbnail: KT-8092.jpg
 exl-id: 0e24c8fd-7fda-452c-96f9-1e7ab1e06922
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/5QKJELbrD1HA89U5E7m-3ekce2YXSqigek23mqrre2c
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2: id: b1809bd0-a86b-4991-8083-2e3b517fc3b8id: c4d07275-6387-4756-8bf7-681e581ffd27
+subfeature_v2: id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: e9001ce2-5245-4a8e-8601-dd958009072f
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: 1565
 ht-degree: 0%
 
 ---
@@ -33,7 +40,7 @@ ht-degree: 0%
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 ## AdobeAPI資格情報を作成しています
 
@@ -280,6 +287,6 @@ views/ディレクトリで、次の内容のjob.jadeファイルを作成しま
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 Webサイトにユーザーフレンドリーなドキュメント処理機能を追加するには、[無料体験版に新規登録](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)してください。 Adobe PDF Embed APIは常に無料で使用でき、Adobe PDF Services APIは6か月間が無料です。この後はドキュメントごとのトランザクションでわずか\$0.05になるため、事業の成長に合わせて[従量課金制](https://developer.adobe.com/document-services/pricing/main)で利用できます。

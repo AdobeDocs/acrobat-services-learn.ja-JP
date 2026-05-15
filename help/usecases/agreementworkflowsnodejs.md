@@ -9,9 +9,16 @@ jira: KT-7473
 thumbnail: KT-7473.jpg
 keywords: おすすめ
 exl-id: 44a03420-e963-472b-aeb8-290422c8d767
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/8SQivYwIRQxLqcHWCvrZ7b4t2BOqGyWKZvvNSpomrlo
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2: id: b1809bd0-a86b-4991-8083-2e3b517fc3b8id: c4d07275-6387-4756-8bf7-681e581ffd27
+subfeature_v2: id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: 2187
 ht-degree: 0%
 
 ---
@@ -20,7 +27,7 @@ ht-degree: 0%
 
 ![使用事例の英雄バナー](assets/UseCaseAgreementHero.jpg)
 
-多くのビジネスアプリケーションやプロセスでは、提案や契約書などの文書が必要です。 PDF文書を使用すると、ファイルの安全性と修正可能性を高めることができます。 また、クライアントがドキュメントをすばやく簡単に完了できるように、電子署名のサポートも提供します。 [!DNL Adobe Acrobat Services]個のAPIは、PDF機能をWebアプリケーションに簡単に組み込むことができます。
+多くのビジネスアプリケーションやプロセスでは、提案や契約書などの文書が必要です。 PDF文書を使用すると、ファイルの安全性と修正可能性を高めることができます。 また、クライアントがドキュメントをすばやく簡単に完了できるように、電子署名のサポートも提供します。[!DNL Adobe Acrobat Services] APIは、PDF機能をwebアプリケーションに簡単に組み込むことができます。
 
 ## 学習内容
 
@@ -28,7 +35,7 @@ ht-degree: 0%
 
 ## 関連APIとリソース
 
-* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
@@ -100,7 +107,7 @@ logger.level = 'info';
 logger.info('Application started')
 ```
 
-上記のコードは、ログされたデータをのファイルに書き込みます。/logs/applicationlog.txt。 代わりにコンソールに書き込むようにする場合は、log4js.configureの呼び出しをコメントアウトできます。
+上記のコードは、ログされたデータを./logs/applicationlog.txtのファイルに書き込みます。 代わりにコンソールに書き込むようにする場合は、log4js.configureの呼び出しをコメントアウトできます。
 
 ## WordファイルをPDFに変換中
 

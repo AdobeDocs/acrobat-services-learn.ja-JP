@@ -8,9 +8,16 @@ type: Tutorial
 jira: KT-8094
 thumbnail: KT-8094.jpg
 exl-id: d704620f-d06a-4714-9d09-3624ac0fcd3a
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/Y9rEEmFRErrNRz8lwG2ertPmm95ScYCigzepibfBoB0
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2: id: b1809bd0-a86b-4991-8083-2e3b517fc3b8id: c4d07275-6387-4756-8bf7-681e581ffd27
+subfeature_v2: id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '1540'
+source-wordcount: 1654
 ht-degree: 0%
 
 ---
@@ -21,7 +28,7 @@ ht-degree: 0%
 
 COVID-19の大流行の間に、多くの企業でチーム間のリモート共同作業が必要となりました。[デジタルドキュメントの共有とレビュー](https://developer.adobe.com/document-services/use-cases/collaboration/review-and-approval)には、チームや部門間のリソースにとって一連の課題が伴います。
 
-例えば、異なるファイル形式でのドキュメントの共有、コンテンツの効果的なレビューとコメント、最新の編集内容との同期などの課題があります。 [!DNL Adobe Acrobat Services]個のAPIは、アプリケーション開発者がユーザーに対してこれらの課題を解決できるように設計されています。
+例えば、異なるファイル形式でのドキュメントの共有、コンテンツの効果的なレビューとコメント、最新の編集内容との同期などの課題があります。[!DNL Adobe Acrobat Services] APIは、アプリケーション開発者がユーザーに対してこれらの課題を解決できるように設計されています。
 
 ## 学習内容
 
@@ -43,7 +50,7 @@ COVID-19の大流行の間に、多くの企業でチーム間のリモート共
 
 ## 関連APIとリソース
 
-* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
@@ -136,7 +143,7 @@ const fileUpload = require( "express-fileupload" );
 app.use( fileUpload() );
 ```
 
-次に、`/upload`エンドポイントを追加し、アップロードしたファイルを同じファイル名を使用して下書きフォルダー内に保存します。 次に、先ほど記述した関数を呼び出して、同じ文書のPDFファイルを作成します(まだPDF書式になっていない場合)。 アップロードされた元の文書の名前に基づいて、新しいPDFファイルのファイル名を作成できます。
+次に、`/upload`エンドポイントを追加し、アップロードしたファイルを同じファイル名を使用して下書きフォルダー内に保存します。 次に、先ほど記述した関数を呼び出して、同じ文書のPDFファイルを作成します（まだPDF書式になっていない場合）。 アップロードされた元の文書の名前に基づいて、新しいPDFファイルのファイル名を作成できます。
 
 ```
 // Create a PDF file from an uploaded file
@@ -330,7 +337,7 @@ app.get( "/download/:file", function( req, res ){
 
 ## 文書のフィードバックを保存中
 
-ユーザーがドキュメントにコメントしたら、[**保存]をクリックします。**&#x200B;既定では、[**保存**]をクリックすると、更新されたPDFファイルがダウンロードされます。 サーバ上の現在のPDFファイルを更新するには、このアクションを変更します。
+ユーザーが文書にコメントしたら、「**保存**」をクリックします。 既定では、[**保存**]をクリックすると、更新されたPDFファイルがダウンロードされます。 サーバ上の現在のPDFファイルを更新するには、このアクションを変更します。
 
 アップロード/下書きフォルダー内のサーバーファイルを上書きするPDFコードに`/save`エンドポイントを追加します：
 

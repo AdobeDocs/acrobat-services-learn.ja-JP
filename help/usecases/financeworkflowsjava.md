@@ -8,9 +8,16 @@ type: Tutorial
 jira: KT-7482
 thumbnail: KT-7482.jpg
 exl-id: 3bdc2610-d497-4a54-afc0-8b8baa234960
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/In-JxFG4Fe8Ui-BBgqChVNfr4-MsagnLlMAQYQVfiZM
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2: id: b1809bd0-a86b-4991-8083-2e3b517fc3b8id: c4d07275-6387-4756-8bf7-681e581ffd27
+subfeature_v2: id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: 1302
 ht-degree: 0%
 
 ---
@@ -25,19 +32,19 @@ ht-degree: 0%
 
 ## 学習内容
 
-この実践チュートリアルでは、[!DNL Adobe Acrobat Services]個のアプリケーションに[!DNL Java Spring Boot]個のAPIを使用する方法について学習します。 PDF文書からコンテンツを抽出してExcelなどの他のデータ形式に変換し、複数のリソースを結合してPDFを保護するモデルビューコントローラ(MVC)アプリを構築します。 このチュートリアルでは、Adobe [PDF埋め込みAPI](https://developer.adobe.com/document-services/apis/pdf-embed)を使用してPDF文書を処理し、Webサイトで表示する方法について説明します。
+この実践チュートリアルでは、[!DNL Java Spring Boot]個のアプリケーションに[!DNL Adobe Acrobat Services]個のAPIを使用する方法について学習します。 PDF文書からコンテンツを抽出してExcelなどの他のデータ形式に変換し、複数のリソースを結合してPDFを保護するモデルビューコントローラ(MVC)アプリを構築します。 このチュートリアルでは、Adobe [PDF埋め込みAPI](https://developer.adobe.com/document-services/apis/pdf-embed)を使用してPDF文書を処理し、Webサイトで表示する方法について説明します。
 
 ## 関連APIとリソース
 
-* [PDFサービスAPI](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
+* [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
 * [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
 
-* [プロジェクトのサンプル](https://github.com/adobe/pdftools-java-sdk-samples)
+* [プロジェクトサンプル](https://github.com/adobe/pdftools-java-sdk-samples)
 
 ## 設定
 
-[!DNL Adobe Acrobat Services]は認証システムを使用してリソースアクセスを制御します。 サービスにアクセスするには、組織またはアプリケーションのAPIキーをAdobeにリクエストする必要があります。 APIキーがある場合は、次のセクションに進みます。 新しいAPIキーを作成するには、[サイトで](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)Getting Started[!DNL Acrobat Services]にアクセスしてください。 キーは無料体験版を使用して作成できます。この無料体験版では、最大6か月間で使用できる1,000件の文書トランザクションを提供します。
+[!DNL Adobe Acrobat Services]は認証システムを使用してリソースアクセスを制御します。 サービスにアクセスするには、組織またはアプリケーションのAPIキーをAdobeにリクエストする必要があります。 APIキーがある場合は、次のセクションに進みます。 新しいAPIキーを作成するには、[!DNL Acrobat Services]サイトで[Getting Started](https://www.adobe.io/apis/documentcloud/dcsdk/gettingstarted.html)にアクセスしてください。 キーは無料体験版を使用して作成できます。この無料体験版では、最大6か月間で使用できる1,000件の文書トランザクションを提供します。
 
 このチュートリアルを実行するには、次の2つのAPIキーセットが必要です。
 
@@ -45,7 +52,7 @@ ht-degree: 0%
 
 * Adobe PDF Embed API
 
-資格情報を作成した後、Resourcesセクション内の[!DNL Spring Boot]アプリケーションにPDFサービスAPI資格情報と秘密キーをコピーします。 [&#x200B; Webサイトの](https://developer.adobe.com/document-services/docs/overview/pdf-services-api)MavenとGradleのライブラリと依存関係[!DNL Adobe Acrobat Services]の詳細をご覧ください。 作業を進める前に、必要なすべてのパッケージとライブラリを設定してください。
+資格情報を作成した後、Resourcesセクション内の[!DNL Spring Boot]アプリケーションにPDFサービスAPI資格情報と秘密キーをコピーします。 [!DNL Adobe Acrobat Services] Webサイトの[MavenとGradleのライブラリと依存関係](https://developer.adobe.com/document-services/docs/overview/pdf-services-api)の詳細をご覧ください。 作業を進める前に、必要なすべてのパッケージとライブラリを設定してください。
 
 ![PDFサービスAPI資格情報のディレクトリの場所のスクリーンショット](assets/FAWJ_1.png)
 
@@ -73,7 +80,7 @@ ExecutionContext executionContext = ExecutionContext.create(credentials);
 
 * PDF文書をExcel、Wordまたはグラフィック形式に変換
 
-* PDF文書(HTML、Excel、Wordなど)を作成
+* PDF文書（HTML、Excel、Wordなど）を作成
 
 * 複数のPDF文書を結合する
 
@@ -113,7 +120,7 @@ try {
 
 [!DNL Adobe Acrobat Services]は、すぐに使えるExcelドキュメントの処理をサポートしていませんが、コミュニティフレームワークとライブラリを使用してコンテンツを処理することはできます。
 
-たとえば、[Apache POI](https://poi.apache.org/)を使用して、[!DNL Java Spring Boot]アプリでExcel (またはその他のMicrosoftドキュメント)を処理したり、Excelファイルに対して他の手動または自動の操作を行うことができます。
+たとえば、[Apache POI](https://poi.apache.org/)を使用して、[!DNL Java Spring Boot]アプリでExcel （またはその他のMicrosoftドキュメント）を処理したり、Excelファイルに対して他の手動または自動の操作を行うことができます。
 
 この例では、PDF文書から始めて、3つの資金の純資産額を抽出し、表に示します。 要件と使用可能なデータに基づいて、チャートや表などの他の情報を取得することもできます。 他のソースからデータを取り込むこともできます。
 
