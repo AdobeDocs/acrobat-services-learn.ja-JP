@@ -9,11 +9,18 @@ jira: KT-10202
 thumbnail: KT-10202.jpg
 exl-id: 2a1752b8-9641-40cc-a0af-1dce6cf49346
 TQID: https://experienceleague.adobe.com/d-865GSolCybDdJcrN-ChmedE8m2um1K6jPWFTUIZBs
-product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
-feature_v2: id: c4d07275-6387-4756-8bf7-681e581ffd27
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080bid: e9001ce2-5245-4a8e-8601-dd958009072f
+product_v2:
+  - id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2:
+  - id: c4d07275-6387-4756-8bf7-681e581ffd27
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e9001ce2-5245-4a8e-8601-dd958009072f
 source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
 source-wordcount: 2933
@@ -41,7 +48,7 @@ ht-degree: 1%
 
 1. サンプルコードをダウンロードする言語を選択します（例：Node.js）。
 1. **[!UICONTROL デベロッパー利用条件]**&#x200B;に同意する場合にオンにします。
-1. **[!UICONTROL 資格情報の作成]**を選択します。
+1. **[!UICONTROL 資格情報の作成]**&#x200B;を選択します。
 サンプルファイル、pdfservices-api-credentials.json、認証用のprivate.keyを含むZIPファイルがコンピューターにダウンロードされます。
 
    ![資格情報のスクリーンショット](assets/automatelegal_2.png)

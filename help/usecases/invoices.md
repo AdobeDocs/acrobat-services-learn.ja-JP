@@ -9,11 +9,18 @@ jira: KT-8145
 thumbnail: KT-8145.jpg
 exl-id: 5871ef8d-be9c-459f-9660-e2c9230a6ceb
 TQID: https://experienceleague.adobe.com/cRSC1vIKbwdoQhwz8HkU-L6sO7ENukJhOqgw2C1O-6Y
-product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
-feature_v2: id: c4d07275-6387-4756-8bf7-681e581ffd27
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2:
+  - id: c4d07275-6387-4756-8bf7-681e581ffd27
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
 source-wordcount: 1487
@@ -27,7 +34,7 @@ ht-degree: 0%
 
 ビジネスが活況を呈している場合には素晴らしいことですが、これらすべての請求書を準備する時期になると、生産性が低下します。 請求書の手動生成には時間がかかるだけでなく、エラーが発生して費用が失われたり、誤った金額で顧客を怒らせたりするリスクもあります。
 
-例えば、ダニエルは、医療用品会社の[経理部門](https://developer.adobe.com/document-services/use-cases/financial/invoices)[に勤務しています](https://developer.adobe.com/document-services/use-cases/financial/invoices)。 月末になったので、彼女はいくつかの異なるシステムから情報を引き出し、その精度を再確認し、請求書をフォーマットしています。 この作業が完了すると、彼女はついに文書をPDFに変換し（専用のソフトウェアを購入しなくても誰でも文書を閲覧できます）、それぞれのお客様にパーソナライズされた請求書を送信できるようになります。
+例えば、ダニエルは、医療用品会社の[経理部門](https://developer.adobe.com/document-services/use-cases/financial/invoices) [に勤務しています](https://developer.adobe.com/document-services/use-cases/financial/invoices)。 月末になったので、彼女はいくつかの異なるシステムから情報を引き出し、その精度を再確認し、請求書をフォーマットしています。 この作業が完了すると、彼女はついに文書をPDFに変換し（専用のソフトウェアを購入しなくても誰でも文書を閲覧できます）、それぞれのお客様にパーソナライズされた請求書を送信できるようになります。
 
 毎月の請求書が完成しても、Danielleはその請求書を逃すことはできません。 一部のお客様は月額以外の請求サイクルを使用しているため、常に誰かの請求書を作成しています。 場合によっては、お客様が請求書を編集して未払いすることがあります。 その後、Danielleは、この請求書の不一致のトラブルシューティングに時間を費やします。 この調子で彼女は仕事を全部ついていくために助手を雇う必要がある。
 
