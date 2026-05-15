@@ -39,7 +39,7 @@ ht-degree: 1%
 ### 必要なもの
 
 * **Adobe PDFサービスの体験版または実稼働版の資格情報**
-Microsoft Power Automateで資格情報を取得および設定する方法について詳しくは、[ここ](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate)を参照してください。
+Microsoft Power Automateで資格情報を取得および設定する方法について詳しくは、[ここ](https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate)を参照してください。
 * **プレミアムコネクタ搭載のMicrosoft Power Automate**
 Power Automateのライセンスレベルを確認する方法については、[こちら](https://docs.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types)を参照してください。
 * **OneDrive**
@@ -54,7 +54,7 @@ Power Automateのライセンスレベルを確認する方法については、
 
 ### 資格情報の取得
 
-このチュートリアルを完了するには、Adobe PDFサービス向けMicrosoft Power Automateで資格情報が既に設定されている必要があります。 この手順をまだ完了していない場合は、[説明](https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate)を参照してください。
+このチュートリアルを完了するには、Adobe PDFサービス向けMicrosoft Power Automateで資格情報が既に設定されている必要があります。 この手順をまだ完了していない場合は、[説明](https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate)を参照してください。
 
 ## パート1：新しいフローを作成し、WordをPDFに変換する
 
