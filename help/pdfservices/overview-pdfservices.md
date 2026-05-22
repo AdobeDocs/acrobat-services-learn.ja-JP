@@ -8,9 +8,17 @@ type: Tutorial
 jira: KT-8116
 thumbnail: KT-8116.jpg
 exl-id: 81410fe4-7a2c-43a9-b497-b7423f9821ec
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/obNo8exmAZ4c8wop-24bOgGLv6IUt44f2j27X-q3p88
+product_v2:
+  - id: acdc2bde-2937-4877-90d9-031dd66278c9
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: 763
 ht-degree: 0%
 
 ---
@@ -23,7 +31,7 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-services-api" title="Adobe PDFサービスAPIの概要" target="_self" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-services-api" title="Adobe PDFサービスAPIの概要" target="_self" rel="referrer">
                         <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/media_10bdc2df8bda2e357f9bcf9913c7c799f35ab16d1.png?width=400&format=webply&optimize=medium" alt="Adobe PDFサービスAPIの概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -32,11 +40,11 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-services-api" target="_self" rel="referrer" title="Adobe PDFサービスAPIの概要">Adobe PDFサービスAPIの概要</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-services-api" target="_self" rel="referrer" title="Adobe PDFサービスAPIの概要">Adobe PDFサービスAPIの概要</a>
                     </p>
                     <p class="is-size-6">AdobeのPDFサービスAPIを使用すると、開発者は強力で柔軟なクラウドベースのAPIを介して、PDFからデータを作成、結合、書き出し、抽出できます</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-services-api" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-services-api" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">視聴</span>
                 </a>
             </div>

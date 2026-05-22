@@ -8,9 +8,26 @@ type: Tutorial
 jira: KT-8097
 thumbnail: KT-8097.jpg
 exl-id: e0c32082-4f8f-4d8b-ab12-55d95b5974c5
-source-git-commit: ba73105ecf0bd27b7445ec4388fc4009eec273b8
+TQID: https://experienceleague.adobe.com/Gd7B7jUfhZPSRujwKVp7hRzb2Nj9-VJFKLYxqwO-GFM
+product_v2:
+  - id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2:
+  - id: b1809bd0-a86b-4991-8083-2e3b517fc3b8
+  - id: c4d07275-6387-4756-8bf7-681e581ffd27
+subfeature_v2:
+  - id: b4b3dc0f-b1be-46b4-b8ca-134a4629084a
+  - id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028
+  - id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: '1890'
+source-wordcount: 2045
 ht-degree: 0%
 
 ---
@@ -41,7 +58,7 @@ ht-degree: 0%
 
 ## テンプレート文書の作成
 
-Microsoft Wordアプリケーションを使用するか、Adobeの[サンプルWordテンプレート](https://developer.adobe.com/document-services/apis/doc-generation#sample-blade)をダウンロードして、法的文書を作成できます。 Adobeそれでも、Microsoft Word用の[Adobe Document Generation Taggerアドイン](https://developer.adobe.com/document-services/docs/overview/document-generation-api/wordaddin)などのヘルパーツールを使用せずに、入力をカスタマイズしてこれらの文書にデジタル署名を行うことは簡単ではありません。
+Microsoft Wordアプリケーションを使用するか、Adobeの[サンプルWordテンプレート](https://developer.adobe.com/document-services/apis/doc-generation#sample-blade)をダウンロードして、法的文書を作成できます。 それでも、Microsoft Word用の[Adobe Document Generation Taggerアドイン](https://developer.adobe.com/document-services/docs/overview/document-generation-api/wordaddin)などのヘルパーツールを使用せずに、入力をカスタマイズしてこれらの文書にデジタル署名を行うことは簡単ではありません。
 
 Document Generation Taggerは、タグを使用した文書のシームレスなカスタマイズを可能にするMicrosoft Wordアドインです。 これにより、JSONデータを使用して動的に入力する文書テンプレートに動的フィールドを作成できます。
 
@@ -87,7 +104,7 @@ Document Generation Tagger for Wordアドインのインストール後、単純
 
 これらの高度な機能は、基本的なタグと同じです。 コンディショナルロジックを含めるには、文書の中から塗りつぶす部分を選択します。 その後、タグの挿入を決定するルールを設定します。
 
-さらに詳しく説明すると、例えば契約書に、コンディショナルのみ含めるセクションがある場合などです。 [コンテンツタイプの選択]フィールドで、[**セクション]を選択します。** [レコードの選択]フィールドで、条件付きセクションを表示するかどうかを決定するオプションを選択します。 目的の条件演算子を選択し、「値」フィールドにテストする値を設定します。 次に、[**条件の挿入]をクリックします。**&#x200B;以下の画面キャプチャは、このプロセスを示しています。
+さらに詳しく説明すると、例えば契約書に、コンディショナルのみ含めるセクションがある場合などです。 コンテンツタイプの選択フィールドで、**セクション**&#x200B;を選択します。 レコードの選択フィールドで、条件セクションを表示するかどうかを決定するオプションを選択します。 目的の条件演算子を選択し、「値」フィールドにテストする値を設定します。 次に、[**条件の挿入**]をクリックします。 次の画面キャプチャは、このプロセスを示しています。
 
 ![条件付きコンテンツを挿入するスクリーンショット](assets/legal_5.png)
 
@@ -187,7 +204,7 @@ npm install express body-parser morgan multer hbs path config mongoose
 
 * Adobe文書生成API
 
-[!DNL Acrobat Services] APIを使用するには資格情報が必要です(PDFのEmbed API資格情報とは異なります)。 有効な資格情報がない場合は、以下の画面キャプチャに示すように、[登録](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)してワークフローを完了してください。 [6か月間の無料体験後は従量課金制](https://developer.adobe.com/document-services/pricing/main)で、ドキュメントのトランザクション1件につきわずか0.05ドルです。
+[!DNL Acrobat Services] APIを使用するには資格情報が必要です（PDFのEmbed API資格情報とは異なります）。 有効な資格情報がない場合は、以下の画面キャプチャに示すように、[登録](https://www.adobe.com/go/dcsdks_credentials?ref=getStartedWithServicesSDK)してワークフローを完了してください。 [6か月間の無料体験後は従量課金制](https://developer.adobe.com/document-services/pricing/main)で、ドキュメントのトランザクション1件につきわずか0.05ドルです。
 
 ![新しい資格情報の作成のスクリーンショット](assets/legal_6.png)
 
@@ -284,7 +301,7 @@ module.exports = { createPDF, createPDFPost };
 
 これらの関数は、変換されたPDF文書をviews/outputディレクトリに保存し、PCにダウンロードすることができます。
 
-また、フリーPDF埋め込みAPIを使用して、変換されたPDFファイルをプレビューすることもできます。 PDF埋め込みAPIを使用して、[資格情報とは異なる](https://www.adobe.com/go/dcsdks_credentials)ここ[!DNL Acrobat Services]でAdobe資格情報を生成し、許可されたドメインを登録してAPIにアクセスできます。 手順に従って、アプリケーションのPDF埋め込みAPI資格情報を生成します。 デモの[こちら](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)を確認することもできます。そこから簡単にコードを生成して、すばやく作業を開始できます。
+また、フリーPDF埋め込みAPIを使用して、変換されたPDFファイルをプレビューすることもできます。 PDF埋め込みAPIを使用して、[!DNL Acrobat Services]資格情報とは異なる[ここ](https://www.adobe.com/go/dcsdks_credentials)でAdobe資格情報を生成し、許可されたドメインを登録してAPIにアクセスできます。 手順に従って、アプリケーションのPDF埋め込みAPI資格情報を生成します。 デモの[こちら](https://documentcloud.adobe.com/view-sdk-demo/index.html#/view/FULL_WINDOW/Bodea%20Brochure.pdf)を確認することもできます。そこから簡単にコードを生成して、すばやく作業を開始できます。
 
 アプリケーションに戻り、アプリケーションのviewフォルダーにlist.hbsファイルとpreview.hbsファイルを作成して、以下のコードスニペットをそれぞれlist.hbsファイルとpreview.hbsファイルに貼り付けます。
 
