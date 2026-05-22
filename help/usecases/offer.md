@@ -271,7 +271,7 @@ OfferLetter-Templateで、新しい&#x200B;**Document Generation**&#x200B;ボタ
 
 「**タグを生成**」ボタンをクリックします。 文書内の適切な位置に挿入するタグのドロップダウンメニューが表示されます。 文書の最初のXをハイライト表示し、**[!UICONTROL firstname]**&#x200B;を選択します。 **[!UICONTROL テキストを挿入]**&#x200B;をクリックすると、「X様」が「X様```{{`offer_letter`.firstname}}```様」に変更されます。 このタグは`documentMergeOperation`の正しい形式です。 続けて、該当するXsで残りの3つのタグを追加します。 OfferLetter-template.docxを必ず保存してください。 次のようになります。
 
-```{{`offer_letter`.firstname}} {{`offer_letter`.lastname}}``` 様
+&#x200B;```{{`offer_letter`.firstname}} {{`offer_letter`.lastname}}``` 様
 
 年間$ ```{{`offer_letter`.salary}}```のポジションを提供いたします。 開始日は```{{`offer_letter`.startdate}}```です。
 
