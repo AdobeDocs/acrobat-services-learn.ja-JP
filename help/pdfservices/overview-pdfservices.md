@@ -9,16 +9,12 @@ jira: KT-8116
 thumbnail: KT-8116.jpg
 exl-id: 81410fe4-7a2c-43a9-b497-b7423f9821ec
 TQID: https://experienceleague.adobe.com/obNo8exmAZ4c8wop-24bOgGLv6IUt44f2j27X-q3p88
-product_v2:
-  - id: acdc2bde-2937-4877-90d9-031dd66278c9
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: 763
+source-wordcount: 755
 ht-degree: 0%
 
 ---
@@ -32,7 +28,7 @@ ht-degree: 0%
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-services-api" title="Adobe PDFサービスAPIの概要" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/media_10bdc2df8bda2e357f9bcf9913c7c799f35ab16d1.png?width=400&format=webply&optimize=medium" alt="Adobe PDFサービスAPIの概要"
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/media_10bdc2df8bda2e357f9bcf9913c7c799f35ab16d1.png?width=400&format=webply&optimize=medium" alt="Adobe PDFサービスAPIの概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -54,8 +50,8 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate" title="Microsoft Power Automateの資格情報の取得" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/media_17606f025e0364a3bdf5e2c3f34744191a654147b.png?width=400&format=webply&optimize=medium" alt="Microsoft Power Automateの資格情報の取得"
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate" title="Microsoft Power Automateの資格情報の取得" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/media_17606f025e0364a3bdf5e2c3f34744191a654147b.png?width=400&format=webply&optimize=medium" alt="Microsoft Power Automateの資格情報の取得"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -63,11 +59,11 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate" target="_self" rel="referrer" title="Microsoft Power Automateの資格情報の取得">Microsoft Power Automateの資格情報を取得しています</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate" target="_self" rel="referrer" title="Microsoft Power Automateの資格情報の取得">Microsoft Power Automateの資格情報を取得しています</a>
                     </p>
                     <p class="is-size-6">資格情報を取得して、Adobe PDFサービスの使用またはトライアルを開始する方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">読み取り</span>
                 </a>
             </div>
@@ -77,8 +73,8 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate" title="Microsoft Power Automateで最初のフローを作成" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/media_1b9c2f022d9f6b9181ffc9d6a272459b7b1f2e558.png?width=400&format=webply&optimize=medium" alt="Microsoft Power Automateで最初のフローを作成"
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate" title="Microsoft Power Automateで最初のフローを作成" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/media_1b9c2f022d9f6b9181ffc9d6a272459b7b1f2e558.png?width=400&format=webply&optimize=medium" alt="Microsoft Power Automateで最初のフローを作成"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -86,11 +82,11 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate" target="_self" rel="referrer" title="Microsoft Power Automateで最初のフローを作成">Microsoft Power Automateで最初のフローを作成する</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate" target="_self" rel="referrer" title="Microsoft Power Automateで最初のフローを作成">Microsoft Power Automateで最初のフローを作成する</a>
                     </p>
                     <p class="is-size-6">Microsoft Power AutomateでAdobe PDFサービスコネクタを使用する方法について説明します。</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/create-workflow-power-automate" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">読み取り</span>
                 </a>
             </div>
@@ -100,8 +96,8 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/createpdffromhtml" title="PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/media_1938a490b89dc72095fe255feb780028d0e35bfd3.jpeg?width=400&format=webply&optimize=medium" alt="PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します"
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/createpdffromhtml" title="PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/media_1938a490b89dc72095fe255feb780028d0e35bfd3.jpeg?width=400&format=webply&optimize=medium" alt="PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -109,11 +105,11 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/createpdffromhtml" target="_self" rel="referrer" title="PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します">PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/createpdffromhtml" target="_self" rel="referrer" title="PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します">PDFサービスAPIとNode.jsを使用して、HTMLまたはMS Officeから数分でPDFを作成します</a>
                     </p>
                     <p class="is-size-6">Adobe PDF Services APIは、複雑な業務ワークフローのニーズを満たすために、複数の強力なPDF操作サービスの中から選択して選択できる無償の範囲を開発者に提供します</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/createpdffromhtml" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/createpdffromhtml" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">読み取り</span>
                 </a>
             </div>
@@ -123,8 +119,8 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/exportpdf" title="PDFサービスAPIを使用したWordやPowerPointなどへのPDFの書き出し" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/media_1c2a613f83230468611aafd79440394925783712e.jpeg?width=400&format=webply&optimize=medium" alt="PDFサービスAPIを使用したWordやPowerPointなどへのPDFの書き出し"
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/exportpdf" title="PDFサービスAPIを使用したWordやPowerPointなどへのPDFの書き出し" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/media_1c2a613f83230468611aafd79440394925783712e.jpeg?width=400&format=webply&optimize=medium" alt="PDFサービスAPIを使用したWordやPowerPointなどへのPDFの書き出し"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -132,11 +128,11 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/exportpdf" target="_self" rel="referrer" title="PDFサービスAPIを使用したWordやPowerPointなどへのPDFの書き出し">PDFサービスAPIを使用してPDFをWord、PowerPointなどにエクスポートする</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/exportpdf" target="_self" rel="referrer" title="PDFサービスAPIを使用したWordやPowerPointなどへのPDFの書き出し">PDFサービスAPIを使用してPDFをWord、PowerPointなどにエクスポートする</a>
                     </p>
                     <p class="is-size-6">Node.js、Java、.Netの言語用のサンプルファイルを使用して、PDFサービスAPIの書き出し処理を実行する方法について説明します</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/exportpdf" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/exportpdf" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">読み取り</span>
                 </a>
             </div>
@@ -146,8 +142,8 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartedjava" title="Adobe PDF Services APIおよびJavaの概要" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/media_1dbfd1a00e5cfc2219b46df6ffbdae9edaaee44e3.jpeg?width=400&format=webply&optimize=medium" alt="Adobe PDF Services APIおよびJavaの概要"
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartedjava" title="Adobe PDF Services APIおよびJavaの概要" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/media_1dbfd1a00e5cfc2219b46df6ffbdae9edaaee44e3.jpeg?width=400&format=webply&optimize=medium" alt="Adobe PDF Services APIおよびJavaの概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -155,11 +151,11 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartedjava" target="_self" rel="referrer" title="Adobe PDF Services APIおよびJavaの概要">Adobe PDF Services APIおよびJavaの概要</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartedjava" target="_self" rel="referrer" title="Adobe PDF Services APIおよびJavaの概要">Adobe PDF Services APIおよびJavaの概要</a>
                     </p>
                     <p class="is-size-6">利用可能なすべてのWebサービスにアクセスできるように用意されたサンプルファイルを、開発者はわずか数分で開始できます</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartedjava" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartedjava" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">読み取り</span>
                 </a>
             </div>
@@ -169,8 +165,8 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/ocr" title="Adobe PDFサービスAPIを使用したOCRPDFファイルの書き出し" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/media_142c638a3b6c3b21eb2fb54dab0af688a19e23731.jpeg?width=400&format=webply&optimize=medium" alt="Adobe PDFサービスAPIを使用したOCRPDFファイルの書き出し"
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/ocr" title="Adobe PDFサービスAPIを使用したOCRPDFファイルの書き出し" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/media_142c638a3b6c3b21eb2fb54dab0af688a19e23731.jpeg?width=400&format=webply&optimize=medium" alt="Adobe PDFサービスAPIを使用したOCRPDFファイルの書き出し"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -178,11 +174,11 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/ocr" target="_self" rel="referrer" title="Adobe PDFサービスAPIを使用したOCRPDFファイルの書き出し">Adobe PDFサービスAPIを使用してOCRPDFファイルを読み込む</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/ocr" target="_self" rel="referrer" title="Adobe PDFサービスAPIを使用したOCRPDFファイルの書き出し">Adobe PDFサービスAPIを使用してOCRPDFファイルを読み込む</a>
                     </p>
                     <p class="is-size-6">OCR(Optical Character Recognition)を使用すると、スキャンした文字をロック解除してテキストを抽出し、検索可能なファイルをPDFできます</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/ocr" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/ocr" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">読み取り</span>
                 </a>
             </div>
@@ -192,8 +188,8 @@ ht-degree: 0%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartednet" title="Adobe PDF Services APIおよび.Netの概要" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/media_11d550069c9dce1a7aa350f44b414ceb4ce859172.jpeg?width=400&format=webply&optimize=medium" alt="Adobe PDF Services APIおよび.Netの概要"
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartednet" title="Adobe PDF Services APIおよび.Netの概要" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/media_11d550069c9dce1a7aa350f44b414ceb4ce859172.jpeg?width=400&format=webply&optimize=medium" alt="Adobe PDF Services APIおよび.Netの概要"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -201,11 +197,11 @@ ht-degree: 0%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartednet" target="_self" rel="referrer" title="Adobe PDF Services APIおよび.Netの概要">Adobe PDF Services APIおよび.Netの概要</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartednet" target="_self" rel="referrer" title="Adobe PDF Services APIおよび.Netの概要">Adobe PDF Services APIおよび.Netの概要</a>
                     </p>
                     <p class="is-size-6">Adobe PDF Services APIは、複雑な業務ワークフローのニーズに合わせて、複数の強力なPDF操作サービスの中から選べる無償の範囲を開発者に提供します</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartednet" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfservices/gettingstartednet" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">読み取り</span>
                 </a>
             </div>
