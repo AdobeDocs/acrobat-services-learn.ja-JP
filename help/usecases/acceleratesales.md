@@ -9,20 +9,14 @@ jira: KT-10222
 thumbnail: KT-10222.jpg
 exl-id: 9430748f-9e2a-405f-acac-94b08ad7a5e3
 TQID: https://experienceleague.adobe.com/xZ2TGxtFDXGq33Zcr1BvJ2V0v7goacfO8Z62mGINeTk
-product_v2:
-  - id: acdc2bde-2937-4877-90d9-031dd66278c9
-feature_v2:
-  - id: c4d07275-6387-4756-8bf7-681e581ffd27
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2: id: c4d07275-6387-4756-8bf7-681e581ffd27
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: 1789
+source-wordcount: 1767
 ht-degree: 0%
 
 ---
@@ -51,7 +45,7 @@ ht-degree: 0%
 
 1. サンプルコードをダウンロードする言語を選択します（例：Node.js）。
 1. **[!UICONTROL デベロッパー利用条件]**&#x200B;に同意する場合にオンにします。
-1. **[!UICONTROL 資格情報の作成]**&#x200B;を選択します。
+1. **[!UICONTROL 資格情報の作成]**を選択します。
 サンプルファイル、pdfservices-api-credentials.json、認証用のprivate.keyを含むZIPファイルがコンピューターにダウンロードされます。
 
    ![資格情報のスクリーンショット](assets/accsales_2.png)
@@ -201,7 +195,7 @@ Microsoft Wordの表の場合と同様に、スタイル、サイズ、その他
 1. *[!UICONTROL 計算の種類の選択]*&#x200B;で、**[!UICONTROL 集計]**&#x200B;を選択します。
 1. *[!UICONTROL 種類の選択]*&#x200B;で、**[!UICONTROL 合計]**&#x200B;を選択します。
 1. *[!UICONTROL レコードの選択]*&#x200B;で、**[!UICONTROL 参照順序]**&#x200B;を選択します。
-1. *[!UICONTROL 集計を実行する項目を選択]で&#x200B;**2&rbrace;totalPaymentsDue.price &#x200B;** を選択します。**
+1. *[!UICONTROL 集計を実行する項目を選択]で**2}totalPaymentsDue.price ]**を選択します。**[!UICONTROL 
 1. **[!UICONTROL 計算の挿入]**&#x200B;を選択します。
 
 このプロセスでは、値の合計を提供する計算タグが挿入されます。 JSONata計算を使用すると、より高度な計算を行うことができます。 次に例を示します。
