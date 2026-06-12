@@ -1,7 +1,7 @@
 ---
 cloud: Document Cloud
 mini-toc-levels: 2
-git-repo: https://github.com/AdobeDocs/acrobat-services-learn.en
+git-repo: https://github.com/AdobeDocs/acrobat-services-learn.ja-JP
 index: true
 source-git-commit: 1f4bae02c97c9522f0ba0662142bc9752c032f04
 workflow-type: tm+mt
