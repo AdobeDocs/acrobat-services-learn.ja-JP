@@ -25,7 +25,7 @@ level_v2:
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
+source-git-commit: a02d17d88a2fb822f7715556b097767cb7f49ad5
 workflow-type: tm+mt
 source-wordcount: 2045
 ht-degree: 0%
@@ -120,7 +120,7 @@ Document Generation Tagger for Wordアドインのインストール後、単純
 
 ### ディレクトリ構造
 
-AdobeLegalContractAPIという名前のフォルダーを作成し、任意のエディターで開きます。 次のフォルダー構造を使用して、```npm init```コマンドで基本のNode.jsアプリケーションを作成します。
+AdobeLegalContractAPIという名前のフォルダーを作成し、任意のエディターで開きます。 次のフォルダー構造を使用して、`npm init`コマンドで基本のNode.jsアプリケーションを作成します。
 
 ```
 ###Directory Structure
@@ -210,7 +210,7 @@ npm install express body-parser morgan multer hbs path config mongoose
 
 サインアッププロセスが完了すると、コードサンプルが自動的にPCにダウンロードされ、開始に役立ちます。 このコード例を抽出して、それに従うことができます。 抽出したコードサンプルのpdftools-api-credentials.jsonファイルとprivate.keyファイルをNode.jsプロジェクトのルートディレクトリに必ずコピーしてください。 [!DNL Acrobat Services]個のAPIエンドポイントにアクセスするには、資格情報が必要です。 パーソナライズされた資格情報を使用してSDKサンプルをダウンロードすることもできるため、サンプルコードでキーを更新する必要はありません。
 
-次に、アプリケーションのルートディレクトリにあるターミナルを使用して```npm install \--save @adobe/documentservices-pdftools-node-sdk```コマンドを実行し、Adobe PDF Services Node SDKをインストールします。 正常にインストールされると、[!DNL Acrobat Services]個のAPIを使用して、アプリケーション内のドキュメントを操作できます。
+次に、アプリケーションのルートディレクトリにあるターミナルを使用して`npm install \--save @adobe/documentservices-pdftools-node-sdk`コマンドを実行し、Adobe PDF Services Node SDKをインストールします。 正常にインストールされると、[!DNL Acrobat Services]個のAPIを使用して、アプリケーション内のドキュメントを操作できます。
 
 ## PDF文書の作成
 

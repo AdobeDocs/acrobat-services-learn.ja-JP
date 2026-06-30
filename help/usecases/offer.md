@@ -24,7 +24,7 @@ level_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
+source-git-commit: 613f10928c919ed475347a894af97f692ed233bb
 workflow-type: tm+mt
 source-wordcount: 1851
 ht-degree: 1%
@@ -269,15 +269,15 @@ OfferLetter-Templateで、新しい&#x200B;**Document Generation**&#x200B;ボタ
 
 ![文字とコードのスクリーンショット](assets/offer_3.png)
 
-「**タグを生成**」ボタンをクリックします。 文書内の適切な位置に挿入するタグのドロップダウンメニューが表示されます。 文書の最初のXをハイライト表示し、**[!UICONTROL firstname]**&#x200B;を選択します。 **[!UICONTROL テキストを挿入]**&#x200B;をクリックすると、「X様」が「X様```{{`offer_letter`.firstname}}```様」に変更されます。 このタグは`documentMergeOperation`の正しい形式です。 続けて、該当するXsで残りの3つのタグを追加します。 OfferLetter-template.docxを必ず保存してください。 次のようになります。
+「**タグを生成**」ボタンをクリックします。 文書内の適切な位置に挿入するタグのドロップダウンメニューが表示されます。 文書の最初のXをハイライト表示し、**[!UICONTROL firstname]**&#x200B;を選択します。 **[!UICONTROL テキストを挿入]**&#x200B;をクリックすると、「X様」が「X様``{{`offer_letter`.firstname}}``様」に変更されます。 このタグは`documentMergeOperation`の正しい形式です。 続けて、該当するXsで残りの3つのタグを追加します。 OfferLetter-template.docxを必ず保存してください。 次のようになります。
 
-&#x200B;```{{`offer_letter`.firstname}} {{`offer_letter`.lastname}}``` 様
+``{{`offer_letter`.firstname}} {{`offer_letter`.lastname}}`` 様
 
-年間$ ```{{`offer_letter`.salary}}```のポジションを提供いたします。 開始日は```{{`offer_letter`.startdate}}```です。
+年間$ ``{{`offer_letter`.salary}}``のポジションを提供いたします。 開始日は``{{`offer_letter`.startdate}}``です。
 
 ようこそ
 
-Wordテンプレートに、JSON形式と一致するマークアップが含まれるようになりました。 例えば、Word文書の冒頭の```{{`offer_letter`.`firstname`}}```は、JSONデータの「firstname」セクションの値に置き換えられます。
+Wordテンプレートに、JSON形式と一致するマークアップが含まれるようになりました。 例えば、Word文書の冒頭の``{{`offer_letter`.`firstname`}}``は、JSONデータの「firstname」セクションの値に置き換えられます。
 
 `generateLetter`関数に戻ります。 REST呼び出しをセキュリティで保護するには、プロジェクトルートにpdftools-api-credentials.jsonという名前の新しいファイルを作成します。 次のJSONデータを貼り付け、[開発者コンソール](https://developer.adobe.com/console/)のサービスアカウント(JWT)セクションから詳細を追加して調整してください。
 
