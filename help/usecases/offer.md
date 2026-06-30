@@ -9,12 +9,21 @@ jira: KT-8096
 thumbnail: KT-8096.jpg
 exl-id: 92f955f0-add5-4570-aa3a-ea63055dadb2
 TQID: https://experienceleague.adobe.com/ZfvtA3o-CQ28V-HdyzMR2TWgw-DpddXoh3zMOAUAqhY
-product_v2: id: acdc2bde-2937-4877-90d9-031dd66278c9
-feature_v2: id: b1809bd0-a86b-4991-8083-2e3b517fc3b8id: c4d07275-6387-4756-8bf7-681e581ffd27
-subfeature_v2: id: b4b3dc0f-b1be-46b4-b8ca-134a4629084aid: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: acdc2bde-2937-4877-90d9-031dd66278c9
+feature_v2:
+  - id: b1809bd0-a86b-4991-8083-2e3b517fc3b8
+  - id: c4d07275-6387-4756-8bf7-681e581ffd27
+subfeature_v2:
+  - id: b4b3dc0f-b1be-46b4-b8ca-134a4629084a
+  - id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 613f10928c919ed475347a894af97f692ed233bb
 workflow-type: tm+mt
 source-wordcount: 1851
@@ -246,7 +255,7 @@ console.log('Exception encountered while executing operation', err);
 }
 ```
 
-そこには多くのコードが展開されています。 まず主要な部分である`documentMergeOperation`を取り上げましょう。 このセクションでは、JSONデータを取り出して、Wordドキュメントテンプレートに結合します。 Adobeサイト](https://developer.adobe.com/document-services/apis/doc-generation#sample-blade)の[例を参考にできますが、簡単な例を独自に作成しましょう。 Wordを開いて、空の新規文書を作成します。 好きなだけカスタマイズできますが、少なくとも次のようなものがあります。
+そこには多くのコードが展開されています。 まず主要な部分である`documentMergeOperation`を取り上げましょう。 このセクションでは、JSONデータを取り出して、Wordドキュメントテンプレートに結合します。 Adobeサイト[&#128279;](https://developer.adobe.com/document-services/apis/doc-generation#sample-blade)の例を参考にできますが、簡単な例を独自に作成しましょう。 Wordを開いて、空の新規文書を作成します。 好きなだけカスタマイズできますが、少なくとも次のようなものがあります。
 
 X様、
 
