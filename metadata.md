@@ -1,11 +1,16 @@
 ---
 cloud: Document Cloud
+solution: Acrobat Services
+feature-set: Acrobat Services
+product_v2:
+  - id: acdc2bde-2937-4877-90d9-031dd66278c9
+usetq: true
 mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/acrobat-services-learn.ja-JP
 index: true
-source-git-commit: 1f4bae02c97c9522f0ba0662142bc9752c032f04
+source-git-commit: 0edd56d49aecc59763e0499c36e6e21aa88154b1
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: 149
 ht-degree: 0%
 
 ---

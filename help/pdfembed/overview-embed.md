@@ -18,7 +18,7 @@ level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
 workflow-type: tm+mt
-source-wordcount: 225
+source-wordcount: 307
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ PDF埋め込みAPIは、忠実度の高いPDFを埋め込み、共同作業を�
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/ja/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" title="プロのようにweb上でPDFを組み合わせる" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/337602/?quality=12&hidetitle=true&format=jpeg&nocache=1736799089651" alt="プロのようにweb上でPDFを組み合わせる"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3456142/?captions=jpn&quality=12&hidetitle=true&format=jpeg&nocache=1736799089651" alt="プロのようにweb上でPDFを組み合わせる"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

@@ -27,4 +27,4 @@ ht-degree: 0%
 
 PDF抽出APIを使用して、PDF文書から自動的にコンテンツを抽出する方法について説明します。 PDF・コンテンツの抽出は、重要なビジネス・データのロック解除に役立ち、そのデータをさまざまなダウンストリーム・プロセスに使用できます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428294?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3446679?captions=jpn&hidetitle=true)
