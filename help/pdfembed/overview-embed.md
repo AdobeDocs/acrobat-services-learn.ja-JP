@@ -8,21 +8,31 @@ type: Tutorial
 jira: KT-8117
 thumbnail: KT-8117.jpg
 exl-id: 2fef89cf-640d-4ff4-9282-070bce8bba78
-TQID: https://experienceleague.adobe.com/WA-l3DkC5MtZNgUHMFArxJbs4a1MJO8GfM60ipRdQXA
+TQID: 'https://experienceleague.adobe.com/WA-l3DkC5MtZNgUHMFArxJbs4a1MJO8GfM60ipRdQXA'
 product_v2:
   - id: acdc2bde-2937-4877-90d9-031dd66278c9
+    internal-label: Acrobat Services
+feature_v2:
+  - id: b1809bd0-a86b-4991-8083-2e3b517fc3b8
+    internal-label: Acrobat Services APIs
+subfeature_v2:
+  - id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028
+    internal-label: PDF Embed API
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
+    internal-label: Beginner
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 48c04e921143cde1421215096e1e02fd5e24b6e2
 workflow-type: tm+mt
-source-wordcount: 307
+source-wordcount: '305'
 ht-degree: 0%
-
 ---
-
 # Adobe PDF Embed APIチュートリアル
 
 PDF埋め込みAPIは、忠実度の高いPDFを埋め込み、共同作業を可能にし、分析を表示するための無料のJavaScript APIです。
@@ -33,8 +43,8 @@ PDF埋め込みAPIは、忠実度の高いPDFを埋め込み、共同作業を�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience" title="PDFのオンラインエクスペリエンスを制御し、分析を収集" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/media_13220573f1e6c61f8460bec79972ce19fb3af8428.png?width=400&format=webply&optimize=medium" alt="PDFのオンラインエクスペリエンスを制御し、分析を収集"
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience" title="PDFのオンラインエクスペリエンスを制御し、分析を収集" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/media_13220573f1e6c61f8460bec79972ce19fb3af8428.png?width=400&format=webply&optimize=medium" alt="PDFのオンラインエクスペリエンスを制御し、分析を収集"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -42,11 +52,11 @@ PDF埋め込みAPIは、忠実度の高いPDFを埋め込み、共同作業を�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience" target="_self" rel="referrer" title="PDFのオンラインエクスペリエンスを制御し、分析を収集">PDFのオンラインエクスペリエンスを制御し、分析を収集する</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience" target="_self" rel="referrer" title="PDFのオンラインエクスペリエンスを制御し、分析を収集">PDFのオンラインエクスペリエンスを制御し、分析を収集する</a>
                     </p>
                     <p class="is-size-6">Adobe PDF Embed APIを使用して外観をコントロールし、共同作業を有効にし、ユーザーがPDFーとどのように対話したかについて、ページや検索に費やした時間などの分析を収集する方法について説明します</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfembed/controlpdfexperience" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">読み取り</span>
                 </a>
             </div>
@@ -56,8 +66,8 @@ PDF埋め込みAPIは、忠実度の高いPDFを埋め込み、共同作業を�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" title="プロのようにweb上でPDFを組み合わせる" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3456142/?captions=jpn&quality=12&hidetitle=true&format=jpeg&nocache=1736799089651" alt="プロのようにweb上でPDFを組み合わせる"
+                    <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" title="プロのようにweb上でPDFを組み合わせる" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/337602/?quality=12&hidetitle=true&format=jpeg&nocache=1736799089651" alt="プロのようにweb上でPDFを組み合わせる"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -65,11 +75,11 @@ PDF埋め込みAPIは、忠実度の高いPDFを埋め込み、共同作業を�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" target="_self" rel="referrer" title="プロのようにweb上でPDFを組み合わせる">Web上でプロのようにPDFを組み合わせる</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" target="_self" rel="referrer" title="プロのようにweb上でPDFを組み合わせる">Web上でプロのようにPDFを組み合わせる</a>
                     </p>
                     <p class="is-size-6">無料のAdobe PDF Embed APIを使用してwebサイトでPDFを使いやすくする方法について説明します</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/events/adobe-developers-live-recordings/2021/oct2021/pdf-embed-api" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">視聴</span>
                 </a>
             </div>

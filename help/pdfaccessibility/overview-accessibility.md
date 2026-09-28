@@ -7,23 +7,34 @@ level: Beginner, Intermediate, Experienced
 type: Tutorial
 jira: KT-15327
 exl-id: dfd018a7-8e1f-4c00-9e1f-6b7b8435fbfa
-TQID: https://experienceleague.adobe.com/eK2v077dMeTRJXYLL521ige-4KKTP9SNQCqg4rHH-sg
+TQID: 'https://experienceleague.adobe.com/eK2v077dMeTRJXYLL521ige-4KKTP9SNQCqg4rHH-sg'
 product_v2:
   - id: acdc2bde-2937-4877-90d9-031dd66278c9
+    internal-label: Acrobat Services
+feature_v2:
+  - id: b1809bd0-a86b-4991-8083-2e3b517fc3b8
+    internal-label: Acrobat Services APIs
+subfeature_v2:
+  - id: fde59d58-a58c-4d69-bee2-f561e5c503e3
+    internal-label: PDF Accessibility AutoTag API
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
-source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
+    internal-label: Accessibility
+source-git-commit: 48c04e921143cde1421215096e1e02fd5e24b6e2
 workflow-type: tm+mt
-source-wordcount: 148
+source-wordcount: '188'
 ht-degree: 0%
-
 ---
-
 # Adobe PDFアクセシビリティ自動タグ付けAPIチュートリアル
 
 このAIを活用したAPIでは、表、段落、リスト、見出しなどに自動でタグ付けされるため、支援テクノロジーを使用してネイティブまたはスキャンしたPDFの読み上げエクスペリエンスが向上します。 また、読み取り順序を識別して、ページ間の複数の列または要素を含む情報の論理フローを保証します。 これをドキュメントのバックログや新しいドキュメントのワークフローに適用し、コンプライアンスをより簡単に進めることができます。
@@ -32,11 +43,11 @@ ht-degree: 0%
 <!--
 CARDS
 
-* https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags
+* https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags
   {target = _self}
   {title = Automatically tag documents for accessibility}
   {description = Learn how to automatically generate documents at scale}
-  {image = https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfaccessibility/media_12d5056f8a08ccdcd7d45c49ee252d1070e5e8e64.png?width=400&format=webply&optimize=medium}
+  {image = https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/media_12d5056f8a08ccdcd7d45c49ee252d1070e5e8e64.png?width=400&format=webply&optimize=medium}
   {cta = Watch}
 
 -->
@@ -48,8 +59,8 @@ CARDS
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" title="文書に自動的にタグ付けしてアクセシビリティを向上" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfaccessibility/media_12d5056f8a08ccdcd7d45c49ee252d1070e5e8e64.png?width=400&format=webply&optimize=medium" alt="文書に自動的にタグ付けしてアクセシビリティを向上"
+                    <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" title="文書に自動的にタグ付けしてアクセシビリティを向上" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/media_12d5056f8a08ccdcd7d45c49ee252d1070e5e8e64.png?width=400&format=webply&optimize=medium" alt="文書に自動的にタグ付けしてアクセシビリティを向上"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -57,11 +68,11 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" target="_self" rel="referrer" title="文書に自動的にタグ付けしてアクセシビリティを向上">文書にアクセシビリティのタグを自動的に付ける</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" target="_self" rel="referrer" title="文書に自動的にタグ付けしてアクセシビリティを向上">文書にアクセシビリティのタグを自動的に付ける</a>
                     </p>
                     <p class="is-size-6">大規模な文書を自動的に生成する方法を学ぶ</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/acrobat-services-learn/tutorials/pdfaccessibility/automatically-add-tags" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">視聴</span>
                 </a>
             </div>
