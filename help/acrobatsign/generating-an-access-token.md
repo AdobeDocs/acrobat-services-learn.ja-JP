@@ -37,4 +37,4 @@ Acrobat Sign APIで使用できるアクセストークンを生成する方法�
 >
 >このチュートリアルは、アプリケーション内に署名プロセスを構築し、組み込んでいるOEMパートナーを対象としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/347350?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3444190?captions=jpn&hidetitle=true)

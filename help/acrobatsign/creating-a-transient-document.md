@@ -39,4 +39,4 @@ Acrobat Sign APIで使用できる一時的なドキュメントを作成する�
 >
 >このチュートリアルは、アプリケーション内に署名プロセスを構築し、組み込んでいるOEMパートナーを対象としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/347351?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3444771?captions=jpn&hidetitle=true)

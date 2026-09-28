@@ -40,4 +40,4 @@ Acrobat Signのデベロッパーアカウントに新規登録する方法を�
 >
 >このチュートリアルは、アプリケーション内に署名プロセスを構築し、組み込んでいるOEMパートナーを対象としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/347347?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3445919?captions=jpn&hidetitle=true)

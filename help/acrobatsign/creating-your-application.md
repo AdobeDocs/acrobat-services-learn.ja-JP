@@ -37,4 +37,4 @@ Acrobat Signでアプリケーションを作成する方法について説明�
 >
 >このチュートリアルは、アプリケーション内に署名プロセスを構築し、組み込んでいるOEMパートナーを対象としています。
 
->[!VIDEO](https://video.tv.adobe.com/v/347348?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3444579?captions=jpn&hidetitle=true)
