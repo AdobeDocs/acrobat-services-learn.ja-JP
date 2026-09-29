@@ -8,27 +8,34 @@ type: Tutorial
 jira: KT-10382
 thumbnail: KT-10382.jpg
 exl-id: 68ec654f-74aa-41b7-9103-44df13402032
-TQID: https://experienceleague.adobe.com/NagNLc23IZyxJtLrW-Ig3-r38gqNECoQq2Pn2ZdxKC8
+TQID: 'https://experienceleague.adobe.com/NagNLc23IZyxJtLrW-Ig3-r38gqNECoQq2Pn2ZdxKC8'
 product_v2:
   - id: acdc2bde-2937-4877-90d9-031dd66278c9
+    internal-label: Acrobat Services
+feature_v2:
+  - id: b1809bd0-a86b-4991-8083-2e3b517fc3b8
+    internal-label: Acrobat Services APIs
+subfeature_v2:
+  - id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+    internal-label: PDF Services API
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
+    internal-label: Beginner
+source-git-commit: 48c04e921143cde1421215096e1e02fd5e24b6e2
 workflow-type: tm+mt
-source-wordcount: 930
+source-wordcount: '930'
 ht-degree: 3%
-
 ---
-
 # Microsoft Power Automateの資格情報の取得
 
-[Microsoft Power Automate](https://powerautomate.microsoft.com/)を使用すると、民間の開発者や開発者は、コードを記述することなく、業務を改善するための強力な自動プロセスを構築できます。 [Adobe PDFサービス](https://us.flow.microsoft.com/en-us/connectors/shared_adobepdftools/adobe-pdf-services/)コネクタは、[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services)の一部であり、Microsoft Power Automate内のAdobe PDFサービスAPIで使用可能な任意の操作を実行できます。
+[Microsoft Power Automate](https://powerautomate.microsoft.com/)を使用すると、民間の開発者や開発者は、コードを記述することなく、業務を改善するための強力な自動プロセスを構築できます。 [Adobe PDFサービス](https://us.flow.microsoft.com/en-us/connectors/shared_adobepdftools/adobe-pdf-services/)のコネクターは、[[!DNL Adobe Acrobat Services]](https://developer.adobe.com/document-services)の一部として、Microsoft Power Automate内のAdobe PDFサービスAPIで利用可能な任意の操作を実行できるようにします。
 
 このチュートリアルでは、資格情報を取得して、Adobe PDFサービスの使用または体験版のダウンロードを開始する方法について説明します。 体験版ユーザーか既存のお客様かに応じて、このチュートリアルでは資格情報を取得するための適切な手順を説明します。
 
-## Microsoft Power AutomateユーザーがAdobe PDFサービスコネクタを使用し始めるにはどうすればよいですか？
+## Microsoft Power AutomateユーザーがAdobe PDFサービスコネクターを使用し始めるにはどうすればよいですか？
 
 既存のMicrosoft Power Automateユーザーは、Adobe PDFサービスの[体験版の資格情報を取得](https://www.adobe.com/go/powerautomate_getstarted)できます。 上記のリンクは、このプロセス、特にMicrosoft Power Automateユーザー向けに役立つ特別な登録リンクです。
 
@@ -55,7 +62,7 @@ ht-degree: 3%
 
 ![新しい資格情報](assets/credentials_3.png)
 
-これらすべての値を含むJSONファイルも自動的にシステムにダウンロードされます。 このファイルの名前は`pdfservices-api-pa-credentials.json`で、次のようになります：
+これらすべての値を含むJSON ファイルも自動的にダウンロードされます。 このファイルの名前は`pdfservices-api-pa-credentials.json`で、次のようになります：
 
 ```json
 {
@@ -105,7 +112,7 @@ ht-degree: 3%
 
 ## 既存のAdobe PDFサービスの資格情報を使用する
 
-[!DNL Adobe Acrobat Services] Webサイトから生成された既存のAdobe PDF Services API資格情報がある場合は、それらをMicrosoft Power Automateで使用できます。 サインアップ中にSDKをダウンロードした場合、既存の資格情報は`pdfservices-api-credentials.json`という名前のJSONファイルの形式で提供されていた可能性があります。 このJSONファイルには、接続資格情報の作成時に必要な5つのキーが含まれています。 それぞれの値をJSONファイルから対応する接続フィールドにコピーします。
+[!DNL Adobe Acrobat Services] Webサイトから生成された既存のAdobe PDF Services API資格情報がある場合は、それらをMicrosoft Power Automateで使用できます。 サインアップ中にSDKをダウンロードした場合、既存の資格情報は`pdfservices-api-credentials.json`という名前のJSON ファイルの形式で提供された可能性があります。 このJSON ファイルには、資格情報を作成するときに必要な5つのキーが含まれています。 JSON ファイルの各値を対応する接続フィールドにコピーします。
 
 秘密キーの値は、`private.key`という名前の2番目のファイルから取得されます。
 

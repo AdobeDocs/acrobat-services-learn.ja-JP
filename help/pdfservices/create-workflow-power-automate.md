@@ -1,6 +1,6 @@
 ---
 title: Microsoft Power Automateで最初のワークフローを作成
-description: Microsoft Power AutomateでAdobe PDFサービスコネクタを使用する方法について説明します。
+description: Microsoft Power AutomateでAdobe PDFサービスコネクターを使用する方法について説明します。
 feature: PDF Services API
 role: Developer
 level: Beginner
@@ -8,25 +8,33 @@ type: Tutorial
 jira: KT-10379
 thumbnail: KT-10379.jpg
 exl-id: 095b705f-c380-42cc-9329-44ef7de655ee
-TQID: https://experienceleague.adobe.com/xltwAkEl5vPjcTGB1YX1VSC02fIVDWK7nElLTbiMkHo
+TQID: 'https://experienceleague.adobe.com/xltwAkEl5vPjcTGB1YX1VSC02fIVDWK7nElLTbiMkHo'
 product_v2:
   - id: acdc2bde-2937-4877-90d9-031dd66278c9
+    internal-label: Acrobat Services
+feature_v2:
+  - id: b1809bd0-a86b-4991-8083-2e3b517fc3b8
+    internal-label: Acrobat Services APIs
+subfeature_v2:
+  - id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+    internal-label: PDF Services API
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
+    internal-label: Customer experience
+source-git-commit: 48c04e921143cde1421215096e1e02fd5e24b6e2
 workflow-type: tm+mt
-source-wordcount: 2046
+source-wordcount: '2046'
 ht-degree: 1%
-
 ---
-
 # Microsoft Power Automateで最初のフローを作成
 
-[Adobe PDFサービス](https://us.flow.microsoft.com/en-us/connectors/shared_adobepdftools/adobe-pdf-services/)コネクタを使用して、[Microsoft Power Automate](https://flow.microsoft.com)で最初のフローを作成する方法について説明します。
+[Adobe PDFサービス](https://us.flow.microsoft.com/en-us/connectors/shared_adobepdftools/adobe-pdf-services/) コネクターを使用して、[Microsoft Power Automate](https://flow.microsoft.com)で最初のフローを作成する方法について説明します。
 
 この実践チュートリアルでは、次の方法について学習します。
 
@@ -40,10 +48,10 @@ ht-degree: 1%
 
 * **Adobe PDFサービスの体験版または実稼働版の資格情報**
 Microsoft Power Automateで資格情報を取得および設定する方法について詳しくは、[ここ](https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfservices/getting-credentials-power-automate)を参照してください。
-* **プレミアムコネクタ搭載のMicrosoft Power Automate**
+* **プレミアムコネクターを備えたMicrosoft Power Automate**
 Power Automateのライセンスレベルを確認する方法については、[こちら](https://docs.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types)を参照してください。
 * **OneDrive**
-このチュートリアルではOneDriveストレージコネクターを使用しますが、他のストレージコネクターで代用することもできます。
+このチュートリアルではOneDriveストレージ・コネクターを使用しますが、任意のストレージ・コネクターで代用できます。
 
 ### サンプルファイル
 
@@ -318,7 +326,7 @@ OneDriveフォルダーに、文書を閲覧するためのパスワードの入
 
 ## 次のステップ
 
-このチュートリアルでは、Word文書をPDFに変換し、データに基づいて文書を生成し、文書を結合して、パスワードで保護しました。 詳しくは、Microsoft Power AutomateのAdobe PDFサービスコネクタで使用できるその他のアクションを確認してください。
+このチュートリアルでは、Word文書をPDFに変換し、データに基づいて文書を生成し、文書を結合して、パスワードで保護しました。 詳しくは、Microsoft Power AutomateのAdobe PDFサービスコネクターで使用できるその他のアクションを確認してください。
 
 * Microsoft Power Automateで使用可能な、作成済みのテンプレートを表示します。
 * Adobe技術ブログの[記事](https://medium.com/adobetech/tagged/microsoft-power-automate)から学ぶ。

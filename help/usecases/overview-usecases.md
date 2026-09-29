@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Adobe Acrobat Services] APIの使用例'
-description: ' [!DNL Adobe Acrobat Services] APIユースケースの概要ページ'
+description: '[!DNL Adobe Acrobat Services] APIユースケースの概要ページ'
 feature: Use Cases
 role: Developer
 level: Beginner, Intermediate, Experienced
@@ -8,29 +8,38 @@ type: Tutorial
 jira: KT-8115
 thumbnail: KT-8115.jpg
 exl-id: 4188897e-f6e6-41ea-be6f-359a3ef0e040
-TQID: https://experienceleague.adobe.com/V3g1PfMzYZsCT1lnRRCUBiN5qF2gd1YeAKSlpXsPRJw
+TQID: 'https://experienceleague.adobe.com/V3g1PfMzYZsCT1lnRRCUBiN5qF2gd1YeAKSlpXsPRJw'
 product_v2:
   - id: acdc2bde-2937-4877-90d9-031dd66278c9
+    internal-label: Acrobat Services
 feature_v2:
   - id: b1809bd0-a86b-4991-8083-2e3b517fc3b8
+    internal-label: Acrobat Services APIs
   - id: c4d07275-6387-4756-8bf7-681e581ffd27
+    internal-label: Use cases
 subfeature_v2:
   - id: b4b3dc0f-b1be-46b4-b8ca-134a4629084a
+    internal-label: Document Generation API
   - id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028
+    internal-label: PDF Embed API
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: e9001ce2-5245-4a8e-8601-dd958009072f
-source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
+    internal-label: Web experience
+source-git-commit: 48c04e921143cde1421215096e1e02fd5e24b6e2
 workflow-type: tm+mt
-source-wordcount: 778
+source-wordcount: '1299'
 ht-degree: 0%
-
 ---
-
 # [!DNL Adobe Acrobat Services] APIの使用例
 
 ## [!DNL Adobe Acrobat Services] APIを使用すると何ができますか？
@@ -328,7 +337,7 @@ ht-degree: 0%
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-### PDF埋め込みAPI
+### PDF Embed API
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">

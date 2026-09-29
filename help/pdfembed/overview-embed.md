@@ -8,21 +8,31 @@ type: Tutorial
 jira: KT-8117
 thumbnail: KT-8117.jpg
 exl-id: 2fef89cf-640d-4ff4-9282-070bce8bba78
-TQID: https://experienceleague.adobe.com/WA-l3DkC5MtZNgUHMFArxJbs4a1MJO8GfM60ipRdQXA
+TQID: 'https://experienceleague.adobe.com/WA-l3DkC5MtZNgUHMFArxJbs4a1MJO8GfM60ipRdQXA'
 product_v2:
   - id: acdc2bde-2937-4877-90d9-031dd66278c9
+    internal-label: Acrobat Services
+feature_v2:
+  - id: b1809bd0-a86b-4991-8083-2e3b517fc3b8
+    internal-label: Acrobat Services APIs
+subfeature_v2:
+  - id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028
+    internal-label: PDF Embed API
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
+    internal-label: Beginner
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
+source-git-commit: 48c04e921143cde1421215096e1e02fd5e24b6e2
 workflow-type: tm+mt
-source-wordcount: 307
+source-wordcount: '305'
 ht-degree: 0%
-
 ---
-
 # Adobe PDF Embed APIチュートリアル
 
 PDF埋め込みAPIは、忠実度の高いPDFを埋め込み、共同作業を可能にし、分析を表示するための無料のJavaScript APIです。

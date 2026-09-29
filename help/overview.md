@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Adobe Acrobat Services]個のAPI Tutorials'
-description: ' [!DNL Adobe Acrobat Services]の概要ページ'
+description: '[!DNL Adobe Acrobat Services]の概要ページ'
 feature: Acrobat Sign API, PDF Services API, PDF Embed API, Document Generation API, PDF Electronic Seal API, PDF Extract API, PDF Accessibility Auto-Tag API
 role: Developer
 level: Beginner, Intermediate, Experienced
@@ -8,33 +8,50 @@ jira: KT-7463
 type: Tutorial
 thumbnail: KT-7463.jpg
 exl-id: c73feb77-4057-42fd-831c-a5004c7637c1
-TQID: https://experienceleague.adobe.com/ybG7xD9KSXaS4blMesQieOT4Z2RpqwnD5haRPxBfFKo
+TQID: 'https://experienceleague.adobe.com/ybG7xD9KSXaS4blMesQieOT4Z2RpqwnD5haRPxBfFKo'
 product_v2:
   - id: acdc2bde-2937-4877-90d9-031dd66278c9
+    internal-label: Acrobat Services
 feature_v2:
   - id: b1809bd0-a86b-4991-8083-2e3b517fc3b8
+    internal-label: Acrobat Services APIs
   - id: c4d07275-6387-4756-8bf7-681e581ffd27
+    internal-label: Use cases
 subfeature_v2:
   - id: ab4ae87a-aa37-4da4-8f10-14bcd836549e
+    internal-label: PDF Extract API
   - id: b4b3dc0f-b1be-46b4-b8ca-134a4629084a
+    internal-label: Document Generation API
   - id: c4b1e8f2-d9a8-4792-b5e4-be52bd870028
+    internal-label: PDF Embed API
   - id: c6f72a9c-54c4-4933-93c9-d7c656ff1f14
+    internal-label: PDF Services API
   - id: e9471a2b-a51d-459f-8642-038a8fd76a8b
+    internal-label: PDF Electronic Seal API
+  - id: aba8c493-b814-4c59-a60d-4962bc4c8ada
+    internal-label: Acrobat Sign API
+  - id: fde59d58-a58c-4d69-bee2-f561e5c503e3
+    internal-label: PDF Accessibility AutoTag API
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 0110d2606056220c4236fe2f0e3afbfc112746e7
+    internal-label: Machine learning
+source-git-commit: 48c04e921143cde1421215096e1e02fd5e24b6e2
 workflow-type: tm+mt
-source-wordcount: 591
-ht-degree: 3%
-
+source-wordcount: '919'
+ht-degree: 2%
 ---
-
 # [!DNL Adobe Acrobat Services] APIチュートリアル
 
 [!DNL Adobe Acrobat Services]には6つの主なAPIがあります：
@@ -225,8 +242,8 @@ CARDS
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/overview-embed" title="PDF埋め込みAPI" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/media_100c64db6899f092f8a30e0d153091398242f8abc.png?width=400&format=webply&optimize=medium" alt="PDF埋め込みAPI"
+                    <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/overview-embed" title="PDF Embed API" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/media_100c64db6899f092f8a30e0d153091398242f8abc.png?width=400&format=webply&optimize=medium" alt="PDF Embed API"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -234,7 +251,7 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/overview-embed" target="_self" rel="referrer" title="PDF埋め込みAPI">PDF埋め込みAPI</a>
+                        <a href="https://experienceleague.adobe.com/ja/docs/acrobat-services-learn/tutorials/pdfembed/overview-embed" target="_self" rel="referrer" title="PDF Embed API">PDF埋め込みAPI</a>
                     </p>
                     <p class="is-size-6">無料のJavascript APIにより、忠実度の高いPDFを埋め込み、共同作業を可能にし、分析を表示</p>
                 </div>
