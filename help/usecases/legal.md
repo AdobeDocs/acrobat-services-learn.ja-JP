@@ -50,7 +50,7 @@ ht-degree: 0%
 
 * [Adobe文書生成API](https://developer.adobe.com/document-services/apis/doc-generation)
 
-* [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
+* [PDF埋め込みAPI](https://www.adobe.com/jp/devnet-docs/dcsdk_io/viewSDK/index.html)
 
 * [Adobe Sign API](https://developer.adobe.com/adobesign-api/)
 

@@ -62,7 +62,7 @@ PDF。 また、複数のレポートの結合、ページの並べ替え、PDF�
 
 ## 関連APIとリソース
 
-* [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
+* [PDF埋め込みAPI](https://www.adobe.com/jp/devnet-docs/dcsdk_io/viewSDK/index.html)
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
