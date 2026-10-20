@@ -61,7 +61,7 @@ COVID-19の大流行の間に、多くの企業でチーム間のリモート共
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-* [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
+* [PDF埋め込みAPI](https://www.adobe.com/jp/devnet-docs/dcsdk_io/viewSDK/index.html)
 
 * [プロジェクトコード](https://github.com/contentlab-io/adobe_reviews_and_approvals)
 
@@ -399,7 +399,7 @@ app.get( "/download/:file", function( req, res ){
   );
 ```
 
-下書き文書へのコメントと注釈がサーバーに保存されるようになりました。 [コールバックの詳細](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#callbacks-workflows)を読んで、ワークフローに合わせることができます。 例えば、複数のユーザーが同じドキュメントを同時にレビューおよびコメントする場合、[ステータスコールバック](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#status-callback)を使用してファイルの競合を処理できます。
+下書き文書へのコメントと注釈がサーバーに保存されるようになりました。 [コールバックの詳細](https://www.adobe.com/jp/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#callbacks-workflows)を読んで、ワークフローに合わせることができます。 例えば、複数のユーザーが同じドキュメントを同時にレビューおよびコメントする場合、[ステータスコールバック](https://www.adobe.com/jp/devnet-docs/dcsdk_io/viewSDK/howtos_ui.html#status-callback)を使用してファイルの競合を処理できます。
 
 最後のステップでは、PDFサービスAPIを使用して、編集したすべての文書を1つのPDFファイルに結合します。
 

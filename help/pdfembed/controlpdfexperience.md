@@ -292,7 +292,7 @@ PDF埋め込みAPIの一部として使用できるJavaScriptイベントは数�
 >
 >Webページには、ヘッダーのページにAdobe Analyticsが既に読み込まれている必要があります。
 
-[Adobe Analyticsドキュメント](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/howtodata.html#adobe-analytics)に移動して、webページでAdobe Analyticsが既に有効になっているかどうかを確認します。 指示に従ってreportSuiteを設定します。
+[Adobe Analyticsドキュメント](https://www.adobe.com/jp/devnet-docs/dcsdk_io/viewSDK/howtodata.html#adobe-analytics)に移動して、webページでAdobe Analyticsが既に有効になっているかどうかを確認します。 指示に従ってreportSuiteを設定します。
 
 ### Google Analytics
 

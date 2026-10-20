@@ -49,7 +49,7 @@ ht-degree: 0%
 
 * [PDF Services API](https://opensource.adobe.com/pdftools-sdk-docs/release/latest/index.html)
 
-* [PDF埋め込みAPI](https://www.adobe.com/devnet-docs/dcsdk_io/viewSDK/index.html)
+* [PDF埋め込みAPI](https://www.adobe.com/jp/devnet-docs/dcsdk_io/viewSDK/index.html)
 
 ## お客様向けのキャンペーンレポートダッシュボード
 
