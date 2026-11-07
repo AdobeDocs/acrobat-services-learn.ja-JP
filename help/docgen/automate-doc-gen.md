@@ -32,4 +32,4 @@ ht-degree: 0%
 
 Microsoft Power AutomateのAdobe PDF Services コネクターを使用してDocument Generation APIを呼び出し、大規模な文書を自動的に生成する方法について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/3428227?hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3506371?captions=jpn&hidetitle=true)
